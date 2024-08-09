@@ -7,4 +7,4 @@ The continuous benchmark results can be found [here][site].
 
 [benchmarkdotnet]: https://github.com/dotnet/BenchmarkDotNet
 [github-action-benchmark]: https://github.com/benchmark-action/github-action-benchmark
-[site]: https://martincostello.github.io/benchmarks
+[site]: https://benchmarks.martincostello.com
