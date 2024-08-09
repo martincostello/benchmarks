@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723217006482,
+  "lastUpdate": 1723218367417,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API Benchmarks": [
@@ -72,6 +72,42 @@ window.BENCHMARK_DATA = {
             "value": 215904.37086588543,
             "unit": "ns",
             "range": "± 1259.2754053046979"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b2489d48f440c507ec6b281e96225a192ed01b32",
+          "message": "Add continuous benchmarks (#1903)\n\nAdd GitHub Actions workflow to run continuous benchmarks and publish to a tracking website.",
+          "timestamp": "2024-08-09T15:43:49Z",
+          "tree_id": "eafe925b1c3304725d323f83cc8e7d07deed3de5",
+          "url": "https://github.com/martincostello/api/commit/b2489d48f440c507ec6b281e96225a192ed01b32"
+        },
+        "date": 1723218367258,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 254928.37869698662,
+            "unit": "ns",
+            "range": "± 1890.4815440014872"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 214182.13284505208,
+            "unit": "ns",
+            "range": "± 1647.1979624514356"
           }
         ]
       }
