@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723214682922,
+  "lastUpdate": 1723217006482,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API Benchmarks": [
@@ -36,6 +36,42 @@ window.BENCHMARK_DATA = {
             "value": 214591.23509114582,
             "unit": "ns",
             "range": "± 1060.276687499065"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "c5d63b8c785df53563ead5ab52ebe6a27f44287e",
+          "message": "Move benchmarks\n\nPublish to subdirectory.",
+          "timestamp": "2024-08-09T16:14:06+01:00",
+          "tree_id": "10053e6777153185080090ae07c6a27dd8546233",
+          "url": "https://github.com/martincostello/api/commit/c5d63b8c785df53563ead5ab52ebe6a27f44287e"
+        },
+        "date": 1723217006059,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 258901.02005709134,
+            "unit": "ns",
+            "range": "± 1138.2015766753814"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 215904.37086588543,
+            "unit": "ns",
+            "range": "± 1259.2754053046979"
           }
         ]
       }
