@@ -215,7 +215,7 @@
 
           // Render footer
           document.getElementById('dl-button').onclick = () => {
-            const dataUrl = 'data:,' + JSON.stringify(data, null, 2);
+            const dataUrl = `data:,${JSON.stringify(data, null, 2)}`;
             const a = document.createElement('a');
             a.href = dataUrl;
             a.download = 'benchmark_data.json';
@@ -244,7 +244,7 @@
                   label: name,
                   data: dataset.map(d => d.bench.value),
                   borderColor: color,
-                  backgroundColor: color + '60', // Add alpha for #rrggbbaa
+                  backgroundColor: `${color}60`, // Add alpha for #rrggbbaa
                 }
               ],
             };
@@ -275,20 +275,20 @@
                   afterTitle: items => {
                     const {index} = items[0];
                     const data = dataset[index];
-                    return '\n' + data.commit.message + '\n\n' + data.commit.timestamp + ' committed by @' + data.commit.author.username + '\n';
+                    return `\n${data.commit.message}\n\n${data.commit.timestamp} committed by @${data.commit.author.username}\n`;
                   },
                   label: item => {
                     let label = item.value;
                     const { range, unit } = dataset[item.index].bench;
-                    label += ' ' + unit;
+                    label += ` ${unit}`;
                     if (range) {
-                      label += ' (' + range + ')';
+                      label += ` (${range})`;
                     }
                     return label;
                   },
                   afterLabel: item => {
                     const { extra } = dataset[item.index].bench;
-                    return extra ? '\n' + extra : '';
+                    return extra ? `\n${extra}` : '';
                   }
                 }
               },
