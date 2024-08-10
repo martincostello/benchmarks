@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723220804375,
+  "lastUpdate": 1723283612273,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API Benchmarks": [
@@ -144,6 +144,42 @@ window.BENCHMARK_DATA = {
             "value": 215785.02284458705,
             "unit": "ns",
             "range": "± 1436.7494936286187"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d38311d65de8e5c1e6e1dcf7bd6407786bf41225",
+          "message": "Bump eslint from 9.8.0 to 9.9.0 in /src/API (#1905)\n\nBumps [eslint](https://github.com/eslint/eslint) from 9.8.0 to 9.9.0.\n- [Release notes](https://github.com/eslint/eslint/releases)\n- [Changelog](https://github.com/eslint/eslint/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/eslint/eslint/compare/v9.8.0...v9.9.0)\n\n---\nupdated-dependencies:\n- dependency-name: eslint\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-10T09:51:13Z",
+          "tree_id": "da716ed45aefb76a01c48c1b4d12d090b47a4b93",
+          "url": "https://github.com/martincostello/api/commit/d38311d65de8e5c1e6e1dcf7bd6407786bf41225"
+        },
+        "date": 1723283612112,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 252264.6146763393,
+            "unit": "ns",
+            "range": "± 1858.8292383214443"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 214133.70983072917,
+            "unit": "ns",
+            "range": "± 1533.1067709912313"
           }
         ]
       }
