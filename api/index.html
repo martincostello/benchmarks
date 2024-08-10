@@ -208,7 +208,7 @@
           const data = window.BENCHMARK_DATA;
 
           // Render header
-          document.getElementById('last-update').textContent = new Date(data.lastUpdate).toString();
+          document.getElementById('last-update').textContent = new Date(data.lastUpdate).toLocaleString();
           const repoLink = document.getElementById('repository-link');
           repoLink.href = data.repoUrl;
           repoLink.textContent = data.repoUrl;
