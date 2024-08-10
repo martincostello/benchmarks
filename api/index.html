@@ -229,7 +229,7 @@
           }));
         }
 
-        function renderAllChars(dataSets) {
+        function renderAllCharts(dataSets) {
 
           function renderGraph(parent, name, dataset) {
             const canvas = document.createElement('canvas');
@@ -296,7 +296,6 @@
                 if (activeElems.length === 0) {
                   return;
                 }
-                // XXX: Undocumented. How can we know the index?
                 const index = activeElems[0]._index;
                 const url = dataset[index].commit.url;
                 window.open(url, '_blank');
@@ -335,7 +334,7 @@
           }
         }
 
-        renderAllChars(init()); // Start
+        renderAllCharts(init());
       })();
     </script>
   </body>
