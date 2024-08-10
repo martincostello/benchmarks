@@ -67,88 +67,26 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <style>
-      html {
-        font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-        -webkit-font-smoothing: antialiased;
-        background-color: #fff;
-        font-size: 16px;
-      }
-      body {
-        color: #4a4a4a;
-        margin: 8px;
-        font-size: 1em;
-        font-weight: 400;
-      }
-      header {
-        margin-bottom: 8px;
-        display: flex;
-        flex-direction: column;
-      }
-      main {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      a {
-        color: #3273dc;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      a:hover {
-        color: #000;
-      }
-      button {
-        color: #fff;
-        background-color: #3298dc;
-        border-color: transparent;
-        cursor: pointer;
-        text-align: center;
-      }
-      button:hover {
-        background-color: #2793da;
-        flex: none;
-      }
-      .spacer {
-        flex: auto;
-      }
-      .small {
-        font-size: 0.75rem;
-      }
-      footer {
-        margin-top: 16px;
-        display: flex;
-        align-items: center;
-      }
-      .header-label {
-        margin-right: 4px;
-      }
-      .benchmark-set {
-        margin: 8px 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      .benchmark-title {
-        font-size: 3rem;
-        font-weight: 600;
-        word-break: break-word;
-        text-align: center;
-      }
-      .benchmark-graphs {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-      }
-      .benchmark-chart {
-        max-width: 1000px;
-      }
-    </style>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a id="link-home" href="/" class="navbar-brand">benchmarks.martincostello.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navbar" aria-controls="site-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="site-navbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a id="link-blog-header" class="nav-link" href="https://blog.martincostello.com/" rel="noopener" target="_blank" title="My blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link-about" class="nav-link" href="https://martincostello.com/home/about/" rel="noopener" target="_blank" title="About me">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header id="header">
       <div class="header-item">
         <strong class="header-label">Last Updated:</strong>
@@ -159,12 +97,27 @@
         <a id="repository-link" rel="noopener"></a>
       </div>
     </header>
-    <main id="main"></main>
+    <main class="container body-content" id="main"></main>
+    <hr />
     <footer>
-      <button id="dl-button">Download data as JSON</button>
-      <div class="spacer"></div>
-      <div class="small">Powered by <a rel="noopener" href="https://github.com/benchmark-action/github-action-benchmark">github-action-benchmark</a></div>
+      <p>
+        &copy; Martin Costello 2024 -
+        <a href="https://github.com/martincostello/benchmarks" target="_blank" rel="noopener" title="GitHub">
+          GitHub repository
+          <span class="fa-brands fa-github" aria-hidden="true"></span>
+        </a>
+        &nbsp;
+        | Powered by <a rel="noopener" href="https://github.com/benchmark-action/github-action-benchmark">github-action-benchmark</a>
+        <button class="btn btn-primary btn-sm d-none d-md-block float-end" id="dl-button" type="button">
+          Download as JSON
+          <span class="fa-solid fa-file-arrow-down" aria-hidden="true"></span>
+        </button>
+      </p>
     </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/flatly/bootstrap.min.css" integrity="sha512-qoT4KwnRpAQ9uczPsw7GunsNmhRnYwSlE2KRCUPRQHSkDuLulCtDXuC2P/P6oqr3M5hoGagUG9pgHDPkD2zCDA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.2/Chart.min.js" integrity="sha512-uWTfEVcTAr+NF8RnQix39Vnfd93celVTAjU2pi4LpdrsPLeLg5RYywi5rw9oF8oCQaJ6b2YPALceNbf3kfDJaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="data.js"></script>
     <script id="main-script">
