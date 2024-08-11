@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723309022008,
+  "lastUpdate": 1723375826055,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -108,6 +108,42 @@ window.BENCHMARK_DATA = {
             "value": 17346339.583333332,
             "unit": "ns",
             "range": "± 4681293.386804324"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "0140004bd1935ebdb71a904b21acf78633901a6e",
+          "message": "Simplify benchmarks name\n\nRemove \"Benchmarks\" suffix.",
+          "timestamp": "2024-08-11T12:28:44+01:00",
+          "tree_id": "2d7ca1e4a260a44e2d8bdded41ff895617085751",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/0140004bd1935ebdb71a904b21acf78633901a6e"
+        },
+        "date": 1723375825807,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 10513627.864583334,
+            "unit": "ns",
+            "range": "± 991735.9894923745"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 19070350.645833332,
+            "unit": "ns",
+            "range": "± 8475679.382457627"
           }
         ]
       }
