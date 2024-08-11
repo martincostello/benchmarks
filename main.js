@@ -59,6 +59,7 @@
             borderColor: color,
             backgroundColor: `${color}60`, // Add alpha for #rrggbbaa
             fill: true,
+            tension: 0.4,
           }
         ],
       };
