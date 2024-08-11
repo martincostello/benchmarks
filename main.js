@@ -7,11 +7,11 @@
         const { commit, date, tool, benches } = entry;
         for (const bench of benches) {
           const result = { commit, date, tool, bench };
-          const arr = map.get(bench.name);
-          if (arr === undefined) {
+          const values = map.get(bench.name);
+          if (values === undefined) {
             map.set(bench.name, [result]);
           } else {
-            arr.push(result);
+            values.push(result);
           }
         }
       }
@@ -27,12 +27,12 @@
     repoLink.textContent = data.repoUrl;
 
     // Render footer
-    document.getElementById('dl-button').onclick = () => {
+    document.getElementById('download-json').onclick = () => {
       const dataUrl = `data:,${JSON.stringify(data, null, 2)}`;
-      const a = document.createElement('a');
-      a.href = dataUrl;
-      a.download = 'benchmark-data.json';
-      a.click();
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = 'benchmark-data.json';
+      link.click();
     };
 
     // Prepare data points for charts
@@ -119,21 +119,21 @@
     }
 
     function renderBenchSet(name, benchSet, main) {
-      const setElem = document.createElement('div');
-      setElem.className = 'benchmark-set';
-      main.appendChild(setElem);
+      const setElement = document.createElement('div');
+      setElement.className = 'benchmark-set';
+      main.appendChild(setElement);
 
-      const nameElem = document.createElement('h1');
-      nameElem.className = 'benchmark-title';
-      nameElem.textContent = name;
-      setElem.appendChild(nameElem);
+      const nameElement = document.createElement('h1');
+      nameElement.className = 'benchmark-title';
+      nameElement.textContent = name;
+      setElement.appendChild(nameElement);
 
-      const graphsElem = document.createElement('div');
-      graphsElem.className = 'benchmark-graphs';
-      setElem.appendChild(graphsElem);
+      const graphsElement = document.createElement('div');
+      graphsElement.className = 'benchmark-graphs';
+      setElement.appendChild(graphsElement);
 
       for (const [benchName, benches] of benchSet.entries()) {
-        renderGraph(graphsElem, benchName, benches)
+        renderGraph(graphsElement, benchName, benches)
       }
     }
 
