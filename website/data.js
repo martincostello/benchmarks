@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723403221147,
+  "lastUpdate": 1723403931359,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -108,6 +108,60 @@ window.BENCHMARK_DATA = {
             "value": 242700.7021484375,
             "unit": "ns",
             "range": "± 1147.5628145886112"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "093ae038a39531f24a7030aeb41d0d4fc3da5c62",
+          "message": "Bump eslint from 9.8.0 to 9.9.0 in /src/Website (#2154)\n\nBumps [eslint](https://github.com/eslint/eslint) from 9.8.0 to 9.9.0.\n- [Release notes](https://github.com/eslint/eslint/releases)\n- [Changelog](https://github.com/eslint/eslint/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/eslint/eslint/compare/v9.8.0...v9.9.0)\n\n---\nupdated-dependencies:\n- dependency-name: eslint\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-11T19:15:13Z",
+          "tree_id": "38594746f3e12d47042df5eec29ff76b5465b0b7",
+          "url": "https://github.com/martincostello/website/commit/093ae038a39531f24a7030aeb41d0d4fc3da5c62"
+        },
+        "date": 1723403931099,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 360146.36851283483,
+            "unit": "ns",
+            "range": "± 1174.142244538584"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 369158.2247596154,
+            "unit": "ns",
+            "range": "± 748.9733201215453"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 433367.13432173297,
+            "unit": "ns",
+            "range": "± 10584.44822701699"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 405278.35226004466,
+            "unit": "ns",
+            "range": "± 2767.140622378607"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 239442.52064732142,
+            "unit": "ns",
+            "range": "± 1156.9972778412093"
           }
         ]
       }
