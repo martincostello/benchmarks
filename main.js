@@ -1,22 +1,5 @@
 'use strict';
 (function () {
-  // Colors from https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
-  const toolColors = {
-    cargo: '#dea584',
-    go: '#00add8',
-    benchmarkjs: '#f1e05a',
-    benchmarkluau: '#000080',
-    pytest: '#3572a5',
-    googlecpp: '#f34b7d',
-    catch2: '#f34b7d',
-    julia: '#a270ba',
-    jmh: '#b07219',
-    benchmarkdotnet: '#178600',
-    customBiggerIsBetter: '#38ff38',
-    customSmallerIsBetter: '#ff3838',
-    _: '#333333'
-  };
-
   function init() {
     function collectBenchesPerTestCase(entries) {
       const map = new Map();
@@ -66,7 +49,7 @@
       canvas.className = 'benchmark-chart';
       parent.appendChild(canvas);
 
-      const color = toolColors[dataset.length > 0 ? dataset[0].tool : '_'];
+      const color = '#178600';
       const data = {
         labels: dataset.map(d => d.commit.id.slice(0, 7)),
         datasets: [
