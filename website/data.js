@@ -2,7 +2,7 @@ window.BENCHMARK_DATA = {
   "lastUpdate": 1723402496332,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
-    "API": [
+    "Website": [
       {
         "commit": {
           "author": {
