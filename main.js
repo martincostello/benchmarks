@@ -94,9 +94,10 @@
                 return `\n${data.commit.message}\n\n${data.commit.timestamp} committed by @${data.commit.author.username}\n`;
               },
               label: context => {
-                let label = context.dataset.label;
-                const { range, unit } = dataset[context.dataIndex].bench;
-                label += ` ${unit}`;
+                const item = dataset[context.dataIndex];
+                let label = item.bench.value.toString();
+                const { range, unit } = item.bench;
+                label += unit;
                 if (range) {
                   label += ` (${range})`;
                 }
@@ -139,6 +140,34 @@
 
     const main = document.getElementById('main');
     for (const { name, dataSet } of dataSets) {
+      // Adjust the values' units to improve readability
+      dataSet.forEach(items => {
+        if (items.length > 0) {
+          let minValue = items.length === 1 ? items[0].bench.value : Number.POSITIVE_INFINITY;
+
+          if (items.length > 1) {
+            for (const item of items) {
+              minValue = Math.min(minValue, item.bench.value);
+            };
+          }
+
+          const factor = 1e-3;
+          const units = ['µs', 'ms', 's'];
+          for (let i = 0; i < units.length; i++) {
+            if (minValue < 1000) {
+              break;
+            }
+            minValue *= factor;
+            for (let j = 0; j < items.length; j++) {
+              const item = items[j];
+              item.bench.value *= factor;
+              item.bench.unit = units[i];
+              item.bench.range = `± ${parseFloat(item.bench.range.substring(2), 10) * factor}`;
+            };
+          }
+        }
+      });
+
       renderBenchSet(name, dataSet, main);
     }
   }
