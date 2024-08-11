@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723376048484,
+  "lastUpdate": 1723400273534,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -324,6 +324,54 @@ window.BENCHMARK_DATA = {
             "value": 211967.57194010416,
             "unit": "ns",
             "range": "± 1622.0526210360829"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "66e869d5b72fa27cc95208a7b79bf068338beb1a",
+          "message": "Add more benchmarks\n\n- Add benchmarks for rendering the homepage and the version.\n- Refactor benchmarks to move server to its own class.",
+          "timestamp": "2024-08-11T19:14:24+01:00",
+          "tree_id": "bdf14fd0da92d7c08fca3f28bf2d145a81066a9e",
+          "url": "https://github.com/martincostello/api/commit/66e869d5b72fa27cc95208a7b79bf068338beb1a"
+        },
+        "date": 1723400273078,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 362686.48277064733,
+            "unit": "ns",
+            "range": "± 2134.5180537995434"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 242894.78372395833,
+            "unit": "ns",
+            "range": "± 1279.958535769437"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 255897.64780560663,
+            "unit": "ns",
+            "range": "± 4955.797744727927"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 216105.46852213543,
+            "unit": "ns",
+            "range": "± 1675.0582727892327"
           }
         ]
       }
