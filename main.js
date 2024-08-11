@@ -78,6 +78,13 @@
             },
           },
         },
+        onClick: (_, elements) => {
+          if (elements.length > 0) {
+            const { index } = elements[0];
+            const url = dataset[index].commit.url;
+            window.open(url, '_blank');
+          }
+        },
         plugins: {
           tooltip: {
             callbacks: {
@@ -98,14 +105,6 @@
                 const { extra } = dataset[context.dataIndex].bench;
                 return extra ? `\n${extra}` : '';
               }
-            },
-            onClick: (_, elements) => {
-              if (elements.length === 0) {
-                return;
-              }
-              const index = activeElems[0]._index;
-              const url = dataset[index].commit.url;
-              window.open(url, '_blank');
             },
           },
         },
