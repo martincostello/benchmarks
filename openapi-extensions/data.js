@@ -2,7 +2,7 @@ window.BENCHMARK_DATA = {
   "lastUpdate": 1723309022008,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
-    "OpenAPI Extensions Benchmarks": [
+    "OpenAPI Extensions": [
       {
         "commit": {
           "author": {
