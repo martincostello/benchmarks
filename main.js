@@ -63,55 +63,50 @@
       };
       const options = {
         scales: {
-          xAxes: [
-            {
-              scaleLabel: {
-                display: true,
-                labelString: 'Commit',
-              },
-            }
-          ],
-          yAxes: [
-            {
-              scaleLabel: {
-                display: true,
-                labelString: dataset.length > 0 ? `t (${dataset[0].bench.unit})` : '',
-              },
-              ticks: {
-                beginAtZero: true,
-              }
-            }
-          ],
-        },
-        tooltips: {
-          callbacks: {
-            afterTitle: items => {
-              const { index } = items[0];
-              const data = dataset[index];
-              return `\n${data.commit.message}\n\n${data.commit.timestamp} committed by @${data.commit.author.username}\n`;
+          x: {
+            title: {
+              display: true,
+              text: 'Commit',
             },
-            label: item => {
-              let label = item.value;
-              const { range, unit } = dataset[item.index].bench;
-              label += ` ${unit}`;
-              if (range) {
-                label += ` (${range})`;
-              }
-              return label;
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: dataset.length > 0 ? `t (${dataset[0].bench.unit})` : '',
             },
-            afterLabel: item => {
-              const { extra } = dataset[item.index].bench;
-              return extra ? `\n${extra}` : '';
-            }
-          }
+          },
         },
-        onClick: (_mouseEvent, activeElems) => {
-          if (activeElems.length === 0) {
-            return;
-          }
-          const index = activeElems[0]._index;
-          const url = dataset[index].commit.url;
-          window.open(url, '_blank');
+        plugins: {
+          tooltip: {
+            callbacks: {
+              afterTitle: items => {
+                const data = dataset[items[0].dataIndex];
+                return `\n${data.commit.message}\n\n${data.commit.timestamp} committed by @${data.commit.author.username}\n`;
+              },
+              label: context => {
+                let label = context.dataset.label;
+                const { range, unit } = dataset[context.dataIndex].bench;
+                label += ` ${unit}`;
+                if (range) {
+                  label += ` (${range})`;
+                }
+                return label;
+              },
+              afterLabel: context => {
+                const { extra } = dataset[context.dataIndex].bench;
+                return extra ? `\n${extra}` : '';
+              }
+            },
+            onClick: (_, elements) => {
+              if (elements.length === 0) {
+                return;
+              }
+              const index = activeElems[0]._index;
+              const url = dataset[index].commit.url;
+              window.open(url, '_blank');
+            },
+          },
         },
       };
 
