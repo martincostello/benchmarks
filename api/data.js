@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723308425022,
+  "lastUpdate": 1723374433577,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API Benchmarks": [
@@ -216,6 +216,42 @@ window.BENCHMARK_DATA = {
             "value": 211727.8247721354,
             "unit": "ns",
             "range": "± 1775.5327026748514"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e61b3fb956910c74e8397b3bc144539d534d3f1b",
+          "message": "Bump Verify.Xunit from 26.1.6 to 26.2.0 in the xunit group (#1907)\n\nBumps the xunit group with 1 update: [Verify.Xunit](https://github.com/VerifyTests/Verify).\r\n\r\n\r\nUpdates `Verify.Xunit` from 26.1.6 to 26.2.0\r\n- [Release notes](https://github.com/VerifyTests/Verify/releases)\r\n- [Commits](https://github.com/VerifyTests/Verify/compare/26.1.6...26.2.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Verify.Xunit\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n  dependency-group: xunit\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-11T11:04:51Z",
+          "tree_id": "2986fb46c857371297736bbab9046bd103217ec3",
+          "url": "https://github.com/martincostello/api/commit/e61b3fb956910c74e8397b3bc144539d534d3f1b"
+        },
+        "date": 1723374433351,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 256173.72317708333,
+            "unit": "ns",
+            "range": "± 1399.4878112910176"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 216947.13193359374,
+            "unit": "ns",
+            "range": "± 1889.3696852638898"
           }
         ]
       }
