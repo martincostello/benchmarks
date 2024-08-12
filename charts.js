@@ -38,7 +38,13 @@
 
     // Render footer
     document.getElementById('download-json').onclick = () => {
-      const dataUrl = `data:,${JSON.stringify(data, null, 2)}`;
+      const jsonString = JSON.stringify(data, null, 2);
+      // See https://developer.mozilla.org/docs/Glossary/Base64#the_unicode_problem
+      const encoder = new TextEncoder();
+      const bytes = encoder.encode(jsonString);
+      const binaryString = Array.from(bytes, (byte) => String.fromCodePoint(byte)).join('');
+      const jsonAsBase64 = btoa(binaryString);
+      const dataUrl = `data:text/json;base64,${jsonAsBase64}`;
       const link = document.createElement('a');
       link.href = dataUrl;
       link.download = 'benchmark-data.json';
