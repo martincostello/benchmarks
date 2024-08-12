@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723403931359,
+  "lastUpdate": 1723448393340,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -162,6 +162,60 @@ window.BENCHMARK_DATA = {
             "value": 239442.52064732142,
             "unit": "ns",
             "range": "± 1156.9972778412093"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "c0fad7edf51d2b6f5878d4db029357483f212276",
+          "message": "Remove redundant files\n\nRemove files that are now served from CDN.",
+          "timestamp": "2024-08-12T08:35:56+01:00",
+          "tree_id": "69ff3bc0f14e4c46ff2071f73656facca8d71b02",
+          "url": "https://github.com/martincostello/website/commit/c0fad7edf51d2b6f5878d4db029357483f212276"
+        },
+        "date": 1723448392814,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 360936.48667689733,
+            "unit": "ns",
+            "range": "± 1198.2093597841854"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 364560.919921875,
+            "unit": "ns",
+            "range": "± 1480.5157940282943"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 426261.303125,
+            "unit": "ns",
+            "range": "± 4858.273744002919"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 401698.4547526042,
+            "unit": "ns",
+            "range": "± 3399.871882809616"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 240110.9384765625,
+            "unit": "ns",
+            "range": "± 1108.2736305719998"
           }
         ]
       }
