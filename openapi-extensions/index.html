@@ -98,12 +98,31 @@
     </nav>
     <header id="header">
       <div class="header-item">
+        <strong class="header-label">Branch:</strong>
+        <span><code id="branch-name"></code></span>
+      </div>
+      <div class="header-item">
         <strong class="header-label">Last Updated:</strong>
         <span id="last-update"></span>
       </div>
       <div class="header-item">
         <strong class="header-label">Repository:</strong>
         <a id="repository-link" rel="noopener" target="_blank"></a>
+      </div>
+      <div class="dropdown">
+        <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Branch
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="?branch=main">
+              main
+              <span class="badge rounded-pill text-bg-secondary">Default</span>
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="?branch=dotnet-vnext">dotnet-vnext</a></li>
+          <li><a class="dropdown-item" href="?branch=dotnet-nightly">dotnet-nightly</a></li>
+        </ul>
       </div>
     </header>
     <main class="container body-content" id="main"></main>
@@ -123,6 +142,6 @@
     <link rel="stylesheet" href="../main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../main.js"></script>
+    <script src="../charts.js"></script>
   </body>
 </html>
