@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723375826055,
+  "lastUpdate": 1723462899198,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -144,6 +144,78 @@ window.BENCHMARK_DATA = {
             "value": 19070350.645833332,
             "unit": "ns",
             "range": "± 8475679.382457627"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "f0010da64c4f5e6586775f074f7811b0c27962f0",
+          "message": "Benchmark .NET vNext\n\n- Run benchmarks for pushes to the vNext branches.\n- Remove concurrency.",
+          "timestamp": "2024-08-12T12:29:35+01:00",
+          "tree_id": "d1d3805f503cf58df5335e79f9bf3c432a8f59d2",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/f0010da64c4f5e6586775f074f7811b0c27962f0"
+        },
+        "date": 1723462277638,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 11509323.677083334,
+            "unit": "ns",
+            "range": "± 937823.8862177653"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 21473568.572916668,
+            "unit": "ns",
+            "range": "± 13088260.204097757"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "5f97deacf73c0a3aed026621aeb7616f9f4c681d",
+          "message": "Link to the branch\n\nLink to the same branch's results.",
+          "timestamp": "2024-08-12T12:39:58+01:00",
+          "tree_id": "19085996ff80fa1dc9e1ea56384771b2014c912d",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/5f97deacf73c0a3aed026621aeb7616f9f4c681d"
+        },
+        "date": 1723462898945,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 10688909.1875,
+            "unit": "ns",
+            "range": "± 726285.6424746973"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 18024279.052083332,
+            "unit": "ns",
+            "range": "± 1230125.2203317152"
           }
         ]
       }
