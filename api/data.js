@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723448142697,
+  "lastUpdate": 1723459518083,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -468,6 +468,54 @@ window.BENCHMARK_DATA = {
             "value": 216438.15458984376,
             "unit": "ns",
             "range": "± 1374.8099329286767"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "81b13bb391b10ecbf0a7bd6dd62d55c70ec204c8",
+          "message": "Add output caching\n\nAdd output caching to the OpenAPI endpoint.",
+          "timestamp": "2024-08-12T10:42:15Z",
+          "tree_id": "3b4f329cd9e11300bc8084679846f94fe7c48f05",
+          "url": "https://github.com/martincostello/api/commit/81b13bb391b10ecbf0a7bd6dd62d55c70ec204c8"
+        },
+        "date": 1723459517921,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 310179.4288411458,
+            "unit": "ns",
+            "range": "± 5300.461572806315"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221839.8126953125,
+            "unit": "ns",
+            "range": "± 1150.4223629824303"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 236723.86595052082,
+            "unit": "ns",
+            "range": "± 2075.000241353632"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 200230.703515625,
+            "unit": "ns",
+            "range": "± 1293.9196335828385"
           }
         ]
       }
