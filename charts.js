@@ -25,7 +25,7 @@
     const dataUrl = `https://raw.githubusercontent.com/martincostello/benchmarks/${branch}/${path}/data.js`;
 
     // Fetch the data, trim the prefix and parse it as JSON
-    const response = await fetch(dataUrl);
+    const response = await fetch(dataUrl, { cache: 'no-cache' });
     const dataText = await response.text();
     const data = JSON.parse(dataText.slice('window.BENCHMARK_DATA = '.length));
 
