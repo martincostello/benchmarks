@@ -36,7 +36,7 @@
     resultsIcon.setAttribute('aria-hidden', 'true');
 
     const resultsLink = document.createElement('a');
-    resultsLink.href = `https://github.com/martincostello/${repo}`;
+    resultsLink.href = `${repo}`;
     resultsLink.role = 'button';
     resultsLink.classList.add('btn');
     resultsLink.classList.add('btn-primary');
