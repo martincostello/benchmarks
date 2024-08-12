@@ -49,6 +49,8 @@
       canvas.className = 'benchmark-chart';
       parent.appendChild(canvas);
 
+      dataset.sort((a, b) => a.date - b.date);
+
       const color = '#178600';
       const data = {
         labels: dataset.map(d => d.commit.id.slice(0, 7)),
