@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723400273534,
+  "lastUpdate": 1723447706973,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -372,6 +372,54 @@ window.BENCHMARK_DATA = {
             "value": 216105.46852213543,
             "unit": "ns",
             "range": "± 1675.0582727892327"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "a92f9950ab6370aed0215d96646fbee957111dd8",
+          "message": "Remove web SDK from benchmarks\n\nRemove the web SDK from the benchmarks project so that the artifact directory is not overridden.",
+          "timestamp": "2024-08-12T08:24:56+01:00",
+          "tree_id": "f91da018c17efb9178bc0af55cca66ffdae8b9b2",
+          "url": "https://github.com/martincostello/api/commit/a92f9950ab6370aed0215d96646fbee957111dd8"
+        },
+        "date": 1723447706785,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 340753.4123186384,
+            "unit": "ns",
+            "range": "± 1661.8230722729845"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 239084.8615234375,
+            "unit": "ns",
+            "range": "± 1106.2093719227767"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 255480.7328125,
+            "unit": "ns",
+            "range": "± 1773.6652286016051"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 216545.17180989584,
+            "unit": "ns",
+            "range": "± 1147.282259597628"
           }
         ]
       }
