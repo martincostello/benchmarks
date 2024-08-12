@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723447706973,
+  "lastUpdate": 1723448142697,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -420,6 +420,54 @@ window.BENCHMARK_DATA = {
             "value": 216545.17180989584,
             "unit": "ns",
             "range": "± 1147.282259597628"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "121bc0eb4c0ac4e8224204bad0706457c701d04d",
+          "message": "Remove redundant files (#1912)\n\n- Remove files that are now served from CDN.\r\n- Update favicon.ico.",
+          "timestamp": "2024-08-12T07:32:16Z",
+          "tree_id": "54c6102e623096f6c39ff69710965a170c1fac85",
+          "url": "https://github.com/martincostello/api/commit/121bc0eb4c0ac4e8224204bad0706457c701d04d"
+        },
+        "date": 1723448142525,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 347687.4011579241,
+            "unit": "ns",
+            "range": "± 2252.421106042693"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 244032.52044270834,
+            "unit": "ns",
+            "range": "± 1492.5851003924072"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 259707.86946614584,
+            "unit": "ns",
+            "range": "± 1500.0516770683455"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 216438.15458984376,
+            "unit": "ns",
+            "range": "± 1374.8099329286767"
           }
         ]
       }
