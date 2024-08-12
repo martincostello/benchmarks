@@ -1,6 +1,6 @@
 'use strict';
-(function () {
-  function init() {
+(async function () {
+  async function init() {
     function collectBenchesPerTestCase(entries) {
       const map = new Map();
       for (const entry of entries) {
@@ -18,7 +18,16 @@
       return map;
     }
 
-    const data = window.BENCHMARK_DATA;
+    // Get the raw data for this repository and optional branch
+    const segments = window.location.pathname.split('/');
+    const path = segments[segments.length - 2];
+    const branch = new URLSearchParams(window.location.search).get('branch') || 'main';
+    const dataUrl = `https://raw.githubusercontent.com/martincostello/benchmarks/${branch}/${path}/data.js`;
+
+    // Fetch the data, trim the prefix and parse it as JSON
+    const response = await fetch(dataUrl);
+    const dataText = await response.text();
+    const data = JSON.parse(dataText.slice('window.BENCHMARK_DATA = '.length));
 
     // Render header
     document.getElementById('last-update').textContent = new Date(data.lastUpdate).toLocaleString();
@@ -174,5 +183,5 @@
     }
   }
 
-  renderAllCharts(init());
+  renderAllCharts(await init());
 })();
