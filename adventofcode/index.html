@@ -98,12 +98,31 @@
     </nav>
     <header id="header">
       <div class="header-item">
+        <strong class="header-label">Branch:</strong>
+        <span><code id="branch-name"></code></span>
+      </div>
+      <div class="header-item">
         <strong class="header-label">Last Updated:</strong>
         <span id="last-update"></span>
       </div>
       <div class="header-item">
         <strong class="header-label">Repository:</strong>
         <a id="repository-link" rel="noopener" target="_blank"></a>
+      </div>
+      <div class="dropdown">
+        <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Branch
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="?branch=main">
+              main
+              <span class="badge rounded-pill text-bg-secondary">Default</span>
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="?branch=dotnet-vnext">dotnet-vnext</a></li>
+          <li><a class="dropdown-item" href="?branch=dotnet-nightly">dotnet-nightly</a></li>
+        </ul>
       </div>
     </header>
     <main class="container body-content" id="main"></main>

@@ -30,6 +30,7 @@
     const data = JSON.parse(dataText.slice('window.BENCHMARK_DATA = '.length));
 
     // Render header
+    document.getElementById('branch-name').textContent = branch;
     document.getElementById('last-update').textContent = new Date(data.lastUpdate).toLocaleString();
     const repoLink = document.getElementById('repository-link');
     repoLink.href = data.repoUrl;
