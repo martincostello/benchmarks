@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723561398072,
+  "lastUpdate": 1723576926114,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -564,6 +564,54 @@ window.BENCHMARK_DATA = {
             "value": 204301.0845703125,
             "unit": "ns",
             "range": "± 1620.9069434774249"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "1def53d037dcbf27564f3c27d88bdbe6ed7ca74f",
+          "message": "Consume .NET daily builds\n\nAdd NuGet feed for .NET 9 pre-release packages.",
+          "timestamp": "2024-08-13T20:18:23+01:00",
+          "tree_id": "3d5e6fbb9279873d225eb8fcc761a3cd5e25aab3",
+          "url": "https://github.com/martincostello/api/commit/1def53d037dcbf27564f3c27d88bdbe6ed7ca74f"
+        },
+        "date": 1723576925942,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 312056.5699869792,
+            "unit": "ns",
+            "range": "± 4801.010268097611"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 225784.87513020833,
+            "unit": "ns",
+            "range": "± 928.9296432826264"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 235696.6796875,
+            "unit": "ns",
+            "range": "± 1947.672723096216"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 203948.32190755208,
+            "unit": "ns",
+            "range": "± 1022.3853487145849"
           }
         ]
       }
