@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723522955427,
+  "lastUpdate": 1723524158428,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -324,6 +324,60 @@ window.BENCHMARK_DATA = {
             "value": 237957.1990234375,
             "unit": "ns",
             "range": "± 1523.1945650422213"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "924a7ab26248c77df35a63227db253da31e0aa0f",
+          "message": "Bump Microsoft.Playwright from 1.45.1 to 1.46.0 (#2158)\n\nBumps [Microsoft.Playwright](https://github.com/microsoft/playwright-dotnet) from 1.45.1 to 1.46.0.\n- [Release notes](https://github.com/microsoft/playwright-dotnet/releases)\n- [Commits](https://github.com/microsoft/playwright-dotnet/compare/v1.45.1...v1.46.0)\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.Playwright\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-13T04:39:08Z",
+          "tree_id": "55a82d5e5c825e7cb388739607b603ef0132246a",
+          "url": "https://github.com/martincostello/website/commit/924a7ab26248c77df35a63227db253da31e0aa0f"
+        },
+        "date": 1723524158261,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 362099.52952223556,
+            "unit": "ns",
+            "range": "± 1324.8273377889816"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 372448.784109933,
+            "unit": "ns",
+            "range": "± 1069.2190153735637"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 430116.9972245066,
+            "unit": "ns",
+            "range": "± 3791.7689883234016"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 402740.71041666664,
+            "unit": "ns",
+            "range": "± 3754.009210593664"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 242617.20813802083,
+            "unit": "ns",
+            "range": "± 1662.5246250490184"
           }
         ]
       }
