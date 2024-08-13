@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723463411516,
+  "lastUpdate": 1723523342252,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -564,6 +564,54 @@ window.BENCHMARK_DATA = {
             "value": 218084.22080078124,
             "unit": "ns",
             "range": "± 1384.3176585949993"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "886ad74e6cd00c5a77ee91b90dad1fe5a49a4206",
+          "message": "Bump the typescript-eslint group in /src/API with 2 updates (#1915)\n\nBumps the typescript-eslint group in /src/API with 2 updates: [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/eslint-plugin) and [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/parser).\n\n\nUpdates `@typescript-eslint/eslint-plugin` from 8.0.1 to 8.1.0\n- [Release notes](https://github.com/typescript-eslint/typescript-eslint/releases)\n- [Changelog](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/CHANGELOG.md)\n- [Commits](https://github.com/typescript-eslint/typescript-eslint/commits/v8.1.0/packages/eslint-plugin)\n\nUpdates `@typescript-eslint/parser` from 8.0.1 to 8.1.0\n- [Release notes](https://github.com/typescript-eslint/typescript-eslint/releases)\n- [Changelog](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/CHANGELOG.md)\n- [Commits](https://github.com/typescript-eslint/typescript-eslint/commits/v8.1.0/packages/parser)\n\n---\nupdated-dependencies:\n- dependency-name: \"@typescript-eslint/eslint-plugin\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n  dependency-group: typescript-eslint\n- dependency-name: \"@typescript-eslint/parser\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n  dependency-group: typescript-eslint\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-13T04:25:58Z",
+          "tree_id": "21e772aea0e1ff629d4b6edddc86e80ff750458a",
+          "url": "https://github.com/martincostello/api/commit/886ad74e6cd00c5a77ee91b90dad1fe5a49a4206"
+        },
+        "date": 1723523341788,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 348983.85540364584,
+            "unit": "ns",
+            "range": "± 1164.231772514083"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 240773.73151506696,
+            "unit": "ns",
+            "range": "± 2275.2344861226265"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 255227.3005859375,
+            "unit": "ns",
+            "range": "± 1566.628369167787"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 216565.52610677082,
+            "unit": "ns",
+            "range": "± 2061.822047392821"
           }
         ]
       }
