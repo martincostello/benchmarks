@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723557788771,
+  "lastUpdate": 1723562883946,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -126,6 +126,48 @@ window.BENCHMARK_DATA = {
             "value": 8120505.114583333,
             "unit": "ns",
             "range": "± 553127.4568499891"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "f2eb177fdbb48b0d6a776d0576ed0625309736a8",
+          "message": "Remove workaround\n\nRemove workaround for install issue with .NET 9.",
+          "timestamp": "2024-08-13T16:25:52+01:00",
+          "tree_id": "ec0d4947931af3b0e6e7cb4cc16e834e009ae08d",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/f2eb177fdbb48b0d6a776d0576ed0625309736a8"
+        },
+        "date": 1723562883813,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 12518909.942708334,
+            "unit": "ns",
+            "range": "± 941163.1279215236"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 12944988.588541666,
+            "unit": "ns",
+            "range": "± 871510.9146429443"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 6664691.135416667,
+            "unit": "ns",
+            "range": "± 373940.896517167"
           }
         ]
       }
