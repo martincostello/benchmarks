@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723459518083,
+  "lastUpdate": 1723566365976,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -516,6 +516,54 @@ window.BENCHMARK_DATA = {
             "value": 200230.703515625,
             "unit": "ns",
             "range": "± 1293.9196335828385"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "87486732c349e085521e65f5056ee7792595be08",
+          "message": "Update to ASP.NET Core 9 preview 7\n\nUpdate to preview 7 of ASP.NET Core 9.",
+          "timestamp": "2024-08-13T17:22:52+01:00",
+          "tree_id": "5ab9bd002989e237728b85267bbec9246c06a338",
+          "url": "https://github.com/martincostello/api/commit/87486732c349e085521e65f5056ee7792595be08"
+        },
+        "date": 1723566365407,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 309247.1146484375,
+            "unit": "ns",
+            "range": "± 5647.780754168822"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221476.54527064733,
+            "unit": "ns",
+            "range": "± 834.725788026559"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 232774.84291294642,
+            "unit": "ns",
+            "range": "± 2099.3908754539093"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 199370.6259358724,
+            "unit": "ns",
+            "range": "± 849.3662681439389"
           }
         ]
       }
