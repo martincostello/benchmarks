@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723463371975,
+  "lastUpdate": 1723522670682,
   "repoUrl": "https://github.com/martincostello/adventofcode",
   "entries": {
     "Advent of Code": [
@@ -480,6 +480,126 @@ window.BENCHMARK_DATA = {
             "value": 57804367.18518519,
             "unit": "ns",
             "range": "± 1250688.4246529045"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "015e5e6ffc2a51110216016ad34f118d074a6bd0",
+          "message": "Bump the typescript-eslint group (#1821)\n\nBumps the typescript-eslint group in /src/AdventOfCode.Site with 2 updates: [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/eslint-plugin) and [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/parser).\n\n\nUpdates `@typescript-eslint/eslint-plugin` from 8.0.1 to 8.1.0\n- [Release notes](https://github.com/typescript-eslint/typescript-eslint/releases)\n- [Changelog](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/CHANGELOG.md)\n- [Commits](https://github.com/typescript-eslint/typescript-eslint/commits/v8.1.0/packages/eslint-plugin)\n\nUpdates `@typescript-eslint/parser` from 8.0.1 to 8.1.0\n- [Release notes](https://github.com/typescript-eslint/typescript-eslint/releases)\n- [Changelog](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/CHANGELOG.md)\n- [Commits](https://github.com/typescript-eslint/typescript-eslint/commits/v8.1.0/packages/parser)\n\n---\nupdated-dependencies:\n- dependency-name: \"@typescript-eslint/eslint-plugin\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n  dependency-group: typescript-eslint\n- dependency-name: \"@typescript-eslint/parser\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n  dependency-group: typescript-eslint\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-13T04:14:26Z",
+          "tree_id": "bbf4dbb25da89908918aea91df447489c73c1502",
+          "url": "https://github.com/martincostello/adventofcode/commit/015e5e6ffc2a51110216016ad34f118d074a6bd0"
+        },
+        "date": 1723522670499,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-01)",
+            "value": 164051.51993815103,
+            "unit": "ns",
+            "range": "± 283.03024344128227"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-02)",
+            "value": 72633.34143066406,
+            "unit": "ns",
+            "range": "± 695.0999008598552"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-03)",
+            "value": 559320.0519205729,
+            "unit": "ns",
+            "range": "± 1843.938025748899"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-04)",
+            "value": 3146660.2955729165,
+            "unit": "ns",
+            "range": "± 7896.006270428687"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-06)",
+            "value": 220626.66333007812,
+            "unit": "ns",
+            "range": "± 299.93111962173276"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-07)",
+            "value": 5696923.315104167,
+            "unit": "ns",
+            "range": "± 28135.777368710143"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-08)",
+            "value": 113394.88415527344,
+            "unit": "ns",
+            "range": "± 859.6258704856829"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-09)",
+            "value": 148964.39331054688,
+            "unit": "ns",
+            "range": "± 1722.5088871590442"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-10)",
+            "value": 89999.03922526042,
+            "unit": "ns",
+            "range": "± 894.050215362709"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-13)",
+            "value": 19497796.822916668,
+            "unit": "ns",
+            "range": "± 40349.663815014625"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-16)",
+            "value": 5232.089637756348,
+            "unit": "ns",
+            "range": "± 19.142487577131067"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-17)",
+            "value": 103047996.13333333,
+            "unit": "ns",
+            "range": "± 658208.8110648242"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-20)",
+            "value": 6093349.239583333,
+            "unit": "ns",
+            "range": "± 23887.124303597193"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-21)",
+            "value": 17808.05908203125,
+            "unit": "ns",
+            "range": "± 152.0517687721592"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-22)",
+            "value": 4329960.815104167,
+            "unit": "ns",
+            "range": "± 16017.286397535314"
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-24)",
+            "value": 59282394.518518515,
+            "unit": "ns",
+            "range": "± 413047.70251212915"
           }
         ]
       }
