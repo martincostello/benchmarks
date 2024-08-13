@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723583000515,
+  "lastUpdate": 1723587465431,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -288,6 +288,42 @@ window.BENCHMARK_DATA = {
             "value": 14322720.989583334,
             "unit": "ns",
             "range": "± 2029577.1805669058"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "999f20fabc38adcbd9547f35135ca6d842a8fe01",
+          "message": "Update packages\n\nUpdate NuGet packages when updating the SDK.",
+          "timestamp": "2024-08-13T23:16:04+01:00",
+          "tree_id": "11ede7d117455220b3cb0b2a290c81f6bbbf4645",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/999f20fabc38adcbd9547f35135ca6d842a8fe01"
+        },
+        "date": 1723587464938,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 21631885.364583332,
+            "unit": "ns",
+            "range": "± 7503399.684036822"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 19125039.5,
+            "unit": "ns",
+            "range": "± 1542431.9314429297"
           }
         ]
       }
