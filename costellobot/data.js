@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723566873771,
+  "lastUpdate": 1723577613853,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -126,6 +126,48 @@ window.BENCHMARK_DATA = {
             "value": 307816.24148995534,
             "unit": "ns",
             "range": "± 1580.9588096060966"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "5ff671949abb6e6fe48a0c1e6e8929eb9b4e9771",
+          "message": "Consume .NET daily builds\n\nAdd NuGet feed for .NET 9 pre-release packages.",
+          "timestamp": "2024-08-13T20:29:49+01:00",
+          "tree_id": "3de9e42dc62bd957aa368494ef2776ed23983472",
+          "url": "https://github.com/martincostello/costellobot/commit/5ff671949abb6e6fe48a0c1e6e8929eb9b4e9771"
+        },
+        "date": 1723577613669,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 539547.7756696428,
+            "unit": "ns",
+            "range": "± 3041.055372603184"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 238636.43619791666,
+            "unit": "ns",
+            "range": "± 1758.945671398241"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 308602.924609375,
+            "unit": "ns",
+            "range": "± 1083.766617198006"
           }
         ]
       }
