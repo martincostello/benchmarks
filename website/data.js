@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723570342005,
+  "lastUpdate": 1723570984944,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -432,6 +432,60 @@ window.BENCHMARK_DATA = {
             "value": 245175.76302083334,
             "unit": "ns",
             "range": "± 1161.020763527894"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "fb0e0aba3b793e3a2690bde2baea975c27eb31e0",
+          "message": "Remove workaround\n\nRemove workaround for bug fixed in .NET 8.0.400 SDK.",
+          "timestamp": "2024-08-13T18:39:14+01:00",
+          "tree_id": "1a37642c7c81bcfcd8996c3579f07350e1ffc09f",
+          "url": "https://github.com/martincostello/website/commit/fb0e0aba3b793e3a2690bde2baea975c27eb31e0"
+        },
+        "date": 1723570984445,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 361223.54161658656,
+            "unit": "ns",
+            "range": "± 1107.9924468351908"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 368416.1183035714,
+            "unit": "ns",
+            "range": "± 1335.7826826574556"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 431330.91354166664,
+            "unit": "ns",
+            "range": "± 7662.33257117401"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 418642.8553292411,
+            "unit": "ns",
+            "range": "± 1680.93556974123"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 240996.705078125,
+            "unit": "ns",
+            "range": "± 1712.322622394778"
           }
         ]
       }
