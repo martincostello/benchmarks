@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723541904442,
+  "lastUpdate": 1723557788771,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -84,6 +84,48 @@ window.BENCHMARK_DATA = {
             "value": 7968058.833333333,
             "unit": "ns",
             "range": "± 93049.31423533752"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "2e9e0fcbb40c115838d0326b2574c3c2a1024c2b",
+          "message": "Use official NuGet packages\n\n- Use official NuGet packages for .NET 9 preview 7.\n- Update .NET SDK.",
+          "timestamp": "2024-08-13T15:00:50+01:00",
+          "tree_id": "f6b78e91970b7fe36350355ae9003e00e1d9d45e",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/2e9e0fcbb40c115838d0326b2574c3c2a1024c2b"
+        },
+        "date": 1723557788468,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 11252371.192708334,
+            "unit": "ns",
+            "range": "± 761672.9975225849"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 11280290.432291666,
+            "unit": "ns",
+            "range": "± 178517.69915195563"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 8120505.114583333,
+            "unit": "ns",
+            "range": "± 553127.4568499891"
           }
         ]
       }
