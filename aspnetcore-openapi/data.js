@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723558314791,
+  "lastUpdate": 1723583058343,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -126,6 +126,48 @@ window.BENCHMARK_DATA = {
             "value": 6428876.286458333,
             "unit": "ns",
             "range": "± 97117.56119290275"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c22d1b858ed67cfd78c4dac88db9d1697882a86d",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24413.1 (#37)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24413.1.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24413.1 SDK.\n\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-preview.7.24406.2 to 9.0.0-rc.1.24413.4.\nBumps Microsoft.AspNetCore.OpenApi from 9.0.0-preview.7.24406.2 to 9.0.0-rc.1.24413.4.\nBumps Microsoft.EntityFrameworkCore.Sqlite from 9.0.0-preview.7.24405.3 to 9.0.0-rc.1.24402.2.\nBumps Microsoft.Extensions.ApiDescription.Server from 9.0.0-preview.7.24406.2 to 9.0.0-rc.1.24413.4.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.EntityFrameworkCore.Sqlite\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-13T21:01:56Z",
+          "tree_id": "89084b8e42ff645e630d8c03fd1353c120681960",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/c22d1b858ed67cfd78c4dac88db9d1697882a86d"
+        },
+        "date": 1723583057854,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 2980366.3736979165,
+            "unit": "ns",
+            "range": "± 883544.0625413307"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 12119190.192708334,
+            "unit": "ns",
+            "range": "± 174056.90920371245"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 7797526.869791667,
+            "unit": "ns",
+            "range": "± 191327.18880866194"
           }
         ]
       }
