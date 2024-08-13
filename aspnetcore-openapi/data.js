@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723583058343,
+  "lastUpdate": 1723588098528,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -168,6 +168,48 @@ window.BENCHMARK_DATA = {
             "value": 7797526.869791667,
             "unit": "ns",
             "range": "± 191327.18880866194"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "70740b57a00ee44c3be59f28e39e89fe3f804373",
+          "message": "Fix TODO\n\nRemove usage of short job.",
+          "timestamp": "2024-08-13T23:24:42+01:00",
+          "tree_id": "fd7d33f256e9f27785b72b76825fc201a9580136",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/70740b57a00ee44c3be59f28e39e89fe3f804373"
+        },
+        "date": 1723588098240,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1064135.1499720982,
+            "unit": "ns",
+            "range": "± 45738.29314461833"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4528481.5693359375,
+            "unit": "ns",
+            "range": "± 115085.91846860523"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2780569.3795572915,
+            "unit": "ns",
+            "range": "± 109107.35891289059"
           }
         ]
       }
