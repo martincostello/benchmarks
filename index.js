@@ -4,6 +4,7 @@
     'adventofcode',
     'api',
     'aspnetcore-openapi',
+    'costellobot',
     'openapi-extensions',
     'project-euler',
     'website',
