@@ -4,6 +4,7 @@
     'adventofcode',
     'api',
     'aspnetcore-openapi',
+    'costellobot',
     'openapi-extensions',
     'project-euler',
     'website',
@@ -33,10 +34,12 @@
     const resultsIcon = document.createElement('span');
     resultsIcon.classList.add('fa-solid');
     resultsIcon.classList.add('fa-chart-line');
+    resultsIcon.classList.add('d-none');
+    resultsIcon.classList.add('d-lg-inline');
     resultsIcon.setAttribute('aria-hidden', 'true');
 
     const resultsLink = document.createElement('a');
-    resultsLink.href = `https://github.com/martincostello/${repo}`;
+    resultsLink.href = `${repo}`;
     resultsLink.role = 'button';
     resultsLink.classList.add('btn');
     resultsLink.classList.add('btn-primary');
