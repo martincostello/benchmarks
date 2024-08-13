@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723523342252,
+  "lastUpdate": 1723568563408,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -612,6 +612,54 @@ window.BENCHMARK_DATA = {
             "value": 216565.52610677082,
             "unit": "ns",
             "range": "± 2061.822047392821"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "122c0da805e35309d86b284ccc2641f2cf197019",
+          "message": "Update .NET SDK to 8.0.400 (#1917)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 8.0.400.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 8.0.400 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 8.0.7 to 8.0.8.\nBumps Microsoft.AspNetCore.Mvc.Testing from 8.0.7 to 8.0.8.\nBumps Microsoft.Extensions.ApiDescription.Server from 8.0.7 to 8.0.8.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-13T16:57:51Z",
+          "tree_id": "296fcf7e62b26b4dd607f87c102348dcfe437eee",
+          "url": "https://github.com/martincostello/api/commit/122c0da805e35309d86b284ccc2641f2cf197019"
+        },
+        "date": 1723568563236,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 344556.161063058,
+            "unit": "ns",
+            "range": "± 2084.2027247529577"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 240858.42063802082,
+            "unit": "ns",
+            "range": "± 1618.3140306599644"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 254122.09772600446,
+            "unit": "ns",
+            "range": "± 1408.44147903183"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 214488.09973958333,
+            "unit": "ns",
+            "range": "± 1293.9030192515536"
           }
         ]
       }
