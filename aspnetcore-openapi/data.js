@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723468591682,
+  "lastUpdate": 1723558314791,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -84,6 +84,48 @@ window.BENCHMARK_DATA = {
             "value": 8270415.270833333,
             "unit": "ns",
             "range": "± 297281.1188451132"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "100eb411b18a0d14e2685d891e21901c8ce01962",
+          "message": "Consume .NET nightly builds\n\nConsume the latest nightly builds of .NET 9.",
+          "timestamp": "2024-08-13T15:09:39+01:00",
+          "tree_id": "85f2108b89d53b67c946691690304917089b5b1e",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/100eb411b18a0d14e2685d891e21901c8ce01962"
+        },
+        "date": 1723558314589,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 15572718.59375,
+            "unit": "ns",
+            "range": "± 1491041.0911661123"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 12350084.848958334,
+            "unit": "ns",
+            "range": "± 654924.679706373"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 6428876.286458333,
+            "unit": "ns",
+            "range": "± 97117.56119290275"
           }
         ]
       }
