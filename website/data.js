@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723524158428,
+  "lastUpdate": 1723570342005,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -378,6 +378,60 @@ window.BENCHMARK_DATA = {
             "value": 242617.20813802083,
             "unit": "ns",
             "range": "± 1662.5246250490184"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8553cf7d430e66068bdb43a31e2028ab871ab994",
+          "message": "Update .NET SDK to 8.0.400 (#2160)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 8.0.400.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 8.0.400 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 8.0.7 to 8.0.8.\nBumps Microsoft.AspNetCore.Mvc.Testing from 8.0.7 to 8.0.8.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-13T17:28:29Z",
+          "tree_id": "8d64eac4f8eb27bdcb85b610152806c7a79db893",
+          "url": "https://github.com/martincostello/website/commit/8553cf7d430e66068bdb43a31e2028ab871ab994"
+        },
+        "date": 1723570341488,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 365270.95256696426,
+            "unit": "ns",
+            "range": "± 1116.2242634307656"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 375759.5177176339,
+            "unit": "ns",
+            "range": "± 1205.99090063236"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 429932.7344501202,
+            "unit": "ns",
+            "range": "± 8181.141842393783"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 407498.7684151786,
+            "unit": "ns",
+            "range": "± 2035.1393042030627"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 245175.76302083334,
+            "unit": "ns",
+            "range": "± 1161.020763527894"
           }
         ]
       }
