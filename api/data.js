@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723460283654,
+  "lastUpdate": 1723561398072,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -516,6 +516,54 @@ window.BENCHMARK_DATA = {
             "value": 202732.68258231026,
             "unit": "ns",
             "range": "± 2146.2668979005844"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b8a20a03ae8bb35b75bc1302ff9113e867110da4",
+          "message": "Bump OpenApi.Extensions\r\nUpdate to latest version of MartinCostello.OpenApi.Extensions from NuGet.org.",
+          "timestamp": "2024-08-13T16:00:01+01:00",
+          "tree_id": "a07500d33113b6ec0ba380e49245ea16d2fc326b",
+          "url": "https://github.com/martincostello/api/commit/b8a20a03ae8bb35b75bc1302ff9113e867110da4"
+        },
+        "date": 1723561397909,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 314355.160546875,
+            "unit": "ns",
+            "range": "± 4167.440672319369"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 220570.8052455357,
+            "unit": "ns",
+            "range": "± 1092.759966219599"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 238658.21015625,
+            "unit": "ns",
+            "range": "± 2505.7146531705166"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 204301.0845703125,
+            "unit": "ns",
+            "range": "± 1620.9069434774249"
           }
         ]
       }
