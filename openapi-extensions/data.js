@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723462899198,
+  "lastUpdate": 1723558411515,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -216,6 +216,42 @@ window.BENCHMARK_DATA = {
             "value": 18024279.052083332,
             "unit": "ns",
             "range": "± 1230125.2203317152"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "633c04fbce9b0b8a97cfcd6879ae51c69382738e",
+          "message": "Consume .NET nightly builds\n\nConsume the latest nightly builds of .NET 9.",
+          "timestamp": "2024-08-13T15:11:40+01:00",
+          "tree_id": "1957a18933821ec01cfa2f1d48687fc23ebe163a",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/633c04fbce9b0b8a97cfcd6879ae51c69382738e"
+        },
+        "date": 1723558411024,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 10898633.395833334,
+            "unit": "ns",
+            "range": "± 210555.66335662158"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 18758007.604166668,
+            "unit": "ns",
+            "range": "± 1544020.591408821"
           }
         ]
       }
