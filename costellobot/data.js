@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723622970952,
+  "lastUpdate": 1723623040138,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -210,6 +210,48 @@ window.BENCHMARK_DATA = {
             "value": 309714.3108723958,
             "unit": "ns",
             "range": "± 2573.3975771112373"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0752bdfd3a7a1e8b3cdb77f4e3c414564a5a3e45",
+          "message": "Bump the microsoft-extensions group with 2 updates (#1623)\n\nBumps the microsoft-extensions group with 2 updates: [Microsoft.Extensions.Http.Resilience](https://github.com/dotnet/extensions) and [Microsoft.Extensions.TimeProvider.Testing](https://github.com/dotnet/extensions).\n\n\nUpdates `Microsoft.Extensions.Http.Resilience` from 8.7.0 to 8.8.0\n- [Release notes](https://github.com/dotnet/extensions/releases)\n- [Commits](https://github.com/dotnet/extensions/commits)\n\nUpdates `Microsoft.Extensions.TimeProvider.Testing` from 8.7.0 to 8.8.0\n- [Release notes](https://github.com/dotnet/extensions/releases)\n- [Commits](https://github.com/dotnet/extensions/commits)\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.Extensions.Http.Resilience\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n  dependency-group: microsoft-extensions\n- dependency-name: Microsoft.Extensions.TimeProvider.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n  dependency-group: microsoft-extensions\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-14T08:07:22Z",
+          "tree_id": "a8db73dd6221f2fb30cecd43bf75fb426dd3cf7b",
+          "url": "https://github.com/martincostello/costellobot/commit/0752bdfd3a7a1e8b3cdb77f4e3c414564a5a3e45"
+        },
+        "date": 1723623039954,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 601960.9610877404,
+            "unit": "ns",
+            "range": "± 4277.741764134576"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 257566.57156808037,
+            "unit": "ns",
+            "range": "± 1371.3740396057385"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 310408.57875279017,
+            "unit": "ns",
+            "range": "± 1211.8963601256407"
           }
         ]
       }
