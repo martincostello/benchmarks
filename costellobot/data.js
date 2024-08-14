@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723650260188,
+  "lastUpdate": 1723652707038,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -294,6 +294,48 @@ window.BENCHMARK_DATA = {
             "value": 304699.59437779017,
             "unit": "ns",
             "range": "± 1474.2815774068963"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4671835701e6f9344c5ad3024d8c0690ac6e1c1f",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24414.7 (#1627)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.7.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump System.Text.Json from 9.0.0-rc.1.24413.14 to 9.0.0-rc.1.24414.2\n\nBumps System.Text.Json from 9.0.0-rc.1.24413.14 to 9.0.0-rc.1.24414.2.\n\n---\nupdated-dependencies:\n- dependency-name: System.Text.Json\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-14T16:21:49Z",
+          "tree_id": "04e930374bb27f62f307701c9995efb51462307e",
+          "url": "https://github.com/martincostello/costellobot/commit/4671835701e6f9344c5ad3024d8c0690ac6e1c1f"
+        },
+        "date": 1723652706877,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 544806.3425480769,
+            "unit": "ns",
+            "range": "± 6038.435105987072"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 239332.41078404017,
+            "unit": "ns",
+            "range": "± 1870.410367843077"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 310269.2242838542,
+            "unit": "ns",
+            "range": "± 1341.2836447259042"
           }
         ]
       }
