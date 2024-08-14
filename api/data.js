@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723609438040,
+  "lastUpdate": 1723635023094,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -708,6 +708,54 @@ window.BENCHMARK_DATA = {
             "value": 210229.0523158482,
             "unit": "ns",
             "range": "± 847.1501237493056"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "a39d4e97449008c61343908a64059e515e7ee985",
+          "message": "Bump elliptic\n\nBump elliptic to 6.5.7 to resolve vulnerability alert.",
+          "timestamp": "2024-08-14T12:27:14+01:00",
+          "tree_id": "6aa700c6ceb5b408e62b6c8ee501c8e4ac8329c7",
+          "url": "https://github.com/martincostello/api/commit/a39d4e97449008c61343908a64059e515e7ee985"
+        },
+        "date": 1723635022907,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 352331.0488978795,
+            "unit": "ns",
+            "range": "± 3386.6719680192427"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 242679.59889322918,
+            "unit": "ns",
+            "range": "± 1546.6912612604376"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 258752.22669270833,
+            "unit": "ns",
+            "range": "± 1062.6948331536405"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 220161.77506510416,
+            "unit": "ns",
+            "range": "± 1914.4074193308347"
           }
         ]
       }
