@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723653379077,
+  "lastUpdate": 1723662603948,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -900,6 +900,54 @@ window.BENCHMARK_DATA = {
             "value": 199586.70462239583,
             "unit": "ns",
             "range": "± 1723.7146233757837"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "254a27aaa07f96ce162629a353ff7a4a957efcb3",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24414.13 (#1923)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.13.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24414.13 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 9.0.0-rc.1.24413.14 to 9.0.0-rc.1.24414.3.\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-rc.1.24413.14 to 9.0.0-rc.1.24414.3.\nBumps Microsoft.AspNetCore.OpenApi from 9.0.0-rc.1.24413.14 to 9.0.0-rc.1.24414.3.\nBumps Microsoft.Extensions.ApiDescription.Server from 9.0.0-rc.1.24413.14 to 9.0.0-rc.1.24414.3.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-14T19:06:45Z",
+          "tree_id": "7b9ac6920940b40f2e0a12d3ecc9c4166127a85c",
+          "url": "https://github.com/martincostello/api/commit/254a27aaa07f96ce162629a353ff7a4a957efcb3"
+        },
+        "date": 1723662603686,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 303693.53683035716,
+            "unit": "ns",
+            "range": "± 4147.490647237406"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 220178.69074358259,
+            "unit": "ns",
+            "range": "± 838.179484391017"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 234722.5034877232,
+            "unit": "ns",
+            "range": "± 1302.9218993958375"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 202644.9845703125,
+            "unit": "ns",
+            "range": "± 2069.5134137197856"
           }
         ]
       }
