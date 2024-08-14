@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723623059309,
+  "lastUpdate": 1723630855387,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -252,6 +252,48 @@ window.BENCHMARK_DATA = {
             "value": 308452.72747395834,
             "unit": "ns",
             "range": "± 1689.9782359523358"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5930c9b43967a6a713d7648fe26efb3c5d1a6bfb",
+          "message": "Update dependency overrides\n\nFrom M.A.DataProtection and add S.Drawing.Common.",
+          "timestamp": "2024-08-14T11:17:45+01:00",
+          "tree_id": "ec94ce181d121bc37ab7bd4a15c20ed30f220afe",
+          "url": "https://github.com/martincostello/costellobot/commit/5930c9b43967a6a713d7648fe26efb3c5d1a6bfb"
+        },
+        "date": 1723630855190,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 547490.4416666667,
+            "unit": "ns",
+            "range": "± 5144.015896662909"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 240905.90846354168,
+            "unit": "ns",
+            "range": "± 1398.3805743034995"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 310551.90436197916,
+            "unit": "ns",
+            "range": "± 1201.5409739893585"
           }
         ]
       }
