@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723619980998,
+  "lastUpdate": 1723621086937,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -126,6 +126,48 @@ window.BENCHMARK_DATA = {
             "value": 304458.8606770833,
             "unit": "ns",
             "range": "± 1379.652052651942"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f00f395c582aeb9e3ee1d385638a085ef7717e40",
+          "message": "Remove Microsoft.AspNetCore.DataProtection (#1622)\n\nRemove explicit package version for Microsoft.AspNetCore.DataProtection and replace with System.Drawing.Common instead to resolve vulnerability.",
+          "timestamp": "2024-08-14T07:34:47Z",
+          "tree_id": "51436bb92c6b71e9200348df232183d15e9c575b",
+          "url": "https://github.com/martincostello/costellobot/commit/f00f395c582aeb9e3ee1d385638a085ef7717e40"
+        },
+        "date": 1723621086471,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 598789.04609375,
+            "unit": "ns",
+            "range": "± 1168.970323899377"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 257920.5017578125,
+            "unit": "ns",
+            "range": "± 2277.4717870312907"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 309335.91796875,
+            "unit": "ns",
+            "range": "± 1940.3501360153095"
           }
         ]
       }
