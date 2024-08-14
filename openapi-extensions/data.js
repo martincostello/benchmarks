@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723612247256,
+  "lastUpdate": 1723613774283,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -324,6 +324,42 @@ window.BENCHMARK_DATA = {
             "value": 13656855.197916666,
             "unit": "ns",
             "range": "± 732593.7833334985"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "51722bc83944297bbe1cb9b97aa3974050210352",
+          "message": "Bump anchore/sbom-action from 0.17.0 to 0.17.1 (#50)",
+          "timestamp": "2024-08-14T06:34:36+01:00",
+          "tree_id": "64993d1a9c3b601b5e19f561fc51369158cb80f8",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/51722bc83944297bbe1cb9b97aa3974050210352"
+        },
+        "date": 1723613774133,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 12830994.765625,
+            "unit": "ns",
+            "range": "± 1512227.9774261073"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 19372677.979166668,
+            "unit": "ns",
+            "range": "± 1384545.239720458"
           }
         ]
       }
