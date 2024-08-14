@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723630658359,
+  "lastUpdate": 1723630714399,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -708,6 +708,54 @@ window.BENCHMARK_DATA = {
             "value": 203027.35009765625,
             "unit": "ns",
             "range": "± 1707.8485197824994"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "52967e8aeab48ba57d784505d4d13d8eb485cd1a",
+          "message": "Remove hack\n\nWarning should no longer appear with rc.1.",
+          "timestamp": "2024-08-14T11:15:11+01:00",
+          "tree_id": "336fe6e2b057da4ed1b66484bdcb957924ce91a6",
+          "url": "https://github.com/martincostello/api/commit/52967e8aeab48ba57d784505d4d13d8eb485cd1a"
+        },
+        "date": 1723630714216,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 317613.9200520833,
+            "unit": "ns",
+            "range": "± 4191.848433965924"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 223472.4617513021,
+            "unit": "ns",
+            "range": "± 773.8927204894308"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 237170.50997488838,
+            "unit": "ns",
+            "range": "± 1420.5883971832666"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 203494.35163225446,
+            "unit": "ns",
+            "range": "± 870.7897081003041"
           }
         ]
       }
