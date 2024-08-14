@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723568563408,
+  "lastUpdate": 1723609438040,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -660,6 +660,54 @@ window.BENCHMARK_DATA = {
             "value": 214488.09973958333,
             "unit": "ns",
             "range": "± 1293.9030192515536"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5fa1bdec710700bb4920b2392f031d4ddb9edc9a",
+          "message": "Bump Microsoft.Extensions.TimeProvider.Testing from 8.7.0 to 8.8.0 (#1919)\n\nBumps [Microsoft.Extensions.TimeProvider.Testing](https://github.com/dotnet/extensions) from 8.7.0 to 8.8.0.\n- [Release notes](https://github.com/dotnet/extensions/releases)\n- [Commits](https://github.com/dotnet/extensions/commits)\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.Extensions.TimeProvider.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-14T04:20:33Z",
+          "tree_id": "ad89992d1f87e8bd35bfc64974a31096261b66af",
+          "url": "https://github.com/martincostello/api/commit/5fa1bdec710700bb4920b2392f031d4ddb9edc9a"
+        },
+        "date": 1723609437848,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 343924.5981069711,
+            "unit": "ns",
+            "range": "± 1210.3732211278805"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 237646.9234375,
+            "unit": "ns",
+            "range": "± 1636.0911817681374"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 251917.2294921875,
+            "unit": "ns",
+            "range": "± 1383.8767236363917"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 210229.0523158482,
+            "unit": "ns",
+            "range": "± 847.1501237493056"
           }
         ]
       }
