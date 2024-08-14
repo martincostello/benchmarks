@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723647342065,
+  "lastUpdate": 1723652764600,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -396,6 +396,42 @@ window.BENCHMARK_DATA = {
             "value": 1145812.6711090687,
             "unit": "ns",
             "range": "± 46471.93798398094"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "da750afe609905c02f17d75d06eedfc0a2030bd4",
+          "message": "Update .NET SDK (#54)\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.7.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-14T16:23:39Z",
+          "tree_id": "338410ecb6c1456429b1891518acb839f99320a5",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/da750afe609905c02f17d75d06eedfc0a2030bd4"
+        },
+        "date": 1723652764110,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 837266.3760653409,
+            "unit": "ns",
+            "range": "± 23363.59406925787"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 1129286.4163851351,
+            "unit": "ns",
+            "range": "± 36963.01495288444"
           }
         ]
       }
