@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723652668245,
+  "lastUpdate": 1723663436291,
   "repoUrl": "https://github.com/martincostello/project-euler",
   "entries": {
     "Project Euler": [
@@ -2088,6 +2088,354 @@ window.BENCHMARK_DATA = {
             "value": 1130446537.6666667,
             "unit": "ns",
             "range": "± 15866803.775230609"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4fe4aa150d1a698ab51a93d6929b02c9fde42e6f",
+          "message": "Update .NET SDK (#522)\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.13.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-14T19:16:15Z",
+          "tree_id": "3434b89acc0d333a8206cad97eff596a7293533d",
+          "url": "https://github.com/martincostello/project-euler/commit/4fe4aa150d1a698ab51a93d6929b02c9fde42e6f"
+        },
+        "date": 1723663435804,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 001)",
+            "value": 1513.446081161499,
+            "unit": "ns",
+            "range": "± 23.897107685025354"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 002)",
+            "value": 35.52977567911148,
+            "unit": "ns",
+            "range": "± 0.4826199824187822"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 003)",
+            "value": 1662615.1067708333,
+            "unit": "ns",
+            "range": "± 167.3935215535395"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 004)",
+            "value": 23476916.135416668,
+            "unit": "ns",
+            "range": "± 361295.4407521136"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 005)",
+            "value": 169294733.7777778,
+            "unit": "ns",
+            "range": "± 167722.19836329544"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 006)",
+            "value": 380.272749265035,
+            "unit": "ns",
+            "range": "± 0.3935705453583653"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 007)",
+            "value": 596326.3404947916,
+            "unit": "ns",
+            "range": "± 2218.529834091548"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 008)",
+            "value": 366540.6949869792,
+            "unit": "ns",
+            "range": "± 8374.706003589294"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 009)",
+            "value": 935194.0152994791,
+            "unit": "ns",
+            "range": "± 4698.4554778954725"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 010)",
+            "value": 20329997.020833332,
+            "unit": "ns",
+            "range": "± 635666.1201939184"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 011)",
+            "value": 78543.81717936198,
+            "unit": "ns",
+            "range": "± 851.235658275285"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 012)",
+            "value": 122540867.06666666,
+            "unit": "ns",
+            "range": "± 310454.5545624507"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 013)",
+            "value": 2769.257033030192,
+            "unit": "ns",
+            "range": "± 10.486812494878897"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 014)",
+            "value": 12540765.645833334,
+            "unit": "ns",
+            "range": "± 71847.24050624961"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 015)",
+            "value": 113.47461001078288,
+            "unit": "ns",
+            "range": "± 0.2933342760624393"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 016)",
+            "value": 37360.51924641927,
+            "unit": "ns",
+            "range": "± 168.5176815323663"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 017)",
+            "value": 2662585.9680989585,
+            "unit": "ns",
+            "range": "± 16838.05089216965"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 018)",
+            "value": 6990.881156921387,
+            "unit": "ns",
+            "range": "± 35.671104481789975"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 019)",
+            "value": 29544.221552530926,
+            "unit": "ns",
+            "range": "± 49.723239714476165"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 020)",
+            "value": 15050.877944946289,
+            "unit": "ns",
+            "range": "± 42.82480508334935"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 021)",
+            "value": 141833.98274739584,
+            "unit": "ns",
+            "range": "± 284.6286095679454"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 022)",
+            "value": 1382291.171875,
+            "unit": "ns",
+            "range": "± 11799.198576996117"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 023)",
+            "value": 29458368.96875,
+            "unit": "ns",
+            "range": "± 166840.17099003284"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 024)",
+            "value": 309.3033137321472,
+            "unit": "ns",
+            "range": "± 0.2434451072944906"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 025)",
+            "value": 546007.6546223959,
+            "unit": "ns",
+            "range": "± 4409.578559173128"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 026)",
+            "value": 18749.66321818034,
+            "unit": "ns",
+            "range": "± 131.6954167103773"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 027)",
+            "value": 19181986.875,
+            "unit": "ns",
+            "range": "± 75231.68023180777"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 028)",
+            "value": 872.196325302124,
+            "unit": "ns",
+            "range": "± 1.4014823031915757"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 029)",
+            "value": 390727.96761067706,
+            "unit": "ns",
+            "range": "± 2139.1165836110663"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 030)",
+            "value": 60552825.88888889,
+            "unit": "ns",
+            "range": "± 202067.8284174236"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 031)",
+            "value": 1062.5153274536133,
+            "unit": "ns",
+            "range": "± 11.67292024113889"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 033)",
+            "value": 466548.90543619794,
+            "unit": "ns",
+            "range": "± 4192.465229080866"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 034)",
+            "value": 81155605.6111111,
+            "unit": "ns",
+            "range": "± 1229986.5702272395"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 035)",
+            "value": 27846246.635416668,
+            "unit": "ns",
+            "range": "± 120784.82994669199"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 036)",
+            "value": 35819107.51111111,
+            "unit": "ns",
+            "range": "± 714024.3467751396"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 037)",
+            "value": 19672381.958333332,
+            "unit": "ns",
+            "range": "± 839079.2953118633"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 038)",
+            "value": 9795304.864583334,
+            "unit": "ns",
+            "range": "± 184772.94270938303"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 040)",
+            "value": 110903894.86666667,
+            "unit": "ns",
+            "range": "± 1178742.58792064"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 041)",
+            "value": 238377851.22222224,
+            "unit": "ns",
+            "range": "± 9207935.80789282"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 042)",
+            "value": 104500.24892171223,
+            "unit": "ns",
+            "range": "± 2671.839711711418"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 044)",
+            "value": 7.76254998644193,
+            "unit": "ns",
+            "range": "± 0.04759324680074796"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 045)",
+            "value": 1546615.2669270833,
+            "unit": "ns",
+            "range": "± 1125.799538075532"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 046)",
+            "value": 69348.45658365886,
+            "unit": "ns",
+            "range": "± 54.006958243073356"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 047)",
+            "value": 103785142.8,
+            "unit": "ns",
+            "range": "± 1345077.8960150122"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 048)",
+            "value": 9650265.981770834,
+            "unit": "ns",
+            "range": "± 52337.26119670948"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 049)",
+            "value": 18754531.635416668,
+            "unit": "ns",
+            "range": "± 156327.01340764944"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 050)",
+            "value": 11152100.046875,
+            "unit": "ns",
+            "range": "± 349801.9603773891"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 052)",
+            "value": 36415065.666666664,
+            "unit": "ns",
+            "range": "± 1648739.7344095868"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 054)",
+            "value": 6420662.415364583,
+            "unit": "ns",
+            "range": "± 15415.888155319819"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 055)",
+            "value": 13733386.5,
+            "unit": "ns",
+            "range": "± 33256.601829601976"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 056)",
+            "value": 47493660.18181818,
+            "unit": "ns",
+            "range": "± 684679.9662910082"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 059)",
+            "value": 5595298.692708333,
+            "unit": "ns",
+            "range": "± 54368.28374962708"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 067)",
+            "value": 150914.48836263022,
+            "unit": "ns",
+            "range": "± 5186.029335119969"
+          },
+          {
+            "name": "MartinCostello.ProjectEuler.Benchmarks.PuzzleBenchmarks.Solve(input: 097)",
+            "value": 1117392104.3333333,
+            "unit": "ns",
+            "range": "± 5946529.908169498"
           }
         ]
       }
