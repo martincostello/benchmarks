@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723621086937,
+  "lastUpdate": 1723622970952,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -168,6 +168,48 @@ window.BENCHMARK_DATA = {
             "value": 309335.91796875,
             "unit": "ns",
             "range": "± 1940.3501360153095"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0d74bca0360e809fab625583a34f5bcd7e6096d5",
+          "message": "Bump NuGet.Versioning from 6.10.2 to 6.11.0 (#1624)\n\nBumps [NuGet.Versioning](https://github.com/NuGet/NuGet.Client) from 6.10.2 to 6.11.0.\n- [Release notes](https://github.com/NuGet/NuGet.Client/releases)\n- [Commits](https://github.com/NuGet/NuGet.Client/commits)\n\n---\nupdated-dependencies:\n- dependency-name: NuGet.Versioning\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-14T08:06:06Z",
+          "tree_id": "906517ef0764d48460cfaed0febfdf36c120bb5b",
+          "url": "https://github.com/martincostello/costellobot/commit/0d74bca0360e809fab625583a34f5bcd7e6096d5"
+        },
+        "date": 1723622970794,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 600789.6826923077,
+            "unit": "ns",
+            "range": "± 2312.738215293822"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 256569.0170200893,
+            "unit": "ns",
+            "range": "± 2228.488852579106"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 309714.3108723958,
+            "unit": "ns",
+            "range": "± 2573.3975771112373"
           }
         ]
       }
