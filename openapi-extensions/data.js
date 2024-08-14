@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723646402808,
+  "lastUpdate": 1723647342065,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -360,6 +360,42 @@ window.BENCHMARK_DATA = {
             "value": 4414303.447916667,
             "unit": "ns",
             "range": "± 499555.3007425626"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b318a0062a78aefd0dba8532a0113a7eab4bb051",
+          "message": "Fix build\r\nFix leftover reference to `ScrubbingOpenApiYamlWriter`.",
+          "timestamp": "2024-08-14T15:53:12+01:00",
+          "tree_id": "6fac59c22462195f7781e669be2b3e4201ef2208",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/b318a0062a78aefd0dba8532a0113a7eab4bb051"
+        },
+        "date": 1723647341749,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 860191.9965587797,
+            "unit": "ns",
+            "range": "± 29879.784417100836"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 1145812.6711090687,
+            "unit": "ns",
+            "range": "± 46471.93798398094"
           }
         ]
       }
