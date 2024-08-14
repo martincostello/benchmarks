@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723587465431,
+  "lastUpdate": 1723646402808,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -324,6 +324,42 @@ window.BENCHMARK_DATA = {
             "value": 19125039.5,
             "unit": "ns",
             "range": "± 1542431.9314429297"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1639558af705f694a061a5ab842248eaacaa55d7",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24414.2 (#52)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.2.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24414.2 SDK.\n\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-preview.7.24406.2 to 9.0.0-rc.1.24413.14.\nBumps Microsoft.AspNetCore.OpenApi from 9.0.0-preview.7.24406.2 to 9.0.0-rc.1.24413.14.\nBumps Microsoft.EntityFrameworkCore.Sqlite from 9.0.0-preview.7.24405.3 to 9.0.0-rc.1.24402.2.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.EntityFrameworkCore.Sqlite\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Update OpenAPI snapshots\n\nUpdate snapshots for latest fixes.\n\n* Update method signature\n\nUpdate the method signature for `OpenApiDocumentService.GetOpenApiDocumentAsync()` to receive an `IServiceProvider` as the first parameter.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>",
+          "timestamp": "2024-08-14T14:38:30Z",
+          "tree_id": "57e8893db2496ee870e185d535378109a86aa487",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/1639558af705f694a061a5ab842248eaacaa55d7"
+        },
+        "date": 1723646402506,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 2258419.08984375,
+            "unit": "ns",
+            "range": "± 88764.6089167615"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 4414303.447916667,
+            "unit": "ns",
+            "range": "± 499555.3007425626"
           }
         ]
       }
