@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723623762264,
+  "lastUpdate": 1723648932563,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -396,6 +396,42 @@ window.BENCHMARK_DATA = {
             "value": 18589607.020833332,
             "unit": "ns",
             "range": "± 1440957.3038466373"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "b4a89c9f0fba87bc3af7b05875b3ac7eead1374c",
+          "message": "Handle getter-only properties\n\nExtend the StyleCop prefix transformer to include get-only properties (\"Gets a value...\").",
+          "timestamp": "2024-08-14T16:20:30+01:00",
+          "tree_id": "532b8de324dedf4a75252cdc47d79e6d51fcd86c",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/b4a89c9f0fba87bc3af7b05875b3ac7eead1374c"
+        },
+        "date": 1723648932414,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 11534344.864583334,
+            "unit": "ns",
+            "range": "± 1328496.8025546542"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 19012003.020833332,
+            "unit": "ns",
+            "range": "± 1357205.4659187794"
           }
         ]
       }
