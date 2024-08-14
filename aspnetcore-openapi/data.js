@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723630866050,
+  "lastUpdate": 1723652273417,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -252,6 +252,48 @@ window.BENCHMARK_DATA = {
             "value": 2761049.2640086208,
             "unit": "ns",
             "range": "± 75192.95049493566"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f8181a797caf3f66c3d652c33059ba5735aa0b05",
+          "message": "Update .NET SDK (#39)\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.7.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-14T16:14:06Z",
+          "tree_id": "cafeb6a0407b1b4fe50825cc3bd3693c645b2555",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/f8181a797caf3f66c3d652c33059ba5735aa0b05"
+        },
+        "date": 1723652273215,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1057068.7417834052,
+            "unit": "ns",
+            "range": "± 22919.226984470974"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4578894.749540441,
+            "unit": "ns",
+            "range": "± 84757.35363821109"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2791365.4862882653,
+            "unit": "ns",
+            "range": "± 85838.74724209137"
           }
         ]
       }
