@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723631049990,
+  "lastUpdate": 1723650260188,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -252,6 +252,48 @@ window.BENCHMARK_DATA = {
             "value": 310299.4156901042,
             "unit": "ns",
             "range": "± 1641.115493480344"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "e059cf281b61ec41cfe8c371f83d1749c4c01e1f",
+          "message": "Consume .NET daily builds\n\nConsume daily builds of .NET 9.",
+          "timestamp": "2024-08-14T16:40:42+01:00",
+          "tree_id": "0f91b0a0af91f86c57e7c0053d343954e107b625",
+          "url": "https://github.com/martincostello/costellobot/commit/e059cf281b61ec41cfe8c371f83d1749c4c01e1f"
+        },
+        "date": 1723650259706,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 534266.5606770833,
+            "unit": "ns",
+            "range": "± 4481.107385366477"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 238127.98374720983,
+            "unit": "ns",
+            "range": "± 1551.7193961984005"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 304699.59437779017,
+            "unit": "ns",
+            "range": "± 1474.2815774068963"
           }
         ]
       }
