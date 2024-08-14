@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723569015385,
+  "lastUpdate": 1723621105936,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -168,6 +168,48 @@ window.BENCHMARK_DATA = {
             "value": 304752.66119791666,
             "unit": "ns",
             "range": "± 1311.4365531989426"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "0eca73589b4f0e97b80578e1992a0d1db0cf32d7",
+          "message": "Fix package version\n\nFix incorrect package version for Microsoft.AspNetCore.DataProtection.",
+          "timestamp": "2024-08-14T07:35:16Z",
+          "tree_id": "ce6677e682b5eeab9137ad409eda314fe382f912",
+          "url": "https://github.com/martincostello/costellobot/commit/0eca73589b4f0e97b80578e1992a0d1db0cf32d7"
+        },
+        "date": 1723621105459,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 538495.0268229167,
+            "unit": "ns",
+            "range": "± 4352.114823160619"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 233290.06868489584,
+            "unit": "ns",
+            "range": "± 1505.4717009254514"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 304511.0909505208,
+            "unit": "ns",
+            "range": "± 1044.4930584636415"
           }
         ]
       }
