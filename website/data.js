@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723570984944,
+  "lastUpdate": 1723636377762,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -486,6 +486,60 @@ window.BENCHMARK_DATA = {
             "value": 240996.705078125,
             "unit": "ns",
             "range": "± 1712.322622394778"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "ebcba41f0e05656af0a3548e617dccc2d1105fa8",
+          "message": "Bump elliptic\n\nBump elliptic to 6.5.7 to resolve vulnerability alert.",
+          "timestamp": "2024-08-14T12:49:09+01:00",
+          "tree_id": "71c6e75f56253de97c29d253d67a5e8076eae860",
+          "url": "https://github.com/martincostello/website/commit/ebcba41f0e05656af0a3548e617dccc2d1105fa8"
+        },
+        "date": 1723636377555,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 361405.32068810094,
+            "unit": "ns",
+            "range": "± 1688.8471310139628"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 366940.5171875,
+            "unit": "ns",
+            "range": "± 1650.1137800419174"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 427989.21021792764,
+            "unit": "ns",
+            "range": "± 5298.829656463561"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 400126.2820172991,
+            "unit": "ns",
+            "range": "± 2995.5148324224433"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 239548.12297712054,
+            "unit": "ns",
+            "range": "± 721.5489401110254"
           }
         ]
       }
