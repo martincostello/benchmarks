@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723588098528,
+  "lastUpdate": 1723630866050,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -210,6 +210,48 @@ window.BENCHMARK_DATA = {
             "value": 2780569.3795572915,
             "unit": "ns",
             "range": "± 109107.35891289059"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e4ecbc0621ad05dd697779675ce7196d64db6014",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24414.2 (#38)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.2.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24414.2 SDK.\n\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-rc.1.24413.4 to 9.0.0-rc.1.24413.14.\nBumps Microsoft.AspNetCore.OpenApi from 9.0.0-rc.1.24413.4 to 9.0.0-rc.1.24413.14.\nBumps Microsoft.Extensions.ApiDescription.Server from 9.0.0-rc.1.24413.4 to 9.0.0-rc.1.24413.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-14T10:17:15Z",
+          "tree_id": "a9bf09be8ab147f015d1e80f413f9ac12dc30a8f",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/e4ecbc0621ad05dd697779675ce7196d64db6014"
+        },
+        "date": 1723630865847,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1036490.3401988636,
+            "unit": "ns",
+            "range": "± 10923.70590974486"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4546092.948341837,
+            "unit": "ns",
+            "range": "± 147036.0403003854"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2761049.2640086208,
+            "unit": "ns",
+            "range": "± 75192.95049493566"
           }
         ]
       }
