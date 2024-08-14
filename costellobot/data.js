@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723623040138,
+  "lastUpdate": 1723637986412,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -252,6 +252,48 @@ window.BENCHMARK_DATA = {
             "value": 310408.57875279017,
             "unit": "ns",
             "range": "± 1211.8963601256407"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "aadf1b0d8eb582ee144a15b8c858823424bf162f",
+          "message": "Bump elliptic\n\nBump elliptic to 6.5.7 to resolve vulnerability alert.",
+          "timestamp": "2024-08-14T13:16:36+01:00",
+          "tree_id": "f00493df073f576c06fe86ec265689b6f172cde3",
+          "url": "https://github.com/martincostello/costellobot/commit/aadf1b0d8eb582ee144a15b8c858823424bf162f"
+        },
+        "date": 1723637986089,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 611694.9244791666,
+            "unit": "ns",
+            "range": "± 4738.155316903917"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 258587.957421875,
+            "unit": "ns",
+            "range": "± 1746.7923763279168"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 309741.393484933,
+            "unit": "ns",
+            "range": "± 1238.6226978464335"
           }
         ]
       }
