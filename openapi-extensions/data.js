@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723613774283,
+  "lastUpdate": 1723623762264,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -360,6 +360,42 @@ window.BENCHMARK_DATA = {
             "value": 19372677.979166668,
             "unit": "ns",
             "range": "± 1384545.239720458"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "6b5b0a4b85cc5135fcc00377ce4d4d2f0f55470c",
+          "message": "Support .NET 9 rc.1\n\nReact to changes from dotnet/aspnetcore#57253 to support consuming CI builds in applications targeting .NET 9 rc.1 nightly builds.",
+          "timestamp": "2024-08-14T09:20:07+01:00",
+          "tree_id": "84c7bb682702f49b3f9dfd391d5f982bf10793af",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/6b5b0a4b85cc5135fcc00377ce4d4d2f0f55470c"
+        },
+        "date": 1723623761949,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 15827296.072916666,
+            "unit": "ns",
+            "range": "± 1325759.496281517"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 18589607.020833332,
+            "unit": "ns",
+            "range": "± 1440957.3038466373"
           }
         ]
       }
