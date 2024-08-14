@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723634601725,
+  "lastUpdate": 1723634916984,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -804,6 +804,54 @@ window.BENCHMARK_DATA = {
             "value": 203117.55800083705,
             "unit": "ns",
             "range": "± 1565.3632295648117"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a5be04c939956dc61f04f42f7b06a245af7a99da",
+          "message": "Fix test\n\nUpdate OpenAPI snapshot.",
+          "timestamp": "2024-08-14T12:25:18+01:00",
+          "tree_id": "697c2b5bd18393d264b2cdb2b3b13f31d45cf0f7",
+          "url": "https://github.com/martincostello/api/commit/a5be04c939956dc61f04f42f7b06a245af7a99da"
+        },
+        "date": 1723634916717,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 312430.7918526786,
+            "unit": "ns",
+            "range": "± 5135.487571958594"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221092.78463040866,
+            "unit": "ns",
+            "range": "± 770.1547595624758"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 234861.8138671875,
+            "unit": "ns",
+            "range": "± 1722.5731664947134"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 202986.73759765626,
+            "unit": "ns",
+            "range": "± 1534.4621081586156"
           }
         ]
       }
