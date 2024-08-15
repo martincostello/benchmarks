@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723636377762,
+  "lastUpdate": 1723744632694,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -540,6 +540,60 @@ window.BENCHMARK_DATA = {
             "value": 239548.12297712054,
             "unit": "ns",
             "range": "± 721.5489401110254"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "54e13509c856ba2236bd7d4c5baf23b746aef31c",
+          "message": "Update .NET SDK (#2167)\n\nUpdate .NET SDK to version 8.0.401.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-15T17:52:23Z",
+          "tree_id": "5959d3a95e7f42d0013b59a0b937d417cf35fdfd",
+          "url": "https://github.com/martincostello/website/commit/54e13509c856ba2236bd7d4c5baf23b746aef31c"
+        },
+        "date": 1723744632547,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 358661.4897836539,
+            "unit": "ns",
+            "range": "± 1070.085898948703"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 364596.5350167411,
+            "unit": "ns",
+            "range": "± 1358.5688701389513"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 424020.5682779948,
+            "unit": "ns",
+            "range": "± 8571.379812912155"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 396734.63902064733,
+            "unit": "ns",
+            "range": "± 3390.8608606836315"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 237833.81048177084,
+            "unit": "ns",
+            "range": "± 1252.0995496079368"
           }
         ]
       }
