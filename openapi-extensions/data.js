@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723648932563,
+  "lastUpdate": 1723695991041,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -432,6 +432,42 @@ window.BENCHMARK_DATA = {
             "value": 19012003.020833332,
             "unit": "ns",
             "range": "± 1357205.4659187794"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "636620af7a5b09c36ab5bcc6e2071e82bbd039a6",
+          "message": "Bump github/codeql-action from 3.26.1 to 3.26.2 (#56)\n\nBumps [github/codeql-action](https://github.com/github/codeql-action) from 3.26.1 to 3.26.2.\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/29d86d22a34ea372b1bbf3b2dced2e25ca6b3384...429e1977040da7a23b6822b13c129cd1ba93dbb2)\n\n---\nupdated-dependencies:\n- dependency-name: github/codeql-action\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-15T04:24:42Z",
+          "tree_id": "f4472f3602ee4340998f1421ac4d98e393aab85d",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/636620af7a5b09c36ab5bcc6e2071e82bbd039a6"
+        },
+        "date": 1723695990886,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 13265902.953125,
+            "unit": "ns",
+            "range": "± 2347241.648973379"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 20188017.71875,
+            "unit": "ns",
+            "range": "± 9553916.319763985"
           }
         ]
       }
