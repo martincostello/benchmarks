@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723609472262,
+  "lastUpdate": 1723709758244,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -660,6 +660,54 @@ window.BENCHMARK_DATA = {
             "value": 202645.73473307292,
             "unit": "ns",
             "range": "± 1048.366413501518"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8aabb3646cad514eb5604a2e6e5f0c0add0a0ae0",
+          "message": "Update NuGet package\n\nUpdate NuGet package for .NET 9 preview 7.",
+          "timestamp": "2024-08-15T09:12:30+01:00",
+          "tree_id": "20a5adfd0d1ee340db626f4fff8d637a935026dc",
+          "url": "https://github.com/martincostello/api/commit/8aabb3646cad514eb5604a2e6e5f0c0add0a0ae0"
+        },
+        "date": 1723709757727,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 306707.42445591517,
+            "unit": "ns",
+            "range": "± 4810.404055227959"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221299.4833984375,
+            "unit": "ns",
+            "range": "± 900.326605874832"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 233500.65891927082,
+            "unit": "ns",
+            "range": "± 1536.4629756201523"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 202219.37578125,
+            "unit": "ns",
+            "range": "± 1365.7758371463979"
           }
         ]
       }
