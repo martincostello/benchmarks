@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723735733246,
+  "lastUpdate": 1723735986579,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -804,6 +804,54 @@ window.BENCHMARK_DATA = {
             "value": 207821.2697265625,
             "unit": "ns",
             "range": "± 3204.819673095299"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fd8e24d69b57c616695b4c6d0601a256bbacd125",
+          "message": "Bump stylelint from 16.8.1 to 16.8.2 in /src/API (#1926)\n\nBumps [stylelint](https://github.com/stylelint/stylelint) from 16.8.1 to 16.8.2.\r\n- [Release notes](https://github.com/stylelint/stylelint/releases)\r\n- [Changelog](https://github.com/stylelint/stylelint/blob/main/CHANGELOG.md)\r\n- [Commits](https://github.com/stylelint/stylelint/compare/16.8.1...16.8.2)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: stylelint\r\n  dependency-type: direct:development\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-15T15:29:42Z",
+          "tree_id": "146eb2236c19dc6e4f22561066e96ab94aa010e2",
+          "url": "https://github.com/martincostello/api/commit/fd8e24d69b57c616695b4c6d0601a256bbacd125"
+        },
+        "date": 1723735986060,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 345636.8592247596,
+            "unit": "ns",
+            "range": "± 1196.2487468631102"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 240762.1138671875,
+            "unit": "ns",
+            "range": "± 1609.463974154158"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 253094.39251302084,
+            "unit": "ns",
+            "range": "± 1479.5288534832373"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 215783.97555338542,
+            "unit": "ns",
+            "range": "± 879.426563963763"
           }
         ]
       }
