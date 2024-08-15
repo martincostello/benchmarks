@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723709973476,
+  "lastUpdate": 1723717411393,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -420,6 +420,48 @@ window.BENCHMARK_DATA = {
             "value": 304969.3741536458,
             "unit": "ns",
             "range": "± 1530.8757089438002"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a5f3f67f2b1d8593de47c688973e9740ad6e494b",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24414.26 (#1630)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.26.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24414.26 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 9.0.0-rc.1.24414.3 to 9.0.0-rc.1.24414.4.\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-rc.1.24414.3 to 9.0.0-rc.1.24414.4.\nBumps System.Text.Json from 9.0.0-rc.1.24414.2 to 9.0.0-rc.1.24414.5.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: System.Text.Json\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-15T10:20:29Z",
+          "tree_id": "f9e12ea44917d1532893fdde6ab60a9e83d6533f",
+          "url": "https://github.com/martincostello/costellobot/commit/a5f3f67f2b1d8593de47c688973e9740ad6e494b"
+        },
+        "date": 1723717411196,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 517420.85013020836,
+            "unit": "ns",
+            "range": "± 6604.634645710493"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 228262.4419921875,
+            "unit": "ns",
+            "range": "± 5170.139535613564"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 293286.8194754464,
+            "unit": "ns",
+            "range": "± 3449.2799092366427"
           }
         ]
       }
