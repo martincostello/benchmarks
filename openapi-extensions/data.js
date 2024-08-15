@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723663091725,
+  "lastUpdate": 1723717190356,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -468,6 +468,42 @@ window.BENCHMARK_DATA = {
             "value": 1060175.197265625,
             "unit": "ns",
             "range": "± 16000.28826117327"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "df2f6c9fbb9214edcaa8dc5d66fc86c6ba823714",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24414.26 (#57)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24414.26.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24414.26 SDK.\n\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-rc.1.24414.3 to 9.0.0-rc.1.24414.4.\nBumps Microsoft.AspNetCore.OpenApi from 9.0.0-rc.1.24414.3 to 9.0.0-rc.1.24414.4.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-15T10:17:32Z",
+          "tree_id": "b8c4fe3529f651f6507d827ca6f6a937c7249ae8",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/df2f6c9fbb9214edcaa8dc5d66fc86c6ba823714"
+        },
+        "date": 1723717189835,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 798989.572162829,
+            "unit": "ns",
+            "range": "± 11617.281396352748"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 1055660.3193359375,
+            "unit": "ns",
+            "range": "± 19829.341833502833"
           }
         ]
       }
