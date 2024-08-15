@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723637986412,
+  "lastUpdate": 1723708187757,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -294,6 +294,48 @@ window.BENCHMARK_DATA = {
             "value": 309741.393484933,
             "unit": "ns",
             "range": "± 1238.6226978464335"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bf5321af872a431b3d3ed914a66b88b7a646ee60",
+          "message": "Bump github/codeql-action from 3.26.1 to 3.26.2 (#1629)\n\nBumps [github/codeql-action](https://github.com/github/codeql-action) from 3.26.1 to 3.26.2.\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/29d86d22a34ea372b1bbf3b2dced2e25ca6b3384...429e1977040da7a23b6822b13c129cd1ba93dbb2)\n\n---\nupdated-dependencies:\n- dependency-name: github/codeql-action\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-15T07:46:31Z",
+          "tree_id": "28c630f8197d3f43cc17277b6e94e4971ae4a1e9",
+          "url": "https://github.com/martincostello/costellobot/commit/bf5321af872a431b3d3ed914a66b88b7a646ee60"
+        },
+        "date": 1723708187465,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 606462.0576822917,
+            "unit": "ns",
+            "range": "± 2755.8217769363832"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 259578.75425502233,
+            "unit": "ns",
+            "range": "± 1413.685888794243"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 311330.88131510414,
+            "unit": "ns",
+            "range": "± 1232.697185293149"
           }
         ]
       }
