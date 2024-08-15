@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723635023094,
+  "lastUpdate": 1723735733246,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -756,6 +756,54 @@ window.BENCHMARK_DATA = {
             "value": 220161.77506510416,
             "unit": "ns",
             "range": "± 1914.4074193308347"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "e971cba547554bcf5e3ff4d39c34fa254b00ec0b",
+          "message": "Remove BenchmarkDotNet.TestAdapter\r\nRemove BenchmarkDotNet.TestAdapter as it's not being used anyway.",
+          "timestamp": "2024-08-15T16:25:19+01:00",
+          "tree_id": "aa22ae81d89882a615f88ab04e97cd413cfb8ac3",
+          "url": "https://github.com/martincostello/api/commit/e971cba547554bcf5e3ff4d39c34fa254b00ec0b"
+        },
+        "date": 1723735732924,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 336907.1466346154,
+            "unit": "ns",
+            "range": "± 4973.5083540324085"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 232257.23084214155,
+            "unit": "ns",
+            "range": "± 7424.660299492623"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 246576.92653245194,
+            "unit": "ns",
+            "range": "± 6557.434579342359"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 207821.2697265625,
+            "unit": "ns",
+            "range": "± 3204.819673095299"
           }
         ]
       }
