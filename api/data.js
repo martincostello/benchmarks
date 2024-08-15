@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723735986579,
+  "lastUpdate": 1723743630563,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -852,6 +852,54 @@ window.BENCHMARK_DATA = {
             "value": 215783.97555338542,
             "unit": "ns",
             "range": "± 879.426563963763"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "13b799278e8357207dd3d762d1bb8d26bb2a20a3",
+          "message": "Update .NET SDK (#1927)\n\nUpdate .NET SDK to version 8.0.401.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-15T17:36:59Z",
+          "tree_id": "c70a68f3cc8a6600c91ca2d841b20a4fc470b52a",
+          "url": "https://github.com/martincostello/api/commit/13b799278e8357207dd3d762d1bb8d26bb2a20a3"
+        },
+        "date": 1723743630212,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 342256.27283653844,
+            "unit": "ns",
+            "range": "± 1606.4971789165763"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 237105.56712239582,
+            "unit": "ns",
+            "range": "± 1061.337666586614"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 251333.3009765625,
+            "unit": "ns",
+            "range": "± 1445.9161514711366"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 212054.64889322917,
+            "unit": "ns",
+            "range": "± 1812.270189203591"
           }
         ]
       }
