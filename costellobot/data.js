@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723708187757,
+  "lastUpdate": 1723744120040,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -336,6 +336,48 @@ window.BENCHMARK_DATA = {
             "value": 311330.88131510414,
             "unit": "ns",
             "range": "± 1232.697185293149"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "adb2e21e419da3a09571681b514df15b8862920e",
+          "message": "Update .NET SDK (#1631)\n\nUpdate .NET SDK to version 8.0.401.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-15T17:40:41Z",
+          "tree_id": "e04517e3c173a0f252ee27133471876946b181d3",
+          "url": "https://github.com/martincostello/costellobot/commit/adb2e21e419da3a09571681b514df15b8862920e"
+        },
+        "date": 1723744119837,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 608951.6825520833,
+            "unit": "ns",
+            "range": "± 2297.4509249569937"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 258540.09284319196,
+            "unit": "ns",
+            "range": "± 1309.635526010714"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 312812.22400841344,
+            "unit": "ns",
+            "range": "± 1675.7312659385664"
           }
         ]
       }
