@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723630855387,
+  "lastUpdate": 1723709953301,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -294,6 +294,48 @@ window.BENCHMARK_DATA = {
             "value": 310551.90436197916,
             "unit": "ns",
             "range": "± 1201.5409739893585"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9276d0463a8dd112c746575e8ea1e05b8d54a99b",
+          "message": "Update NuGet packages\n\nUpdate NuGet packages for .NET 9 preview 7.",
+          "timestamp": "2024-08-15T09:15:55+01:00",
+          "tree_id": "b66b705183504e2433f234139274f951194076a4",
+          "url": "https://github.com/martincostello/costellobot/commit/9276d0463a8dd112c746575e8ea1e05b8d54a99b"
+        },
+        "date": 1723709952974,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 548469.357561384,
+            "unit": "ns",
+            "range": "± 5370.50718303545"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 235536.52434430804,
+            "unit": "ns",
+            "range": "± 1888.7089463302232"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 312540.5753255208,
+            "unit": "ns",
+            "range": "± 928.8289149388199"
           }
         ]
       }
