@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723744120040,
+  "lastUpdate": 1723793085427,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -378,6 +378,48 @@ window.BENCHMARK_DATA = {
             "value": 312812.22400841344,
             "unit": "ns",
             "range": "± 1675.7312659385664"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "96551696b0552812e38529d0508637a5110b7d58",
+          "message": "Bump stylelint from 16.8.1 to 16.8.2 in /src/Costellobot (#1632)\n\nBumps [stylelint](https://github.com/stylelint/stylelint) from 16.8.1 to 16.8.2.\n- [Release notes](https://github.com/stylelint/stylelint/releases)\n- [Changelog](https://github.com/stylelint/stylelint/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/stylelint/stylelint/compare/16.8.1...16.8.2)\n\n---\nupdated-dependencies:\n- dependency-name: stylelint\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-16T07:21:40Z",
+          "tree_id": "c582ee3be869667235c48dfcc0540c724c59feef",
+          "url": "https://github.com/martincostello/costellobot/commit/96551696b0552812e38529d0508637a5110b7d58"
+        },
+        "date": 1723793085264,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 598277.7582632211,
+            "unit": "ns",
+            "range": "± 1102.1335751277982"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 254520.17727864583,
+            "unit": "ns",
+            "range": "± 3124.453091857121"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 307825.39481026784,
+            "unit": "ns",
+            "range": "± 1078.995551078075"
           }
         ]
       }
