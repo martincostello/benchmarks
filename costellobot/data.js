@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723794419446,
+  "lastUpdate": 1723798036925,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -546,6 +546,48 @@ window.BENCHMARK_DATA = {
             "value": 310945.9404296875,
             "unit": "ns",
             "range": "± 1522.2205339473885"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "Martin Costello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "f94403b2ac7f5656e1895a12d2d5e01199e320d1",
+          "message": "Update comment\n\nUpdate comment to reference new method for .NET 10.",
+          "timestamp": "2024-08-16T09:44:05+01:00",
+          "tree_id": "5100cac24b9b030edb6237cb1edf598dbb6bf75d",
+          "url": "https://github.com/martincostello/costellobot/commit/f94403b2ac7f5656e1895a12d2d5e01199e320d1"
+        },
+        "date": 1723798036725,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 603584.2611979167,
+            "unit": "ns",
+            "range": "± 2046.3104125396364"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 256417.783203125,
+            "unit": "ns",
+            "range": "± 2330.851347025236"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 312909.4119140625,
+            "unit": "ns",
+            "range": "± 1798.8136326392719"
           }
         ]
       }
