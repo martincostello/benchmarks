@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723782973655,
+  "lastUpdate": 1723788154904,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -252,6 +252,48 @@ window.BENCHMARK_DATA = {
             "value": 6779591.161458333,
             "unit": "ns",
             "range": "± 291187.4382918129"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "eee30b569f6cc768518be095c49335e25d11bcee",
+          "message": "Bump elliptic from 6.5.6 to 6.5.7 in /src/TodoApp (#45)",
+          "timestamp": "2024-08-16T07:00:11+01:00",
+          "tree_id": "9bec64024a94bf9331aa2b41803a4262e0b7dde0",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/eee30b569f6cc768518be095c49335e25d11bcee"
+        },
+        "date": 1723788154271,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 13899868.098958334,
+            "unit": "ns",
+            "range": "± 2498143.020168193"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 13021479.713541666,
+            "unit": "ns",
+            "range": "± 434524.6674870423"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 6830258.296875,
+            "unit": "ns",
+            "range": "± 331930.56392246776"
           }
         ]
       }
