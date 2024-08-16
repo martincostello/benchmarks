@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723793106515,
+  "lastUpdate": 1723794205460,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -462,6 +462,48 @@ window.BENCHMARK_DATA = {
             "value": 307664.32979910716,
             "unit": "ns",
             "range": "± 1247.1051516282973"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4e14e03e9d8c9f033500cbafe419714c4463ef0f",
+          "message": "Bump Azure.Extensions.AspNetCore.Configuration.Secrets (#1634)\n\nBumps [Azure.Extensions.AspNetCore.Configuration.Secrets](https://github.com/Azure/azure-sdk-for-net) from 1.3.1 to 1.3.2.\n- [Release notes](https://github.com/Azure/azure-sdk-for-net/releases)\n- [Commits](https://github.com/Azure/azure-sdk-for-net/compare/Azure.Extensions.AspNetCore.Configuration.Secrets_1.3.1...Azure.Extensions.AspNetCore.Configuration.Secrets_1.3.2)\n\n---\nupdated-dependencies:\n- dependency-name: Azure.Extensions.AspNetCore.Configuration.Secrets\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-16T07:40:19Z",
+          "tree_id": "c0c85ccdcacf2d08c83f29f7091199d16841995b",
+          "url": "https://github.com/martincostello/costellobot/commit/4e14e03e9d8c9f033500cbafe419714c4463ef0f"
+        },
+        "date": 1723794204962,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 608068.39453125,
+            "unit": "ns",
+            "range": "± 2728.923299457412"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 258685.08224051338,
+            "unit": "ns",
+            "range": "± 2206.380939414659"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 313690.0068359375,
+            "unit": "ns",
+            "range": "± 3800.305843810426"
           }
         ]
       }
