@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723789557586,
+  "lastUpdate": 1723789572742,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -648,6 +648,60 @@ window.BENCHMARK_DATA = {
             "value": 243375.89027622767,
             "unit": "ns",
             "range": "± 1577.8346805834174"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "eb7f746e5677144a281a358554e00d413a0e0906",
+          "message": "Bump @stylistic/eslint-plugin from 2.6.2 to 2.6.4 in /src/Website (#2168)",
+          "timestamp": "2024-08-16T07:22:38+01:00",
+          "tree_id": "dd45165696aef72b6c66e92f779d953aefb83569",
+          "url": "https://github.com/martincostello/website/commit/eb7f746e5677144a281a358554e00d413a0e0906"
+        },
+        "date": 1723789572524,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 363746.2019981971,
+            "unit": "ns",
+            "range": "± 1088.3539731619614"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 372277.3074869792,
+            "unit": "ns",
+            "range": "± 1843.5501617259554"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 431193.34135298297,
+            "unit": "ns",
+            "range": "± 10397.461889258544"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 406237.04345703125,
+            "unit": "ns",
+            "range": "± 2752.8261353772787"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 241304.73932291666,
+            "unit": "ns",
+            "range": "± 2028.3587904373437"
           }
         ]
       }
