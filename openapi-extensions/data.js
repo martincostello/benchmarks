@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723717190356,
+  "lastUpdate": 1723806789222,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -504,6 +504,42 @@ window.BENCHMARK_DATA = {
             "value": 1055660.3193359375,
             "unit": "ns",
             "range": "± 19829.341833502833"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "37f786ba3b796a2070414392196fb1a044ed20dd",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24415.1 (#58)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24415.1.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.Sqlite from 9.0.0-rc.1.24402.2 to 9.0.0-rc.1.24415.3\n\nBumps Microsoft.EntityFrameworkCore.Sqlite from 9.0.0-rc.1.24402.2 to 9.0.0-rc.1.24415.3.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.Sqlite\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-16T11:10:45Z",
+          "tree_id": "c64c055eba41264b974923ab9b3f6312cec52383",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/37f786ba3b796a2070414392196fb1a044ed20dd"
+        },
+        "date": 1723806788633,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 801076.8431581439,
+            "unit": "ns",
+            "range": "± 19335.90607792463"
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 1069807.6201171875,
+            "unit": "ns",
+            "range": "± 13657.44170397048"
           }
         ]
       }
