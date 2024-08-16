@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723743630563,
+  "lastUpdate": 1723789705525,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -900,6 +900,54 @@ window.BENCHMARK_DATA = {
             "value": 212054.64889322917,
             "unit": "ns",
             "range": "± 1812.270189203591"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c6c5dc0edc813940d49e5c3746e45b340433b780",
+          "message": "Bump @stylistic/eslint-plugin from 2.6.2 to 2.6.4 in /src/API (#1928)",
+          "timestamp": "2024-08-16T07:23:50+01:00",
+          "tree_id": "c1020a8dd22cb4b803eb885236feac010e66f57c",
+          "url": "https://github.com/martincostello/api/commit/c6c5dc0edc813940d49e5c3746e45b340433b780"
+        },
+        "date": 1723789705368,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 349392.70738002233,
+            "unit": "ns",
+            "range": "± 2249.218424892935"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 244265.6955078125,
+            "unit": "ns",
+            "range": "± 1625.508698786868"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 259094.5146484375,
+            "unit": "ns",
+            "range": "± 1385.6115363538586"
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 217075.91793619792,
+            "unit": "ns",
+            "range": "± 988.6354258042428"
           }
         ]
       }
