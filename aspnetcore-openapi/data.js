@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723717262735,
+  "lastUpdate": 1723806749031,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -378,6 +378,48 @@ window.BENCHMARK_DATA = {
             "value": 2807385.386479592,
             "unit": "ns",
             "range": "± 88361.89058547461"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8cdf45a5e3834fedfa3f86af871c0bb67718266a",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24415.1 (#46)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24415.1.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.Sqlite from 9.0.0-rc.1.24402.2 to 9.0.0-rc.1.24415.3\n\nBumps Microsoft.EntityFrameworkCore.Sqlite from 9.0.0-rc.1.24402.2 to 9.0.0-rc.1.24415.3.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.Sqlite\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-16T11:08:56Z",
+          "tree_id": "8bafeb28ee8a44c0b9d8d7a79b0ead7cda7cefe0",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/8cdf45a5e3834fedfa3f86af871c0bb67718266a"
+        },
+        "date": 1723806748544,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 985137.7153477822,
+            "unit": "ns",
+            "range": "± 24952.214166844453"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4356496.529119318,
+            "unit": "ns",
+            "range": "± 88304.02139708378"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2638222.59375,
+            "unit": "ns",
+            "range": "± 83272.2248790238"
           }
         ]
       }
