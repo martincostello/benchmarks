@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723782590707,
+  "lastUpdate": 1723782973655,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -210,6 +210,48 @@ window.BENCHMARK_DATA = {
             "value": 7232485.734375,
             "unit": "ns",
             "range": "± 225770.2228751772"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2d1ade78ae2bb8c873809f169b7daea9315715b5",
+          "message": "Bump eslint from 9.8.0 to 9.9.0 in /src/TodoApp (#43)\n\nBumps [eslint](https://github.com/eslint/eslint) from 9.8.0 to 9.9.0.\n- [Release notes](https://github.com/eslint/eslint/releases)\n- [Changelog](https://github.com/eslint/eslint/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/eslint/eslint/compare/v9.8.0...v9.9.0)\n\n---\nupdated-dependencies:\n- dependency-name: eslint\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-16T04:34:00Z",
+          "tree_id": "aef32bb88dc5634184c15969737e4b346bc9d1ff",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/2d1ade78ae2bb8c873809f169b7daea9315715b5"
+        },
+        "date": 1723782973454,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 20992101.78125,
+            "unit": "ns",
+            "range": "± 9694525.149855155"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 12318400.625,
+            "unit": "ns",
+            "range": "± 426517.65876675985"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 6779591.161458333,
+            "unit": "ns",
+            "range": "± 291187.4382918129"
           }
         ]
       }
