@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723788154904,
+  "lastUpdate": 1723789543148,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -294,6 +294,48 @@ window.BENCHMARK_DATA = {
             "value": 6830258.296875,
             "unit": "ns",
             "range": "± 331930.56392246776"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "459b9cbc7079dd60ccabde497731b4cea439930e",
+          "message": "Bump @stylistic/eslint-plugin from 2.6.2 to 2.6.4 in /src/TodoApp (#44)",
+          "timestamp": "2024-08-16T07:23:21+01:00",
+          "tree_id": "c8bee0f6f8786e780eceaa669950c690a76ed782",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/459b9cbc7079dd60ccabde497731b4cea439930e"
+        },
+        "date": 1723789542970,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 10922779.463541666,
+            "unit": "ns",
+            "range": "± 267831.58065678267"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 12987174.049479166,
+            "unit": "ns",
+            "range": "± 664172.2654064536"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 6530649.447916667,
+            "unit": "ns",
+            "range": "± 370554.36688909295"
           }
         ]
       }
