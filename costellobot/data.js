@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723717411393,
+  "lastUpdate": 1723806859841,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -462,6 +462,48 @@ window.BENCHMARK_DATA = {
             "value": 293286.8194754464,
             "unit": "ns",
             "range": "± 3449.2799092366427"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "102549341+costellobot@users.noreply.github.com",
+            "name": "costellobot",
+            "username": "costellobot"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ead0347831cd8560fe502ffdbfcf3ceccdf49088",
+          "message": "Update .NET SDK (#1637)\n\nUpdate .NET SDK to version 9.0.100-rc.1.24415.1.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-16T11:11:07Z",
+          "tree_id": "14ac73483e4ea747cd07df335412b3b92487d75e",
+          "url": "https://github.com/martincostello/costellobot/commit/ead0347831cd8560fe502ffdbfcf3ceccdf49088"
+        },
+        "date": 1723806859654,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 542089.7528645833,
+            "unit": "ns",
+            "range": "± 4827.08459472109"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 238269.4740234375,
+            "unit": "ns",
+            "range": "± 1201.2661080900566"
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 305873.37737165176,
+            "unit": "ns",
+            "range": "± 990.2542290313961"
           }
         ]
       }
