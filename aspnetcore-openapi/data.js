@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723562883946,
+  "lastUpdate": 1723782590707,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -168,6 +168,48 @@ window.BENCHMARK_DATA = {
             "value": 6664691.135416667,
             "unit": "ns",
             "range": "± 373940.896517167"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f3c8b171cf37a60aece50c056baea75ba3416ec4",
+          "message": "Bump the typescript-eslint group in /src/TodoApp with 2 updates (#42)\n\nBumps the typescript-eslint group in /src/TodoApp with 2 updates: [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/eslint-plugin) and [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/parser).\n\n\nUpdates `@typescript-eslint/eslint-plugin` from 8.0.1 to 8.1.0\n- [Release notes](https://github.com/typescript-eslint/typescript-eslint/releases)\n- [Changelog](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/CHANGELOG.md)\n- [Commits](https://github.com/typescript-eslint/typescript-eslint/commits/v8.1.0/packages/eslint-plugin)\n\nUpdates `@typescript-eslint/parser` from 8.0.1 to 8.1.0\n- [Release notes](https://github.com/typescript-eslint/typescript-eslint/releases)\n- [Changelog](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/CHANGELOG.md)\n- [Commits](https://github.com/typescript-eslint/typescript-eslint/commits/v8.1.0/packages/parser)\n\n---\nupdated-dependencies:\n- dependency-name: \"@typescript-eslint/eslint-plugin\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n  dependency-group: typescript-eslint\n- dependency-name: \"@typescript-eslint/parser\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n  dependency-group: typescript-eslint\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-08-16T04:27:37Z",
+          "tree_id": "a89f8b810d1277a20a74a085a5dcb6062366f67d",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/f3c8b171cf37a60aece50c056baea75ba3416ec4"
+        },
+        "date": 1723782590542,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 23370265.885416668,
+            "unit": "ns",
+            "range": "± 11607851.24278598"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 13250592.427083334,
+            "unit": "ns",
+            "range": "± 838287.1778660287"
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 7232485.734375,
+            "unit": "ns",
+            "range": "± 225770.2228751772"
           }
         ]
       }
