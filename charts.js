@@ -109,7 +109,7 @@
             callbacks: {
               afterTitle: items => {
                 const data = dataset[items[0].dataIndex];
-                return `\n${data.commit.message}\n\n${data.commit.timestamp} committed by @${data.commit.author.username}\n`;
+                return `\n${data.commit.message}\n\n${data.commit.timestamp} authored by @${data.commit.author.username}\n`;
               },
               label: context => {
                 const item = dataset[context.dataIndex];
