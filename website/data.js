@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1723807068019,
+  "lastUpdate": 1723881570594,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -648,6 +648,60 @@ window.BENCHMARK_DATA = {
             "value": 222851.25507061297,
             "unit": "ns",
             "range": "± 731.5219186275584"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "committer": {
+            "email": "martin@martincostello.com",
+            "name": "martincostello",
+            "username": "martincostello"
+          },
+          "distinct": true,
+          "id": "57eb01b05afb189c6337eac6a68b656ba689c276",
+          "message": "Consume .NET daily builds\n\nConsume daily builds of .NET 9.",
+          "timestamp": "2024-08-17T08:55:51+01:00",
+          "tree_id": "5ecdecf02f7604675e5c6aaaf6ae1c3a29da3c10",
+          "url": "https://github.com/martincostello/website/commit/57eb01b05afb189c6337eac6a68b656ba689c276"
+        },
+        "date": 1723881570348,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 327528.3710239955,
+            "unit": "ns",
+            "range": "± 4643.360311502154"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 330625.19921875,
+            "unit": "ns",
+            "range": "± 2728.1472106945344"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 419664.86259191175,
+            "unit": "ns",
+            "range": "± 7150.43264006506"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 379861.6357421875,
+            "unit": "ns",
+            "range": "± 1373.851909371367"
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 220866.13979867788,
+            "unit": "ns",
+            "range": "± 1398.605387318583"
           }
         ]
       }
