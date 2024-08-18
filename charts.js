@@ -142,11 +142,11 @@
         },
       };
 
-      const hasMemory = dataset.some(d => d.bench.bytesAllocated);
+      const hasMemory = dataset.some(d => d.bench.bytesAllocated !== undefined);
       if (hasMemory) {
         data.datasets.push({
           label: `${name} (memory)`,
-          data: dataset.map(d => d.bench.bytesAllocated),
+          data: dataset.filter(d => d.bench.bytesAllocated != undefined).map(d => d.bench.bytesAllocated),
           borderColor: memoryColor,
           backgroundColor: `${memoryColor}60`,
           fill: false,
@@ -218,13 +218,15 @@
             };
           }
 
-          const hasMemory = items.some(item => item.bench.bytesAllocated);
+          const hasMemory = items.some(item => item.bench.bytesAllocated !== undefined);
           if (hasMemory) {
             minValue = items.length === 1 ? items[0].bench.bytesAllocated : Number.POSITIVE_INFINITY;
 
             if (items.length > 1) {
               for (const item of items) {
-                minValue = Math.min(minValue, item.bench.bytesAllocated);
+                if (item.bench.bytesAllocated !== undefined) {
+                  minValue = Math.min(minValue, item.bench.bytesAllocated);
+                }
               };
             }
 
@@ -236,8 +238,10 @@
               minValue *= factor;
               for (let j = 0; j < items.length; j++) {
                 const item = items[j];
-                item.bench.bytesAllocated *= factor;
-                item.bench.memoryUnit = memoryUnits[i];
+                if (item.bench.bytesAllocated !== undefined) {
+                  item.bench.bytesAllocated *= factor;
+                  item.bench.memoryUnit = memoryUnits[i];
+                }
               };
             }
           }
