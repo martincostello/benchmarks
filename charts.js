@@ -22,16 +22,15 @@
     const segments = window.location.pathname.split('/');
     const path = segments[segments.length - 2];
     const branch = new URLSearchParams(window.location.search).get('branch') || 'main';
-    const dataUrl = `https://raw.githubusercontent.com/martincostello/benchmarks/${branch}/${path}/data.js`;
+    const dataUrl = `https://raw.githubusercontent.com/martincostello/benchmarks/${branch}/${path}/data.json`;
 
-    // Fetch the data, trim the prefix and parse it as JSON
+    // Fetch the data and parse it as JSON
     const response = await fetch(dataUrl, { cache: 'no-cache' });
-    const dataText = await response.text();
-    const data = JSON.parse(dataText.slice('window.BENCHMARK_DATA = '.length));
+    const data = await response.json();
 
     // Render header
     document.getElementById('branch-name').textContent = branch;
-    document.getElementById('last-update').textContent = new Date(data.lastUpdate).toLocaleString();
+    document.getElementById('last-update').textContent = new Date(data.lastUpdated).toLocaleString();
     const repoLink = document.getElementById('repository-link');
     repoLink.href = data.repoUrl;
     repoLink.textContent = data.repoUrl;
@@ -67,20 +66,26 @@
 
       dataset.sort((a, b) => a.date - b.date);
 
-      const color = '#178600';
+      const memoryAxis = 'y2';
+      const memoryColor = '#e34c26';
+      const timeAxis = 'y';
+      const timeColor = '#178600';
+
       const data = {
-        labels: dataset.map(d => d.commit.id.slice(0, 7)),
+        labels: dataset.map(d => d.commit.sha.slice(0, 7)),
         datasets: [
           {
-            label: name,
+            label: `${name} (time)`,
             data: dataset.map(d => d.bench.value),
-            borderColor: color,
-            backgroundColor: `${color}60`, // Add alpha for #rrggbbaa
+            borderColor: timeColor,
+            backgroundColor: `${timeColor}60`,
             fill: true,
             tension: 0.4,
-          }
+            yAxisID: timeAxis,
+          },
         ],
       };
+
       const options = {
         scales: {
           x: {
@@ -113,11 +118,18 @@
               },
               label: context => {
                 const item = dataset[context.dataIndex];
-                let label = item.bench.value.toString();
-                const { range, unit } = item.bench;
-                label += unit;
-                if (range) {
-                  label += ` (${range})`;
+                const memory = context.datasetIndex === 1;
+                let label;
+                if (memory) {
+                  label = item.bench.bytesAllocated.toString();
+                  label += item.bench.memoryUnit;
+                } else {
+                  label = item.bench.value.toString();
+                  const { range, unit } = item.bench;
+                  label += unit;
+                  if (range) {
+                    label += ` (${range})`;
+                  }
                 }
                 return label;
               },
@@ -129,6 +141,28 @@
           },
         },
       };
+
+      const hasMemory = dataset.some(d => d.bench.bytesAllocated !== undefined);
+      if (hasMemory) {
+        data.datasets.push({
+          label: `${name} (memory)`,
+          data: dataset.filter(d => d.bench.bytesAllocated != undefined).map(d => d.bench.bytesAllocated),
+          borderColor: memoryColor,
+          backgroundColor: `${memoryColor}60`,
+          fill: false,
+          pointStyle: 'triangle',
+          tension: 0.4,
+          yAxisID: memoryAxis,
+        });
+        options.scales[memoryAxis] = {
+          beginAtZero: true,
+          position: 'right',
+          title: {
+            display: hasMemory,
+            text: dataset.length > 0 ? dataset[0].bench.memoryUnit : '',
+          },
+        };
+      }
 
       new Chart(canvas, {
         type: 'line',
@@ -170,8 +204,8 @@
           }
 
           const factor = 1e-3;
-          const units = ['µs', 'ms', 's'];
-          for (let i = 0; i < units.length; i++) {
+          const timeUnits = ['µs', 'ms', 's'];
+          for (let i = 0; i < timeUnits.length; i++) {
             if (minValue < 1000) {
               break;
             }
@@ -179,9 +213,37 @@
             for (let j = 0; j < items.length; j++) {
               const item = items[j];
               item.bench.value *= factor;
-              item.bench.unit = units[i];
+              item.bench.unit = timeUnits[i];
               item.bench.range = `± ${parseFloat(item.bench.range.substring(2), 10) * factor}`;
             };
+          }
+
+          const hasMemory = items.some(item => item.bench.bytesAllocated !== undefined);
+          if (hasMemory) {
+            minValue = items.length === 1 ? items[0].bench.bytesAllocated : Number.POSITIVE_INFINITY;
+
+            if (items.length > 1) {
+              for (const item of items) {
+                if (item.bench.bytesAllocated !== undefined) {
+                  minValue = Math.min(minValue, item.bench.bytesAllocated);
+                }
+              };
+            }
+
+            const memoryUnits = ['KB', 'MB'];
+            for (let i = 0; i < memoryUnits.length; i++) {
+              if (minValue < 1000) {
+                break;
+              }
+              minValue *= factor;
+              for (let j = 0; j < items.length; j++) {
+                const item = items[j];
+                if (item.bench.bytesAllocated !== undefined) {
+                  item.bench.bytesAllocated *= factor;
+                  item.bench.memoryUnit = memoryUnits[i];
+                }
+              };
+            }
           }
         }
       });
