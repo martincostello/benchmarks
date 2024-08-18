@@ -126,7 +126,7 @@
                 let label;
                 if (memory && item && item.bench.bytesAllocated !== undefined) {
                   label = item.bench.bytesAllocated.toString();
-                  label += item.bench.memoryUnit;
+                  label += item.bench.memoryUnit ?? ' bytes';
                 } else {
                   label = item.bench.value.toString();
                   const { range, unit } = item.bench;
@@ -148,7 +148,7 @@
 
       const hasMemory = dataset.some(d => d.bench.bytesAllocated !== undefined);
       if (hasMemory) {
-        const memoryUnit = dataset.find(d => d.bench.bytesAllocated !== undefined)?.bench.memoryUnit ?? '';
+        const memoryUnit = dataset.find(d => d.bench.bytesAllocated !== undefined)?.bench.memoryUnit ?? 'bytes';
         data.datasets.push({
           label: 'Memory',
           data: dataset.map(d => d.bench.bytesAllocated),
