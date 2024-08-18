@@ -120,7 +120,7 @@
                 const item = dataset[context.dataIndex];
                 const memory = context.datasetIndex === 1;
                 let label;
-                if (memory) {
+                if (memory && item && item.bench.bytesAllocated !== undefined) {
                   label = item.bench.bytesAllocated.toString();
                   label += item.bench.memoryUnit;
                 } else {
@@ -146,7 +146,7 @@
       if (hasMemory) {
         data.datasets.push({
           label: `${name} (memory)`,
-          data: dataset.filter(d => d.bench.bytesAllocated != undefined).map(d => d.bench.bytesAllocated),
+          data: dataset.map(d => d.bench.bytesAllocated),
           borderColor: memoryColor,
           backgroundColor: `${memoryColor}60`,
           fill: false,
