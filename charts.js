@@ -144,6 +144,7 @@
 
       const hasMemory = dataset.some(d => d.bench.bytesAllocated !== undefined);
       if (hasMemory) {
+        const memoryUnit = dataset.find(d => d.bench.bytesAllocated !== undefined)?.bench.memoryUnit ?? '';
         data.datasets.push({
           label: `${name} (memory)`,
           data: dataset.map(d => d.bench.bytesAllocated),
@@ -159,7 +160,7 @@
           position: 'right',
           title: {
             display: hasMemory,
-            text: dataset.length > 0 ? dataset[0].bench.memoryUnit : '',
+            text: memoryUnit,
           },
         };
       }
