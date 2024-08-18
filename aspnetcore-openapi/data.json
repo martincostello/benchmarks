@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1723976348800,
+  "lastUpdated": 1724001427526,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -496,6 +496,44 @@
             "unit": "ns",
             "range": "± 87651.92201547703",
             "bytesAllocated": 1568361
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "58d2bd391f1b3ec0341877d2c3f67d8281ca3ca5",
+          "message": "Update .NET SDK to 9.0.100-rc.1.24417.9 (#48)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 9.0.100-rc.1.24417.9.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 9.0.100-rc.1.24417.9 SDK.\n\nBumps Microsoft.AspNetCore.Mvc.Testing from 9.0.0-rc.1.24414.4 to 9.0.0-rc.1.24416.6.\nBumps Microsoft.AspNetCore.OpenApi from 9.0.0-rc.1.24414.4 to 9.0.0-rc.1.24416.6.\nBumps Microsoft.Extensions.ApiDescription.Server from 9.0.0-rc.1.24414.4 to 9.0.0-rc.1.24416.6.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-08-18T17:13:32Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/58d2bd391f1b3ec0341877d2c3f67d8281ca3ca5"
+        },
+        "date": 1724001427526,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1003807.1973958333,
+            "unit": "ns",
+            "range": "± 16307.144447134371",
+            "bytesAllocated": 339386
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4589477.456163194,
+            "unit": "ns",
+            "range": "± 136035.32322707033",
+            "bytesAllocated": 1627441
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2797095.916466346,
+            "unit": "ns",
+            "range": "± 112043.47051470433",
+            "bytesAllocated": 1568366
           }
         ]
       }
