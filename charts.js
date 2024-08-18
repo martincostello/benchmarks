@@ -75,7 +75,7 @@
         labels: dataset.map(d => d.commit.sha.slice(0, 7)),
         datasets: [
           {
-            label: `${name} (time)`,
+            label: 'Time',
             data: dataset.map(d => d.bench.value),
             borderColor: timeColor,
             backgroundColor: `${timeColor}60`,
@@ -110,6 +110,10 @@
           }
         },
         plugins: {
+          title: {
+            display: true,
+            text: name,
+          },
           tooltip: {
             callbacks: {
               afterTitle: items => {
@@ -146,7 +150,7 @@
       if (hasMemory) {
         const memoryUnit = dataset.find(d => d.bench.bytesAllocated !== undefined)?.bench.memoryUnit ?? '';
         data.datasets.push({
-          label: `${name} (memory)`,
+          label: 'Memory',
           data: dataset.map(d => d.bench.bytesAllocated),
           borderColor: memoryColor,
           backgroundColor: `${memoryColor}60`,
