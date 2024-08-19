@@ -101,6 +101,14 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav">
+                  <li>
+                      <button type="button" class="btn btn-link navbar-btn nav-link d-none" id="sign-out" title="Sign out" data-bs-toggle="tooltip" data-bs-title="Removes your GitHub access token from local storage">
+                          Sign out
+                          <span class="fa fa-sign-out" aria-hidden="true"></span>
+                      </button>
+                  </li>
+              </ul>
             </div>
         </div>
     </nav>
@@ -166,7 +174,7 @@
             </select>
           </div>
           <div class="col">
-            <button class="btn btn-primary" id="load-data" type="submit">
+            <button class="btn btn-primary" id="load-data" type="submit" data-bs-toggle="tooltip" data-bs-title="Loads the benchmark data for the selected repository and branch">
               Load data &nbsp;
               <span class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></span>
               <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true"></span>

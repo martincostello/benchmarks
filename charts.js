@@ -51,6 +51,12 @@
 
     if (token) {
       headers['Authorization'] = `token ${token}`;
+      const signOut = document.getElementById('sign-out');
+      signOut.addEventListener('click', () => {
+        localStorage.removeItem(tokenKey);
+        location.reload();
+      });
+      signOut.classList.remove(hideClass);
     }
 
     const repoOwner = 'martincostello';
