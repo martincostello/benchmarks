@@ -1,5 +1,6 @@
 'use strict';
 (async function () {
+  const hideClass = 'd-none';
   async function init() {
     function collectBenchesPerTestCase(entries) {
       const map = new Map();
@@ -18,22 +19,159 @@
       return map;
     }
 
-    // Get the raw data for this repository and optional branch
-    const segments = window.location.pathname.split('/');
-    const path = segments[segments.length - 2];
-    const branch = new URLSearchParams(window.location.search).get('branch') || 'main';
-    const dataUrl = `https://raw.githubusercontent.com/martincostello/benchmarks/${branch}/${path}/data.json`;
+    const tooltips = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')];
+    tooltips.map(element => new bootstrap.Tooltip(element));
 
-    // Fetch the data and parse it as JSON
-    const response = await fetch(dataUrl, { cache: 'no-cache' });
-    const data = await response.json();
+    const tokenKey = 'github-token';
+    const token = localStorage.getItem(tokenKey);
 
-    // Render header
-    document.getElementById('branch-name').textContent = branch;
-    document.getElementById('last-update').textContent = new Date(data.lastUpdated).toLocaleString();
+    if (!token) {
+      const tokenValue = document.getElementById('github-token');
+      if (tokenValue) {
+        document.getElementById('save-token').addEventListener('click', () => {
+          const token = tokenValue.value;
+          if (token.length > 0) {
+            document.getElementById('load-data').disabled = true;
+            document.getElementById('spinner').classList.remove(hideClass);
+            localStorage.setItem(tokenKey, token);
+            location.reload();
+          }
+        });
+        document.getElementById('token-prompt').classList.remove(hideClass);
+        return null;
+      }
+    }
+
+    ['download-json', 'header', 'main'].forEach(id => document.getElementById(id).classList.remove(hideClass));
+
+    const headers = {
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+    }
+
+    if (token) {
+      headers['Authorization'] = `token ${token}`;
+    }
+
+    const repoOwner = 'martincostello';
+    const repositories = [
+      'adventofcode',
+      'api',
+      'aspnetcore-openapi',
+      'costellobot',
+      'openapi-extensions',
+      'project-euler',
+      'website',
+    ];
+
+    const parameters = new URLSearchParams(window.location.search);
+    const repo = parameters.get('repo') || repositories[0];
+    let branch = parameters.get('branch');
+
+    const githubServerUrl = 'https://api.github.com';
+
+    const repositorySelect = document.getElementById('repository');
+    for (const item of repositories) {
+      const option = document.createElement('option');
+      option.selected = item === repo;
+      option.textContent = item;
+      option.value = item;
+      repositorySelect.appendChild(option);
+    }
+
+    repositorySelect.value = repo;
+
+    const branchSelect = document.getElementById('branch');
+
+    const hydrateBranches = async (_) => {
+      const repoName = repositorySelect.value;
+      const repoUrl = `${githubServerUrl}/repos/${repoOwner}/${repoName}`;
+      const repoResponse = await fetch(repoUrl, {
+        cache: 'no-cache',
+        headers,
+      });
+
+      const repository = await repoResponse.json();
+      let branchName = branch;
+
+      if (!branchName || branchName.length === 0) {
+        branchName = repository.default_branch;
+      }
+
+      const branchesUrl = `${githubServerUrl}/repos/${repository.full_name}/branches`;
+      const branchesResponse = await fetch(branchesUrl, {
+        cache: 'no-cache',
+        headers,
+      });
+
+      const branches = await branchesResponse.json();
+      const branchSelect = document.getElementById('branch');
+
+      while (branchSelect.firstChild) {
+        branchSelect.removeChild(branchSelect.firstChild);
+      }
+
+      for (const branch of branches) {
+        const option = document.createElement('option');
+        option.selected = branch.name === branchName;
+        option.textContent = branch.name;
+        option.value = branch.name;
+        branchSelect.appendChild(option);
+      }
+
+      if (branch === null) {
+        branch = branchName;
+      }
+    };
+
+    await hydrateBranches();
+
+    branchSelect.value = branch;
+
+    repositorySelect.addEventListener('change', async () => {
+      await hydrateBranches();
+    });
+
+    const dataUrl = `https://raw.githubusercontent.com/${repoOwner}/benchmarks/${branch}/${repo}/data.json`;
+    const response = await fetch(dataUrl, {
+      cache: 'no-cache',
+    });
+
+    let data;
+
+    try {
+      data = await response.json();
+    }
+    catch (error) {
+      document.getElementById('header').classList.add(hideClass);
+      document.getElementById('error').classList.remove(hideClass);
+      return null;
+    }
+
+    const lastUpdatedElement = document.getElementById('last-update');
+    const lastUpdated = new Date(data.lastUpdated);
+    lastUpdatedElement.textContent = lastUpdated.toLocaleString();
+    lastUpdatedElement.title = lastUpdated.toISOString();
+
     const repoLink = document.getElementById('repository-link');
     repoLink.href = data.repoUrl;
     repoLink.textContent = data.repoUrl;
+
+    const branchLink = document.getElementById('branch-link');
+    branchLink.href = `${data.repoUrl}/tree/${branch}`;
+    branchLink.children[0].textContent = branch;
+
+    const suiteNames = Object.keys(data.entries);
+    if (suiteNames.length === 1) {
+      const benchmarks = data.entries[suiteNames[0]];
+      if (benchmarks && benchmarks.length > 0) {
+        const commit = benchmarks[benchmarks.length - 1].commit;
+
+        const commitLink = document.getElementById('commit-link');
+        commitLink.href = `${data.repoUrl}/commits/${commit.sha}`;
+        commitLink.children[0].textContent = commit.sha;
+      }
+    }
 
     // Render footer
     document.getElementById('download-json').onclick = () => {
@@ -50,7 +188,6 @@
       link.click();
     };
 
-    // Prepare data points for charts
     return Object.keys(data.entries).map(name => ({
       name,
       dataSet: collectBenchesPerTestCase(data.entries[name]),
@@ -197,7 +334,6 @@
 
     const main = document.getElementById('main');
     for (const { name, dataSet } of dataSets) {
-      // Adjust the values' units to improve readability
       dataSet.forEach(items => {
         if (items.length > 0) {
           let minValue = items.length === 1 ? items[0].bench.value : Number.POSITIVE_INFINITY;
@@ -257,5 +393,9 @@
     }
   }
 
-  renderAllCharts(await init());
+  const dataSets = await init();
+  if (dataSets) {
+    renderAllCharts(dataSets);
+    document.getElementById('spinner').classList.add(hideClass);
+  }
 })();
