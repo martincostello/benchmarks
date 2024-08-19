@@ -156,8 +156,8 @@
     </div>
     <header class="d-none" id="header">
       <form id="data-select" method="get">
-        <div class="row g-3">
-          <div class="input-group mb-3 col">
+        <div class="g-3 row row-cols-6">
+          <div class="input-group col">
             <label class="input-group-text" for="repository">
               Repository &nbsp;
               <span class="fa-solid fa-code" aria-hidden="true"></span>
@@ -165,7 +165,7 @@
             <select class="form-select" id="repository" name="repo">
             </select>
           </div>
-          <div class="input-group mb-3 col">
+          <div class="input-group col">
             <label class="input-group-text" for="branch">
               Branch &nbsp;
               <span class="fa-solid fa-code-branch" aria-hidden="true"></span>
@@ -173,7 +173,7 @@
             <select class="form-select" id="branch" name="branch">
             </select>
           </div>
-          <div class="col">
+          <div class="col col-auto">
             <button class="btn btn-primary" id="load-data" type="submit" data-bs-toggle="tooltip" data-bs-title="Loads the benchmark data for the selected repository and branch">
               Load data &nbsp;
               <span class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></span>
