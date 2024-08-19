@@ -167,17 +167,18 @@
     branchLink.href = `${data.repoUrl}/tree/${branch}`;
     branchLink.children[0].textContent = branch;
 
+    let commitSha = undefined;
     const suiteNames = Object.keys(data.entries);
     if (suiteNames.length === 1) {
       const benchmarks = data.entries[suiteNames[0]];
       if (benchmarks && benchmarks.length > 0) {
-        const commit = benchmarks[benchmarks.length - 1].commit;
-
-        const commitLink = document.getElementById('commit-link');
-        commitLink.href = `${data.repoUrl}/commits/${commit.sha}`;
-        commitLink.children[0].textContent = commit.sha;
+        commitSha = benchmarks[benchmarks.length - 1].commit.sha;
       }
     }
+
+    const commitLink = document.getElementById('commit-link');
+    commitLink.href = commitSha ? `${data.repoUrl}/commits/${commitSha}` : '';
+    commitLink.children[0].textContent = commitSha ?? '';
 
     // Render footer
     document.getElementById('download-json').onclick = () => {
