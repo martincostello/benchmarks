@@ -18,8 +18,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-            ref: ${{ github.event.repository.default_branch }}
-            token: ${{ secrets.COSTELLOBOT_TOKEN }}
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+          token: ${{ secrets.COSTELLOBOT_TOKEN }}
 
       - name: Merge main to gh-pages
         shell: bash
@@ -33,7 +34,6 @@ jobs:
           git config user.email ${GIT_COMMIT_USER_EMAIL} &&
           git config user.name ${GIT_COMMIT_USER_NAME} &&
           git fetch ${GIT_REMOTE} &&
-          git checkout ${GIT_DEFAULT_BRANCH} &&
           git checkout ${GIT_BRANCH} &&
           git merge ${GIT_DEFAULT_BRANCH} &&
           git push ${GIT_REMOTE} ${GIT_BRANCH}
