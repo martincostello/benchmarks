@@ -109,6 +109,16 @@
       });
 
       const branches = await branchesResponse.json();
+
+      branches.sort((a, b) => {
+        if (a.name === repository.default_branch) {
+          return -1;
+        } else if (b.name === repository.default_branch) {
+          return 1;
+        }
+        return a.name.localeCompare(b.name);
+      });
+
       const branchSelect = document.getElementById('branch');
 
       while (branchSelect.firstChild) {
