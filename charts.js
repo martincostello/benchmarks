@@ -181,12 +181,18 @@
       cache: 'no-cache',
     });
 
-    let data;
+    let data = null;
 
-    try {
-      data = await response.json();
+    if (response.ok) {
+      try {
+        data = await response.json();
+      }
+      catch (error) {
+        return null;
+      }
     }
-    catch (error) {
+
+    if (!data) {
       document.getElementById('header').classList.add(hideClass);
       document.getElementById('error').classList.remove(hideClass);
       return null;
