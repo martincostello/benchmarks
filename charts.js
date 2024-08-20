@@ -117,11 +117,18 @@
     const branchSelect = document.getElementById('branch');
 
     const hydrateBranches = async (_) => {
-      const repoName = repositorySelect.value;
+      let repoName = repositorySelect.value;
+      if (repoName.length === 0) {
+        repoName = repo;
+      }
       const repoUrl = `${githubServerUrl}/repos/${dashboardOwner}/${repoName}`;
       const repoResponse = await fetch(repoUrl, {
         headers,
       });
+
+      if (!repoResponse.ok) {
+        throw new Error(`Failed to get repository ${dashboardOwner}/${repoName}`);
+      }
 
       const repository = await repoResponse.json();
       let branchName = branch;
@@ -134,6 +141,10 @@
       const branchesResponse = await fetch(branchesUrl, {
         headers,
       });
+
+      if (!branchesResponse.ok) {
+        throw new Error(`Failed to get branches for repository ${dashboardOwner}/${repoName}`);
+      }
 
       const branches = await branchesResponse.json();
 
