@@ -93,7 +93,6 @@
       const repoName = repositorySelect.value;
       const repoUrl = `${githubServerUrl}/repos/${repoOwner}/${repoName}`;
       const repoResponse = await fetch(repoUrl, {
-        cache: 'no-cache',
         headers,
       });
 
@@ -106,7 +105,6 @@
 
       const branchesUrl = `${githubServerUrl}/repos/${repository.full_name}/branches`;
       const branchesResponse = await fetch(branchesUrl, {
-        cache: 'no-cache',
         headers,
       });
 
