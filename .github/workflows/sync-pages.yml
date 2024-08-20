@@ -33,6 +33,7 @@ jobs:
           git config user.email ${GIT_COMMIT_USER_EMAIL} &&
           git config user.name ${GIT_COMMIT_USER_NAME} &&
           git fetch ${GIT_REMOTE} &&
+          git checkout ${GIT_DEFAULT_BRANCH} &&
           git checkout ${GIT_BRANCH} &&
           git merge ${GIT_DEFAULT_BRANCH} &&
           git push ${GIT_REMOTE} ${GIT_BRANCH}
