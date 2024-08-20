@@ -28,9 +28,11 @@ jobs:
           GIT_COMMIT_USER_NAME: ${{ vars.GIT_COMMIT_USER_NAME }}
           GIT_BRANCH: 'gh-pages'
           GIT_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          GIT_REMOTE: 'origin'
         run: >
           git config user.email ${GIT_COMMIT_USER_EMAIL} &&
           git config user.name ${GIT_COMMIT_USER_NAME} &&
+          git fetch ${GIT_REMOTE} &&
           git checkout ${GIT_BRANCH} &&
           git merge ${GIT_DEFAULT_BRANCH} &&
-          git push origin ${GIT_BRANCH}
+          git push ${GIT_REMOTE} ${GIT_BRANCH}
