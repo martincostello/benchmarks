@@ -1,7 +1,11 @@
 'use strict';
 (async function () {
-  const githubServerUrl = 'https://api.github.com';
   const hideClass = 'd-none';
+
+  const config = window.DASHBOARD_CONFIG;
+  const githubServerUrl = config.githubApiUrl;
+  const githubDataUrl = config.githubDataUrl;
+
   async function init() {
     function collectBenchesPerTestCase(entries) {
       const map = new Map();
@@ -26,7 +30,7 @@
     const headers = {
       'Accept': 'application/vnd.github+json',
       'Authorization': `token ${token}`,
-      'X-GitHub-Api-Version': '2022-11-28',
+      'X-GitHub-Api-Version': config.githubApiVersion,
     }
 
     let tokenValid = undefined;
@@ -91,16 +95,9 @@
       signOut.classList.remove(hideClass);
     }
 
-    const repoOwner = 'martincostello';
-    const repositories = [
-      'adventofcode',
-      'api',
-      'aspnetcore-openapi',
-      'costellobot',
-      'openapi-extensions',
-      'project-euler',
-      'website',
-    ];
+    const dashboardOwner = config.dashboardRepositoryOwner;
+    const dashboardName = config.dashboardRepositoryName;
+    const repositories = config.repositories;
 
     const parameters = new URLSearchParams(window.location.search);
     const repo = parameters.get('repo') || repositories[0];
@@ -121,7 +118,7 @@
 
     const hydrateBranches = async (_) => {
       const repoName = repositorySelect.value;
-      const repoUrl = `${githubServerUrl}/repos/${repoOwner}/${repoName}`;
+      const repoUrl = `${githubServerUrl}/repos/${dashboardOwner}/${repoName}`;
       const repoResponse = await fetch(repoUrl, {
         headers,
       });
@@ -176,7 +173,7 @@
       await hydrateBranches();
     });
 
-    const dataUrl = `https://raw.githubusercontent.com/${repoOwner}/benchmarks/${branch}/${repo}/data.json`;
+    const dataUrl = `${githubDataUrl}/${dashboardOwner}/${dashboardName}/${branch}/${repo}/data.json`;
     const response = await fetch(dataUrl, {
       cache: 'no-cache',
     });
@@ -255,9 +252,9 @@
       dataset.sort((a, b) => a.date - b.date);
 
       const memoryAxis = 'y2';
-      const memoryColor = '#e34c26';
+      const memoryColor = config.colors.memory;
       const timeAxis = 'y';
-      const timeColor = '#178600';
+      const timeColor = config.colors.time;
 
       const data = {
         labels: dataset.map(d => d.commit.sha.slice(0, 7)),
