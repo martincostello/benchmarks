@@ -1,0 +1,112 @@
+{
+  "lastUpdated": 1724157458526,
+  "repoUrl": "https://github.com/martincostello/benchmarks-demo",
+  "entries": {
+    "DotNetBenchmarks.IndexOfAnyBenchmarks": [
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "42e2392ea5cb0bc5e40dc6d83209adedfcba3ec2",
+          "message": "Fix benchmarks (#2)\n\nRemove the `-Filter` parameter and just pass a literal `*` as otherwise PowerShell keeps trying to expand it, breaking the invocation.",
+          "timestamp": "2024-08-20T12:34:24Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/42e2392ea5cb0bc5e40dc6d83209adedfcba3ec2"
+        },
+        "date": 1724157458526,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.440263656278451,
+            "unit": "ns",
+            "range": "± 0.028783044585658987",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 4.98829476748194,
+            "unit": "ns",
+            "range": "± 0.026116498350482",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 3.0429915810624757,
+            "unit": "ns",
+            "range": "± 0.0186205371414151",
+            "bytesAllocated": 0
+          }
+        ]
+      }
+    ],
+    "DotNetBenchmarks.HashBenchmarks": [
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "42e2392ea5cb0bc5e40dc6d83209adedfcba3ec2",
+          "message": "Fix benchmarks (#2)\n\nRemove the `-Filter` parameter and just pass a literal `*` as otherwise PowerShell keeps trying to expand it, breaking the invocation.",
+          "timestamp": "2024-08-20T12:34:24Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/42e2392ea5cb0bc5e40dc6d83209adedfcba3ec2"
+        },
+        "date": 1724157458526,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 7653.378912789481,
+            "unit": "ns",
+            "range": "± 46.9595028403772",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 7089.60852595738,
+            "unit": "ns",
+            "range": "± 9.27703688202347",
+            "bytesAllocated": 56
+          }
+        ]
+      }
+    ],
+    "DotNetBenchmarks.ILoggerFactoryBenchmarks": [
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "42e2392ea5cb0bc5e40dc6d83209adedfcba3ec2",
+          "message": "Fix benchmarks (#2)\n\nRemove the `-Filter` parameter and just pass a literal `*` as otherwise PowerShell keeps trying to expand it, breaking the invocation.",
+          "timestamp": "2024-08-20T12:34:24Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/42e2392ea5cb0bc5e40dc6d83209adedfcba3ec2"
+        },
+        "date": 1724157458526,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 70.3433185060819,
+            "unit": "ns",
+            "range": "± 0.5665478886134108",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 59.05663513285773,
+            "unit": "ns",
+            "range": "± 0.36423715525413614",
+            "bytesAllocated": 120
+          }
+        ]
+      }
+    ]
+  }
+}
