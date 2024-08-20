@@ -256,9 +256,14 @@
   function renderAllCharts(dataSets) {
 
     function renderGraph(parent, name, dataset) {
+      const container = document.createElement('div');
+      container.classList.add('benchmark-chart-container');
+      container.classList.add('col');
+      parent.appendChild(container);
+
       const canvas = document.createElement('canvas');
-      canvas.className = 'benchmark-chart';
-      parent.appendChild(canvas);
+      canvas.classList.add('benchmark-chart');
+      container.appendChild(canvas);
 
       dataset.sort((a, b) => a.date - b.date);
 
@@ -374,16 +379,19 @@
 
     function renderBenchSet(name, benchSet, main) {
       const setElement = document.createElement('div');
-      setElement.className = 'benchmark-set';
+      setElement.classList.add('benchmark-set');
       main.appendChild(setElement);
 
-      const nameElement = document.createElement('h1');
-      nameElement.className = 'benchmark-title';
+      const nameElement = document.createElement('h2');
+      nameElement.classList.add('benchmark-title');
       nameElement.textContent = name;
       setElement.appendChild(nameElement);
 
       const graphsElement = document.createElement('div');
-      graphsElement.className = 'benchmark-graphs';
+      graphsElement.classList.add('benchmark-graphs');
+      graphsElement.classList.add('row');
+      graphsElement.classList.add('row-cols-1');
+      graphsElement.classList.add('row-cols-sm-2');
       setElement.appendChild(graphsElement);
 
       for (const [benchName, benches] of benchSet.entries()) {
