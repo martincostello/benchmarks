@@ -165,7 +165,7 @@
 
     const branchLink = document.getElementById('branch-link');
     branchLink.href = `${data.repoUrl}/tree/${branch}`;
-    branchLink.children[0].textContent = branch;
+    branchLink.textContent = branch;
 
     let commitSha = undefined;
     const suiteNames = Object.keys(data.entries);
@@ -178,7 +178,7 @@
 
     const commitLink = document.getElementById('commit-link');
     commitLink.href = commitSha ? `${data.repoUrl}/commits/${commitSha}` : '';
-    commitLink.children[0].textContent = commitSha ?? '';
+    commitLink.textContent = commitSha ?? '';
 
     // Render footer
     document.getElementById('download-json').onclick = () => {
