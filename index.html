@@ -101,11 +101,12 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav d-none" id="sign-out">
+                  <span class="navbar-text" id="user-name" title="GitHub user" data-bs-toggle="tooltip" data-bs-title="Unauthenticated" data-github-user-login=""></span>
                   <li>
-                      <button type="button" class="btn btn-link navbar-btn nav-link d-none" id="sign-out" title="Sign out" data-bs-toggle="tooltip" data-bs-title="Removes your GitHub access token from local storage">
-                          Sign out
-                          <span class="fa fa-sign-out" aria-hidden="true"></span>
+                      <button type="button" class="btn btn-link navbar-btn nav-link" title="Sign out" data-bs-toggle="tooltip" data-bs-title="Removes your GitHub access token from local storage">
+                        Sign out
+                        <span class="fa fa-sign-out" aria-hidden="true"></span>
                       </button>
                   </li>
               </ul>
@@ -133,7 +134,7 @@
                   &nbsp;
                   <span class="fa-solid fa-key" aria-hidden="true"></span>
                 </div>
-                <input type="password" class="form-control" id="github-token" placeholder="ghp_repo-scoped-token" data-bs-toggle="tooltip" data-bs-title="The GitHub access token must have at least the public_repo scope">
+                <input type="password" autocomplete="off" class="form-control" id="github-token" placeholder="ghp_repo-scoped-token" data-bs-toggle="tooltip" data-bs-title="The GitHub access token must have at least the public_repo scope">
               </div>
             </div>
             <div class="col-12">
@@ -150,6 +151,23 @@
           </form>
         </div>
       </div>
+    </div>
+    <div class="alert alert-warning d-none mx-2" id="token-invalid" role="alert">
+      <p class="fw-medium">
+        <span class="fa-stack">
+          <i class="fa-solid fa-key fa-stack-1x"></i>
+          <i class="fa-solid fa-ban fa-stack-1x text-danger"></i>
+        </span>
+        Your GitHub access token is invalid.
+      </p>
+      <p>
+        Possible causes:
+        <ul class="fw-light">
+          <li>The token is not for GitHub.com</li>
+          <li>The token has been deleted or regenerated.</li>
+          <li>The token has expired.</li>
+          <li>The token does not have the correct scopes.</li>
+      </p>
     </div>
     <div class="alert alert-danger d-none m-2" id="error" role="alert">
       Failed to load the data for the benchmarks.

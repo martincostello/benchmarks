@@ -1,5 +1,6 @@
 'use strict';
 (async function () {
+  const githubServerUrl = 'https://api.github.com';
   const hideClass = 'd-none';
   async function init() {
     function collectBenchesPerTestCase(entries) {
@@ -19,11 +20,42 @@
       return map;
     }
 
+    const tokenKey = 'github-token';
+    let token = localStorage.getItem(tokenKey);
+
+    const headers = {
+      'Accept': 'application/vnd.github+json',
+      'Authorization': `token ${token}`,
+      'X-GitHub-Api-Version': '2022-11-28',
+    }
+
+    let tokenValid = undefined;
+
+    if (token) {
+      try {
+        const response = await fetch(`${githubServerUrl}/user`, {
+          headers,
+        });
+        tokenValid = response.ok;
+        if (tokenValid) {
+          const user = await response.json();
+          const userInfo = document.getElementById('user-name');
+          userInfo.setAttribute('data-bs-title', `Signed in as @${user.login} (${user.name})`);
+          userInfo.setAttribute('data-github-user-login', user.login);
+        }
+      }
+      catch (error) {
+        tokenValid = false;
+      }
+
+      if (!tokenValid) {
+        localStorage.removeItem(tokenKey);
+        token = null;
+      }
+    }
+
     const tooltips = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')];
     tooltips.map(element => new bootstrap.Tooltip(element));
-
-    const tokenKey = 'github-token';
-    const token = localStorage.getItem(tokenKey);
 
     if (!token) {
       const tokenValue = document.getElementById('github-token');
@@ -38,16 +70,16 @@
           }
         });
         document.getElementById('token-prompt').classList.remove(hideClass);
+        if (tokenValid === false) {
+          const alert = document.getElementById('token-invalid');
+          alert.classList.remove(hideClass);
+        }
+        tokenValue.focus();
         return null;
       }
     }
 
     ['download-json', 'header', 'main'].forEach(id => document.getElementById(id).classList.remove(hideClass));
-
-    const headers = {
-      'Accept': 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-    }
 
     if (token) {
       headers['Authorization'] = `token ${token}`;
@@ -73,8 +105,6 @@
     const parameters = new URLSearchParams(window.location.search);
     const repo = parameters.get('repo') || repositories[0];
     let branch = parameters.get('branch');
-
-    const githubServerUrl = 'https://api.github.com';
 
     const repositorySelect = document.getElementById('repository');
     for (const item of repositories) {
