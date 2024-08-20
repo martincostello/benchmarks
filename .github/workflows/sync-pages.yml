@@ -1,0 +1,36 @@
+name: sync-pages
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+            ref: ${{ github.event.repository.default_branch }}
+            token: ${{ secrets.COSTELLOBOT_TOKEN }}
+
+      - name: Merge main to gh-pages
+        shell: bash
+        env:
+          GIT_COMMIT_USER_EMAIL: ${{ vars.GIT_COMMIT_USER_EMAIL }}
+          GIT_COMMIT_USER_NAME: ${{ vars.GIT_COMMIT_USER_NAME }}
+          GIT_BRANCH: 'gh-pages'
+          GIT_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: >
+          git config user.email ${GIT_COMMIT_USER_EMAIL} &&
+          git config user.name ${GIT_COMMIT_USER_NAME} &&
+          git checkout ${GIT_BRANCH} &&
+          git merge ${GIT_DEFAULT_BRANCH} &&
+          git push origin ${GIT_BRANCH}
