@@ -9,6 +9,7 @@ window.DASHBOARD_CONFIG = {
   githubApiVersion: '2022-11-28',
   githubDataUrl: 'https://raw.githubusercontent.com',
   repositories: [
+    'benchmarks-demo,
     'adventofcode',
     'api',
     'aspnetcore-openapi',
