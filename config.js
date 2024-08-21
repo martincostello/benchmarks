@@ -8,6 +8,7 @@ window.DASHBOARD_CONFIG = {
   githubApiUrl: 'https://api.github.com',
   githubApiVersion: '2022-11-28',
   githubDataUrl: 'https://raw.githubusercontent.com',
+  githubServerUrl: 'https://github.com',
   repositories: [
     'benchmarks-demo',
     'adventofcode',
@@ -17,5 +18,8 @@ window.DASHBOARD_CONFIG = {
     'openapi-extensions',
     'project-euler',
     'website',
+  ],
+  tokenScopes: [
+    'public_repo',
   ],
 };

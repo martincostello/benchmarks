@@ -3,8 +3,29 @@
   const hideClass = 'd-none';
 
   const config = window.DASHBOARD_CONFIG;
-  const githubServerUrl = config.githubApiUrl;
+  if (!config) {
+    throw new Error('Dashboard configuration not found.');
+  }
+
+  const githubApiUrl = config.githubApiUrl;
   const githubDataUrl = config.githubDataUrl;
+  const githubServerUrl = config.githubServerUrl;
+  const isGitHubEnterprise = githubServerUrl !== 'https://github.com';
+
+  const description = encodeURIComponent(`${config.dashboardRepositoryOwner} benchmarks`);
+  const scopes = encodeURIComponent(config.tokenScopes.join(','));
+
+  document.getElementById('new-token-link').href = `${githubServerUrl}/settings/tokens/new?description=${description}&scopes=${scopes}`;
+  document.getElementById('repo-link').href = `${githubServerUrl}/${config.dashboardRepositoryOwner}/${config.dashboardRepositoryName}`;
+
+  document.getElementById('token-mismatch').textContent =
+    isGitHubEnterprise ?
+    'The token is for GitHub.com not GitHub Enterprise' :
+    'The token is not for GitHub.com';
+
+  const githubType = isGitHubEnterprise ? 'GitHub Enterprise' : 'GitHub';
+  const githubNameElements = document.querySelectorAll('.github-name');
+  githubNameElements.forEach(element => element.setAttribute('data-github-type', githubType));
 
   async function init() {
     function collectBenchesPerTestCase(entries) {
@@ -37,7 +58,7 @@
 
     if (token) {
       try {
-        const response = await fetch(`${githubServerUrl}/user`, {
+        const response = await fetch(`${githubApiUrl}/user`, {
           headers,
         });
         tokenValid = response.ok;
@@ -101,7 +122,9 @@
 
     const parameters = new URLSearchParams(window.location.search);
     const repo = parameters.get('repo') || repositories[0];
+
     let branch = parameters.get('branch');
+    let publicRepo = false;
 
     const repositorySelect = document.getElementById('repository');
     for (const item of repositories) {
@@ -121,7 +144,7 @@
       if (repoName.length === 0) {
         repoName = repo;
       }
-      const repoUrl = `${githubServerUrl}/repos/${dashboardOwner}/${repoName}`;
+      const repoUrl = `${githubApiUrl}/repos/${dashboardOwner}/${repoName}`;
       const repoResponse = await fetch(repoUrl, {
         headers,
       });
@@ -131,13 +154,15 @@
       }
 
       const repository = await repoResponse.json();
+      publicRepo = repository.visibility === 'public';
+
       let branchName = branch;
 
       if (!branchName || branchName.length === 0) {
         branchName = repository.default_branch;
       }
 
-      const branchesUrl = `${githubServerUrl}/repos/${repository.full_name}/branches`;
+      const branchesUrl = `${githubApiUrl}/repos/${repository.full_name}/branches`;
       const branchesResponse = await fetch(branchesUrl, {
         headers,
       });
@@ -184,10 +209,25 @@
       await hydrateBranches();
     });
 
-    const dataUrl = `${githubDataUrl}/${dashboardOwner}/${dashboardName}/${branch}/${repo}/data.json`;
-    const response = await fetch(dataUrl, {
+    const fileName = 'data.json';
+    const useApi = isGitHubEnterprise || !publicRepo;
+    const dataUrl =
+      useApi ?
+      `${githubApiUrl}/repos/${dashboardOwner}/${dashboardName}/contents/${repo}/${fileName}?ref=${branch}` :
+      `${githubDataUrl}/${dashboardOwner}/${dashboardName}/${branch}/${repo}/${fileName}`;
+
+    const fetchOptions = {
       cache: 'no-cache',
-    });
+    };
+
+    if (useApi) {
+      fetchOptions.headers = {
+        ...headers,
+        'Accept': 'application/vnd.github.v3.raw',
+      };
+    }
+
+    const response = await fetch(dataUrl, fetchOptions);
 
     let data = null;
 
