@@ -50,7 +50,6 @@
 
     const headers = {
       'Accept': 'application/vnd.github+json',
-      'Authorization': `token ${token}`,
       'X-GitHub-Api-Version': config.githubApiVersion,
     }
 
@@ -59,7 +58,8 @@
     if (token) {
       try {
         const response = await fetch(`${githubApiUrl}/user`, {
-          headers,
+          ...headers,
+          'Authorization': `token ${token}`,
         });
         tokenValid = response.ok;
         if (tokenValid) {
@@ -82,7 +82,7 @@
     const tooltips = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')];
     tooltips.map(element => new bootstrap.Tooltip(element));
 
-    if (!token) {
+    if (!token && isGitHubEnterprise) {
       const tokenValue = document.getElementById('github-token');
       if (tokenValue) {
         document.getElementById('save-token').addEventListener('click', () => {
