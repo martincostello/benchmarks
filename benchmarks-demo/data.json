@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1724203935984,
+  "lastUpdated": 1724240628798,
   "repoUrl": "https://github.com/martincostello/benchmarks-demo",
   "entries": {
     "DotNetBenchmarks.IndexOfAnyBenchmarks": [
@@ -78,6 +78,44 @@
             "bytesAllocated": 0
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "4f5594bf3eff2c7be2751424e186012811e7cdbc",
+          "message": "Add sample HTTP benchmark\n\nAdd an example of benchmarking an ASP.NET Core HTTP API.",
+          "timestamp": "2024-08-21T11:39:04Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/4f5594bf3eff2c7be2751424e186012811e7cdbc"
+        },
+        "date": 1724240628798,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.434052627285322,
+            "unit": "ns",
+            "range": "± 0.021735783450896887",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 5.007710431516171,
+            "unit": "ns",
+            "range": "± 0.02403939259316126",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 3.3229733476681367,
+            "unit": "ns",
+            "range": "± 0.01974343981981938",
+            "bytesAllocated": 0
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.HashBenchmarks": [
@@ -139,6 +177,37 @@
             "value": 7101.761590685163,
             "unit": "ns",
             "range": "± 13.610975444317969",
+            "bytesAllocated": 56
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "4f5594bf3eff2c7be2751424e186012811e7cdbc",
+          "message": "Add sample HTTP benchmark\n\nAdd an example of benchmarking an ASP.NET Core HTTP API.",
+          "timestamp": "2024-08-21T11:39:04Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/4f5594bf3eff2c7be2751424e186012811e7cdbc"
+        },
+        "date": 1724240628798,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 7653.214499840369,
+            "unit": "ns",
+            "range": "± 37.71378726147944",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 7095.113506862095,
+            "unit": "ns",
+            "range": "± 10.778049358630527",
             "bytesAllocated": 56
           }
         ]
@@ -204,6 +273,70 @@
             "unit": "ns",
             "range": "± 0.38394483115161887",
             "bytesAllocated": 120
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "4f5594bf3eff2c7be2751424e186012811e7cdbc",
+          "message": "Add sample HTTP benchmark\n\nAdd an example of benchmarking an ASP.NET Core HTTP API.",
+          "timestamp": "2024-08-21T11:39:04Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/4f5594bf3eff2c7be2751424e186012811e7cdbc"
+        },
+        "date": 1724240628798,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 73.48430520693461,
+            "unit": "ns",
+            "range": "± 0.40448693356706295",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 68.26109742323557,
+            "unit": "ns",
+            "range": "± 0.45430033996902197",
+            "bytesAllocated": 120
+          }
+        ]
+      }
+    ],
+    "DotNetBenchmarks.TodoAppBenchmarks": [
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "4f5594bf3eff2c7be2751424e186012811e7cdbc",
+          "message": "Add sample HTTP benchmark\n\nAdd an example of benchmarking an ASP.NET Core HTTP API.",
+          "timestamp": "2024-08-21T11:39:04Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/4f5594bf3eff2c7be2751424e186012811e7cdbc"
+        },
+        "date": 1724240628798,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+            "value": 79517.09608845538,
+            "unit": "ns",
+            "range": "± 4238.666597631018",
+            "bytesAllocated": 3087
+          },
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            "value": 85787.80440063476,
+            "unit": "ns",
+            "range": "± 2997.9865678997935",
+            "bytesAllocated": 2947
           }
         ]
       }
