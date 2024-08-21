@@ -55,11 +55,13 @@
 
     let tokenValid = undefined;
 
-    if (token) {
+    if (token && token.length > 0) {
       try {
         const response = await fetch(`${githubApiUrl}/user`, {
-          ...headers,
-          'Authorization': `token ${token}`,
+          headers : {
+            ...headers,
+            'Authorization': `token ${token}`,
+          },
         });
         tokenValid = response.ok;
         if (tokenValid) {
