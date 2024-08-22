@@ -297,8 +297,9 @@
 
   function renderAllCharts(dataSets) {
 
-    function renderGraph(parent, name, dataset) {
+    function renderGraph(suiteName, parent, name, dataset) {
       const container = document.createElement('div');
+      container.id = `${suiteName}-${name}`;
       container.classList.add('benchmark-chart-container');
       container.classList.add('col');
       parent.appendChild(container);
@@ -422,6 +423,7 @@
     function renderBenchSet(name, benchSet, main) {
       const setElement = document.createElement('div');
       setElement.classList.add('benchmark-set');
+      setElement.id = name;
       main.appendChild(setElement);
 
       const nameElement = document.createElement('h2');
@@ -437,7 +439,7 @@
       setElement.appendChild(graphsElement);
 
       for (const [benchName, benches] of benchSet.entries()) {
-        renderGraph(graphsElement, benchName, benches)
+        renderGraph(name, graphsElement, benchName, benches)
       }
     }
 
@@ -499,6 +501,14 @@
       });
 
       renderBenchSet(name, dataSet, main);
+    }
+
+    if (window.location.hash) {
+      const focus = window.location.hash.substring(1);
+      const element = document.getElementById(focus);
+      if (element) {
+        element.scrollIntoView(false);
+      }
     }
   }
 
