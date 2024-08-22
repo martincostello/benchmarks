@@ -429,6 +429,18 @@
       const nameElement = document.createElement('h2');
       nameElement.classList.add('benchmark-title');
       nameElement.textContent = name;
+
+      const suiteLink = document.createElement('a');
+      suiteLink.href = `#${name}`;
+      suiteLink.classList.add('benchmark-set-anchor');
+      nameElement.appendChild(suiteLink);
+
+      const linkIcon = document.createElement('span');
+      linkIcon.classList.add('fa-solid');
+      linkIcon.classList.add('fa-link');
+      linkIcon.setAttribute('aria-hidden', 'true');
+      suiteLink.appendChild(linkIcon);
+
       setElement.appendChild(nameElement);
 
       const graphsElement = document.createElement('div');
