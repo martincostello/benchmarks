@@ -506,6 +506,9 @@
     if (window.location.hash) {
       const focus = window.location.hash.substring(1);
       const element = document.getElementById(focus);
+      if (!element) {
+        element = document.getElementById(decodeURIComponent(focus));
+      }
       if (element) {
         element.scrollIntoView(false);
       }
