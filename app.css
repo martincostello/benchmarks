@@ -9,10 +9,6 @@
   }
 }
 
-a {
-  color: #0F7661;
-}
-
 body {
   padding-top: 85px;
 }
@@ -74,6 +70,23 @@ header {
   max-width: 1000px;
 }
 
+.github-name::before {
+  content: attr(data-github-type);
+}
+
+#branch-name {
+  color: unset;
+}
+
+#user-name:before {
+  content: '@' attr(data-github-user-login) ' | ';
+}
+
+/* Custom CSS different from just vanilla Bootstrap 5 */
+a {
+  color: #0F7661;
+}
+
 .btn-github {
   background-color: #000;
   border-color: #000;
@@ -85,16 +98,4 @@ header {
   background-color: #424649;
   border-color: #373b3e;
   color: #fff;
-}
-
-.github-name::before {
-  content: attr(data-github-type);
-}
-
-#branch-name {
-  color: unset;
-}
-
-#user-name:before {
-  content: '@' attr(data-github-user-login) ' | ';
 }
