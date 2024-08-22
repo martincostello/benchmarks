@@ -451,7 +451,7 @@
       setElement.appendChild(graphsElement);
 
       for (const [benchName, benches] of benchSet.entries()) {
-        renderGraph(name, graphsElement, benchName, benches)
+        renderGraph(name, graphsElement, benchName, benches);
       }
     }
 
