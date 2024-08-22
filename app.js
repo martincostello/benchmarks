@@ -263,10 +263,16 @@
 
     let commitSha = undefined;
     const suiteNames = Object.keys(data.entries);
-    if (suiteNames.length === 1) {
-      const benchmarks = data.entries[suiteNames[0]];
-      if (benchmarks && benchmarks.length > 0) {
-        commitSha = benchmarks[benchmarks.length - 1].commit.sha;
+    if (suiteNames.length > 0) {
+      const shas = [];
+      for (const suiteName of suiteNames) {
+        const benchmarks = data.entries[suiteName];
+        if (benchmarks && benchmarks.length > 0) {
+          shas.push(benchmarks[benchmarks.length - 1].commit.sha);
+        }
+      }
+      if (new Set(shas).size === 1) {
+        commitSha = shas[0];
       }
     }
 
