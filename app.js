@@ -255,7 +255,7 @@
 
     const repoLink = document.getElementById('repository-link');
     repoLink.href = data.repoUrl;
-    repoLink.textContent = data.repoUrl;
+    repoLink.textContent = data.repoUrl.replace(`${githubServerUrl}/`, '');
 
     const branchLink = document.getElementById('branch-link');
     branchLink.href = `${data.repoUrl}/tree/${branch}`;
@@ -272,7 +272,7 @@
 
     const commitLink = document.getElementById('commit-link');
     commitLink.href = commitSha ? `${data.repoUrl}/commits/${commitSha}` : '';
-    commitLink.textContent = commitSha ?? '';
+    commitLink.textContent = commitSha ? commitSha.slice(0, 7) : '';
 
     // Render footer
     document.getElementById('download-json').onclick = () => {
