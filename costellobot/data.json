@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1724397865052,
+  "lastUpdated": 1724417944665,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -1310,6 +1310,44 @@
             "unit": "ns",
             "range": "± 1960.0799439716843",
             "bytesAllocated": 46331
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b75a318da34bbb9689b01164cc7dcfc6a21a34ec",
+          "message": "Extract NuGet package versions from Git diffs (#1663)\n\n- Parse Git diffs to extract which NuGet packages were updated and the versions they were updated from and to.\r\n- Fetch the diff for a pull request to use to determine (only for NuGet) which dependencies were updated and to which version(s).",
+          "timestamp": "2024-08-23T12:55:35Z",
+          "url": "https://github.com/martincostello/costellobot/commit/b75a318da34bbb9689b01164cc7dcfc6a21a34ec"
+        },
+        "date": 1724417944665,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 603281.7325106534,
+            "unit": "ns",
+            "range": "± 5921.668828247485",
+            "bytesAllocated": 47029
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 260456.65983072916,
+            "unit": "ns",
+            "range": "± 1955.5298473735515",
+            "bytesAllocated": 19985
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 312002.5414663461,
+            "unit": "ns",
+            "range": "± 1089.3215602245477",
+            "bytesAllocated": 46317
           }
         ]
       }
