@@ -51,7 +51,7 @@
     const headers = {
       'Accept': 'application/vnd.github+json',
       'X-GitHub-Api-Version': config.githubApiVersion,
-    }
+    };
 
     let tokenValid = undefined;
 
@@ -81,6 +81,7 @@
       }
     }
 
+    const loadData = document.getElementById('load-data');
     const tooltips = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')];
     tooltips.map(element => new bootstrap.Tooltip(element));
 
@@ -90,7 +91,7 @@
         document.getElementById('save-token').addEventListener('click', () => {
           const token = tokenValue.value;
           if (token.length > 0) {
-            document.getElementById('load-data').disabled = true;
+            loadData.disabled = true;
             document.getElementById('spinner').classList.remove(hideClass);
             localStorage.setItem(tokenKey, token);
             location.reload();
@@ -106,7 +107,8 @@
       }
     }
 
-    ['download-json', 'header', 'main'].forEach(id => document.getElementById(id).classList.remove(hideClass));
+    ['download-json', 'header', 'main'].forEach(
+      (id) => document.getElementById(id).classList.remove(hideClass));
 
     if (token) {
       headers['Authorization'] = `token ${token}`;
@@ -138,68 +140,76 @@
     }
 
     repositorySelect.value = repo;
+    repositorySelect.disabled = false;
 
     const branchSelect = document.getElementById('branch');
 
     const hydrateBranches = async (_) => {
-      let repoName = repositorySelect.value;
-      if (repoName.length === 0) {
-        repoName = repo;
-      }
-      const repoUrl = `${githubApiUrl}/repos/${dashboardOwner}/${repoName}`;
-      const repoResponse = await fetch(repoUrl, {
-        headers,
-      });
-
-      if (!repoResponse.ok) {
-        throw new Error(`Failed to get repository ${dashboardOwner}/${repoName}`);
-      }
-
-      const repository = await repoResponse.json();
-      publicRepo = repository.visibility === 'public';
-
-      let branchName = branch;
-
-      if (!branchName || branchName.length === 0) {
-        branchName = repository.default_branch;
-      }
-
-      const branchesUrl = `${githubApiUrl}/repos/${repository.full_name}/branches`;
-      const branchesResponse = await fetch(branchesUrl, {
-        headers,
-      });
-
-      if (!branchesResponse.ok) {
-        throw new Error(`Failed to get branches for repository ${dashboardOwner}/${repoName}`);
-      }
-
-      const branches = await branchesResponse.json();
-
-      branches.sort((a, b) => {
-        if (a.name === repository.default_branch) {
-          return -1;
-        } else if (b.name === repository.default_branch) {
-          return 1;
-        }
-        return a.name.localeCompare(b.name);
-      });
-
       const branchSelect = document.getElementById('branch');
+      branchSelect.disabled = true;
+      loadData.disabled = true;
 
-      while (branchSelect.firstChild) {
-        branchSelect.removeChild(branchSelect.firstChild);
-      }
+      try {
+        let repoName = repositorySelect.value;
+        if (repoName.length === 0) {
+          repoName = repo;
+        }
+        const repoUrl = `${githubApiUrl}/repos/${dashboardOwner}/${repoName}`;
+        const repoResponse = await fetch(repoUrl, {
+          headers,
+        });
 
-      for (const branch of branches) {
-        const option = document.createElement('option');
-        option.selected = branch.name === branchName;
-        option.textContent = branch.name;
-        option.value = branch.name;
-        branchSelect.appendChild(option);
-      }
+        if (!repoResponse.ok) {
+          throw new Error(`Failed to get repository ${dashboardOwner}/${repoName}`);
+        }
 
-      if (branch === null) {
-        branch = branchName;
+        const repository = await repoResponse.json();
+        publicRepo = repository.visibility === 'public';
+
+        let branchName = branch;
+
+        if (!branchName || branchName.length === 0) {
+          branchName = repository.default_branch;
+        }
+
+        const branchesUrl = `${githubApiUrl}/repos/${repository.full_name}/branches`;
+        const branchesResponse = await fetch(branchesUrl, {
+          headers,
+        });
+
+        if (!branchesResponse.ok) {
+          throw new Error(`Failed to get branches for repository ${dashboardOwner}/${repoName}`);
+        }
+
+        const branches = await branchesResponse.json();
+
+        branches.sort((a, b) => {
+          if (a.name === repository.default_branch) {
+            return -1;
+          } else if (b.name === repository.default_branch) {
+            return 1;
+          }
+          return a.name.localeCompare(b.name);
+        });
+
+        while (branchSelect.firstChild) {
+          branchSelect.removeChild(branchSelect.firstChild);
+        }
+
+        for (const branch of branches) {
+          const option = document.createElement('option');
+          option.selected = branch.name === branchName;
+          option.textContent = branch.name;
+          option.value = branch.name;
+          branchSelect.appendChild(option);
+        }
+
+        if (branch === null) {
+          branch = branchName;
+        }
+      } finally {
+        branchSelect.disabled = false;
+        loadData.disabled = false;
       }
     };
 

@@ -180,7 +180,7 @@
               Repository &nbsp;
               <span class="fa-solid fa-code" aria-hidden="true"></span>
             </label>
-            <select class="form-select" id="repository" name="repo">
+            <select class="form-select" id="repository" name="repo" disabled="true">
             </select>
           </div>
           <div class="input-group col">
@@ -188,11 +188,12 @@
               Branch &nbsp;
               <span class="fa-solid fa-code-branch" aria-hidden="true"></span>
             </label>
-            <select class="form-select" id="branch" name="branch">
+            <select class="form-select" id="branch" name="branch" disabled="true">
+              <option>Loading...</option>
             </select>
           </div>
           <div class="col col-auto">
-            <button class="btn btn-primary" id="load-data" type="submit" data-bs-toggle="tooltip" data-bs-title="Loads the benchmark data for the selected repository and branch">
+            <button class="btn btn-primary" id="load-data" type="submit" data-bs-toggle="tooltip" data-bs-title="Loads the benchmark data for the selected repository and branch" disabled="true">
               Load data &nbsp;
               <span class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></span>
               <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true"></span>
