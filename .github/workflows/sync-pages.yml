@@ -31,9 +31,9 @@ jobs:
           GIT_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           GIT_REMOTE: 'origin'
         run: >
-          git config user.email ${GIT_COMMIT_USER_EMAIL} &&
-          git config user.name ${GIT_COMMIT_USER_NAME} &&
-          git fetch ${GIT_REMOTE} &&
-          git checkout ${GIT_BRANCH} &&
-          git merge ${GIT_DEFAULT_BRANCH} &&
-          git push ${GIT_REMOTE} ${GIT_BRANCH}
+          git config user.email "${GIT_COMMIT_USER_EMAIL}" &&
+          git config user.name "${GIT_COMMIT_USER_NAME}" &&
+          git fetch "${GIT_REMOTE}" &&
+          git checkout "${GIT_BRANCH}" &&
+          git merge "${GIT_DEFAULT_BRANCH}" &&
+          git push "${GIT_REMOTE}" "${GIT_BRANCH}"
