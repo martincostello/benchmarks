@@ -1,9 +1,8 @@
 ---
 name: Feature request
 about: Suggest an idea for a feature of this dashboard
-title: ''
+title: 'Feature request'
 labels: feature-request
-assignees: ''
 ---
 
 <!--
