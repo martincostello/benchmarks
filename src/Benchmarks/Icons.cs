@@ -31,5 +31,10 @@ public static class Icons
     /// <summary>
     /// Gets the <c>right-from-bracket</c> icon.
     /// </summary>
-    public static string RightFromBracket => "right-from-bracket";
+    public static string RightFromBracket => "fa-solid fa-right-from-bracket";
+
+    /// <summary>
+    /// Gets the <c>right-to-bracket</c> icon.
+    /// </summary>
+    public static string RightToBracket => "fa-solid fa-right-to-bracket";
 }

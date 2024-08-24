@@ -2,6 +2,109 @@
 
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
-<h1>This is the @(Options.Value.RepositoryOwner)/@(Options.Value.RepositoryName) repository</h1>
+<div class="alert alert-danger d-none m-2" id="error" role="alert">
+    Failed to load benchmark data.
+</div>
+<header class="d-none" id="header">
+    <form id="data-select" method="get">
+        <div class="g-3 row row-cols-6">
+            <div class="input-group col">
+                <label class="input-group-text col-auto col-lg-1" for="repository">
+                    Repository &nbsp;
+                    <span class="fa-solid fa-code" aria-hidden="true"></span>
+                </label>
+                <select class="form-select" id="repository" name="repo" disabled>
+                </select>
+            </div>
+            <div class="input-group col">
+                <label class="input-group-text col-auto col-lg-1" for="branch">
+                    Branch &nbsp;
+                    <span class="fa-solid fa-code-branch" aria-hidden="true"></span>
+                </label>
+                <select class="form-select" id="branch" name="branch" disabled>
+                    <option>Loading...</option>
+                </select>
+            </div>
+            <div class="col col-auto">
+                <button class="btn btn-primary" id="load-data" type="submit" data-bs-toggle="tooltip" data-bs-title="Loads the benchmark data for the selected repository and branch" disabled>
+                    Load data &nbsp;
+                    <span class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></span>
+                    <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <hr />
+    <div class="header-item">
+        <strong class="header-label">
+            <span class="fa-regular fa-clock fa-fw" aria-hidden="true"></span>
+            Last Updated:
+        </strong>
+        <span id="last-update">
+            <div class="spinner-grow spinner-grow-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </span>
+    </div>
+    <div class="header-item">
+        <strong class="header-label">
+            <span class="fa-brands fa-github fa-fw" aria-hidden="true"></span>
+            Repository:
+        </strong>
+        <a id="repository-link" href="" rel="noopener" target="_blank">
+            <div class="spinner-grow spinner-grow-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </a>
+    </div>
+    <div class="header-item">
+        <strong class="header-label">
+            <span class="fa-solid fa-code-branch fa-fw" aria-hidden="true"></span>
+            Branch:
+        </strong>
+        <a id="branch-link" class="font-monospace text-decoration-none" href="" rel="noopener" target="_blank">
+            <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </a>
+    </div>
+    <div class="header-item">
+        <strong class="header-label">
+            <span class="fa-solid fa-code-commit fa-fw" aria-hidden="true"></span>
+            Commit:
+        </strong>
+        <a id="commit-link" class="font-monospace text-decoration-none" href="" rel="noopener" target="_blank">
+            <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </a>
+    </div>
+</header>
 
-Welcome to your new app.
+@code {
+    protected async override Task OnInitializedAsync()
+    {
+        if (Options.Value.IsGitHubEnterprise || GitHubService.IsAuthenticated)
+        {
+            bool hasValidToken = false;
+
+            if (GitHubService.IsAuthenticated)
+            {
+                try
+                {
+                    _ = await GitHubClient.GetUserAsync();
+                    hasValidToken = true;
+                }
+                catch (HttpRequestException)
+                {
+                    hasValidToken = false;
+                }
+            }
+
+            if (!hasValidToken)
+            {
+                Navigation.NavigateTo("/token");
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@
                     <a class="nav-link" href="https://martincostello.com/home/about/" rel="noopener" target="_blank" title="About me">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="repo-link" href="#" target="_blank" rel="noopener" title="@(options.GitHubInstance)">
+                    <a class="nav-link" href="@(options.GitHubServerUrl)/@(options.RepositoryOwner)/@(options.RepositoryName)" target="_blank" rel="noopener" title="@(options.GitHubInstance)">
                         @(options.GitHubInstance)
                         <Icon Name="@(Icons.GitHub)" />
                     </a>
@@ -30,17 +30,39 @@
             </ul>
             @if (_isAuthenticated)
             {
-                <ul class="nav navbar-nav d-none" id="sign-out">
+                <ul class="nav navbar-nav">
                     <span class="navbar-text"
                           id="user-name"
                           title="@(options.GitHubInstance) user"
                           data-bs-toggle="tooltip"
-                          data-bs-title="Signed in as @(_user?.Login) (@(_user?.Name))"
-                          data-github-user-login=""></span>
+                          data-bs-title="Signed in as @(_user?.Login) (@(_user?.Name))">
+                        @(_user?.Login)
+                    </span>
                     <li>
-                        <button type="button" class="btn btn-link navbar-btn nav-link" title="Sign out" data-bs-toggle="tooltip" data-bs-title="Removes your @(options.GitHubInstance) access token from local storage">
+                        <button class="btn btn-link navbar-btn nav-link"
+                                title="Sign out"
+                                type="button"
+                                data-bs-toggle="tooltip"
+                                data-bs-title="Removes your @(options.GitHubInstance) access token from local storage"
+                                @onclick="SignOutAsync">
                             Sign out
                             <Icon Name="@(Icons.RightFromBracket)" />
+                        </button>
+                    </li>
+                </ul>
+            }
+            else if (!options.IsGitHubEnterprise)
+            {
+                <ul class="nav navbar-nav">
+                    <li>
+                        <button class="btn btn-link navbar-btn nav-link"
+                                title="Sign in"
+                                type="button"
+                                data-bs-toggle="tooltip"
+                                data-bs-title="Configure a @(options.GitHubInstance) access token"
+                                @onclick="SignIn">
+                            Sign in
+                            <Icon Name="@(Icons.RightToBracket)" />
                         </button>
                     </li>
                 </ul>
@@ -69,5 +91,16 @@
                 _isAuthenticated = false;
             }
         }
+    }
+
+    private void SignIn()
+    {
+        Navigation.NavigateTo("/token");
+    }
+
+    private async Task SignOutAsync()
+    {
+        await GitHubService.StoreTokenAsync(string.Empty);
+        Navigation.NavigateTo("/");
     }
 }

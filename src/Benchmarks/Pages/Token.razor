@@ -2,6 +2,7 @@
 
 @{
     var options = Options.Value;
+    var tokenRequired = options.IsGitHubEnterprise;
 }
 
 <PageTitle>Configure @(options.GitHubInstance) Token - @(options.BrandName)</PageTitle>
@@ -9,28 +10,43 @@
 <div class="m-2" id="token-prompt">
     <div class="card">
         <div class="card-header">
-            @(options.GitHubInstance) Token Required
+            @(options.GitHubInstance) Token @(tokenRequired ? "Required" : string.Empty)
         </div>
         <div class="card-body">
             <p class="card-text">
-                A @(options.GitHubInstance) access token is required to load the data for this dashboard.
-            </p>
-            <p class="card-text">
-                @(options.TokenScopes.Count > 1)
+                @if (tokenRequired)
                 {
-                    Generate a new token with the following scopes and enter it into the form below:
-                    <ul>
-                        @foreach (var scope in options.TokenScopes)
-                        {
-                            <li>
-                                <code>@(scope)</code>
-                            </li>
-                        }
-                    </ul>
+                    <text>
+                        A @(options.GitHubInstance) access token is required to load the data for this dashboard.
+                    </text>
                 }
                 else
                 {
-                    Generate a new token with the <code>@(options.TokenScopes.FirstOrDefault() ?? "public_repo")</code> scope and enter it into the form below.
+                    <text>
+                        A @(options.GitHubInstance) access token can be configured to load the data for this dashboard to help avoid rate limiting.
+                    </text>
+                }
+            </p>
+            <p class="card-text">
+                @if (options.TokenScopes.Count > 1)
+                {
+                    <text>
+                        Generate a new token with the following scopes and enter it into the form below:
+                        <ul>
+                            @foreach (var scope in options.TokenScopes)
+                            {
+                                <li>
+                                    <code>@(scope)</code>
+                                </li>
+                            }
+                        </ul>
+                    </text>
+                }
+                else
+                {
+                    <text>
+                        Generate a new token with the <code>@(options.TokenScopes.FirstOrDefault() ?? "public_repo")</code> scope and enter it into the form below.
+                    </text>
                 }
             </p>
             <form class="row row-cols-lg-auto g-3 align-items-center">
@@ -51,7 +67,10 @@
                                type="password"
                                data-bs-toggle="tooltip"
                                data-bs-title="The GitHub access token must have at least the public_repo scope"
-                               data-1p-ignore>
+                               data-1p-ignore
+                               data-lpignore="true"
+                               @oninput="TokenChanged"
+                               @ref="_tokenInput">
                     </div>
                 </div>
                 <div class="col-12">
@@ -63,9 +82,44 @@
                     </a>
                 </div>
                 <div class="col-12">
-                    <button type="button" class="btn btn-primary" id="save-token">Save and Reload</button>
+                    <button class="btn btn-primary"
+                            disabled="@(!HasToken)"
+                            type="button"
+                            @onclick="StoreTokenAsync">
+                        Save and Reload
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+@code {
+    private string? _token;
+    private ElementReference _tokenInput;
+
+    private bool HasToken => !string.IsNullOrEmpty(_token);
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await _tokenInput.FocusAsync();
+    }
+
+    private void TokenChanged(ChangeEventArgs args)
+    {
+        if (args.Value is string token)
+        {
+            _token = token;
+        }
+    }
+
+    private async Task StoreTokenAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(_token))
+        {
+            await GitHubService.StoreTokenAsync(_token);
+        }
+
+        Navigation.NavigateTo("/");
+    }
+}
