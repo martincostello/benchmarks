@@ -66,7 +66,7 @@ public sealed class DashboardOptions
     /// <summary>
     /// Gets a value indicating whether GitHub Enterprise is being used.
     /// </summary>
-    public bool IsGitHubEnterprise => GitHubApiUrl.Host == "api.github.com";
+    public bool IsGitHubEnterprise => GitHubApiUrl.Host != "api.github.com";
 
     /// <summary>
     /// Gets the name to use to refer to the GitHub instance.
