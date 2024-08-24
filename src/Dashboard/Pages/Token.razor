@@ -1,4 +1,4 @@
-﻿@page "/token"
+@page "/token"
 
 @{
     var options = Options.Value;
@@ -74,7 +74,11 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <a href="#" id="new-token-link" class="btn btn-github" role="button" target="_blank" rel="noopener">
+                    <a class="btn btn-github"
+                       href="@(_generateTokenUrl)"
+                       role="button"
+                       target="_blank"
+                       rel="noopener">
                         Generate token
                         <Icon Name="@(Icons.Plus)" />
                         <Icon Name="@(Icons.GitHub)" />
@@ -95,10 +99,21 @@
 </div>
 
 @code {
+    private string? _generateTokenUrl;
     private string? _token;
     private ElementReference _tokenInput;
 
     private bool HasToken => !string.IsNullOrEmpty(_token);
+
+    protected override void OnInitialized()
+    {
+        var options = Options.Value;
+
+        var description = Uri.EscapeDataString($"{options.RepositoryOwner} benchmarks");
+        var scopes = Uri.EscapeDataString(string.Join(',', options.TokenScopes));
+
+        _generateTokenUrl = $"{Options.Value.GitHubServerUrl}/settings/tokens/new?description={description}&scopes={scopes}";
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
