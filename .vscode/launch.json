@@ -2,13 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Benchmarks",
+      "name": "Launch Dashboard",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
       "program": "dotnet",
       "args": ["run"],
-      "cwd": "${workspaceFolder}/src/Benchmarks",
+      "cwd": "${workspaceFolder}/src/Dashboard",
       "stopAtEntry": false,
       "serverReadyAction": {
         "action": "openExternally",
@@ -20,12 +20,12 @@
       }
     },
     {
-      "name": "Debug Benchmarks in Chrome",
+      "name": "Debug Dashboard in Chrome",
       "type": "chrome",
       "request": "launch",
       "timeout": 30000,
       "url": "https://localhost:50001",
-      "webRoot": "${workspaceFolder}/src/Benchmarks",
+      "webRoot": "${workspaceFolder}/src/Dashboard",
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}"
     },
     {
@@ -37,7 +37,7 @@
       "args": [
         "test"
       ],
-      "cwd": "${workspaceFolder}/tests/Benchmarks.Tests",
+      "cwd": "${workspaceFolder}/tests/Dashboard.Tests",
       "console": "internalConsole",
       "stopAtEntry": false,
       "internalConsoleOptions": "openOnSessionStart"

@@ -100,11 +100,11 @@ function DotNetPublish {
 }
 
 $publishProjects = @(
-    (Join-Path $solutionPath "src" "Benchmarks" "Benchmarks.csproj")
+    (Join-Path $solutionPath "src" "Dashboard" "Dashboard.csproj")
 )
 
 $testProjects = @(
-    (Join-Path $solutionPath "tests" "Benchmarks.Tests" "Benchmarks.Tests.csproj")
+    (Join-Path $solutionPath "tests" "Dashboard.Tests" "Dashboard.Tests.csproj")
 )
 
 Write-Host "Publishing solution..." -ForegroundColor Green
