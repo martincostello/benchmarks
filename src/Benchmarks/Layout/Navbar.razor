@@ -35,7 +35,7 @@
                           id="user-name"
                           title="@(options.GitHubInstance) user"
                           data-bs-toggle="tooltip"
-                          data-bs-title="Signed in as @(_githubUser?.Login) (@(_githubUser?.Name))"
+                          data-bs-title="Signed in as @(_user?.Login) (@(_user?.Name))"
                           data-github-user-login=""></span>
                     <li>
                         <button type="button" class="btn btn-link navbar-btn nav-link" title="Sign out" data-bs-toggle="tooltip" data-bs-title="Removes your @(options.GitHubInstance) access token from local storage">
@@ -51,7 +51,7 @@
 
 @code {
     private bool _isAuthenticated;
-    private (string Login, string Name)? _githubUser;
+    private GitHubUser? _user;
 
     protected override async Task OnInitializedAsync()
     {
@@ -61,9 +61,9 @@
         {
             try
             {
-                _githubUser = await GitHubClient.GetUserAsync();
+                _user = await GitHubClient.GetUserAsync();
             }
-            catch (HttpRequestException)
+            catch (HttpRequestException ex) when (ex.StatusCode is System.Net.HttpStatusCode.Unauthorized)
             {
                 // TODO Clear local storage
                 _isAuthenticated = false;

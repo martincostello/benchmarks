@@ -3,8 +3,9 @@
 
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Text.Json;
+using System.Text.Json.Serialization.Metadata;
 using Blazored.LocalStorage;
+using MartinCostello.Benchmarks.Models;
 using Microsoft.Extensions.Options;
 
 namespace MartinCostello.Benchmarks;
@@ -24,17 +25,18 @@ public sealed class GitHubClient(
     /// <returns>
     /// A <see cref="Task"/> representing the asynchronous operation to get the login and name of the authenticated user.
     /// </returns>
-    public async Task<(string Login, string Name)> GetUserAsync(CancellationToken cancellationToken = default)
+    public async Task<GitHubUser> GetUserAsync(CancellationToken cancellationToken = default)
     {
-        var user = await GetAsync("user", cancellationToken);
-
-        var login = user!.RootElement.GetProperty("login")!.GetString()!;
-        var name = user.RootElement.GetProperty("name")!.GetString()!;
-
-        return (login, name);
+        return (await GetAsync<GitHubUser>(
+            "user",
+            AppJsonSerializerContext.Default.GitHubUser,
+            cancellationToken))!;
     }
 
-    private async Task<JsonDocument?> GetAsync(string url, CancellationToken cancellationToken)
+    private async Task<T?> GetAsync<T>(
+        string url,
+        JsonTypeInfo<T> jsonTypeInfo,
+        CancellationToken cancellationToken)
     {
         var requestUri = new Uri(options.Value.GitHubApiUrl, url);
 
@@ -44,7 +46,9 @@ public sealed class GitHubClient(
         using var response = await client.SendAsync(message, cancellationToken);
         response.EnsureSuccessStatusCode();
 
-        return await response.Content.ReadFromJsonAsync<JsonDocument>(cancellationToken);
+        return await response.Content.ReadFromJsonAsync<T>(
+            jsonTypeInfo,
+            cancellationToken);
     }
 
     private async Task<string?> GetTokenAsync(CancellationToken cancellationToken)
