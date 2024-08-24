@@ -9,6 +9,16 @@ namespace MartinCostello.Benchmarks;
 public sealed class DashboardOptions
 {
     /// <summary>
+    /// Gets or sets the brand name for the dashboard.
+    /// </summary>
+    public string BrandName { get; set; } = "Benchmarks";
+
+    /// <summary>
+    /// Gets or sets the Font Awesome icons classes to use for the dashboard brand.
+    /// </summary>
+    public IList<string> BrandIcons { get; set; } = [];
+
+    /// <summary>
     /// Gets or sets the colors to use for the chart data sets.
     /// </summary>
     public IDictionary<string, string> DataSetColors { get; set; } = new Dictionary<string, string>();
@@ -52,4 +62,14 @@ public sealed class DashboardOptions
     /// Gets or sets the GitHub token scope(s) to request.
     /// </summary>
     public IList<string> TokenScopes { get; set; } = ["public_repo"];
+
+    /// <summary>
+    /// Gets a value indicating whether GitHub Enterprise is being used.
+    /// </summary>
+    public bool IsGitHubEnterprise => GitHubApiUrl.Host == "api.github.com";
+
+    /// <summary>
+    /// Gets the name to use to refer to the GitHub instance.
+    /// </summary>
+    public string GitHubInstance => IsGitHubEnterprise ? "GitHub Enterprise" : "GitHub";
 }

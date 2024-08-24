@@ -1,0 +1,25 @@
+﻿<div class="@(SpinnerType == SpinnerType.Growing ? "spinner-grow spinner-grow-sm" : "spinner-border spinner-border-sm")"
+     id="@(Id)"
+     role="status">
+    <span class="visually-hidden">@(LoadingText)</span>
+</div>
+
+@code {
+    /// <summary>
+    /// Gets the optional ID for the spinner.
+    /// </summary>
+    [Parameter]
+    public string? Id { get; init; }
+
+    /// <summary>
+    /// Gets the text to show while the spinner is loading.
+    /// </summary>
+    [Parameter]
+    public string LoadingText { get; init; } = "Loading...";
+
+    /// <summary>
+    /// Gets the type of the spinner.
+    /// </summary>
+    [Parameter]
+    public SpinnerType SpinnerType { get; init; }
+}

@@ -1,0 +1,71 @@
+﻿@page "/token"
+
+@{
+    var options = Options.Value;
+}
+
+<PageTitle>Configure @(options.GitHubInstance) Token - @(options.BrandName)</PageTitle>
+
+<div class="m-2" id="token-prompt">
+    <div class="card">
+        <div class="card-header">
+            @(options.GitHubInstance) Token Required
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                A @(options.GitHubInstance) access token is required to load the data for this dashboard.
+            </p>
+            <p class="card-text">
+                @(options.TokenScopes.Count > 1)
+                {
+                    Generate a new token with the following scopes and enter it into the form below:
+                    <ul>
+                        @foreach (var scope in options.TokenScopes)
+                        {
+                            <li>
+                                <code>@(scope)</code>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    Generate a new token with the <code>@(options.TokenScopes.FirstOrDefault() ?? "public_repo")</code> scope and enter it into the form below.
+                }
+            </p>
+            <form class="row row-cols-lg-auto g-3 align-items-center">
+                <div class="col-12">
+                    <label class="visually-hidden" for="github-token">
+                        @(options.GitHubInstance) Token
+                    </label>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <Icon Name="@(Icons.GitHub)" />
+                            &nbsp;
+                            <Icon Name="@(Icons.Key)" />
+                        </div>
+                        <input autocomplete="off"
+                               class="form-control"
+                               id="github-token"
+                               placeholder="ghp_repo-scoped-token"
+                               type="password"
+                               data-bs-toggle="tooltip"
+                               data-bs-title="The GitHub access token must have at least the public_repo scope"
+                               data-1p-ignore>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#" id="new-token-link" class="btn btn-github" role="button" target="_blank" rel="noopener">
+                        Generate token
+                        <Icon Name="@(Icons.Plus)" />
+                        <Icon Name="@(Icons.GitHub)" />
+                        <Icon Name="@(Icons.Key)" />
+                    </a>
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" id="save-token">Save and Reload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

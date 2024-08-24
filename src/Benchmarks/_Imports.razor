@@ -5,6 +5,13 @@
 @using Microsoft.AspNetCore.Components.Web
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.Extensions.Options
 @using Microsoft.JSInterop
 @using MartinCostello.Benchmarks
+@using MartinCostello.Benchmarks.Components
 @using MartinCostello.Benchmarks.Layout
+
+@inject GitHubClient GitHubClient
+@inject GitHubService GitHubService
+@inject Blazored.LocalStorage.ISyncLocalStorageService LocalStorage
+@inject IOptions<DashboardOptions> Options

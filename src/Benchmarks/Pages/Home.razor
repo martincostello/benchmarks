@@ -1,8 +1,7 @@
 ﻿@page "/"
-@inject IConfiguration Configuration
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
-<h1>This is the @(Configuration["Dashboard:RepositoryOwner"])/@(Configuration["Dashboard:RepositoryName"]) repository</h1>
+<h1>This is the @(Options.Value.RepositoryOwner)/@(Options.Value.RepositoryName) repository</h1>
 
 Welcome to your new app.

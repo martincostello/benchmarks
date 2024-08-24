@@ -1,0 +1,73 @@
+﻿@{
+    var options = Options.Value;
+}
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">
+            @options.BrandName
+            @foreach (var iconClasses in options.BrandIcons)
+            {
+                <span class="@(iconClasses) d-none d-lg-inline" aria-hidden="true"></span>
+            }
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navbar" aria-controls="site-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://blog.martincostello.com/" rel="noopener" target="_blank" title="My blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://martincostello.com/home/about/" rel="noopener" target="_blank" title="About me">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="repo-link" href="#" target="_blank" rel="noopener" title="@(options.GitHubInstance)">
+                        @(options.GitHubInstance)
+                        <Icon Name="@(Icons.GitHub)" />
+                    </a>
+                </li>
+            </ul>
+            @if (_isAuthenticated)
+            {
+                <ul class="nav navbar-nav d-none" id="sign-out">
+                    <span class="navbar-text"
+                          id="user-name"
+                          title="@(options.GitHubInstance) user"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="Signed in as @(_githubUser?.Login) (@(_githubUser?.Name))"
+                          data-github-user-login=""></span>
+                    <li>
+                        <button type="button" class="btn btn-link navbar-btn nav-link" title="Sign out" data-bs-toggle="tooltip" data-bs-title="Removes your @(options.GitHubInstance) access token from local storage">
+                            Sign out
+                            <Icon Name="@(Icons.RightFromBracket)" />
+                        </button>
+                    </li>
+                </ul>
+            }
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool _isAuthenticated;
+    private (string Login, string Name)? _githubUser;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _isAuthenticated = GitHubService.IsAuthenticated;
+
+        if (_isAuthenticated)
+        {
+            try
+            {
+                _githubUser = await GitHubClient.GetUserAsync();
+            }
+            catch (HttpRequestException)
+            {
+                // TODO Clear local storage
+                _isAuthenticated = false;
+            }
+        }
+    }
+}
