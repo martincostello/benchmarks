@@ -14,6 +14,16 @@ public static class Icons
     public static string CloudArrowDown => "fa-solid fa-cloud-arrow-down";
 
     /// <summary>
+    /// Gets the <c>code</c> icon.
+    /// </summary>
+    public static string Code => "fa-solid fa-code";
+
+    /// <summary>
+    /// Gets the <c>code-branch</c> icon.
+    /// </summary>
+    public static string CodeBranch => "fa-solid fa-code-branch";
+
+    /// <summary>
     /// Gets the <c>floppy-disk</c> icon.
     /// </summary>
     public static string FloppyDisk => "fa-solid fa-floppy-disk";

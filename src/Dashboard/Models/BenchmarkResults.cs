@@ -14,6 +14,7 @@ public sealed class BenchmarkResults
     /// Gets or sets the date and time the benchmark data was last updated.
     /// </summary>
     [JsonPropertyName("lastUpdated")]
+    [JsonConverter(typeof(UnixEpochDateTimeOffsetConverter))]
     public DateTimeOffset LastUpdated { get; set; }
 
     /// <summary>

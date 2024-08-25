@@ -23,6 +23,12 @@ public sealed class GitHubRepository
     public string FullName { get; set; } = default!;
 
     /// <summary>
+    /// Gets or sets the HTML URL of the repository.
+    /// </summary>
+    [JsonPropertyName("html_url")]
+    public string HtmlUrl { get; set; } = default!;
+
+    /// <summary>
     /// Gets or sets the name of the repository.
     /// </summary>
     [JsonPropertyName("name")]

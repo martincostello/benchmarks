@@ -41,8 +41,8 @@ public sealed class GitHubClient(
 
         var relativeUri =
             useApi ?
-            $"repos/{current.RepositoryOwner}/{current.RepositoryName}/contents/${repository}/${fileName}?ref=${branch}"
-            : $"{current.RepositoryOwner}/${current.RepositoryName}/${branch}/${repository}/${fileName}";
+            $"repos/{current.RepositoryOwner}/{current.RepositoryName}/contents/{repository}/{fileName}?ref={branch}"
+            : $"{current.RepositoryOwner}/{current.RepositoryName}/{branch}/{repository}/{fileName}";
 
         var requestUri = new Uri(baseAddress, relativeUri);
 
@@ -76,7 +76,7 @@ public sealed class GitHubClient(
     /// A <see cref="Task"/> representing the asynchronous operation to get the repository.
     /// </returns>
     public async Task<GitHubRepository> GetRepositoryAsync(string owner, string name, CancellationToken cancellationToken = default)
-        => (await GetAsync($"{owner}/{name}", AppJsonSerializerContext.Default.GitHubRepository, cancellationToken))!;
+        => (await GetAsync($"repos/{owner}/{name}", AppJsonSerializerContext.Default.GitHubRepository, cancellationToken))!;
 
     /// <summary>
     /// Gets the specified GitHub repository's branches as an asynchronous operation.
@@ -91,7 +91,7 @@ public sealed class GitHubClient(
         string owner,
         string name,
         CancellationToken cancellationToken = default)
-        => await GetAsync($"{owner}/{name}/branches", AppJsonSerializerContext.Default.IListGitHubBranch, cancellationToken) ?? [];
+        => await GetAsync($"repos/{owner}/{name}/branches", AppJsonSerializerContext.Default.IListGitHubBranch, cancellationToken) ?? [];
 
     /// <summary>
     /// Gets the current GitHub user as an asynchronous operation.

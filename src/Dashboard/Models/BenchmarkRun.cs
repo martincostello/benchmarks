@@ -20,6 +20,7 @@ public sealed class BenchmarkRun
     /// Gets or sets the date and time of the benchmark run.
     /// </summary>
     [JsonPropertyName("date")]
+    [JsonConverter(typeof(UnixEpochDateTimeOffsetConverter))]
     public DateTimeOffset Timestamp { get; set; }
 
     /// <summary>

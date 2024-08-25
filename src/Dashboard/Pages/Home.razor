@@ -2,93 +2,295 @@
 
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
-<div class="alert alert-danger d-none m-2" id="error" role="alert">
-    Failed to load benchmark data.
-</div>
-<header class="d-none" id="header">
+<header>
     <form id="data-select" method="get">
         <div class="g-3 row row-cols-6">
             <div class="input-group col">
                 <label class="input-group-text col-auto col-lg-1" for="repository">
                     Repository &nbsp;
-                    <span class="fa-solid fa-code" aria-hidden="true"></span>
+                    <Icon Name="@(Icons.Code)" />
                 </label>
-                <select class="form-select" id="repository" name="repo" disabled>
+                <select class="form-select" name="repo" disabled="@(DisableRepositories)" @onchange="RepositoryChangedAsync">
+                    @if (_repositories.Count < 1)
+                    {
+                        <option>Loading...</option>
+                    }
+                    else
+                    {
+                        @foreach (var repo in _repositories)
+                        {
+                            <option value="@(repo)">@(repo)</option>
+                        }
+                    }
                 </select>
             </div>
             <div class="input-group col">
                 <label class="input-group-text col-auto col-lg-1" for="branch">
                     Branch &nbsp;
-                    <span class="fa-solid fa-code-branch" aria-hidden="true"></span>
+                    <Icon Name="@(Icons.CodeBranch)" />
                 </label>
-                <select class="form-select" id="branch" name="branch" disabled>
-                    <option>Loading...</option>
+                <select class="form-select" name="branch" disabled="@(DisableBranches)" @onchange="BranchChangedAsync">
+                    @if (_branches.Count < 1)
+                    {
+                        <option>Loading...</option>
+                    }
+                    else
+                    {
+                        @foreach (var branch in _branches)
+                        {
+                            <option value="@(branch)" selected="@(branch == _repository?.DefaultBranch)">@(branch)</option>
+                        }
+                    }
                 </select>
-            </div>
-            <div class="col col-auto">
-                <button class="btn btn-primary" id="load-data" type="submit" data-bs-toggle="tooltip" data-bs-title="Loads the benchmark data for the selected repository and branch" disabled>
-                    Load data &nbsp;
-                    <span class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></span>
-                    <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true"></span>
-                </button>
             </div>
         </div>
     </form>
     <hr />
-    <div class="header-item">
-        <strong class="header-label">
-            <span class="fa-regular fa-clock fa-fw" aria-hidden="true"></span>
-            Last Updated:
-        </strong>
-        <span id="last-update">
-            <div class="spinner-grow spinner-grow-sm" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </span>
-    </div>
-    <div class="header-item">
-        <strong class="header-label">
-            <span class="fa-brands fa-github fa-fw" aria-hidden="true"></span>
-            Repository:
-        </strong>
-        <a id="repository-link" href="" rel="noopener" target="_blank">
-            <div class="spinner-grow spinner-grow-sm" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </a>
-    </div>
-    <div class="header-item">
-        <strong class="header-label">
-            <span class="fa-solid fa-code-branch fa-fw" aria-hidden="true"></span>
-            Branch:
-        </strong>
-        <a id="branch-link" class="font-monospace text-decoration-none" href="" rel="noopener" target="_blank">
-            <div class="spinner-grow spinner-grow-sm text-dark" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </a>
-    </div>
-    <div class="header-item">
-        <strong class="header-label">
-            <span class="fa-solid fa-code-commit fa-fw" aria-hidden="true"></span>
-            Commit:
-        </strong>
-        <a id="commit-link" class="font-monospace text-decoration-none" href="" rel="noopener" target="_blank">
-            <div class="spinner-grow spinner-grow-sm text-dark" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </a>
-    </div>
+    @if (_dataNotFound)
+    {
+        <div class="alert alert-danger m-2" role="alert">
+            Failed to load benchmark data.
+        </div>
+    }
+    else
+    {
+        <div class="header-item">
+            <strong class="header-label">
+                <span class="fa-regular fa-clock fa-fw" aria-hidden="true"></span>
+                Last Updated:
+            </strong>
+            @if (_benchmarks?.LastUpdated is { } timestamp && !ShowLoaders)
+            {
+                <span title="@timestamp.ToString("s", CultureInfo.InvariantCulture)">
+                    @(timestamp.ToLocalTime().ToString("G"))
+                </span>
+            }
+            else
+            {
+                <Spinner />
+            }
+        </div>
+        <div class="header-item">
+            <strong class="header-label">
+                <span class="fa-brands fa-github fa-fw" aria-hidden="true"></span>
+                Repository:
+            </strong>
+            <a href="@(_repository?.HtmlUrl ?? "#")" rel="noopener" target="_blank">
+                @if (_repository is null || ShowLoaders)
+                {
+                    <Spinner />
+                }
+                else
+                {
+                    @(_repository.FullName)
+                }
+            </a>
+        </div>
+        <div class="header-item">
+            <strong class="header-label">
+                <span class="fa-solid fa-code-branch fa-fw" aria-hidden="true"></span>
+                Branch:
+            </strong>
+            <a class="font-monospace text-decoration-none" href="@(_branchUrl ?? "#")" rel="noopener" target="_blank">
+                @if (_branch is null || ShowLoaders)
+                {
+                    <Spinner />
+                }
+                else
+                {
+                    @(_branch)
+                }
+            </a>
+        </div>
+        <div class="header-item">
+            <strong class="header-label">
+                <span class="fa-solid fa-code-commit fa-fw" aria-hidden="true"></span>
+                Commit:
+            </strong>
+            <a class="font-monospace text-decoration-none" href="@(_commitUrl ?? "#")" rel="noopener" target="_blank">
+                @if (_commit is null || ShowLoaders)
+                {
+                    <Spinner />
+                }
+                else
+                {
+                    @(_commit[..7])
+                }
+            </a>
+        </div>
+    }
 </header>
 
 @code {
+    public bool DisableRepositories => _repositories.Count < 1 || _loading;
+    public bool DisableBranches => _branches.Count < 1 || _loading;
+    public bool ShowLoaders => _loading;
+
+    private BenchmarkResults? _benchmarks;
+    private bool _dataNotFound;
+    private string? _branch;
+    private string? _branchUrl;
+    private string? _commit;
+    private string? _commitUrl;
+    private bool _loading;
+    private GitHubRepository? _repository;
+    private IList<string> _repositories = [];
+    private List<string> _branches = [];
+
     protected async override Task OnInitializedAsync()
     {
-        if (Options.Value.IsGitHubEnterprise || GitHubService.HasToken)
+        var options = Options.Value;
+
+        if (options.IsGitHubEnterprise || GitHubService.HasToken)
         {
             if (!await GitHubService.VerifyTokenAsync())
             {
                 Navigation.NavigateTo(Routes.Token);
+                return;
+            }
+        }
+
+        _repositories = options.Repositories;
+
+        if (_repositories.Count > 0)
+        {
+            try
+            {
+                _loading = true;
+                await LoadRepositoryAsync(_repositories[0]);
+            }
+            finally
+            {
+                _loading = false;
+            }
+        }
+    }
+
+    private async Task RepositoryChangedAsync(ChangeEventArgs args)
+    {
+        if (args.Value is string repository)
+        {
+            try
+            {
+                _loading = true;
+                await LoadRepositoryAsync(repository);
+            }
+            finally
+            {
+                _loading = false;
+            }
+        }
+    }
+
+    private async Task BranchChangedAsync(ChangeEventArgs args)
+    {
+        if (args.Value is string branch)
+        {
+            _branch = branch;
+
+            try
+            {
+                _loading = true;
+                await LoadBenchmarksAsync(branch);
+            }
+            finally
+            {
+                _loading = false;
+            }
+        }
+    }
+
+    private async Task LoadRepositoryAsync(string repository)
+    {
+        _repository = await GitHubClient.GetRepositoryAsync(Options.Value.RepositoryOwner, repository);
+
+        await LoadBranchesAsync(_repository.Name);
+
+        if (_branches?.Count > 0)
+        {
+            _branch = _branches[0];
+            await LoadBenchmarksAsync(_branch);
+        }
+    }
+
+    private async Task LoadBranchesAsync(string repository)
+    {
+        var branches = await GitHubClient.GetRepositoryBranchesAsync(Options.Value.RepositoryOwner, repository);
+
+        _branches.Clear();
+        foreach (var branch in branches)
+        {
+            _branches.Add(branch.Name);
+        }
+
+        _branches.Sort((x, y) =>
+        {
+            if (x == _repository?.DefaultBranch)
+            {
+                return -1;
+            }
+            else if (y == _repository?.DefaultBranch)
+            {
+                return 1;
+            }
+
+            return string.Compare(x, y);
+        });
+
+        StateHasChanged();
+    }
+
+    private async Task LoadBenchmarksAsync(string branch)
+    {
+        if (_repository is not null)
+        {
+            try
+            {
+                _loading = true;
+                _benchmarks = await GitHubClient.GetBenchmarksAsync(_repository.Name, branch, _repository.IsPublic);
+
+                if (_benchmarks is null)
+                {
+                    _dataNotFound = true;
+                    _branchUrl = null;
+                }
+                else
+                {
+                    _dataNotFound = false;
+
+                    var options = Options.Value;
+
+                    var builder = new UriBuilder(options.GitHubServerUrl);
+
+                    builder.Path = $"{options.RepositoryOwner}/{_repository.Name}/tree/{branch}";
+                    _branchUrl = builder.Uri.ToString();
+
+                    _commit = null;
+                    if (_benchmarks.Suites.Count > 0)
+                    {
+                        var commits = new HashSet<string>();
+
+                        foreach (var benchmarks in _benchmarks.Suites.Values)
+                        {
+                            if (benchmarks.Count > 0)
+                            {
+                                commits.Add(benchmarks.Last().Commit.Sha);
+                            }
+                        }
+
+                        if (commits.Count == 1)
+                        {
+                            _commit = commits.FirstOrDefault();
+                        }
+                    }
+
+                    builder.Path = $"{options.RepositoryOwner}/{_repository.Name}/commits/{_benchmarks.Suites.Values.First().Last().Commit.Sha}";
+                    _commitUrl = builder.Uri.ToString();
+                }
+            }
+            finally
+            {
+                _loading = false;
             }
         }
     }
