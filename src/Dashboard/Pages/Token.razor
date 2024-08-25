@@ -8,7 +8,7 @@
 <PageTitle>Configure @(options.GitHubInstance) Token - @(options.BrandName)</PageTitle>
 
 <div class="row m-2 justify-content-center">
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-8">
         <div class="card ">
             <div class="card-header">
                 @(options.GitHubInstance) Token @(tokenRequired ? "Required" : string.Empty)
@@ -51,7 +51,7 @@
                     }
                 </p>
                 <form class="row row-cols-lg-auto g-2 align-items-center">
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-8">
                         <label class="visually-hidden" for="github-token">
                             @(options.GitHubInstance) Token
                         </label>
@@ -75,7 +75,7 @@
                                    @ref="_tokenInput">
                         </div>
                     </div>
-                    <div class="d-grid gap-2 d-md-block col-12 col-lg mx-auto">
+                    <div class="d-grid gap-2 d-md-block col-12 col-lg-4 col-lg mx-auto">
                         <a class="btn btn-github"
                             href="@(_generateTokenUrl)"
                             role="button"
