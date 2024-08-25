@@ -16,7 +16,6 @@ builder.Services.AddScoped(
     (provider) =>
         new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddBlazorBootstrap();
 builder.Services.AddBlazoredLocalStorage();
 
 builder.Services.AddScoped<GitHubClient>();
