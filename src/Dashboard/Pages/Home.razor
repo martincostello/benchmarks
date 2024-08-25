@@ -153,10 +153,18 @@
 
         if (GitHubService.Repositories.Count > 0)
         {
-            var repo = Repository ?? GitHubService.Repositories[0];
+            var repo = GitHubService.Repositories[0];
+
+            if (Repository is { Length: > 0 } name &&
+                GitHubService.Repositories.Contains(name, StringComparer.Ordinal))
+            {
+                repo = name;
+            }
+
             await LoadAsync(() => GitHubService.LoadRepositoryAsync(repo));
 
-            if (Branch is { Length: > 0 } branch)
+            if (Branch is { Length: > 0 } branch &&
+                GitHubService.Branches.Contains(branch, StringComparer.Ordinal))
             {
                 await LoadAsync(() => GitHubService.LoadBenchmarksAsync(branch));
             }
