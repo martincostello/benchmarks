@@ -88,7 +88,7 @@ public sealed class GitHubService(
 
         var builder = new UriBuilder(current.GitHubServerUrl)
         {
-            Path = $"{current.RepositoryOwner}/{repo}/tree/{branch}",
+            Path = $"{current.RepositoryOwner}/{repo.Name}/tree/{branch}",
         };
 
         return builder.Uri.ToString();
@@ -111,7 +111,7 @@ public sealed class GitHubService(
 
         var builder = new UriBuilder(current.GitHubServerUrl)
         {
-            Path = $"{current.RepositoryOwner}/{repo}/commits/{sha}",
+            Path = $"{current.RepositoryOwner}/{repo.Name}/commits/{sha}",
         };
 
         return builder.Uri.ToString();
