@@ -8,6 +8,9 @@ using MartinCostello.Benchmarks.Models;
 namespace MartinCostello.Benchmarks;
 
 [ExcludeFromCodeCoverage]
+[JsonSerializable(typeof(BenchmarkData))]
+[JsonSerializable(typeof(IList<GitHubBranch>))]
+[JsonSerializable(typeof(GitHubRepository))]
 [JsonSerializable(typeof(GitHubUser))]
 [JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
 public sealed partial class AppJsonSerializerContext : JsonSerializerContext;

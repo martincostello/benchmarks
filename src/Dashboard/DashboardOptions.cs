@@ -9,6 +9,11 @@ namespace MartinCostello.Benchmarks;
 public sealed class DashboardOptions
 {
     /// <summary>
+    /// Gets or sets the name of the benchmark data files.
+    /// </summary>
+    public string BenchmarkFileName { get; set; } = "data.json";
+
+    /// <summary>
     /// Gets or sets the brand name for the dashboard.
     /// </summary>
     public string BrandName { get; set; } = "Benchmarks";
