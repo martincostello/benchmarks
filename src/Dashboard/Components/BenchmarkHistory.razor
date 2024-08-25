@@ -1,0 +1,23 @@
+<div id="@(Suite)-@(Name)" class="benchmark-chart-container col">
+    <canvas class="benchmark-chart"></canvas>
+</div>
+
+@code {
+    /// <summary>
+    /// Gets the benchmark name.
+    /// </summary>
+    [Parameter]
+    public required string Name { get; init; }
+
+    /// <summary>
+    /// Gets the name of the associated benchmark suite.
+    /// </summary>
+    [Parameter]
+    public required string Suite { get; init; }
+
+    /// <summary>
+    /// Gets the benchmark results.
+    /// </summary>
+    [Parameter]
+    public required IList<BenchmarkResult> Results { get; init; }
+}

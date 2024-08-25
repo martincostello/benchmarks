@@ -5,9 +5,17 @@
             <Icon Name="@(Icons.Link)" />
         </a>
     </h2>
+    <div class="benchmark-graphs row row-cols-1 row-cols-sm-2">
+        @foreach ((var name, var results) in _results)
+        {
+            <BenchmarkHistory Name="@(name)" Results="@(results)" Suite="@(Name)" />
+        }
+    </div>
 </div>
 
 @code {
+    private Dictionary<string, IList<BenchmarkResult>> _results = new();
+
     /// <summary>
     /// Gets the benchmark suite name.
     /// </summary>
@@ -19,4 +27,27 @@
     /// </summary>
     [Parameter]
     public required IList<BenchmarkRun> Runs { get; init; }
+
+    protected override void OnInitialized()
+    {
+        Dictionary<string, SortedList<DateTimeOffset, BenchmarkResult>> sets = new();
+
+        foreach (var run in Runs)
+        {
+            foreach (var benchmark in run.Benchmarks)
+            {
+                if (!sets.TryGetValue(benchmark.Name, out var results))
+                {
+                    sets[benchmark.Name] = results = [];
+                }
+
+                results.Add(run.Timestamp, benchmark);
+            }
+        }
+
+        foreach ((var suite, var results) in sets)
+        {
+            _results[suite] = results.Select((p) => p.Value).ToList();
+        }
+    }
 }
