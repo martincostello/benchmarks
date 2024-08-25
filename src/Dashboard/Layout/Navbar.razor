@@ -19,7 +19,7 @@
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="site-navbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="https://blog.martincostello.com/" rel="noopener" target="_blank" title="My blog">
@@ -55,6 +55,9 @@
                           data-bs-title="Signed in as @(user.Login) (@(user.Name))">
                         @(user.Login)
                     </span>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
                     <li>
                         <button class="btn btn-link navbar-btn nav-link"
                                 title="Sign out"
