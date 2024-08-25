@@ -126,6 +126,7 @@
     public bool DisableBranches => _branches.Count < 1 || _loading;
     public bool ShowLoaders => _loading;
 
+    private readonly List<string> _branches = [];
     private BenchmarkResults? _benchmarks;
     private bool _dataNotFound;
     private string? _branch;
@@ -135,19 +136,16 @@
     private bool _loading;
     private GitHubRepository? _repository;
     private IList<string> _repositories = [];
-    private List<string> _branches = [];
 
     protected async override Task OnInitializedAsync()
     {
         var options = Options.Value;
 
-        if (options.IsGitHubEnterprise || GitHubService.HasToken)
+        if ((options.IsGitHubEnterprise || GitHubService.HasToken) &&
+            !await GitHubService.VerifyTokenAsync())
         {
-            if (!await GitHubService.VerifyTokenAsync())
-            {
-                Navigation.NavigateTo(Routes.Token);
-                return;
-            }
+            Navigation.NavigateTo(Routes.Token);
+            return;
         }
 
         _repositories = options.Repositories;
@@ -270,12 +268,9 @@
                     {
                         var commits = new HashSet<string>();
 
-                        foreach (var benchmarks in _benchmarks.Suites.Values)
+                        foreach (var benchmarks in _benchmarks.Suites.Values.Where((p) => p.Count > 0))
                         {
-                            if (benchmarks.Count > 0)
-                            {
-                                commits.Add(benchmarks.Last().Commit.Sha);
-                            }
+                            commits.Add(benchmarks.Last().Commit.Sha);
                         }
 
                         if (commits.Count == 1)
