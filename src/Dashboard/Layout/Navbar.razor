@@ -1,4 +1,4 @@
-﻿@{
+@{
     var options = Options.Value;
 }
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
@@ -10,19 +10,33 @@
                 <span class="@(iconClasses) d-none d-lg-inline" aria-hidden="true"></span>
             }
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navbar" aria-controls="site-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#site-navbar"
+                aria-controls="site-navbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://blog.martincostello.com/" rel="noopener" target="_blank" title="My blog">Blog</a>
+                    <a class="nav-link" href="https://blog.martincostello.com/" rel="noopener" target="_blank" title="My blog">
+                        Blog
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://martincostello.com/home/about/" rel="noopener" target="_blank" title="About me">About</a>
+                    <a class="nav-link" href="https://martincostello.com/home/about/" rel="noopener" target="_blank" title="About me">
+                        About
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@(options.GitHubServerUrl)/@(options.RepositoryOwner)/@(options.RepositoryName)" target="_blank" rel="noopener" title="@(options.GitHubInstance)">
+                    <a class="nav-link"
+                       href="@(_repositoryUrl)"
+                       rel="noopener"
+                       target="_blank"
+                       title="@(options.GitHubInstance)">
                         @(options.GitHubInstance)
                         <Icon Name="@(Icons.GitHub)" />
                     </a>
@@ -73,9 +87,22 @@
 
 @code {
     private bool _isAuthenticated;
+    private string? _repositoryUrl;
     private GitHubUser? _user;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
+    {
+        var options = Options.Value;
+
+        var uriBuilder = new UriBuilder(options.GitHubServerUrl)
+        {
+            Path = $"{options.RepositoryOwner}/{options.RepositoryName}",
+        };
+
+        _repositoryUrl = uriBuilder.Uri.ToString();
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         _isAuthenticated = GitHubService.IsAuthenticated;
 
@@ -100,6 +127,7 @@
 
     private async Task SignOutAsync()
     {
+        _isAuthenticated = false;
         await GitHubService.StoreTokenAsync(string.Empty);
         Navigation.NavigateTo("/");
     }
