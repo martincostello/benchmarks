@@ -3,7 +3,7 @@
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
 <header>
-    <form id="data-select" method="get">
+    <form method="get">
         <div class="g-3 row row-cols-6">
             <div class="input-group col">
                 <label class="input-group-text col-auto col-lg-1" for="repository">
@@ -11,15 +11,16 @@
                     <Icon Name="@(Icons.Code)" />
                 </label>
                 <select class="form-select" name="repo" disabled="@(DisableRepositories)" @onchange="RepositoryChangedAsync">
-                    @if (_repositories.Count < 1)
+                    @if (GitHubService.Repositories.Count < 1)
                     {
                         <option>Loading...</option>
                     }
                     else
                     {
-                        @foreach (var repo in _repositories)
+                        @foreach (var repo in GitHubService.Repositories)
                         {
-                            <option value="@(repo)">@(repo)</option>
+                            var selected = Repository is not null && repo == Repository;
+                            <option value="@(repo)" selected="@(selected)">@(repo)</option>
                         }
                     }
                 </select>
@@ -30,15 +31,19 @@
                     <Icon Name="@(Icons.CodeBranch)" />
                 </label>
                 <select class="form-select" name="branch" disabled="@(DisableBranches)" @onchange="BranchChangedAsync">
-                    @if (_branches.Count < 1)
+                    @if (GitHubService.Branches.Count < 1)
                     {
                         <option>Loading...</option>
                     }
                     else
                     {
-                        @foreach (var branch in _branches)
+                        @foreach (var branch in GitHubService.Branches)
                         {
-                            <option value="@(branch)" selected="@(branch == _repository?.DefaultBranch)">@(branch)</option>
+                            var selected =
+                                Branch is not null && branch == Branch ||
+                                Branch is null && branch == GitHubService.CurrentRepository?.DefaultBranch;
+
+                            <option value="@(branch)" selected="@(selected)">@(branch)</option>
                         }
                     }
                 </select>
@@ -46,20 +51,20 @@
         </div>
     </form>
     <hr />
-    @if (_dataNotFound)
+    @if (_notFound)
     {
         <div class="alert alert-danger m-2" role="alert">
-            Failed to load benchmark data.
+            Failed benchmark data for found for branch <code>@(GitHubService.CurrentBranch)</code>.
         </div>
     }
-    else
+    else if (GitHubService.Benchmarks is not null)
     {
         <div class="header-item">
             <strong class="header-label">
                 <span class="fa-regular fa-clock fa-fw" aria-hidden="true"></span>
                 Last Updated:
             </strong>
-            @if (_benchmarks?.LastUpdated is { } timestamp && !ShowLoaders)
+            @if (GitHubService.Benchmarks.LastUpdated is { } timestamp && !ShowLoaders)
             {
                 <span title="@timestamp.ToString("s", CultureInfo.InvariantCulture)">
                     @(timestamp.ToLocalTime().ToString("G"))
@@ -75,14 +80,14 @@
                 <span class="fa-brands fa-github fa-fw" aria-hidden="true"></span>
                 Repository:
             </strong>
-            <a href="@(_repository?.HtmlUrl ?? "#")" rel="noopener" target="_blank">
-                @if (_repository is null || ShowLoaders)
+            <a href="@(GitHubService.CurrentRepository?.HtmlUrl ?? "#")" rel="noopener" target="_blank">
+                @if (GitHubService.CurrentRepository is null || ShowLoaders)
                 {
                     <Spinner />
                 }
                 else
                 {
-                    @(_repository.FullName)
+                    @(GitHubService.CurrentRepository.FullName)
                 }
             </a>
         </div>
@@ -91,14 +96,14 @@
                 <span class="fa-solid fa-code-branch fa-fw" aria-hidden="true"></span>
                 Branch:
             </strong>
-            <a class="font-monospace text-decoration-none" href="@(_branchUrl ?? "#")" rel="noopener" target="_blank">
-                @if (_branch is null || ShowLoaders)
+            <a class="font-monospace text-decoration-none" href="@(GitHubService.BranchUrl())" rel="noopener" target="_blank">
+                @if (GitHubService.CurrentBranch is null || ShowLoaders)
                 {
                     <Spinner />
                 }
                 else
                 {
-                    @(_branch)
+                    @(GitHubService.CurrentBranch)
                 }
             </a>
         </div>
@@ -107,14 +112,14 @@
                 <span class="fa-solid fa-code-commit fa-fw" aria-hidden="true"></span>
                 Commit:
             </strong>
-            <a class="font-monospace text-decoration-none" href="@(_commitUrl ?? "#")" rel="noopener" target="_blank">
-                @if (_commit is null || ShowLoaders)
+            <a class="font-monospace text-decoration-none" href="@(GitHubService.CommitUrl())" rel="noopener" target="_blank">
+                @if (GitHubService.CurrentCommit is null || ShowLoaders)
                 {
                     <Spinner />
                 }
                 else
                 {
-                    @(_commit[..7])
+                    @(GitHubService.CurrentCommit[..7])
                 }
             </a>
         </div>
@@ -122,20 +127,18 @@
 </header>
 
 @code {
-    public bool DisableRepositories => _repositories.Count < 1 || _loading;
-    public bool DisableBranches => _branches.Count < 1 || _loading;
+    public bool DisableRepositories => GitHubService.Repositories.Count < 1 || _loading;
+    public bool DisableBranches => GitHubService.Branches.Count < 1 || _loading;
     public bool ShowLoaders => _loading;
 
-    private readonly List<string> _branches = [];
-    private BenchmarkResults? _benchmarks;
-    private bool _dataNotFound;
-    private string? _branch;
-    private string? _branchUrl;
-    private string? _commit;
-    private string? _commitUrl;
+    [SupplyParameterFromQuery(Name = "branch")]
+    public string? Branch { get; set; }
+
+    [SupplyParameterFromQuery(Name = "repo")]
+    public string? Repository { get; set; }
+
     private bool _loading;
-    private GitHubRepository? _repository;
-    private IList<string> _repositories = [];
+    private bool _notFound;
 
     protected async override Task OnInitializedAsync()
     {
@@ -148,18 +151,14 @@
             return;
         }
 
-        _repositories = options.Repositories;
-
-        if (_repositories.Count > 0)
+        if (GitHubService.Repositories.Count > 0)
         {
-            try
+            var repo = Repository ?? GitHubService.Repositories[0];
+            await LoadAsync(() => GitHubService.LoadRepositoryAsync(repo));
+
+            if (Branch is { Length: > 0 } branch)
             {
-                _loading = true;
-                await LoadRepositoryAsync(_repositories[0]);
-            }
-            finally
-            {
-                _loading = false;
+                await LoadAsync(() => GitHubService.LoadBenchmarksAsync(branch));
             }
         }
     }
@@ -168,15 +167,7 @@
     {
         if (args.Value is string repository)
         {
-            try
-            {
-                _loading = true;
-                await LoadRepositoryAsync(repository);
-            }
-            finally
-            {
-                _loading = false;
-            }
+            await LoadAsync(() => GitHubService.LoadRepositoryAsync(repository));
         }
     }
 
@@ -184,109 +175,21 @@
     {
         if (args.Value is string branch)
         {
-            _branch = branch;
-
-            try
-            {
-                _loading = true;
-                await LoadBenchmarksAsync(branch);
-            }
-            finally
-            {
-                _loading = false;
-            }
+            await LoadAsync(() => GitHubService.LoadBenchmarksAsync(branch));
         }
     }
 
-    private async Task LoadRepositoryAsync(string repository)
+    private async Task LoadAsync(Func<Task> loader)
     {
-        _repository = await GitHubClient.GetRepositoryAsync(Options.Value.RepositoryOwner, repository);
-
-        await LoadBranchesAsync(_repository.Name);
-
-        if (_branches?.Count > 0)
+        try
         {
-            _branch = _branches[0];
-            await LoadBenchmarksAsync(_branch);
+            _loading = true;
+            await loader();
         }
-    }
-
-    private async Task LoadBranchesAsync(string repository)
-    {
-        var branches = await GitHubClient.GetRepositoryBranchesAsync(Options.Value.RepositoryOwner, repository);
-
-        _branches.Clear();
-        foreach (var branch in branches)
+        finally
         {
-            _branches.Add(branch.Name);
-        }
-
-        _branches.Sort((x, y) =>
-        {
-            if (x == _repository?.DefaultBranch)
-            {
-                return -1;
-            }
-            else if (y == _repository?.DefaultBranch)
-            {
-                return 1;
-            }
-
-            return string.Compare(x, y);
-        });
-
-        StateHasChanged();
-    }
-
-    private async Task LoadBenchmarksAsync(string branch)
-    {
-        if (_repository is not null)
-        {
-            try
-            {
-                _loading = true;
-                _benchmarks = await GitHubClient.GetBenchmarksAsync(_repository.Name, branch, _repository.IsPublic);
-
-                if (_benchmarks is null)
-                {
-                    _dataNotFound = true;
-                    _branchUrl = null;
-                }
-                else
-                {
-                    _dataNotFound = false;
-
-                    var options = Options.Value;
-
-                    var builder = new UriBuilder(options.GitHubServerUrl);
-
-                    builder.Path = $"{options.RepositoryOwner}/{_repository.Name}/tree/{branch}";
-                    _branchUrl = builder.Uri.ToString();
-
-                    _commit = null;
-                    if (_benchmarks.Suites.Count > 0)
-                    {
-                        var commits = new HashSet<string>();
-
-                        foreach (var benchmarks in _benchmarks.Suites.Values.Where((p) => p.Count > 0))
-                        {
-                            commits.Add(benchmarks.Last().Commit.Sha);
-                        }
-
-                        if (commits.Count == 1)
-                        {
-                            _commit = commits.FirstOrDefault();
-                        }
-                    }
-
-                    builder.Path = $"{options.RepositoryOwner}/{_repository.Name}/commits/{_benchmarks.Suites.Values.First().Last().Commit.Sha}";
-                    _commitUrl = builder.Uri.ToString();
-                }
-            }
-            finally
-            {
-                _loading = false;
-            }
+            _loading = false;
+            _notFound = GitHubService.Benchmarks is null;
         }
     }
 }
