@@ -62,7 +62,7 @@
                                 <Icon Name="@(Icons.Key)" />
                             </div>
                             <input autocomplete="off"
-                                   class="form-control @(_invalidToken ? "is-invalid" : string.Empty)"
+                                   class="form-control @(GitHubService.InvalidToken ? "is-invalid" : string.Empty)"
                                    placeholder="ghp_repo-scoped-token"
                                    required
                                    title="Invalid @(options.GitHubInstance) token."
@@ -102,9 +102,41 @@
     </div>
 </div>
 
+@if (GitHubService.InvalidToken)
+{
+    <div class="row justify-content-center mx-4">
+        <div class="alert alert-warning col-12 col-md-8" role="alert">
+            <h5 class="fw-bolder">
+                <span class="fa-stack">
+                    <i class="fa-solid fa-key fa-stack-1x"></i>
+                    <i class="fa-solid fa-ban fa-stack-1x text-danger"></i>
+                </span>
+                Invalid @(options.GitHubInstance) token
+            </h5>
+            <p>
+                Possible causes:
+                <ul class="fw-light">
+                    <li>
+                        @if (options.IsGitHubEnterprise)
+                        {
+                            <text>The token is for GitHub.com not GitHub Enterprise</text>
+                        }
+                        else
+                        {
+                            <text>The token is not for GitHub.com</text>
+                        }
+                    </li>
+                    <li>The token has been deleted or regenerated</li>
+                    <li>The token has expired</li>
+                    <li>The token does not have the correct scopes</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+}
+
 @code {
     private string? _generateTokenUrl;
-    private bool _invalidToken;
     private string? _token;
     private ElementReference _tokenInput;
 
@@ -136,7 +168,6 @@
         if (args.Value is string token)
         {
             _token = token;
-            _invalidToken = false;
         }
     }
 
@@ -144,11 +175,11 @@
     {
         if (!string.IsNullOrWhiteSpace(_token))
         {
-            _invalidToken = !await GitHubService.SignInAsync(_token);
-
-            StateHasChanged();
-
-            if (!_invalidToken)
+            if (!await GitHubService.SignInAsync(_token))
+            {
+                StateHasChanged();
+            }
+            else
             {
                 Navigation.NavigateTo(Routes.Home);
             }

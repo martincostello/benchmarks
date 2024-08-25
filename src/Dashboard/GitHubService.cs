@@ -15,6 +15,8 @@ public sealed class GitHubService(
 {
     private const string TokenKey = "github-token";
 
+    private bool _invalidToken;
+
     /// <summary>
     /// Raised when the GitHub user changes.
     /// </summary>
@@ -29,6 +31,11 @@ public sealed class GitHubService(
     /// Gets a value indicating whether has a GitHub token configured.
     /// </summary>
     public bool HasToken => !string.IsNullOrEmpty(localStorage.GetItemAsString(TokenKey));
+
+    /// <summary>
+    /// Gets a value indicating whether the token is invalid.
+    /// </summary>
+    public bool InvalidToken => _invalidToken;
 
     /// <summary>
     /// Signs in the user with the specified GitHub token as an asynchronous operation.
@@ -82,15 +89,20 @@ public sealed class GitHubService(
     /// </returns>
     public async Task<bool> VerifyTokenAsync(CancellationToken cancellationToken = default)
     {
+        bool result;
+
         try
         {
             CurrentUser = await client.GetUserAsync(cancellationToken);
-            return true;
+            result = true;
         }
         catch (HttpRequestException)
         {
             await SignOutAsync(cancellationToken);
-            return false;
+            result = false;
         }
+
+        _invalidToken = !result;
+        return result;
     }
 }

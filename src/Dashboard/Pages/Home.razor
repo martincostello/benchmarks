@@ -86,22 +86,7 @@
     {
         if (Options.Value.IsGitHubEnterprise || GitHubService.HasToken)
         {
-            bool hasValidToken = false;
-
-            if (GitHubService.HasToken)
-            {
-                try
-                {
-                    _ = await GitHubClient.GetUserAsync();
-                    hasValidToken = true;
-                }
-                catch (HttpRequestException)
-                {
-                    hasValidToken = false;
-                }
-            }
-
-            if (!hasValidToken)
+            if (!await GitHubService.VerifyTokenAsync())
             {
                 Navigation.NavigateTo(Routes.Token);
             }
