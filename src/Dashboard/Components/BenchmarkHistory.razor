@@ -1,5 +1,7 @@
+@using BlazorBootstrap
+
 <div id="@(Suite)-@(Name)" class="benchmark-chart-container col">
-    <canvas class="benchmark-chart"></canvas>
+    <LineChart Class="benchmark-chart" @ref="_chart" />
 </div>
 
 @code {
@@ -16,8 +18,180 @@
     public required string Suite { get; init; }
 
     /// <summary>
-    /// Gets the benchmark results.
+    /// Gets the benchmark items.
     /// </summary>
     [Parameter]
-    public required IList<BenchmarkResult> Results { get; init; }
+    public required IList<BenchmarkItem> Items { get; init; }
+
+    private LineChart _chart = default!;
+
+    protected override void OnInitialized()
+    {
+        NormalizeUnits(Items);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var dataSets = new List<IChartDataset>();
+
+        var duration = new LineChartDataset()
+        {
+            BackgroundColor = $"{Options.Value.DataSetColors["Time"]}60",
+            BorderColor = Options.Value.DataSetColors["Time"],
+            Data = [.. Items.Select((p) => p.Result.Value)],
+            Fill = true,
+            Label = "Time",
+            Tension = 0.4,
+            YAxisID = "y",
+        };
+
+        dataSets.Add(duration);
+
+        if (Items.Any((p) => p.Result.BytesAllocated is not null))
+        {
+            var memoryUnit = Items.Where(d => d.Result.BytesAllocated.HasValue).FirstOrDefault()?.Result.MemoryUnit ?? "bytes";
+
+            var memory = new LineChartDataset()
+            {
+                BackgroundColor = $"{Options.Value.DataSetColors["Memory"]}60",
+                BorderColor = Options.Value.DataSetColors["Memory"],
+                Data = [.. Items.Select((p) => p.Result.BytesAllocated)],
+                Fill = false,
+                Label = "Memory",
+                PointStyle = ["triangle"],
+                Tension = 0.4,
+                YAxisID = "y2",
+            };
+
+            dataSets.Add(memory);
+        }
+
+        var data = new ChartData()
+        {
+            Labels = [.. Items.Select((p) => p.Commit.Sha[..7])],
+            Datasets = dataSets,
+        };
+
+        var options = new LineChartOptions()
+        {
+            Responsive = true,
+        };
+
+        options.Plugins.Title = new()
+        {
+            Display = true,
+            Text = Name,
+        };
+
+        options.Plugins.Tooltip = new()
+        {
+        };
+
+        options.Scales.X!.Title = new()
+        {
+            Display = true,
+            Text = "Commit",
+        };
+
+        options.Scales.Y!.BeginAtZero = true;
+        options.Scales.Y.Title = new()
+        {
+            Display = true,
+            Text = Items.Count > 0 ? $"t ({Items[0].Result.Unit})" : string.Empty,
+        };
+
+        if (firstRender)
+        {
+            await _chart!.InitializeAsync(data, options);
+        }
+        else
+        {
+            await _chart!.UpdateAsync(data, options);
+        }
+    }
+
+    private static void NormalizeUnits(IList<BenchmarkItem> items)
+    {
+        if (items.Count < 1)
+        {
+            return;
+        }
+
+        var minValue = items.Count == 1 ? items[0].Result.Value : double.PositiveInfinity;
+
+        if (items.Count > 1)
+        {
+            foreach (var item in items)
+            {
+                minValue = Math.Min(minValue, item.Result.Value);
+            }
+        }
+
+        double factor = 1e-3;
+        double limit = 1_000;
+
+        string[] timeUnits = ["µs", "ms", "s"];
+
+        for (int i = 0; i < timeUnits.Length; i++)
+        {
+            if (minValue < limit)
+            {
+                break;
+            }
+
+            minValue *= factor;
+
+            for (int j = 0; j < items.Count; j++)
+            {
+                var item = items[j];
+
+                item.Result.Value *= factor;
+                item.Result.Unit = timeUnits[i];
+
+                if (item.Result.Range is not null)
+                {
+                    item.Result.Range = $"± {double.Parse(item.Result.Range[2..], CultureInfo.InvariantCulture) * factor}";
+                }
+            }
+        }
+
+        if (items.Any((p) => p.Result.BytesAllocated is not null))
+        {
+            double minBytes = items.Count == 1 ? items[0].Result.BytesAllocated ?? default : double.PositiveInfinity;
+
+            if (items.Count > 1)
+            {
+                foreach (var item in items)
+                {
+                    if (item.Result.BytesAllocated is { } value)
+                    {
+                        minBytes = Math.Min(minBytes, value);
+                    }
+                }
+            }
+
+            string[] memoryUnits = ["KB", "MB"];
+
+            for (int i = 0; i < memoryUnits.Length; i++)
+            {
+                if (minBytes < limit)
+                {
+                    break;
+                }
+
+                minBytes *= factor;
+
+                for (int j = 0; j < items.Count; j++)
+                {
+                    var item = items[j];
+
+                    if (item.Result.BytesAllocated is { } value)
+                    {
+                        item.Result.BytesAllocated *= (long)factor;
+                        item.Result.MemoryUnit = memoryUnits[i];
+                    }
+                }
+            }
+        }
+    }
 }

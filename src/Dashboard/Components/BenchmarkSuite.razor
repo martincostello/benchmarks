@@ -6,15 +6,15 @@
         </a>
     </h2>
     <div class="benchmark-graphs row row-cols-1 row-cols-sm-2">
-        @foreach ((var name, var results) in _results)
+        @foreach ((var benchmark, var items) in _items)
         {
-            <BenchmarkHistory Name="@(name)" Results="@(results)" Suite="@(Name)" />
+            <BenchmarkHistory Items="@(items)" Name="@(benchmark)" Suite="@(Name)" />
         }
     </div>
 </div>
 
 @code {
-    private Dictionary<string, IList<BenchmarkResult>> _results = new();
+    private readonly Dictionary<string, IList<BenchmarkItem>> _items = new();
 
     /// <summary>
     /// Gets the benchmark suite name.
@@ -30,7 +30,7 @@
 
     protected override void OnInitialized()
     {
-        Dictionary<string, SortedList<DateTimeOffset, BenchmarkResult>> sets = new();
+        Dictionary<string, SortedList<DateTimeOffset, BenchmarkItem>> sets = new();
 
         foreach (var run in Runs)
         {
@@ -41,13 +41,13 @@
                     sets[benchmark.Name] = results = [];
                 }
 
-                results.Add(run.Timestamp, benchmark);
+                results.Add(run.Timestamp, new(run.Commit, benchmark));
             }
         }
 
         foreach ((var suite, var results) in sets)
         {
-            _results[suite] = results.Select((p) => p.Value).ToList();
+            _items[suite] = results.Select((p) => p.Value).ToList();
         }
     }
 }
