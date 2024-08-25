@@ -1,0 +1,22 @@
+<div id="@(Name)" class="benchmark-set">
+    <h2 class="benchmark-title">
+        @(Name)
+        <a class="benchmark-set-anchor" href="#@(Name)">
+            <Icon Name="@(Icons.Link)" />
+        </a>
+    </h2>
+</div>
+
+@code {
+    /// <summary>
+    /// Gets the benchmark suite name.
+    /// </summary>
+    [Parameter]
+    public required string Name { get; init; }
+
+    /// <summary>
+    /// Gets the benchmark runs.
+    /// </summary>
+    [Parameter]
+    public required IList<BenchmarkRun> Runs { get; init; }
+}

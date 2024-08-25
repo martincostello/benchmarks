@@ -1,4 +1,5 @@
 @page "/"
+@inject IJSRuntime JS
 
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
@@ -126,6 +127,14 @@
     }
 </header>
 
+@if (GitHubService.Benchmarks is not null)
+{
+    foreach ((var name, var suite) in GitHubService.Benchmarks.Suites)
+    {
+        <BenchmarkSuite Name="@(name)" Runs="@(suite)" />
+    }
+}
+
 @code {
     public bool DisableRepositories => GitHubService.Repositories.Count < 1 || _loading;
     public bool DisableBranches => GitHubService.Branches.Count < 1 || _loading;
@@ -177,6 +186,11 @@
                 Navigation.NavigateTo(Routes.Token);
             }
         }
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("scrollToActiveChart", []);
     }
 
     private async Task RepositoryChangedAsync(ChangeEventArgs args)
