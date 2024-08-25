@@ -161,12 +161,20 @@
                 repo = name;
             }
 
-            await LoadAsync(() => GitHubService.LoadRepositoryAsync(repo));
-
-            if (Branch is { Length: > 0 } branch &&
-                GitHubService.Branches.Contains(branch, StringComparer.Ordinal))
+            try
             {
-                await LoadAsync(() => GitHubService.LoadBenchmarksAsync(branch));
+                await LoadAsync(() => GitHubService.LoadRepositoryAsync(repo));
+
+                if (Branch is { Length: > 0 } branch &&
+                    GitHubService.Branches.Contains(branch, StringComparer.Ordinal))
+                {
+                    await LoadAsync(() => GitHubService.LoadBenchmarksAsync(branch));
+                }
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode is System.Net.HttpStatusCode.Forbidden && !GitHubService.HasToken)
+            {
+                // User was rate-limited with anonymous access
+                Navigation.NavigateTo(Routes.Token);
             }
         }
     }
