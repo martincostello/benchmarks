@@ -7,93 +7,95 @@
 
 <PageTitle>Configure @(options.GitHubInstance) Token - @(options.BrandName)</PageTitle>
 
-<div class="m-2" id="token-prompt">
-    <div class="card">
-        <div class="card-header">
-            @(options.GitHubInstance) Token @(tokenRequired ? "Required" : string.Empty)
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-                @if (tokenRequired)
-                {
-                    <text>
-                        A @(options.GitHubInstance) access token is required to load the data for this dashboard.
-                    </text>
-                }
-                else
-                {
-                    <text>
-                        A @(options.GitHubInstance) access token can be configured to load the data for this dashboard to help avoid rate limiting.
-                    </text>
-                }
-            </p>
-            <p class="card-text">
-                @if (options.TokenScopes.Count > 1)
-                {
-                    <text>
-                        Generate a new token with the following scopes and enter it into the form below:
-                        <ul>
-                            @foreach (var scope in options.TokenScopes)
-                            {
-                                <li>
-                                    <code>@(scope)</code>
-                                </li>
-                            }
-                        </ul>
-                    </text>
-                }
-                else
-                {
-                    <text>
-                        Generate a new token with the <code>@(options.TokenScopes.FirstOrDefault() ?? "public_repo")</code> scope and enter it into the form below.
-                    </text>
-                }
-            </p>
-            <form class="row row-cols-lg-auto g-3 align-items-center">
-                <div class="col-12">
-                    <label class="visually-hidden" for="github-token">
-                        @(options.GitHubInstance) Token
-                    </label>
-                    <div class="input-group">
-                        <div class="input-group-text">
-                            <Icon Name="@(Icons.GitHub)" />
-                            &nbsp;
-                            <Icon Name="@(Icons.Key)" />
+<div class="row m-2 justify-content-center">
+    <div class="col-12 col-md-5">
+        <div class="card ">
+            <div class="card-header">
+                @(options.GitHubInstance) Token @(tokenRequired ? "Required" : string.Empty)
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    @if (tokenRequired)
+                    {
+                        <text>
+                            A @(options.GitHubInstance) access token is required to load the data for this dashboard.
+                        </text>
+                    }
+                    else
+                    {
+                        <text>
+                            A @(options.GitHubInstance) access token can be configured to load the data for this dashboard to help avoid rate limiting.
+                        </text>
+                    }
+                </p>
+                <p class="card-text">
+                    @if (options.TokenScopes.Count > 1)
+                    {
+                        <text>
+                            Generate a new token with the following scopes and enter it into the form below:
+                            <ul>
+                                @foreach (var scope in options.TokenScopes)
+                                {
+                                    <li>
+                                        <code>@(scope)</code>
+                                    </li>
+                                }
+                            </ul>
+                        </text>
+                    }
+                    else
+                    {
+                        <text>
+                            Generate a new token with the <code>@(options.TokenScopes.FirstOrDefault() ?? "public_repo")</code> scope and enter it into the form below.
+                        </text>
+                    }
+                </p>
+                <form class="row row-cols-lg-auto g-2 align-items-center">
+                    <div class="col-12 col-lg-7">
+                        <label class="visually-hidden" for="github-token">
+                            @(options.GitHubInstance) Token
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <Icon Name="@(Icons.GitHub)" />
+                                &nbsp;
+                                <Icon Name="@(Icons.Key)" />
+                            </div>
+                            <input autocomplete="off"
+                                   class="form-control"
+                                   placeholder="ghp_repo-scoped-token"
+                                   type="password"
+                                   data-bs-toggle="tooltip"
+                                   data-bs-title="The GitHub access token must have at least the public_repo scope"
+                                   data-1p-ignore
+                                   data-lpignore="true"
+                                   @oninput="TokenChanged"
+                                   @ref="_tokenInput">
                         </div>
-                        <input autocomplete="off"
-                               class="form-control"
-                               id="github-token"
-                               placeholder="ghp_repo-scoped-token"
-                               type="password"
-                               data-bs-toggle="tooltip"
-                               data-bs-title="The GitHub access token must have at least the public_repo scope"
-                               data-1p-ignore
-                               data-lpignore="true"
-                               @oninput="TokenChanged"
-                               @ref="_tokenInput">
                     </div>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-github"
-                       href="@(_generateTokenUrl)"
-                       role="button"
-                       target="_blank"
-                       rel="noopener">
-                        Generate token
-                        <Icon Name="@(Icons.Plus)" />
-                        <Icon Name="@(Icons.GitHub)" />
-                        <Icon Name="@(Icons.Key)" />
-                    </a>
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-primary"
-                            disabled="@(!HasToken)"
-                            type="button"
-                            @onclick="StoreTokenAsync">
-                        Save and Reload
-                    </button>
-                </div>
-            </form>
+                    <div class="d-grid gap-2 d-md-block col-12 col-lg mx-auto">
+                        <a class="btn btn-github"
+                            href="@(_generateTokenUrl)"
+                            role="button"
+                            target="_blank"
+                            rel="noopener">
+                            Generate
+                            <Icon Name="@(Icons.Plus)" />
+                            <Icon Name="@(Icons.GitHub)" />
+                            <Icon Name="@(Icons.Key)" />
+                        </a>
+                        <button class="btn btn-primary"
+                                disabled="@(!HasToken)"
+                                type="button"
+                                @onclick="StoreTokenAsync">
+                            Save
+                            <Icon Name="@(Icons.FloppyDisk)" />
+                            <Icon Name="@(Icons.GitHub)" />
+                            <Icon Name="@(Icons.Key)" />
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
