@@ -18,7 +18,6 @@ window.configureToolTips = () => {
   tooltips.map((element) => new bootstrap.Tooltip(element));
 };
 
-const canvases = new Map();
 window.renderChart = (canvasId, configString) => {
   const config = JSON.parse(configString);
 
@@ -127,16 +126,14 @@ window.renderChart = (canvasId, configString) => {
     };
   }
 
-  const previous = canvases.get(canvasId);
+  const previous = Chart.getChart(canvasId);;
   if (previous) {
     previous.destroy();
   }
 
-  const chart = new Chart(document.getElementById(canvasId), {
+  new Chart(document.getElementById(canvasId), {
     type: 'line',
     data,
     options,
   });
-
-  canvases.set(canvasId, chart);
 };
