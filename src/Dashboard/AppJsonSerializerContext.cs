@@ -8,7 +8,7 @@ using MartinCostello.Benchmarks.Models;
 namespace MartinCostello.Benchmarks;
 
 [ExcludeFromCodeCoverage]
-[JsonSerializable(typeof(BenchmarkData))]
+[JsonSerializable(typeof(BenchmarkResults))]
 [JsonSerializable(typeof(IList<GitHubBranch>))]
 [JsonSerializable(typeof(GitHubRepository))]
 [JsonSerializable(typeof(GitHubUser))]

@@ -28,7 +28,7 @@ public sealed class GitHubClient(
     /// <returns>
     /// A <see cref="Task"/> representing the asynchronous operation to get the benchmark data.
     /// </returns>
-    public async Task<BenchmarkData?> GetBenchmarksAsync(
+    public async Task<BenchmarkResults?> GetBenchmarksAsync(
         string repository,
         string branch,
         bool isPublic,
@@ -63,7 +63,7 @@ public sealed class GitHubClient(
 
         response.EnsureSuccessStatusCode();
 
-        return (await response.Content.ReadFromJsonAsync(AppJsonSerializerContext.Default.BenchmarkData, cancellationToken))!;
+        return (await response.Content.ReadFromJsonAsync(AppJsonSerializerContext.Default.BenchmarkResults, cancellationToken))!;
     }
 
     /// <summary>
