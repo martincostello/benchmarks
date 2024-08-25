@@ -114,8 +114,6 @@
     {
         await GitHubService.SignOutAsync();
 
-        StateHasChanged();
-
         var uri = Options.Value.IsGitHubEnterprise ? Routes.Token : Routes.Home;
         Navigation.NavigateTo(uri);
     }
