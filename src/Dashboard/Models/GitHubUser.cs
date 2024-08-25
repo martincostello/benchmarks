@@ -11,6 +11,12 @@ namespace MartinCostello.Benchmarks.Models;
 public sealed class GitHubUser
 {
     /// <summary>
+    /// Gets or sets the user's GitHub avatar URL.
+    /// </summary>
+    [JsonPropertyName("avatar_url")]
+    public string AvatarUrl { get; set; } = default!;
+
+    /// <summary>
     /// Gets or sets the user's GitHub login.
     /// </summary>
     [JsonPropertyName("login")]
