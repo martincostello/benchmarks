@@ -54,7 +54,7 @@
     @if (_notFound)
     {
         <div class="alert alert-danger m-2" role="alert">
-            Failed benchmark data for found for branch <code>@(GitHubService.CurrentBranch)</code>.
+            Failed benchmark data for found for branch <span class="font-monospace">@(GitHubService.CurrentBranch)</span>.
         </div>
     }
     else if (GitHubService.Benchmarks is not null)
