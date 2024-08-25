@@ -47,7 +47,7 @@
             }
             @if (user is not null)
             {
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav px-1">
                     <span class="navbar-text"
                           id="user-name"
                           title="@(options.GitHubInstance) user"
@@ -55,9 +55,6 @@
                           data-bs-title="Signed in as @(user.Login) (@(user.Name))">
                         @(user.Login)
                     </span>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
                     <li>
                         <button class="btn btn-link navbar-btn nav-link"
                                 title="Sign out"
@@ -75,7 +72,7 @@
             {
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="btn btn-link navbar-btn nav-link"
+                        <a class="navbar-btn nav-link"
                            href="@(Routes.Token)"
                            title="Sign in"
                            type="button"
