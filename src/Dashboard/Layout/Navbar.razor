@@ -3,7 +3,7 @@
 }
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand">
+        <a href="@(Routes.Home)" class="navbar-brand">
             @options.BrandName
             @foreach (var iconClasses in options.BrandIcons)
             {
@@ -72,15 +72,15 @@
             {
                 <ul class="nav navbar-nav">
                     <li>
-                        <button class="btn btn-link navbar-btn nav-link"
-                                title="Sign in"
-                                type="button"
-                                data-bs-toggle="tooltip"
-                                data-bs-title="Configure a @(options.GitHubInstance) access token"
-                                @onclick="SignIn">
+                        <a class="btn btn-link navbar-btn nav-link"
+                           href="@(Routes.Token)"
+                           title="Sign in"
+                           type="button"
+                           data-bs-toggle="tooltip"
+                           data-bs-title="Configure a @(options.GitHubInstance) access token">
                             Sign in
                             <Icon Name="@(Icons.RightToBracket)" />
-                        </button>
+                        </a>
                     </li>
                 </ul>
             }
@@ -110,18 +110,13 @@
         GitHubService.OnUserChanged += (_, _) => StateHasChanged();
     }
 
-    private void SignIn()
-    {
-        Navigation.NavigateTo("/token");
-    }
-
     private async Task SignOutAsync()
     {
         await GitHubService.SignOutAsync();
 
         StateHasChanged();
 
-        var uri = Options.Value.IsGitHubEnterprise ? "/token" : "/";
+        var uri = Options.Value.IsGitHubEnterprise ? Routes.Token : Routes.Home;
         Navigation.NavigateTo(uri);
     }
 }
