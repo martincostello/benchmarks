@@ -1,10 +1,16 @@
-<div class="@(SpinnerType == SpinnerType.Growing ? "spinner-grow spinner-grow-sm" : "spinner-border spinner-border-sm")"
+<div class="@(SpinnerType == SpinnerType.Growing ? "spinner-grow spinner-grow-sm" : "spinner-border spinner-border-sm") @(Color)"
      id="@(Id)"
      role="status">
     <span class="visually-hidden">@(LoadingText)</span>
 </div>
 
 @code {
+    /// <summary>
+    /// Gets the optional color for the spinner.
+    /// </summary>
+    [Parameter]
+    public string? Color { get; init; }
+
     /// <summary>
     /// Gets the optional ID for the spinner.
     /// </summary>
