@@ -50,8 +50,8 @@
                         </text>
                     }
                 </p>
-                <form class="row row-cols-lg-auto g-2 align-items-center">
-                    <div class="col-12 col-lg-8">
+                <form class="row g-2 align-items-center">
+                    <div class="col-12">
                         <label class="visually-hidden" for="github-token">
                             @(options.GitHubInstance) Token
                         </label>
@@ -75,8 +75,8 @@
                                    @ref="_tokenInput">
                         </div>
                     </div>
-                    <div class="d-grid gap-2 d-md-block col-12 col-lg-4 col-lg mx-auto">
-                        <a class="btn btn-github"
+                    <div class="col-12 d-grid gap-2 d-xl-inline mx-auto">
+                        <a class="btn btn-github col-xl-2"
                             href="@(_generateTokenUrl)"
                             role="button"
                             target="_blank"
@@ -86,7 +86,7 @@
                             <Icon Name="@(Icons.GitHub)" />
                             <Icon Name="@(Icons.Key)" />
                         </a>
-                        <button class="btn btn-primary"
+                        <button class="btn btn-primary col-xl-2"
                                 disabled="@(!HasToken)"
                                 type="button"
                                 @onclick="SignInAsync">
