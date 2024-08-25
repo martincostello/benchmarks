@@ -129,9 +129,9 @@
 
 @if (GitHubService.Benchmarks is not null)
 {
-    foreach ((var name, var suite) in GitHubService.Benchmarks.Suites)
+    foreach ((var name, var runs) in GitHubService.Benchmarks.Suites)
     {
-        <BenchmarkSuite Name="@(name)" Runs="@(suite)" />
+        <BenchmarkSuite Name="@(name)" Runs="@(runs)" />
     }
 }
 
