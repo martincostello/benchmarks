@@ -117,7 +117,13 @@
         var description = Uri.EscapeDataString($"{options.RepositoryOwner} benchmarks");
         var scopes = Uri.EscapeDataString(string.Join(',', options.TokenScopes));
 
-        _generateTokenUrl = $"{Options.Value.GitHubServerUrl}/settings/tokens/new?description={description}&scopes={scopes}";
+        var builder = new UriBuilder(Options.Value.GitHubServerUrl)
+        {
+            Path = "settings/tokens/new",
+            Query = $"description={description}&scopes={scopes}",
+        };
+
+        _generateTokenUrl = builder.Uri.ToString();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
