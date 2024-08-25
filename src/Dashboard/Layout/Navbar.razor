@@ -42,15 +42,18 @@
                     </a>
                 </li>
             </ul>
-            @if (_isAuthenticated)
+            @{
+                var user = GitHubService.CurrentUser;
+            }
+            @if (user is not null)
             {
                 <ul class="nav navbar-nav">
                     <span class="navbar-text"
                           id="user-name"
                           title="@(options.GitHubInstance) user"
                           data-bs-toggle="tooltip"
-                          data-bs-title="Signed in as @(_user?.Login) (@(_user?.Name))">
-                        @(_user?.Login)
+                          data-bs-title="Signed in as @(user.Login) (@(user.Name))">
+                        @(user.Login)
                     </span>
                     <li>
                         <button class="btn btn-link navbar-btn nav-link"
@@ -86,11 +89,9 @@
 </nav>
 
 @code {
-    private bool _isAuthenticated;
     private string? _repositoryUrl;
-    private GitHubUser? _user;
 
-    protected override void OnInitialized()
+    protected async override Task OnInitializedAsync()
     {
         var options = Options.Value;
 
@@ -100,24 +101,13 @@
         };
 
         _repositoryUrl = uriBuilder.Uri.ToString();
-    }
 
-    protected async override Task OnAfterRenderAsync(bool firstRender)
-    {
-        _isAuthenticated = GitHubService.IsAuthenticated;
-
-        if (_isAuthenticated)
+        if (GitHubService.HasToken)
         {
-            try
-            {
-                _user = await GitHubClient.GetUserAsync();
-            }
-            catch (HttpRequestException ex) when (ex.StatusCode is System.Net.HttpStatusCode.Unauthorized)
-            {
-                // TODO Clear local storage
-                _isAuthenticated = false;
-            }
+            await GitHubService.VerifyTokenAsync();
         }
+
+        GitHubService.OnUserChanged += (_, _) => StateHasChanged();
     }
 
     private void SignIn()
@@ -127,8 +117,11 @@
 
     private async Task SignOutAsync()
     {
-        _isAuthenticated = false;
-        await GitHubService.StoreTokenAsync(string.Empty);
-        Navigation.NavigateTo("/");
+        await GitHubService.SignOutAsync();
+
+        StateHasChanged();
+
+        var uri = Options.Value.IsGitHubEnterprise ? "/token" : "/";
+        Navigation.NavigateTo(uri);
     }
 }

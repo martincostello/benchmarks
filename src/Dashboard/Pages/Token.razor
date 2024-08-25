@@ -62,8 +62,10 @@
                                 <Icon Name="@(Icons.Key)" />
                             </div>
                             <input autocomplete="off"
-                                   class="form-control"
+                                   class="form-control @(_invalidToken ? "is-invalid" : string.Empty)"
                                    placeholder="ghp_repo-scoped-token"
+                                   required
+                                   title="Invalid @(options.GitHubInstance) token."
                                    type="password"
                                    data-bs-toggle="tooltip"
                                    data-bs-title="The GitHub access token must have at least the public_repo scope"
@@ -87,7 +89,7 @@
                         <button class="btn btn-primary"
                                 disabled="@(!HasToken)"
                                 type="button"
-                                @onclick="StoreTokenAsync">
+                                @onclick="SignInAsync">
                             Save
                             <Icon Name="@(Icons.FloppyDisk)" />
                             <Icon Name="@(Icons.GitHub)" />
@@ -102,6 +104,7 @@
 
 @code {
     private string? _generateTokenUrl;
+    private bool _invalidToken;
     private string? _token;
     private ElementReference _tokenInput;
 
@@ -127,16 +130,22 @@
         if (args.Value is string token)
         {
             _token = token;
+            _invalidToken = false;
         }
     }
 
-    private async Task StoreTokenAsync()
+    private async Task SignInAsync()
     {
         if (!string.IsNullOrWhiteSpace(_token))
         {
-            await GitHubService.StoreTokenAsync(_token);
-        }
+            _invalidToken = !await GitHubService.SignInAsync(_token);
 
-        Navigation.NavigateTo("/");
+            StateHasChanged();
+
+            if (!_invalidToken)
+            {
+                Navigation.NavigateTo("/");
+            }
+        }
     }
 }

@@ -84,11 +84,11 @@
 @code {
     protected async override Task OnInitializedAsync()
     {
-        if (Options.Value.IsGitHubEnterprise || GitHubService.IsAuthenticated)
+        if (Options.Value.IsGitHubEnterprise || GitHubService.HasToken)
         {
             bool hasValidToken = false;
 
-            if (GitHubService.IsAuthenticated)
+            if (GitHubService.HasToken)
             {
                 try
                 {
