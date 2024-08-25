@@ -80,48 +80,48 @@
                 <span class="fa-brands fa-github fa-fw" aria-hidden="true"></span>
                 Repository:
             </strong>
-            <a href="@(GitHubService.CurrentRepository?.HtmlUrl ?? "#")" rel="noopener" target="_blank">
-                @if (GitHubService.CurrentRepository is null || ShowLoaders)
-                {
-                    <Spinner />
-                }
-                else
-                {
+            @if (GitHubService.CurrentRepository is null || ShowLoaders)
+            {
+                <Spinner />
+            }
+            else
+            {
+                <a href="@(GitHubService.CurrentRepository.HtmlUrl ?? "#")" rel="noopener" target="_blank">
                     @(GitHubService.CurrentRepository.FullName)
-                }
-            </a>
+                </a>
+            }
         </div>
         <div class="header-item">
             <strong class="header-label">
                 <span class="fa-solid fa-code-branch fa-fw" aria-hidden="true"></span>
                 Branch:
             </strong>
-            <a class="font-monospace text-decoration-none" href="@(GitHubService.BranchUrl())" rel="noopener" target="_blank">
-                @if (GitHubService.CurrentBranch is null || ShowLoaders)
-                {
-                    <Spinner />
-                }
-                else
-                {
+            @if (GitHubService.CurrentBranch is null || ShowLoaders)
+            {
+                <Spinner Color="text-dark" />
+            }
+            else
+            {
+                <a class="font-monospace" href="@(GitHubService.BranchUrl())" rel="noopener" target="_blank">
                     @(GitHubService.CurrentBranch)
-                }
-            </a>
+                </a>
+            }
         </div>
         <div class="header-item">
             <strong class="header-label">
                 <span class="fa-solid fa-code-commit fa-fw" aria-hidden="true"></span>
                 Commit:
             </strong>
-            <a class="font-monospace text-decoration-none" href="@(GitHubService.CommitUrl())" rel="noopener" target="_blank">
-                @if (GitHubService.CurrentCommit is null || ShowLoaders)
-                {
-                    <Spinner />
-                }
-                else
-                {
+            @if (GitHubService.CurrentCommit is null || ShowLoaders)
+            {
+                <Spinner Color="text-dark" />
+            }
+            else
+            {
+                <a class="font-monospace" href="@(GitHubService.CommitUrl())" rel="noopener" target="_blank">
                     @(GitHubService.CurrentCommit[..7])
-                }
-            </a>
+                </a>
+            }
         </div>
     }
 </header>
