@@ -4,7 +4,7 @@
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
 <header>
-    <form method="get">
+    <form>
         <div class="g-3 row row-cols-6">
             <div class="input-group col">
                 <label class="input-group-text col-auto col-xl-1" for="repository">
@@ -54,7 +54,7 @@
     <hr />
     @if (_notFound && !ShowLoaders)
     {
-        <div class="alert alert-danger m-2" role="alert">
+        <div class="alert alert-danger m-2" id="no-benchmarks" role="alert">
             Failed benchmark data for found for branch <span class="font-monospace">@(GitHubService.CurrentBranch)</span>.
         </div>
     }
@@ -135,7 +135,7 @@
 }
 else if (GitHubService.Benchmarks?.Suites.Count > 0)
 {
-    <div>
+    <div id="benchmarks">
         @foreach ((var name, var runs) in GitHubService.Benchmarks.Suites)
         {
             var items = GroupBenchmarks(runs);

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Martin Costello, 2024. All rights reserved.
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 
+using MartinCostello.Benchmarks.Pages;
 using Microsoft.Playwright;
 
 namespace MartinCostello.Benchmarks;
@@ -54,7 +55,10 @@ public class DashboardTests(
             await page.GotoAsync(Fixture.ServerAddress);
             await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
 
-            // TODO
+            var app = new HomePage(page);
+
+            // Act and Assert
+            await app.WaitForContentAsync();
         });
     }
 

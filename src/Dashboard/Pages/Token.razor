@@ -50,7 +50,7 @@
                         </text>
                     }
                 </p>
-                <form class="row g-2 align-items-center">
+                <form class="row g-2 align-items-center" @onsubmit="(_) => { }">
                     <div class="col-12">
                         <label class="visually-hidden" for="github-token">
                             @(options.GitHubInstance) Token
@@ -63,15 +63,15 @@
                             </div>
                             <input autocomplete="off"
                                    class="form-control @(GitHubService.InvalidToken ? "is-invalid" : string.Empty)"
+                                   id="token-input"
                                    placeholder="ghp_repo-scoped-token"
                                    required
                                    title="Invalid @(options.GitHubInstance) token."
                                    type="password"
-                                   data-bs-toggle="tooltip"
-                                   data-bs-title="The GitHub access token must have at least the public_repo scope"
                                    data-1p-ignore
                                    data-lpignore="true"
                                    @oninput="TokenChanged"
+                                   @onkeydown="@TrySignInAsync"
                                    @ref="_tokenInput">
                         </div>
                     </div>
@@ -80,7 +80,9 @@
                             href="@(_generateTokenUrl)"
                             role="button"
                             target="_blank"
-                            rel="noopener">
+                            rel="noopener"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="The @(options.GitHubInstance) access token must have at least the public_repo scope">
                             Generate
                             <Icon Name="@(Icons.Plus)" />
                             <Icon Name="@(Icons.GitHub)" />
@@ -88,6 +90,7 @@
                         </a>
                         <button class="btn btn-primary col-xl-2"
                                 disabled="@(!HasToken)"
+                                id="save-token"
                                 type="button"
                                 @onclick="SignInAsync">
                             Save
@@ -168,6 +171,14 @@
         if (args.Value is string token)
         {
             _token = token;
+        }
+    }
+
+    private async Task TrySignInAsync(KeyboardEventArgs args)
+    {
+        if (args.Code == "Enter" || args.Code == "NumpadEnter")
+        {
+            await SignInAsync();
         }
     }
 
