@@ -124,6 +124,13 @@ window.renderChart = (canvasId, configString) => {
         text: memoryUnit,
       },
     };
+
+    const allZero = dataset.every(d => d.result.bytesAllocated === 0);
+    if (allZero) {
+      options.scales[memoryAxis].ticks = {
+        precision: 0,
+      };
+    }
   }
 
   const previous = Chart.getChart(canvasId);;
