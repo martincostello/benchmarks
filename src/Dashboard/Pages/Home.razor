@@ -137,31 +137,7 @@ else if (GitHubService.Benchmarks is not null)
 {
     foreach ((var name, var runs) in GitHubService.Benchmarks.Suites)
     {
-        Dictionary<string, SortedList<DateTimeOffset, BenchmarkItem>> sets = new();
-
-        foreach (var run in runs)
-        {
-            foreach (var benchmark in run.Benchmarks)
-            {
-                if (!sets.TryGetValue(benchmark.Name, out var results))
-                {
-                    sets[benchmark.Name] = results = [];
-                }
-
-                results.Add(run.Timestamp, new(run.Commit, benchmark));
-            }
-        }
-
-        Dictionary<string, IList<BenchmarkItem>> items = new();
-
-        foreach ((var suite, var results) in sets)
-        {
-            var ben = results.Select((p) => p.Value).ToList();
-            NormalizeUnits(ben);
-
-            items[suite] = ben;
-        }
-
+        var items = GroupBenchmarks(runs);
         <BenchmarkSuite Name="@(name)" Benchmarks="@(items)" />
     }
 }
@@ -256,6 +232,37 @@ else if (GitHubService.Benchmarks is not null)
             _loading = false;
             _notFound = GitHubService.Benchmarks is null;
         }
+    }
+
+    private static Dictionary<string, IList<BenchmarkItem>> GroupBenchmarks(IList<BenchmarkRun> runs)
+    {
+        Dictionary<string, SortedList<DateTimeOffset, BenchmarkItem>> sortedGroups = new();
+
+        foreach (var run in runs)
+        {
+            foreach (var benchmark in run.Benchmarks)
+            {
+                if (!sortedGroups.TryGetValue(benchmark.Name, out var results))
+                {
+                    sortedGroups[benchmark.Name] = results = [];
+                }
+
+                results.Add(run.Timestamp, new(run.Commit, benchmark));
+            }
+        }
+
+        Dictionary<string, IList<BenchmarkItem>> grouped = new();
+
+        foreach ((var suite, var results) in sortedGroups)
+        {
+            var items = results.Select((p) => p.Value).ToList();
+
+            NormalizeUnits(items);
+
+            grouped[suite] = items;
+        }
+
+        return grouped;
     }
 
     private static void NormalizeUnits(IList<BenchmarkItem> items)
