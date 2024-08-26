@@ -46,22 +46,19 @@ public sealed class DashboardFixture : IDisposable
     {
         if (!_disposed)
         {
-            if (disposing)
+            if (disposing && _server is not null)
             {
-                if (_server is not null)
+                try
                 {
-                    try
-                    {
-                        _server.Kill();
-                    }
-                    catch (Exception)
-                    {
-                        // Ignore
-                    }
-
-                    _server.Dispose();
-                    _server = null;
+                    _server.Kill();
                 }
+                catch (Exception)
+                {
+                    // Ignore
+                }
+
+                _server.Dispose();
+                _server = null;
             }
 
             _disposed = true;

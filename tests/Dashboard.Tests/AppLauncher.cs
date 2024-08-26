@@ -39,26 +39,26 @@ internal static class AppLauncher
         var completionSource = new TaskCompletionSource();
         var registration = default(CancellationTokenRegistration);
 
-        using var tokenSource = new CancellationTokenSource(timeout);
-
-        var server = Process.Start(startInfo);
-
-        WaitForStart(server, completionSource);
-
-        registration = tokenSource.Token.Register(
-            () => completionSource.TrySetException(
-                new TimeoutException($"Failed to start the dashboard within {timeout.TotalSeconds} seconds.")));
-
         try
         {
+            using var tokenSource = new CancellationTokenSource(timeout);
+
+            var server = Process.Start(startInfo);
+
+            WaitForStart(server, completionSource);
+
+            registration = tokenSource.Token.Register(
+                () => completionSource.TrySetException(
+                    new TimeoutException($"Failed to start the dashboard within {timeout.TotalSeconds} seconds.")));
+
             completionSource.Task.Wait();
+
+            return (server!, serverAddress);
         }
         finally
         {
             registration.Dispose();
         }
-
-        return (server!, serverAddress);
     }
 
     private static int GetFreePort()
