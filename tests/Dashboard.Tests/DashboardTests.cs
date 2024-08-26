@@ -51,7 +51,6 @@ public class DashboardTests(
         var browser = new BrowserFixture(options, OutputHelper);
         await browser.WithPageAsync(async page =>
         {
-            // Load the application
             await page.GotoAsync(Fixture.ServerAddress);
             await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
 
