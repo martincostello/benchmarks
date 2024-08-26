@@ -131,7 +131,6 @@
     <div class="d-flex justify-content-center">
         <Spinner SpinnerType="@(SpinnerType.Border)" Large="true" LoadingText="Fetching data..." />
     </div>
-    <!-- TODO Fix memory normalization and refactor -->
 }
 else if (GitHubService.Benchmarks is not null)
 {
@@ -272,77 +271,58 @@ else if (GitHubService.Benchmarks is not null)
             return;
         }
 
-        var minValue = items.Count == 1 ? items[0].Result.Value : double.PositiveInfinity;
+        const double Factor = 1e-3;
+        const double Limit = 1_000;
 
-        if (items.Count > 1)
-        {
-            foreach (var item in items)
-            {
-                minValue = Math.Min(minValue, item.Result.Value);
-            }
-        }
-
-        double factor = 1e-3;
-        double limit = 1_000;
-
+        var minimumTime = items.Min((p) => p.Result.Value);
         string[] timeUnits = ["µs", "ms", "s"];
 
         for (int i = 0; i < timeUnits.Length; i++)
         {
-            if (minValue < limit)
+            if (minimumTime < Limit)
             {
                 break;
             }
 
-            minValue *= factor;
+            minimumTime *= Factor;
 
             for (int j = 0; j < items.Count; j++)
             {
                 var item = items[j];
 
-                item.Result.Value *= factor;
+                item.Result.Value *= Factor;
                 item.Result.Unit = timeUnits[i];
 
-                if (item.Result.Range is not null)
+                if (item.Result.Range is { Length: > 0 } range)
                 {
-                    item.Result.Range = $"± {double.Parse(item.Result.Range[2..], CultureInfo.InvariantCulture) * factor}";
+                    var rangeValue = double.Parse(range[2..], CultureInfo.InvariantCulture);
+                    rangeValue *= Factor;
+
+                    item.Result.Range = $"± {rangeValue}";
                 }
             }
         }
 
-        if (items.Any((p) => p.Result.BytesAllocated is not null))
+        if (items.Where((p) => p is not null).Min((p) => p.Result!.BytesAllocated) is { } minimumBytes)
         {
-            double minBytes = items.Count == 1 ? items[0].Result.BytesAllocated ?? default : double.PositiveInfinity;
-
-            if (items.Count > 1)
-            {
-                foreach (var item in items)
-                {
-                    if (item.Result.BytesAllocated is { } value)
-                    {
-                        minBytes = Math.Min(minBytes, value);
-                    }
-                }
-            }
-
             string[] memoryUnits = ["KB", "MB"];
 
             for (int i = 0; i < memoryUnits.Length; i++)
             {
-                if (minBytes < limit)
+                if (minimumBytes < Limit)
                 {
                     break;
                 }
 
-                minBytes *= factor;
+                minimumBytes *= Factor;
 
                 for (int j = 0; j < items.Count; j++)
                 {
                     var item = items[j];
 
-                    if (item.Result.BytesAllocated is { } value)
+                    if (item.Result.BytesAllocated is not null)
                     {
-                        item.Result.BytesAllocated *= (long)factor;
+                        item.Result.BytesAllocated *= Factor;
                         item.Result.MemoryUnit = memoryUnits[i];
                     }
                 }

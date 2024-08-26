@@ -38,7 +38,7 @@ public sealed class BenchmarkResult
     /// Gets or sets the number of bytes of memory allocated by the benchmark, if any.
     /// </summary>
     [JsonPropertyName("bytesAllocated")]
-    public long? BytesAllocated { get; set; }
+    public double? BytesAllocated { get; set; }
 
     /// <summary>
     /// Gets or sets the memory unit of the benchmark.
