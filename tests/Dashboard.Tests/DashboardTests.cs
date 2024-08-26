@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Martin Costello, 2024. All rights reserved.
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 
+using System.Runtime.CompilerServices;
 using MartinCostello.Benchmarks.Pages;
 using Microsoft.Playwright;
 
@@ -28,6 +29,16 @@ public class DashboardTests(
 
         return browsers;
     }
+
+#pragma warning disable xUnit1013
+    [ModuleInitializer]
+    public static void InitPlaywright()
+    {
+        VerifyImageMagick.Initialize();
+        VerifyImageMagick.RegisterComparers(threshold: 0.25);
+        VerifyPlaywright.Initialize();
+    }
+#pragma warning restore xUnit1013
 
     [Theory]
     [MemberData(nameof(Browsers))]
@@ -101,6 +112,19 @@ public class DashboardTests(
                 "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
             ]);
 
+            var chart = await dashboard.GetChart(
+                "DotNetBenchmarks.TodoAppBenchmarks",
+                "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos");
+
+            await Verify(chart)
+                .LocatorScreenshotOptions(new()
+                {
+                    Quality = 50,
+                    Type = ScreenshotType.Jpeg,
+                })
+                .UseDirectory("snapshots")
+                .UseTextForParameters($"{browserType}_{browserChannel}_benchmarks-demo");
+
             // Arrange
             var token = await dashboard.SignInAsync();
             await token.WaitForContentAsync();
@@ -167,6 +191,21 @@ public class DashboardTests(
                 "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
                 "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
             ]);
+
+            chart = await dashboard.GetChart(
+                "Website",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools");
+
+            chart.ShouldNotBeNull();
+
+            await Verify(chart)
+                .LocatorScreenshotOptions(new()
+                {
+                    Quality = 50,
+                    Type = ScreenshotType.Jpeg,
+                })
+                .UseDirectory("snapshots")
+                .UseTextForParameters($"{browserType}_{browserChannel}_website");
 
             // Act
             await dashboard.SignOutAsync();

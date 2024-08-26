@@ -94,6 +94,17 @@ public class HomePage(IPage page) : AppPage(page)
         return this;
     }
 
+    public async Task<IElementHandle> GetChart(string suite, string name)
+    {
+        var suiteElement = await Page.WaitForSelectorAsync($"id={suite}");
+        suiteElement.ShouldNotBeNull();
+
+        var canvas = await suiteElement.QuerySelectorAsync($"[name='{name}']");
+        canvas.ShouldNotBeNull();
+
+        return canvas;
+    }
+
     private static class Selectors
     {
         internal const string Benchmarks = "id=benchmarks";
