@@ -115,6 +115,6 @@ ForEach ($project in $publishProjects) {
 if (-Not $SkipTests) {
     Write-Host "Testing $($testProjects.Count) project(s)..." -ForegroundColor Green
     ForEach ($project in $testProjects) {
-        #DotNetTest $project
+        DotNetTest $project
     }
 }
