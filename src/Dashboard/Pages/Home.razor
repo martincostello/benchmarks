@@ -178,7 +178,7 @@ else if (GitHubService.Benchmarks is not null)
     [SupplyParameterFromQuery(Name = "repo")]
     public string? Repository { get; set; }
 
-    private bool _loading;
+    private bool _loading = true;
     private bool _notFound;
 
     protected async override Task OnInitializedAsync()
@@ -222,6 +222,11 @@ else if (GitHubService.Benchmarks is not null)
 
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
+        if (firstRender)
+        {
+            _loading = false;
+        }
+
         await JS.InvokeVoidAsync("scrollToActiveChart", []);
     }
 
