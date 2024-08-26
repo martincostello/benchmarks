@@ -81,7 +81,7 @@ window.renderChart = (canvasId, configString) => {
             const item = dataset[context.dataIndex];
             const memory = context.datasetIndex === 1;
             let label;
-            if (memory && item && item.result.bytesAllocated !== undefined) {
+            if (memory && item && item.result.bytesAllocated !== null) {
               label = item.result.bytesAllocated.toString();
               label += item.result.memoryUnit ?? ' bytes';
             } else {
@@ -103,9 +103,9 @@ window.renderChart = (canvasId, configString) => {
     },
   };
 
-  const hasMemory = dataset.some(d => d.result.bytesAllocated !== undefined);
+  const hasMemory = dataset.some(d => d.result.bytesAllocated !== null);
   if (hasMemory) {
-    const memoryUnit = dataset.find(d => d.result.bytesAllocated !== undefined)?.result.memoryUnit ?? 'bytes';
+    const memoryUnit = dataset.find(d => d.result.bytesAllocated !== null)?.result.memoryUnit ?? 'bytes';
     data.datasets.push({
       label: 'Memory',
       data: dataset.map(d => d.result.bytesAllocated),

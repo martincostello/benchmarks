@@ -43,6 +43,6 @@ public sealed class BenchmarkResult
     /// <summary>
     /// Gets or sets the memory unit of the benchmark.
     /// </summary>
-    [JsonIgnore]
+    [JsonPropertyName("memoryUnit")]
     public string? MemoryUnit { get; set; }
 }
