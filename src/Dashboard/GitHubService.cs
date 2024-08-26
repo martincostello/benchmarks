@@ -202,23 +202,15 @@ public sealed class GitHubService(
     }
 
     /// <summary>
-    /// Signs out the user as an asynchronous operation.
-    /// </summary>
-    /// <param name="cancellationToken">The optional <see cref="CancellationToken"/> to use.</param>
-    /// <returns>
-    /// A <see cref="Task"/> representing the asynchronous operation to sign out.
+    /// Signs out the user.
+    /// </summary>"Task"/> representing the asynchronous operation to sign out.
     /// </returns>
-    public async Task SignOutAsync(CancellationToken cancellationToken = default)
+    public void SignOut()
     {
-        // TODO Make this async with async local storage
-        cancellationToken.ThrowIfCancellationRequested();
-
         localStorage.SetItemAsString(TokenKey, string.Empty);
 
         CurrentUser = null;
         OnUserChanged?.Invoke(this, new(null));
-
-        await Task.CompletedTask;
     }
 
     /// <summary>
@@ -240,7 +232,7 @@ public sealed class GitHubService(
         }
         catch (HttpRequestException)
         {
-            await SignOutAsync(cancellationToken);
+            SignOut();
             result = false;
         }
 
