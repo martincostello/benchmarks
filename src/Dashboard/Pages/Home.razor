@@ -1,5 +1,4 @@
 @page "/"
-@inject IJSRuntime JS
 
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
@@ -220,14 +219,12 @@ else if (GitHubService.Benchmarks is not null)
         }
     }
 
-    protected async override Task OnAfterRenderAsync(bool firstRender)
+    protected override void OnAfterRender(bool firstRender)
     {
         if (firstRender)
         {
             _loading = false;
         }
-
-        await JS.InvokeVoidAsync("scrollToActiveChart", []);
     }
 
     private async Task RepositoryChangedAsync(ChangeEventArgs args)

@@ -53,6 +53,11 @@
         });
 
         await JS.InvokeVoidAsync("renderChart", [CanvasId, options]);
+
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("scrollToActiveChart", []);
+        }
     }
 
     protected override bool ShouldRender() => true;
