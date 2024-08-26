@@ -23,3 +23,8 @@ builder.Services.AddScoped<GitHubClient>();
 builder.Services.AddScoped<GitHubService>();
 
 await builder.Build().RunAsync();
+
+public partial class Program
+{
+    // Expose the Program class for use with WebApplicationFactory<T>
+}
