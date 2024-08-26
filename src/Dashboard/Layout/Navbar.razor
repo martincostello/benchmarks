@@ -1,6 +1,9 @@
+@implements IAsyncDisposable
+
 @{
     var options = Options.Value;
 }
+
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
     <div class="container-fluid">
         <a href="@(Routes.Home)" class="navbar-brand">
@@ -88,6 +91,12 @@
 @code {
     private string? _repositoryUrl;
 
+    public ValueTask DisposeAsync()
+    {
+        GitHubService.OnUserChanged -= OnUserChanged;
+        return ValueTask.CompletedTask;
+    }
+
     protected async override Task OnInitializedAsync()
     {
         var options = Options.Value;
@@ -104,8 +113,11 @@
             await GitHubService.VerifyTokenAsync();
         }
 
-        GitHubService.OnUserChanged += (_, _) => StateHasChanged();
+        GitHubService.OnUserChanged += OnUserChanged;
     }
+
+    private void OnUserChanged(object? sender, GitHubUserChangedEventArgs args)
+        => StateHasChanged();
 
     private async Task SignOutAsync()
     {
