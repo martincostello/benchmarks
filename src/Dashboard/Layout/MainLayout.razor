@@ -20,7 +20,5 @@
 
 @code {
     protected async override Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("configureToolTips", []);
-    }
+        => await JS.InvokeVoidAsync("configureToolTips", []);
 }
