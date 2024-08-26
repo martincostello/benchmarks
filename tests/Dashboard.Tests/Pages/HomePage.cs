@@ -10,6 +10,34 @@ public class HomePage(IPage page) : AppPage(page)
     public override async Task WaitForContentAsync()
         => await Page.WaitForSelectorAsync(Selectors.Benchmarks);
 
+    public async Task<IDictionary<string, IList<string>>> Benchmarks()
+    {
+        var element = await Page.WaitForSelectorAsync(Selectors.Benchmarks);
+        element.ShouldNotBeNull();
+
+        var benchmarks = new Dictionary<string, IList<string>>();
+
+        foreach (var suite in await element.QuerySelectorAllAsync(".benchmark-set"))
+        {
+            var suiteName = await suite.GetAttributeAsync("id");
+            suiteName.ShouldNotBeNullOrWhiteSpace();
+
+            var names = new List<string>();
+
+            foreach (var benchmark in await suite.QuerySelectorAllAsync("canvas"))
+            {
+                var name = await benchmark.GetAttributeAsync("name");
+                name.ShouldNotBeNullOrWhiteSpace();
+
+                names.Add(name);
+            }
+
+            benchmarks[suiteName] = names;
+        }
+
+        return benchmarks;
+    }
+
     public async Task<string> Branch()
     {
         var element = await Page.WaitForSelectorAsync(Selectors.Branch);

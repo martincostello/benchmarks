@@ -26,17 +26,6 @@ public class DashboardTests(
             { BrowserType.Firefox, null },
         };
 
-        // HACK Skip on macOS. See https://github.com/microsoft/playwright-dotnet/issues/2920.
-        if (!OperatingSystem.IsLinux() && !OperatingSystem.IsMacOS())
-        {
-            browsers.Add(BrowserType.Chromium, "msedge");
-        }
-
-        if (OperatingSystem.IsMacOS())
-        {
-            browsers.Add(BrowserType.Webkit, null);
-        }
-
         return browsers;
     }
 
@@ -81,6 +70,37 @@ public class DashboardTests(
             await dashboard.Repositories().ShouldBe(expectedRepos);
             await dashboard.Branches().ShouldBe(["main", "dotnet-nightly", "dotnet-vnext"]);
 
+            var benchmarks = await dashboard.Benchmarks();
+
+            benchmarks.ShouldContainKey("DotNetBenchmarks.IndexOfAnyBenchmarks");
+            benchmarks["DotNetBenchmarks.IndexOfAnyBenchmarks"].ShouldBe(
+            [
+                "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+                "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+                "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            ]);
+
+            benchmarks.ShouldContainKey("DotNetBenchmarks.HashBenchmarks");
+            benchmarks["DotNetBenchmarks.HashBenchmarks"].ShouldBe(
+            [
+                "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+                "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            ]);
+
+            benchmarks.ShouldContainKey("DotNetBenchmarks.ILoggerFactoryBenchmarks");
+            benchmarks["DotNetBenchmarks.ILoggerFactoryBenchmarks"].ShouldBe(
+            [
+                "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+                "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            ]);
+
+            benchmarks.ShouldContainKey("DotNetBenchmarks.TodoAppBenchmarks");
+            benchmarks["DotNetBenchmarks.TodoAppBenchmarks"].ShouldBe(
+            [
+                "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+                "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            ]);
+
             // Arrange
             var token = await dashboard.SignInAsync();
             await token.WaitForContentAsync();
@@ -115,6 +135,18 @@ public class DashboardTests(
             await dashboard.Repositories().ShouldBe(expectedRepos);
             await dashboard.Branches().ShouldBe(["main", "dev"]);
 
+            benchmarks = await dashboard.Benchmarks();
+
+            benchmarks.ShouldContainKey("Website");
+            benchmarks["Website"].ShouldBe(
+            [
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            ]);
+
             // Act
             await dashboard.WithBranch("dev");
 
@@ -124,6 +156,17 @@ public class DashboardTests(
             await dashboard.Branch().ShouldBe("dev");
             await dashboard.Repositories().ShouldBe(expectedRepos);
             await dashboard.Branches().ShouldBe(["main", "dev"]);
+
+            benchmarks = await dashboard.Benchmarks();
+
+            benchmarks.ShouldContainKey("Website");
+            benchmarks["Website"].ShouldBe(
+            [
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+                "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            ]);
 
             // Act
             await dashboard.SignOutAsync();
