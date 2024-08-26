@@ -11,6 +11,8 @@ public class DashboardTests(
     DashboardFixture fixture,
     ITestOutputHelper outputHelper) : IAsyncLifetime
 {
+    private const string ValidFakeToken = "VALID_GITHUB_ACCESS_TOKEN";
+
     private DashboardFixture Fixture { get; } = fixture;
 
     private ITestOutputHelper OutputHelper { get; } = outputHelper;
@@ -43,6 +45,18 @@ public class DashboardTests(
     public async Task Can_View_Benchmarks(string browserType, string? browserChannel)
     {
         // Arrange
+        string[] expectedRepos =
+        [
+            "benchmarks-demo",
+            "adventofcode",
+            "api",
+            "aspnetcore-openapi",
+            "costellobot",
+            "openapi-extensions",
+            "project-euler",
+            "website",
+        ];
+
         var options = new BrowserFixtureOptions
         {
             BrowserType = browserType,
@@ -55,10 +69,67 @@ public class DashboardTests(
             await page.GotoAsync(Fixture.ServerAddress);
             await page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
 
-            var app = new HomePage(page);
+            await ConfigureMocksAsync(page);
+
+            var dashboard = new HomePage(page);
 
             // Act and Assert
-            await app.WaitForContentAsync();
+            await dashboard.WaitForContentAsync();
+            await dashboard.Repository().ShouldBe("benchmarks-demo");
+            await dashboard.Branch().ShouldBe("main");
+
+            await dashboard.Repositories().ShouldBe(expectedRepos);
+            await dashboard.Branches().ShouldBe(["main", "dotnet-nightly", "dotnet-vnext"]);
+
+            // Arrange
+            var token = await dashboard.SignInAsync();
+            await token.WaitForContentAsync();
+
+            // Act
+            await token.WithToken(Guid.NewGuid().ToString());
+            await token.SaveToken();
+
+            // Assert
+            await token.TokenIsInvalid().ShouldBeTrue();
+
+            // Act
+            await token.WithToken(ValidFakeToken);
+            await token.SaveToken();
+
+            // Assert
+            await dashboard.WaitForSignedInAsync();
+            await dashboard.UserNameAsync().ShouldBe("speedy");
+            await dashboard.Repository().ShouldBe("benchmarks-demo");
+            await dashboard.Branch().ShouldBe("main");
+
+            await dashboard.Repositories().ShouldBe(expectedRepos);
+            await dashboard.Branches().ShouldBe(["main", "dotnet-nightly", "dotnet-vnext"]);
+
+            // Act
+            await dashboard.WithRepository("website");
+
+            // Assert
+            await dashboard.WaitForContentAsync();
+            await dashboard.Repository().ShouldBe("website");
+            await dashboard.Branch().ShouldBe("main");
+            await dashboard.Repositories().ShouldBe(expectedRepos);
+            await dashboard.Branches().ShouldBe(["main", "dev"]);
+
+            // Act
+            await dashboard.WithBranch("dev");
+
+            // Assert
+            await dashboard.WaitForContentAsync();
+            await dashboard.Repository().ShouldBe("website");
+            await dashboard.Branch().ShouldBe("dev");
+            await dashboard.Repositories().ShouldBe(expectedRepos);
+            await dashboard.Branches().ShouldBe(["main", "dev"]);
+
+            // Act
+            await dashboard.SignOutAsync();
+
+            // Assert
+            await dashboard.WaitForSignedOutAsync();
         });
     }
 
@@ -70,6 +141,9 @@ public class DashboardTests(
 
     public Task DisposeAsync() => Task.CompletedTask;
 
+    private static string JsonResponseFile(string name)
+        => Path.Combine(".", "Responses", $"{name}.json");
+
     private static void InstallPlaywright()
     {
         int exitCode = Microsoft.Playwright.Program.Main(["install"]);
@@ -77,6 +151,75 @@ public class DashboardTests(
         if (exitCode != 0)
         {
             throw new InvalidOperationException($"Playwright exited with code {exitCode}");
+        }
+    }
+
+    private static async Task ConfigureMocksAsync(IPage page)
+    {
+        const string GitHubApi = "https://api.github.com";
+        const string GitHubData = "https://raw.githubusercontent.com";
+        const string Owner = "martincostello";
+
+        await ConfigureUserAsync(page);
+        await ConfigureRepoAsync(page, "benchmarks-demo", ["main"]);
+        await ConfigureRepoAsync(page, "website", ["main", "dev"]);
+
+        static async Task ConfigureRepoAsync(IPage page, string repo, string[] branches)
+        {
+            await page.RouteAsync($"{GitHubApi}/repos/{Owner}/{repo}", async (route) =>
+            {
+                await route.FulfillAsync(new()
+                {
+                    Path = JsonResponseFile($"{repo}-repo"),
+                });
+            });
+
+            await page.RouteAsync($"{GitHubApi}/repos/{Owner}/{repo}/branches", async (route) =>
+            {
+                await route.FulfillAsync(new()
+                {
+                    Path = JsonResponseFile($"{repo}-branches"),
+                });
+            });
+
+            foreach (var branch in branches)
+            {
+                await page.RouteAsync($"{GitHubData}/{Owner}/benchmarks/{branch}/{repo}/data.json", async (route) =>
+                {
+                    await route.FulfillAsync(new()
+                    {
+                        Path = JsonResponseFile($"{repo}-{branch}"),
+                    });
+                });
+            }
+        }
+
+        static async Task ConfigureUserAsync(IPage page)
+        {
+            await page.RouteAsync($"{GitHubApi}/user", async (route) =>
+            {
+                const string Authorization = "authorization";
+
+                route.Request.Headers.ShouldContainKey(Authorization);
+                var token = route.Request.Headers[Authorization];
+
+                if (token == $"token {ValidFakeToken}")
+                {
+                    await route.FulfillAsync(new()
+                    {
+                        Path = JsonResponseFile("user-valid-token"),
+                        Status = 200,
+                    });
+                }
+                else
+                {
+                    await route.FulfillAsync(new()
+                    {
+                        Path = JsonResponseFile("user-invalid-token"),
+                        Status = 401,
+                    });
+                }
+            });
         }
     }
 }

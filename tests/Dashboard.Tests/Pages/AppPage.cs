@@ -27,7 +27,7 @@ public abstract class AppPage(IPage page)
         => await Page.ClickAsync(Selectors.SignOut);
 
     public async Task<string> UserNameAsync()
-        => await Page.InnerTextAsync(Selectors.UserName);
+        => (await Page.InnerTextAsync(Selectors.UserName)).Trim();
 
     public async Task WaitForSignedInAsync()
         => await Page.WaitForSelectorAsync(Selectors.UserName);

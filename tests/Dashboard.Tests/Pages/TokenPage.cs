@@ -10,6 +10,12 @@ public sealed class TokenPage(IPage page) : AppPage(page)
     public override async Task WaitForContentAsync()
         => await Page.WaitForSelectorAsync(Selectors.TokenInput);
 
+    public async Task<bool> TokenIsInvalid()
+    {
+        await Page.WaitForSelectorAsync(Selectors.InvalidToken);
+        return await Page.IsVisibleAsync(Selectors.InvalidToken);
+    }
+
     public async Task<TokenPage> WithToken(string token)
     {
         await Page.FillAsync(Selectors.TokenInput, token);
@@ -21,6 +27,7 @@ public sealed class TokenPage(IPage page) : AppPage(page)
 
     private static class Selectors
     {
+        internal const string InvalidToken = "id=invalid-token";
         internal const string TokenInput = "id=token-input";
         internal const string SaveButton = "id=save-token";
     }

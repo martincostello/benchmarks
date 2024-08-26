@@ -11,7 +11,7 @@
                     Repository &nbsp;
                     <Icon Name="@(Icons.Code)" />
                 </label>
-                <select class="form-select" name="repo" disabled="@(DisableRepositories)" @onchange="RepositoryChangedAsync">
+                <select class="form-select" id="repository" name="repo" disabled="@(DisableRepositories)" @onchange="RepositoryChangedAsync">
                     @if (GitHubService.Repositories.Count < 1)
                     {
                         <option>Loading...</option>
@@ -31,7 +31,7 @@
                     Branch &nbsp;
                     <Icon Name="@(Icons.CodeBranch)" />
                 </label>
-                <select class="form-select" name="branch" disabled="@(DisableBranches)" @onchange="BranchChangedAsync">
+                <select class="form-select" id="branch" name="branch" disabled="@(DisableBranches)" @onchange="BranchChangedAsync">
                     @if (GitHubService.Branches.Count < 1)
                     {
                         <option>Loading...</option>

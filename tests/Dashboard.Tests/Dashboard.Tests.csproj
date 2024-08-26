@@ -6,7 +6,10 @@
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Responses\**\*.json;xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Responses\user-valid-token.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dashboard\Dashboard.csproj" />
