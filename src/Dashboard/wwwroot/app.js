@@ -18,6 +18,24 @@ window.configureToolTips = () => {
   tooltips.map((element) => new bootstrap.Tooltip(element));
 };
 
+window.configureDataDownload = (json, fileName) => {
+  const element = document.getElementById('download-json');
+  if (element) {
+    element.onclick = () => {
+      // See https://developer.mozilla.org/docs/Glossary/Base64#the_unicode_problem
+      const encoder = new TextEncoder();
+      const bytes = encoder.encode(json);
+      const binaryString = Array.from(bytes, (byte) => String.fromCodePoint(byte)).join('');
+      const jsonAsBase64 = btoa(binaryString);
+      const dataUrl = `data:text/json;base64,${jsonAsBase64}`;
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = fileName;
+      link.click();
+    };
+  }
+};
+
 window.renderChart = (canvasId, configString) => {
   const config = JSON.parse(configString);
 

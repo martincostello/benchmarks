@@ -1,4 +1,5 @@
 @page "/"
+@inject IJSRuntime JS
 
 <PageTitle>Benchmarks - @(Options.Value.BrandName)</PageTitle>
 
@@ -132,13 +133,20 @@
         <Spinner SpinnerType="@(SpinnerType.Border)" Large="true" LoadingText="Fetching data..." />
     </div>
 }
-else if (GitHubService.Benchmarks is not null)
+else if (GitHubService.Benchmarks?.Suites.Count > 0)
 {
-    foreach ((var name, var runs) in GitHubService.Benchmarks.Suites)
-    {
-        var items = GroupBenchmarks(runs);
-        <BenchmarkSuite Name="@(name)" Benchmarks="@(items)" />
-    }
+    <div>
+        @foreach ((var name, var runs) in GitHubService.Benchmarks.Suites)
+        {
+            var items = GroupBenchmarks(runs);
+            <BenchmarkSuite Name="@(name)" Benchmarks="@(items)" />
+        }
+
+        <button class="btn btn-primary btn-sm d-block" id="download-json" type="button">
+            Download as JSON
+            <Icon Name="@(Icons.FileArrowDown)" />
+        </button>
+    </div>
 }
 
 @code {
@@ -194,11 +202,17 @@ else if (GitHubService.Benchmarks is not null)
         }
     }
 
-    protected override void OnAfterRender(bool firstRender)
+    protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             _loading = false;
+        }
+
+        if (GitHubService.Benchmarks is { } data)
+        {
+            var json = System.Text.Json.JsonSerializer.Serialize(data, AppJsonSerializerContext.Default.BenchmarkResults);
+            await JS.InvokeVoidAsync("configureDataDownload", [json, Options.Value.BenchmarkFileName]);
         }
     }
 

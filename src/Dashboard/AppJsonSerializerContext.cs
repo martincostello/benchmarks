@@ -12,5 +12,5 @@ namespace MartinCostello.Benchmarks;
 [JsonSerializable(typeof(IList<GitHubBranch>))]
 [JsonSerializable(typeof(GitHubRepository))]
 [JsonSerializable(typeof(GitHubUser))]
-[JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
+[JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase, WriteIndented = true)]
 public sealed partial class AppJsonSerializerContext : JsonSerializerContext;

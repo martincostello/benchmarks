@@ -15,5 +15,8 @@ internal sealed class UnixEpochDateTimeOffsetConverter : JsonConverter<DateTimeO
     }
 
     public override void Write(Utf8JsonWriter writer, DateTimeOffset value, JsonSerializerOptions options)
-        => throw new NotImplementedException();
+    {
+        long timestamp = value.ToUnixTimeMilliseconds();
+        writer.WriteNumberValue(timestamp);
+    }
 }
