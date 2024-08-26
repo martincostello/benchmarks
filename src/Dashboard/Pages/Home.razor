@@ -51,7 +51,7 @@
         </div>
     </form>
     <hr />
-    @if (_notFound)
+    @if (_notFound && !ShowLoaders)
     {
         <div class="alert alert-danger m-2" role="alert">
             Failed benchmark data for found for branch <span class="font-monospace">@(GitHubService.CurrentBranch)</span>.
