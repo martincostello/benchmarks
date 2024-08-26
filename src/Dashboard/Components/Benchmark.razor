@@ -28,12 +28,24 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        if (!Options.Value.DataSetColors.TryGetValue("Memory", out var memoryColor) ||
+            memoryColor is not { Length: > 0 })
+        {
+            memoryColor = "#e34c26";
+        }
+
+        if (!Options.Value.DataSetColors.TryGetValue("Time", out var timeColor) ||
+            timeColor is not { Length: > 0 })
+        {
+            timeColor = "#178600";
+        }
+
         var options = System.Text.Json.JsonSerializer.Serialize(new
         {
             colors = new
             {
-                memory = Options.Value.DataSetColors["Memory"],
-                time = Options.Value.DataSetColors["Time"],
+                memory = memoryColor,
+                time = timeColor,
             },
             dataset = Items,
             name = Name,
