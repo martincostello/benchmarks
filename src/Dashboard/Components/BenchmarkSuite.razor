@@ -6,16 +6,14 @@
         </a>
     </h2>
     <div class="benchmark-graphs row row-cols-1 row-cols-sm-2">
-        @foreach ((var benchmark, var items) in _items)
+        @foreach ((var benchmark, var items) in Benchmarks)
         {
-            <BenchmarkHistory Items="@(items)" Name="@(benchmark)" Suite="@(Name)" />
+            <Benchmark Items="@(items)" Name="@(benchmark)" Suite="@(Name)" />
         }
     </div>
 </div>
 
 @code {
-    private readonly Dictionary<string, IList<BenchmarkItem>> _items = new();
-
     /// <summary>
     /// Gets the benchmark suite name.
     /// </summary>
@@ -23,31 +21,10 @@
     public required string Name { get; init; }
 
     /// <summary>
-    /// Gets the benchmark runs.
+    /// Gets the benchmarks for the suite.
     /// </summary>
     [Parameter]
-    public required IList<BenchmarkRun> Runs { get; init; }
+    public required Dictionary<string, IList<BenchmarkItem>> Benchmarks { get; init; }
 
-    protected override void OnInitialized()
-    {
-        Dictionary<string, SortedList<DateTimeOffset, BenchmarkItem>> sets = new();
-
-        foreach (var run in Runs)
-        {
-            foreach (var benchmark in run.Benchmarks)
-            {
-                if (!sets.TryGetValue(benchmark.Name, out var results))
-                {
-                    sets[benchmark.Name] = results = [];
-                }
-
-                results.Add(run.Timestamp, new(run.Commit, benchmark));
-            }
-        }
-
-        foreach ((var suite, var results) in sets)
-        {
-            _items[suite] = results.Select((p) => p.Value).ToList();
-        }
-    }
+    protected override bool ShouldRender() => true;
 }

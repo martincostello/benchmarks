@@ -127,11 +127,43 @@
     }
 </header>
 
-@if (GitHubService.Benchmarks is not null)
+@if (ShowLoaders)
+{
+    <div class="d-flex justify-content-center">
+        <Spinner SpinnerType="@(SpinnerType.Border)" Large="true" LoadingText="Fetching data..." />
+    </div>
+    <!-- TODO Fix memory normalization and refactor -->
+}
+else if (GitHubService.Benchmarks is not null)
 {
     foreach ((var name, var runs) in GitHubService.Benchmarks.Suites)
     {
-        <BenchmarkSuite Name="@(name)" Runs="@(runs)" />
+        Dictionary<string, SortedList<DateTimeOffset, BenchmarkItem>> sets = new();
+
+        foreach (var run in runs)
+        {
+            foreach (var benchmark in run.Benchmarks)
+            {
+                if (!sets.TryGetValue(benchmark.Name, out var results))
+                {
+                    sets[benchmark.Name] = results = [];
+                }
+
+                results.Add(run.Timestamp, new(run.Commit, benchmark));
+            }
+        }
+
+        Dictionary<string, IList<BenchmarkItem>> items = new();
+
+        foreach ((var suite, var results) in sets)
+        {
+            var ben = results.Select((p) => p.Value).ToList();
+            NormalizeUnits(ben);
+
+            items[suite] = ben;
+        }
+
+        <BenchmarkSuite Name="@(name)" Benchmarks="@(items)" />
     }
 }
 
@@ -206,6 +238,7 @@
         if (args.Value is string branch)
         {
             await LoadAsync(() => GitHubService.LoadBenchmarksAsync(branch));
+            StateHasChanged();
         }
     }
 
@@ -220,6 +253,91 @@
         {
             _loading = false;
             _notFound = GitHubService.Benchmarks is null;
+        }
+    }
+
+    private static void NormalizeUnits(IList<BenchmarkItem> items)
+    {
+        if (items.Count < 1)
+        {
+            return;
+        }
+
+        var minValue = items.Count == 1 ? items[0].Result.Value : double.PositiveInfinity;
+
+        if (items.Count > 1)
+        {
+            foreach (var item in items)
+            {
+                minValue = Math.Min(minValue, item.Result.Value);
+            }
+        }
+
+        double factor = 1e-3;
+        double limit = 1_000;
+
+        string[] timeUnits = ["µs", "ms", "s"];
+
+        for (int i = 0; i < timeUnits.Length; i++)
+        {
+            if (minValue < limit)
+            {
+                break;
+            }
+
+            minValue *= factor;
+
+            for (int j = 0; j < items.Count; j++)
+            {
+                var item = items[j];
+
+                item.Result.Value *= factor;
+                item.Result.Unit = timeUnits[i];
+
+                if (item.Result.Range is not null)
+                {
+                    item.Result.Range = $"± {double.Parse(item.Result.Range[2..], CultureInfo.InvariantCulture) * factor}";
+                }
+            }
+        }
+
+        if (items.Any((p) => p.Result.BytesAllocated is not null))
+        {
+            double minBytes = items.Count == 1 ? items[0].Result.BytesAllocated ?? default : double.PositiveInfinity;
+
+            if (items.Count > 1)
+            {
+                foreach (var item in items)
+                {
+                    if (item.Result.BytesAllocated is { } value)
+                    {
+                        minBytes = Math.Min(minBytes, value);
+                    }
+                }
+            }
+
+            string[] memoryUnits = ["KB", "MB"];
+
+            for (int i = 0; i < memoryUnits.Length; i++)
+            {
+                if (minBytes < limit)
+                {
+                    break;
+                }
+
+                minBytes *= factor;
+
+                for (int j = 0; j < items.Count; j++)
+                {
+                    var item = items[j];
+
+                    if (item.Result.BytesAllocated is { } value)
+                    {
+                        item.Result.BytesAllocated *= (long)factor;
+                        item.Result.MemoryUnit = memoryUnits[i];
+                    }
+                }
+            }
         }
     }
 }

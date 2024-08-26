@@ -1,0 +1,47 @@
+@inject IJSRuntime JS
+
+<div class="benchmark-chart-container col" id="@(Id)">
+    <canvas class="benchmark-chart" id="@(CanvasId)" />
+</div>
+
+@code {
+    /// <summary>
+    /// Gets the benchmark name.
+    /// </summary>
+    [Parameter]
+    public required string Name { get; init; }
+
+    /// <summary>
+    /// Gets the name of the associated benchmark suite.
+    /// </summary>
+    [Parameter]
+    public required string Suite { get; init; }
+
+    /// <summary>
+    /// Gets the benchmark items.
+    /// </summary>
+    [Parameter]
+    public required IList<BenchmarkItem> Items { get; init; }
+
+    private string Id => $"{Suite}-{Name}";
+    private string CanvasId => $"{Suite}-{Name}-canvas";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var options = System.Text.Json.JsonSerializer.Serialize(new
+        {
+            colors = new
+            {
+                memory = Options.Value.DataSetColors["Memory"],
+                time = Options.Value.DataSetColors["Time"],
+            },
+            dataset = Items,
+            name = Name,
+            suiteName = Suite,
+        });
+
+        await JS.InvokeVoidAsync("renderChart", [CanvasId, options]);
+    }
+
+    protected override bool ShouldRender() => true;
+}
