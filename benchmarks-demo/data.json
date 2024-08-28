@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1724755892047,
+  "lastUpdated": 1724808843794,
   "repoUrl": "https://github.com/martincostello/benchmarks-demo",
   "entries": {
     "DotNetBenchmarks.IndexOfAnyBenchmarks": [
@@ -420,6 +420,44 @@
             "bytesAllocated": 0
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "bfd8fa81a9c91959ba980a383fa72d0650f49b3f",
+          "message": "Switch on all benchmarks\n\nSwitch on all benchmarks in the assembly, rather than specific types.",
+          "timestamp": "2024-08-27T10:46:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/bfd8fa81a9c91959ba980a383fa72d0650f49b3f"
+        },
+        "date": 1724808843794,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.447007465859254,
+            "unit": "ns",
+            "range": "± 0.02489865722529254",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 4.991276213182853,
+            "unit": "ns",
+            "range": "± 0.01257097506415108",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 3.3103371957937875,
+            "unit": "ns",
+            "range": "± 0.00300168568644627",
+            "bytesAllocated": 0
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.HashBenchmarks": [
@@ -760,6 +798,37 @@
             "value": 7092.14832611084,
             "unit": "ns",
             "range": "± 10.752860873493466",
+            "bytesAllocated": 56
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "bfd8fa81a9c91959ba980a383fa72d0650f49b3f",
+          "message": "Switch on all benchmarks\n\nSwitch on all benchmarks in the assembly, rather than specific types.",
+          "timestamp": "2024-08-27T10:46:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/bfd8fa81a9c91959ba980a383fa72d0650f49b3f"
+        },
+        "date": 1724808843794,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 7626.00297663762,
+            "unit": "ns",
+            "range": "± 13.91034179316273",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 7104.705113728841,
+            "unit": "ns",
+            "range": "± 15.648431761112501",
             "bytesAllocated": 56
           }
         ]
@@ -1106,6 +1175,37 @@
             "bytesAllocated": 120
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "bfd8fa81a9c91959ba980a383fa72d0650f49b3f",
+          "message": "Switch on all benchmarks\n\nSwitch on all benchmarks in the assembly, rather than specific types.",
+          "timestamp": "2024-08-27T10:46:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/bfd8fa81a9c91959ba980a383fa72d0650f49b3f"
+        },
+        "date": 1724808843794,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 72.86603943506877,
+            "unit": "ns",
+            "range": "± 0.5219181825359686",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 67.99941788514455,
+            "unit": "ns",
+            "range": "± 0.16534000010205022",
+            "bytesAllocated": 120
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.TodoAppBenchmarks": [
@@ -1385,6 +1485,37 @@
             "unit": "ns",
             "range": "± 3507.142485192483",
             "bytesAllocated": 2930
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "bfd8fa81a9c91959ba980a383fa72d0650f49b3f",
+          "message": "Switch on all benchmarks\n\nSwitch on all benchmarks in the assembly, rather than specific types.",
+          "timestamp": "2024-08-27T10:46:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/bfd8fa81a9c91959ba980a383fa72d0650f49b3f"
+        },
+        "date": 1724808843794,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+            "value": 79807.54556102966,
+            "unit": "ns",
+            "range": "± 4381.282787900518",
+            "bytesAllocated": 3060
+          },
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            "value": 83777.1439484627,
+            "unit": "ns",
+            "range": "± 3769.3052816519676",
+            "bytesAllocated": 2945
           }
         ]
       }
