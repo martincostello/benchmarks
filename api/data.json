@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1725965246857,
+  "lastUpdated": 1726054640810,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -3137,6 +3137,58 @@
             "unit": "ns",
             "range": "± 62243.25526317053",
             "bytesAllocated": 2419098
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "3edce8fd5d4ff4578712acac03d0e06a1deed735",
+          "message": "Update to ASP.NET Core 9 (#1503)\n\n- Update to ASP.NET Core 9 RC1.\r\n- Use new `Convert.ToHexStringLower()` and `CryptographicOperations.HashData()` APIs.\r\n- Replace `Swashbuckle.AspNetCore` with `Microsoft.AspNetCore.OpenApi`.\r\n- Enable OpenAPI documentation with native AoT.",
+          "timestamp": "2024-09-11T11:33:37Z",
+          "url": "https://github.com/martincostello/api/commit/3edce8fd5d4ff4578712acac03d0e06a1deed735"
+        },
+        "date": 1726054640810,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 312955.42738560267,
+            "unit": "ns",
+            "range": "± 2638.8959026846906",
+            "bytesAllocated": 41993
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 227835.73704427082,
+            "unit": "ns",
+            "range": "± 1305.7125872041167",
+            "bytesAllocated": 15825
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 235967.040625,
+            "unit": "ns",
+            "range": "± 2289.1837347348733",
+            "bytesAllocated": 13986
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 205292.76038411458,
+            "unit": "ns",
+            "range": "± 1677.5835258216457",
+            "bytesAllocated": 11177
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 225204.27473958334,
+            "unit": "ns",
+            "range": "± 2226.3460193951214",
+            "bytesAllocated": 25394
           }
         ]
       }
