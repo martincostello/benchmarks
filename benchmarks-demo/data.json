@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1725358711112,
+  "lastUpdated": 1726043339196,
   "repoUrl": "https://github.com/martincostello/benchmarks-demo",
   "entries": {
     "DotNetBenchmarks.IndexOfAnyBenchmarks": [
@@ -420,6 +420,44 @@
             "bytesAllocated": 0
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "d2b4b04ad31910f236cf4b2742b7b0de594ae28d",
+          "message": "Consume .NET nightly builds\n\nConsume the latest nightly builds of .NET 9.",
+          "timestamp": "2024-09-11T08:24:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d2b4b04ad31910f236cf4b2742b7b0de594ae28d"
+        },
+        "date": 1726043339196,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.172043959299724,
+            "unit": "ns",
+            "range": "± 0.0020910691388307053",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 4.257748252650102,
+            "unit": "ns",
+            "range": "± 0.018863547287375052",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 3.327997856835524,
+            "unit": "ns",
+            "range": "± 0.021631960474918825",
+            "bytesAllocated": 0
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.HashBenchmarks": [
@@ -760,6 +798,37 @@
             "value": 7084.922396146334,
             "unit": "ns",
             "range": "± 16.587129838331155",
+            "bytesAllocated": 56
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "d2b4b04ad31910f236cf4b2742b7b0de594ae28d",
+          "message": "Consume .NET nightly builds\n\nConsume the latest nightly builds of .NET 9.",
+          "timestamp": "2024-09-11T08:24:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d2b4b04ad31910f236cf4b2742b7b0de594ae28d"
+        },
+        "date": 1726043339196,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 7594.696397145589,
+            "unit": "ns",
+            "range": "± 31.05105156446522",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 7078.653611246745,
+            "unit": "ns",
+            "range": "± 14.766906092979243",
             "bytesAllocated": 56
           }
         ]
@@ -1106,6 +1175,37 @@
             "bytesAllocated": 120
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "d2b4b04ad31910f236cf4b2742b7b0de594ae28d",
+          "message": "Consume .NET nightly builds\n\nConsume the latest nightly builds of .NET 9.",
+          "timestamp": "2024-09-11T08:24:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d2b4b04ad31910f236cf4b2742b7b0de594ae28d"
+        },
+        "date": 1726043339196,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 72.0748350262642,
+            "unit": "ns",
+            "range": "± 0.4263367596938388",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 66.22554883956909,
+            "unit": "ns",
+            "range": "± 0.2522587910767606",
+            "bytesAllocated": 120
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.TodoAppBenchmarks": [
@@ -1322,6 +1422,37 @@
             "value": 100529.32798138786,
             "unit": "ns",
             "range": "± 3207.620138326117",
+            "bytesAllocated": 2921
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "d2b4b04ad31910f236cf4b2742b7b0de594ae28d",
+          "message": "Consume .NET nightly builds\n\nConsume the latest nightly builds of .NET 9.",
+          "timestamp": "2024-09-11T08:24:22Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d2b4b04ad31910f236cf4b2742b7b0de594ae28d"
+        },
+        "date": 1726043339196,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+            "value": 96672.0044969128,
+            "unit": "ns",
+            "range": "± 2942.928720778261",
+            "bytesAllocated": 3112
+          },
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            "value": 97434.47223977481,
+            "unit": "ns",
+            "range": "± 3078.4026224056456",
             "bytesAllocated": 2921
           }
         ]
