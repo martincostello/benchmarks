@@ -1,0 +1,54 @@
+name: housekeeping
+
+on:
+  schedule:
+    - cron: '00 01 * * SUN'
+  workflow_dispatch:
+
+permissions: {}
+
+env:
+  FORCE_COLOR: 3
+  TERM: xterm
+
+jobs:
+  delete-branches:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Delete branches
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $branches = gh api "/repos/${env:GITHUB_REPOSITORY}/branches" `
+            | ConvertFrom-Json `
+            | Where-Object { $_.protected -eq $false }
+
+          if ($branches.Count -eq 0) {
+            Write-Output "No unprotected branches found"
+          } else {
+            Write-Output "Found $($branches.Count) unprotected branches"
+
+            $now = Get-Date
+            $threshold = $now.AddDays(-7)
+
+            foreach ($branch in $branches) {
+                $commit = gh api "/repos/${env:GITHUB_REPOSITORY}/commits/$($branch.commit.sha)" | ConvertFrom-Json
+                $date = [datetime]$commit.commit.author.date
+
+                if ($date -lt $threshold) {
+                  gh api -X DELETE "/repos/${env:GITHUB_REPOSITORY}/git/refs/heads/$($branch.name)" | Out-Null
+                  if ($LASTEXITCODE -eq 0) {
+                    Write-Output "Deleted branch $($branch.name)"
+                  } else {
+                    Write-Output "Failed to delete branch $($branch.name)"
+                  }
+                } else {
+                  Write-Output "Skipping branch $($branch.name)"
+                }
+            }
+          }
