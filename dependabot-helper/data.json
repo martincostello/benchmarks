@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1729081351240,
+  "lastUpdated": 1729164124146,
   "repoUrl": "https://github.com/martincostello/dependabot-helper",
   "entries": {
     "DependabotHelper": [
@@ -961,6 +961,37 @@
             "unit": "ns",
             "range": "± 2329.192093443092",
             "bytesAllocated": 26202
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "f1d9039568e73f0385148144008bc7155a09b129",
+          "message": "Ignore invalid rate limits\n\nIf Octokit somehow reports a reset value that's the Unix epoch, ignore it, rather than tell the user their rate limit resets 55 years ago",
+          "timestamp": "2024-10-17T11:19:15Z",
+          "url": "https://github.com/martincostello/dependabot-helper/commit/f1d9039568e73f0385148144008bc7155a09b129"
+        },
+        "date": 1729164124146,
+        "benches": [
+          {
+            "name": "MartinCostello.DependabotHelper.Benchmarks.AppBenchmarks.Root",
+            "value": 616836.3729166667,
+            "unit": "ns",
+            "range": "± 5992.790912206481",
+            "bytesAllocated": 72641
+          },
+          {
+            "name": "MartinCostello.DependabotHelper.Benchmarks.AppBenchmarks.Version",
+            "value": 256332.17265625,
+            "unit": "ns",
+            "range": "± 1922.8631656835028",
+            "bytesAllocated": 26203
           }
         ]
       }
