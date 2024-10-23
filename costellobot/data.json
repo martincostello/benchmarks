@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1729675837751,
+  "lastUpdated": 1729678506179,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -5186,6 +5186,44 @@
             "unit": "ns",
             "range": "± 1043.252088137731",
             "bytesAllocated": 46638
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "bf07c590ea311a4f27d1c8cabf53789c70f68558",
+          "message": "Publish fewer messages to ServiceBus\n\nReduce the number of GitHub Webhook payloads actually published to Azure ServiceBus by ignoring events not in the list of known payloads.",
+          "timestamp": "2024-10-23T10:11:45Z",
+          "url": "https://github.com/martincostello/costellobot/commit/bf07c590ea311a4f27d1c8cabf53789c70f68558"
+        },
+        "date": 1729678506179,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 543109.4886997768,
+            "unit": "ns",
+            "range": "± 4763.689800116144",
+            "bytesAllocated": 47273
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 239378.91943359375,
+            "unit": "ns",
+            "range": "± 1885.7895383323505",
+            "bytesAllocated": 21588
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 311588.44765625,
+            "unit": "ns",
+            "range": "± 1874.5138923405027",
+            "bytesAllocated": 46634
           }
         ]
       }
