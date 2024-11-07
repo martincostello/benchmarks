@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1730978447619,
+  "lastUpdated": 1730997822436,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -6478,6 +6478,44 @@
             "unit": "ns",
             "range": "± 1064.3480053958567",
             "bytesAllocated": 46642
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "e446339d781b11597db2074cdffd225614d166d9",
+          "message": "Fix mixed package trust approval\n\nFix pull requests not being approved when the method of trust in a batch of updated dependencies. Otherwise, a package trusted by owner amongst packages trusted by name would cause the trust check to fail.",
+          "timestamp": "2024-11-07T16:40:33Z",
+          "url": "https://github.com/martincostello/costellobot/commit/e446339d781b11597db2074cdffd225614d166d9"
+        },
+        "date": 1730997822436,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 537995.1430989583,
+            "unit": "ns",
+            "range": "± 4436.7122687504025",
+            "bytesAllocated": 47273
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 239155.00182291667,
+            "unit": "ns",
+            "range": "± 2667.7509258308764",
+            "bytesAllocated": 21587
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 306317.4440917969,
+            "unit": "ns",
+            "range": "± 474.32025992945063",
+            "bytesAllocated": 46628
           }
         ]
       }
