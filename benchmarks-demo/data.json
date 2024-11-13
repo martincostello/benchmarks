@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1731454735601,
+  "lastUpdated": 1731461657657,
   "repoUrl": "https://github.com/martincostello/benchmarks-demo",
   "entries": {
     "DotNetBenchmarks.IndexOfAnyBenchmarks": [
@@ -3498,6 +3498,44 @@
             "bytesAllocated": 0
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4",
+          "message": "Update to .NET 9 (#3)\n\n* Update to .NET 9 preview 7\r\n\r\nUpdate to preview 7 of .NET 9.\r\n\r\n* Update .NET SDK (#20)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.1.24452.12.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#48)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.2.24474.11.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#65)\r\n\r\nUpdate .NET SDK to version 9.0.100.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\nCo-authored-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-11-12T23:34:39Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4"
+        },
+        "date": 1731461657657,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.191410140693188,
+            "unit": "ns",
+            "range": "± 0.02184558783648351",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 4.254943325583424,
+            "unit": "ns",
+            "range": "± 0.018428318931527594",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 3.333683055639267,
+            "unit": "ns",
+            "range": "± 0.021540921709314546",
+            "bytesAllocated": 0
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.HashBenchmarks": [
@@ -6349,6 +6387,37 @@
             "value": 7094.750546591623,
             "unit": "ns",
             "range": "± 13.577401900892628",
+            "bytesAllocated": 56
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4",
+          "message": "Update to .NET 9 (#3)\n\n* Update to .NET 9 preview 7\r\n\r\nUpdate to preview 7 of .NET 9.\r\n\r\n* Update .NET SDK (#20)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.1.24452.12.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#48)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.2.24474.11.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#65)\r\n\r\nUpdate .NET SDK to version 9.0.100.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\nCo-authored-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-11-12T23:34:39Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4"
+        },
+        "date": 1731461657657,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 7647.5560302734375,
+            "unit": "ns",
+            "range": "± 35.80511319809916",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 7087.9952310834615,
+            "unit": "ns",
+            "range": "± 12.54901956060234",
             "bytesAllocated": 56
           }
         ]
@@ -9206,6 +9275,37 @@
             "bytesAllocated": 120
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4",
+          "message": "Update to .NET 9 (#3)\n\n* Update to .NET 9 preview 7\r\n\r\nUpdate to preview 7 of .NET 9.\r\n\r\n* Update .NET SDK (#20)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.1.24452.12.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#48)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.2.24474.11.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#65)\r\n\r\nUpdate .NET SDK to version 9.0.100.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\nCo-authored-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-11-12T23:34:39Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4"
+        },
+        "date": 1731461657657,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 72.75296755347934,
+            "unit": "ns",
+            "range": "± 0.5563566840848652",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 64.93775125741959,
+            "unit": "ns",
+            "range": "± 0.43903853440294655",
+            "bytesAllocated": 120
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.TodoAppBenchmarks": [
@@ -11996,6 +12096,37 @@
             "unit": "ns",
             "range": "± 2768.837806312738",
             "bytesAllocated": 2920
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4",
+          "message": "Update to .NET 9 (#3)\n\n* Update to .NET 9 preview 7\r\n\r\nUpdate to preview 7 of .NET 9.\r\n\r\n* Update .NET SDK (#20)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.1.24452.12.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#48)\r\n\r\nUpdate .NET SDK to version 9.0.100-rc.2.24474.11.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n* Update .NET SDK (#65)\r\n\r\nUpdate .NET SDK to version 9.0.100.\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\r\nCo-authored-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2024-11-12T23:34:39Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/d7e3f5b2d827e9e86e1ae87767e8c22810aca5c4"
+        },
+        "date": 1731461657657,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+            "value": 94716.69376627605,
+            "unit": "ns",
+            "range": "± 3273.6528549832733",
+            "bytesAllocated": 3113
+          },
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            "value": 96577.54729903371,
+            "unit": "ns",
+            "range": "± 3241.90807164151",
+            "bytesAllocated": 2921
           }
         ]
       }
