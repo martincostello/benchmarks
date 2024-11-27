@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1732688148571,
+  "lastUpdated": 1732720393138,
   "repoUrl": "https://github.com/martincostello/adventofcode",
   "entries": {
     "Advent of Code": [
@@ -15639,6 +15639,135 @@
             "unit": "ns",
             "range": "± 646993.2728676957",
             "bytesAllocated": 30105095
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "34ffd4a0e0f0af887fb143e2d8577d2ed5743295",
+          "message": "Refactor dictionary extensions\n\n- Use concrete dictionary instead of interface.\n- Remove unused methods.\n- Implement decrement in terms of increment.",
+          "timestamp": "2024-11-27T15:09:57Z",
+          "url": "https://github.com/martincostello/adventofcode/commit/34ffd4a0e0f0af887fb143e2d8577d2ed5743295"
+        },
+        "date": 1732720393138,
+        "benches": [
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-01)",
+            "value": 107663.13570149739,
+            "unit": "ns",
+            "range": "± 470.08675017886816",
+            "bytesAllocated": 37521
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-02)",
+            "value": 66938.19506835938,
+            "unit": "ns",
+            "range": "± 799.6001062317871",
+            "bytesAllocated": 22329
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-03)",
+            "value": 586596.4280598959,
+            "unit": "ns",
+            "range": "± 13764.187570245856",
+            "bytesAllocated": 1075338
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-04)",
+            "value": 2471485.6067708335,
+            "unit": "ns",
+            "range": "± 12449.393420020453",
+            "bytesAllocated": 2894152
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-06)",
+            "value": 129944.70776367188,
+            "unit": "ns",
+            "range": "± 849.5345379335864",
+            "bytesAllocated": 33209
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-07)",
+            "value": 2797324.2421875,
+            "unit": "ns",
+            "range": "± 10975.282231917841",
+            "bytesAllocated": 4678295
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-08)",
+            "value": 116993.88199869792,
+            "unit": "ns",
+            "range": "± 871.9912561749181",
+            "bytesAllocated": 118241
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-09)",
+            "value": 151786.06193033853,
+            "unit": "ns",
+            "range": "± 463.5795134614086",
+            "bytesAllocated": 206689
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-10)",
+            "value": 87360.2001953125,
+            "unit": "ns",
+            "range": "± 388.28882963308223",
+            "bytesAllocated": 212755
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-13)",
+            "value": 17049205.052083332,
+            "unit": "ns",
+            "range": "± 104126.39037485367",
+            "bytesAllocated": 12093946
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-16)",
+            "value": 5185.8781331380205,
+            "unit": "ns",
+            "range": "± 160.28318542297612",
+            "bytesAllocated": 7464
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-17)",
+            "value": 99868529.86666667,
+            "unit": "ns",
+            "range": "± 2022040.896063989",
+            "bytesAllocated": 104153198
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-20)",
+            "value": 4693647.552083333,
+            "unit": "ns",
+            "range": "± 10920.78816228621",
+            "bytesAllocated": 5144102
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-21)",
+            "value": 18562.62373860677,
+            "unit": "ns",
+            "range": "± 1372.9218214709854",
+            "bytesAllocated": 29761
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-22)",
+            "value": 1868965.0885416667,
+            "unit": "ns",
+            "range": "± 22758.89427366944",
+            "bytesAllocated": 581295
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-24)",
+            "value": 53297836.53333333,
+            "unit": "ns",
+            "range": "± 1159030.6495769697",
+            "bytesAllocated": 30110015
           }
         ]
       }
