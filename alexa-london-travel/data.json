@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1732977524041,
+  "lastUpdated": 1732979571961,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -2714,6 +2714,65 @@
             "unit": "ns",
             "range": "± 554.8088929006374",
             "bytesAllocated": 52417
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "5ab99cc449039b195a8fec60dee2ab48a522832f",
+          "message": "Update help interaction\n\nEnd the help intent response with a question as required by the certification guidelines.\n\n> The help prompt must end with a question for users or prompt the user to speak and leave the session open to receive a response. Please refer to test case 4.12 from our Submission Checklist for guidance on the help intent.",
+          "timestamp": "2024-11-30T15:09:00Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/5ab99cc449039b195a8fec60dee2ab48a522832f"
+        },
+        "date": 1732979571961,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 113760.71848707933,
+            "unit": "ns",
+            "range": "± 858.7287644722263",
+            "bytesAllocated": 36484
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 134952.26531110491,
+            "unit": "ns",
+            "range": "± 358.52648455857934",
+            "bytesAllocated": 64987
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 125773.12169471153,
+            "unit": "ns",
+            "range": "± 478.98558613360194",
+            "bytesAllocated": 57601
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 125963.79967447916,
+            "unit": "ns",
+            "range": "± 386.1173990228812",
+            "bytesAllocated": 51659
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 113931.9704938616,
+            "unit": "ns",
+            "range": "± 543.5385945587997",
+            "bytesAllocated": 36509
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 129103.4697265625,
+            "unit": "ns",
+            "range": "± 214.03950155588416",
+            "bytesAllocated": 52416
           }
         ]
       }
