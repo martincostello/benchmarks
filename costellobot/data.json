@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1736759817207,
+  "lastUpdated": 1736770351275,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -10544,6 +10544,44 @@
             "unit": "ns",
             "range": "± 1743.3776996406114",
             "bytesAllocated": 46507
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ba57f4cfcf236f6333dce9953c07bd9c6d0bcd1d",
+          "message": "Re-use YAML deserializer\n\nCreate a single YAML deserializer and re-use across all invocations, rather than building a new one every time.",
+          "timestamp": "2025-01-13T12:09:21Z",
+          "url": "https://github.com/martincostello/costellobot/commit/ba57f4cfcf236f6333dce9953c07bd9c6d0bcd1d"
+        },
+        "date": 1736770351275,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 550342.834123884,
+            "unit": "ns",
+            "range": "± 4979.325205869213",
+            "bytesAllocated": 47371
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 241349.35909598213,
+            "unit": "ns",
+            "range": "± 1361.7944852486596",
+            "bytesAllocated": 21444
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 311552.590890067,
+            "unit": "ns",
+            "range": "± 914.5777634151387",
+            "bytesAllocated": 46515
           }
         ]
       }
