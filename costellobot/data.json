@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1740732760377,
+  "lastUpdated": 1740733727085,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -16092,6 +16092,44 @@
             "unit": "ns",
             "range": "± 1697.6330475484824",
             "bytesAllocated": 48528
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "e5d8b74d8cafa77792434554a3607321f7236f2e",
+          "message": "Fix distrusting implicitly trusted entities\n\nFix mix-up with anti-forgery setup that mean cookies weren't being set on GET resources and not all POST resources were validating them.",
+          "timestamp": "2025-02-28T09:05:40Z",
+          "url": "https://github.com/martincostello/costellobot/commit/e5d8b74d8cafa77792434554a3607321f7236f2e"
+        },
+        "date": 1740733727085,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 563546.9059244791,
+            "unit": "ns",
+            "range": "± 6276.717634463082",
+            "bytesAllocated": 46498
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 243936.36087740384,
+            "unit": "ns",
+            "range": "± 964.3962495081324",
+            "bytesAllocated": 21395
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 312459.724609375,
+            "unit": "ns",
+            "range": "± 1340.150390446384",
+            "bytesAllocated": 48529
           }
         ]
       }
