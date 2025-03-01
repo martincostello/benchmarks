@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1740831685032,
+  "lastUpdated": 1740847044493,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -8024,6 +8024,65 @@
             "unit": "ns",
             "range": "± 2717.5778556019036",
             "bytesAllocated": 52541
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7daadb8ed51ee11e486f8d1c2e09ef23f358b2f3",
+          "message": "Configure OpenTelemetry collector\n\nRefactor deployment to support emitting metrics to an OLTP endpoint directly, rather than to a local collector in a layer.",
+          "timestamp": "2025-03-01T16:33:33Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/7daadb8ed51ee11e486f8d1c2e09ef23f358b2f3"
+        },
+        "date": 1740847044493,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 118951.42320033482,
+            "unit": "ns",
+            "range": "± 1681.0996124325122",
+            "bytesAllocated": 36424
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 142871.8216796875,
+            "unit": "ns",
+            "range": "± 1358.453474120862",
+            "bytesAllocated": 64990
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 132378.18209635417,
+            "unit": "ns",
+            "range": "± 1017.817565237119",
+            "bytesAllocated": 57703
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 131642.8857421875,
+            "unit": "ns",
+            "range": "± 906.6583705263893",
+            "bytesAllocated": 51852
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 118768.99329427084,
+            "unit": "ns",
+            "range": "± 1001.3900337238915",
+            "bytesAllocated": 36547
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 133712.30944010417,
+            "unit": "ns",
+            "range": "± 2020.8368079260779",
+            "bytesAllocated": 52476
           }
         ]
       }
