@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1740908097607,
+  "lastUpdated": 1740910275386,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -8201,6 +8201,65 @@
             "unit": "ns",
             "range": "± 1314.1145387795261",
             "bytesAllocated": 52483
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "1e888ff0d1cf3bd65fbd6399e8168cca972f8179",
+          "message": "Fix missing telemetry\n\nFix missing telemetry due to `OTEL_EXPORTER_OTLP_ENDPOINT` no longer being set in the environment variables.",
+          "timestamp": "2025-03-02T10:07:19Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/1e888ff0d1cf3bd65fbd6399e8168cca972f8179"
+        },
+        "date": 1740910275386,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 119511.44517299107,
+            "unit": "ns",
+            "range": "± 1247.529058631344",
+            "bytesAllocated": 36187
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 141046.98880709134,
+            "unit": "ns",
+            "range": "± 897.8839069054269",
+            "bytesAllocated": 64701
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 131854.31937081474,
+            "unit": "ns",
+            "range": "± 1985.6317681594303",
+            "bytesAllocated": 57691
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 132250.77506510416,
+            "unit": "ns",
+            "range": "± 1433.1479172611207",
+            "bytesAllocated": 51831
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 117439.0859375,
+            "unit": "ns",
+            "range": "± 1785.0087138545532",
+            "bytesAllocated": 36221
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 133769.6241861979,
+            "unit": "ns",
+            "range": "± 2047.6576703211153",
+            "bytesAllocated": 52513
           }
         ]
       }
