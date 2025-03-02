@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1740910275386,
+  "lastUpdated": 1740917528975,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -8260,6 +8260,65 @@
             "unit": "ns",
             "range": "± 2047.6576703211153",
             "bytesAllocated": 52513
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "948277b1fd1a102ccf6cd5e7976421abff291872",
+          "message": "Fix configuration\n\n- Fix configuration being registered as `IConfiguratonRoot`, which meant it didn't override the default `IConfiguration`, so was missing the AWS Secret Manager-provided values.\n- Update test to add coverage for issue.",
+          "timestamp": "2025-03-02T12:08:22Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/948277b1fd1a102ccf6cd5e7976421abff291872"
+        },
+        "date": 1740917528975,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 119510.33167317709,
+            "unit": "ns",
+            "range": "± 1739.773244035817",
+            "bytesAllocated": 36527
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 141964.92156110491,
+            "unit": "ns",
+            "range": "± 1352.527685821511",
+            "bytesAllocated": 64990
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 132163.03095703124,
+            "unit": "ns",
+            "range": "± 1244.1667922851962",
+            "bytesAllocated": 57637
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 132621.43880208334,
+            "unit": "ns",
+            "range": "± 1952.915934041027",
+            "bytesAllocated": 51805
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 120174.96948242188,
+            "unit": "ns",
+            "range": "± 1047.4831601942406",
+            "bytesAllocated": 36507
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 134795.46875,
+            "unit": "ns",
+            "range": "± 2072.0478767521213",
+            "bytesAllocated": 52536
           }
         ]
       }
