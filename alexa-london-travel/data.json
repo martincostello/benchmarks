@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1741327123518,
+  "lastUpdated": 1741367556734,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -9027,6 +9027,65 @@
             "unit": "ns",
             "range": "± 1410.956260816195",
             "bytesAllocated": 52813
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "e67cc9d1149110a24fbd827dabf23f9d59d2fc63",
+          "message": "Refactor code coverage\n\nCherry-pick changes from #1629 to:\n\n- Centralise more coverage logic.\n- Make writing the coverage to the step summary more resilient.\n- Simplify coverage exclusions.\n- Collect coverage from the Aspire app host.",
+          "timestamp": "2025-03-07T17:08:37Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/e67cc9d1149110a24fbd827dabf23f9d59d2fc63"
+        },
+        "date": 1741367556734,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 118469.1750139509,
+            "unit": "ns",
+            "range": "± 1675.1492347543374",
+            "bytesAllocated": 36802
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 141652.59794921876,
+            "unit": "ns",
+            "range": "± 1371.040520965003",
+            "bytesAllocated": 65310
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 132279.33782552084,
+            "unit": "ns",
+            "range": "± 1319.8046062559135",
+            "bytesAllocated": 57968
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 133580.6368815104,
+            "unit": "ns",
+            "range": "± 1951.5730896518378",
+            "bytesAllocated": 52106
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 119186.54446847098,
+            "unit": "ns",
+            "range": "± 997.0827033645733",
+            "bytesAllocated": 36814
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 134492.98837890624,
+            "unit": "ns",
+            "range": "± 1414.846171271763",
+            "bytesAllocated": 52819
           }
         ]
       }
