@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1742049798048,
+  "lastUpdated": 1742053524591,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -15045,6 +15045,58 @@
             "unit": "ns",
             "range": "± 1957.1711923116513",
             "bytesAllocated": 25162
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "bc57c3031ca0b5713ad0d639d5747999f7633191",
+          "message": "Avoid Uri allocations\n\n- Construct CDN URLs with strings to avoid `Uri` allocations.\n- Only compute the canonical URL once per request.",
+          "timestamp": "2025-03-15T15:41:41Z",
+          "url": "https://github.com/martincostello/api/commit/bc57c3031ca0b5713ad0d639d5747999f7633191"
+        },
+        "date": 1742053524591,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 293637.6876302083,
+            "unit": "ns",
+            "range": "± 4531.4667917896295",
+            "bytesAllocated": 30995
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 222368.16301618304,
+            "unit": "ns",
+            "range": "± 651.5628972734679",
+            "bytesAllocated": 15554
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 232882.94309895832,
+            "unit": "ns",
+            "range": "± 1210.7369694926344",
+            "bytesAllocated": 13770
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 203407.321812221,
+            "unit": "ns",
+            "range": "± 613.5009731840632",
+            "bytesAllocated": 10977
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 227577.4578125,
+            "unit": "ns",
+            "range": "± 1668.3687456046885",
+            "bytesAllocated": 25161
           }
         ]
       }
