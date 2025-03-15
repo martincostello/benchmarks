@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1741930486675,
+  "lastUpdated": 1742056593694,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -10539,6 +10539,37 @@
             "value": 277158.3204520089,
             "unit": "ns",
             "range": "± 3127.958077463845",
+            "bytesAllocated": 58798
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "76a172dc337958f86dbedb7fb0154fb0b207a1f3",
+          "message": "Avoid Uri allocations\n\n- Construct CDN URLs with strings to avoid `Uri` allocations.\n- Remove redundant DNS preload domains.",
+          "timestamp": "2025-03-15T16:33:43Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/76a172dc337958f86dbedb7fb0154fb0b207a1f3"
+        },
+        "date": 1742056593694,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 737377.1685474537,
+            "unit": "ns",
+            "range": "± 29442.4247854156",
+            "bytesAllocated": 214562
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 274960.6104266827,
+            "unit": "ns",
+            "range": "± 2256.5098064181366",
             "bytesAllocated": 58798
           }
         ]
