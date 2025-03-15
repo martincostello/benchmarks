@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1741929849800,
+  "lastUpdated": 1742054469705,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -13442,6 +13442,58 @@
             "unit": "ns",
             "range": "± 1202.0509970062596",
             "bytesAllocated": 19168
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "b672f3ab078a2209533155e9d9014e857fa03fca",
+          "message": "Avoid Uri allocations\n\nConstruct CDN URLs with strings to avoid `Uri` allocations.",
+          "timestamp": "2025-03-15T15:57:29Z",
+          "url": "https://github.com/martincostello/website/commit/b672f3ab078a2209533155e9d9014e857fa03fca"
+        },
+        "date": 1742054469705,
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 311058.3203125,
+            "unit": "ns",
+            "range": "± 5778.096138993354",
+            "bytesAllocated": 40618
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 315371.8125,
+            "unit": "ns",
+            "range": "± 4591.439690271667",
+            "bytesAllocated": 41572
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 401708.16575520835,
+            "unit": "ns",
+            "range": "± 3096.5330255956974",
+            "bytesAllocated": 56392
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 369097.75540364586,
+            "unit": "ns",
+            "range": "± 5507.695103367728",
+            "bytesAllocated": 50243
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 222598.25260416666,
+            "unit": "ns",
+            "range": "± 2686.053707844351",
+            "bytesAllocated": 19173
           }
         ]
       }
