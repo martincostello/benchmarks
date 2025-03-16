@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1742144362276,
+  "lastUpdated": 1742145697892,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -15564,6 +15564,58 @@
             "value": 231424.06122295672,
             "unit": "ns",
             "range": "± 1668.082202768114",
+            "bytesAllocated": 25162
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "9a2042be6eb55ca77ccf2ae33fd6c39c882baecd",
+          "message": "Use OpenTelemetry baggage\n\nUse `Baggage.GetBaggage()` instead of `Activity.Current?.Baggage` to hopefully fix k6 profile correlation.",
+          "timestamp": "2025-03-16T17:17:57Z",
+          "url": "https://github.com/martincostello/api/commit/9a2042be6eb55ca77ccf2ae33fd6c39c882baecd"
+        },
+        "date": 1742145697892,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 296628.9897836539,
+            "unit": "ns",
+            "range": "± 2568.2613350943097",
+            "bytesAllocated": 30993
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 225853.71840122767,
+            "unit": "ns",
+            "range": "± 912.279489078932",
+            "bytesAllocated": 15553
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 238635.1392299107,
+            "unit": "ns",
+            "range": "± 2587.535239996668",
+            "bytesAllocated": 13771
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 205560.97056361608,
+            "unit": "ns",
+            "range": "± 1038.3773696182498",
+            "bytesAllocated": 10977
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 231300.2681361607,
+            "unit": "ns",
+            "range": "± 1601.2885290291604",
             "bytesAllocated": 25162
           }
         ]
