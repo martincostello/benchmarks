@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1742054960382,
+  "lastUpdated": 1742118207524,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -15149,6 +15149,58 @@
             "unit": "ns",
             "range": "± 1098.1572360737591",
             "bytesAllocated": 25161
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "f35cf205c7548e991a9b204346d1398da9e0554d",
+          "message": "Use ReplaceLineEndings()\n\nSimplify code by using `string.ReplaceLineEndings()`, which also fixes an issue when running the container when built from WSL related into line endings in HTTP response headers.",
+          "timestamp": "2025-03-16T09:39:46Z",
+          "url": "https://github.com/martincostello/api/commit/f35cf205c7548e991a9b204346d1398da9e0554d"
+        },
+        "date": 1742118207524,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 297350.7670522836,
+            "unit": "ns",
+            "range": "± 2648.1287126570364",
+            "bytesAllocated": 30995
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 224056.01373697916,
+            "unit": "ns",
+            "range": "± 772.8840965354287",
+            "bytesAllocated": 15554
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 238933.30210658483,
+            "unit": "ns",
+            "range": "± 1570.1088929068765",
+            "bytesAllocated": 13771
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 205811.48899739582,
+            "unit": "ns",
+            "range": "± 1374.8163952200748",
+            "bytesAllocated": 10978
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 230747.7349330357,
+            "unit": "ns",
+            "range": "± 1835.7218085899272",
+            "bytesAllocated": 25162
           }
         ]
       }
