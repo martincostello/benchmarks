@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1743833655265,
+  "lastUpdated": 1743946694627,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -17229,6 +17229,58 @@
             "unit": "ns",
             "range": "± 2216.829260230858",
             "bytesAllocated": 25154
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9ae6ba7e9b852d1ac0215893e51255de8d32b21d",
+          "message": "Migrate solution to SLNX (#2288)\n\n* Migrate solution to SLNX\n\nMigrates the .NET solution to use the new [`.slnx`][slnx] file format.\n\n[slnx]: https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/\n\nContributes to https://github.com/martincostello/repo-migrations/issues/85.\n\nSigned-off-by: costellobot[bot] <102247573+costellobot[bot]@users.noreply.github.com>\n\n* Migrate to SLNX\r\n\r\n- Migrate to the new `.slnx` file format.\r\n- Bump OpenTelemetry.Resources.Azure and OpenTelemetry.Resources.Container to their latest versions.\r\n- Run the test projects in parallel with each other.\n\n---------\n\nSigned-off-by: costellobot[bot] <102247573+costellobot[bot]@users.noreply.github.com>\nCo-authored-by: costellobot[bot] <102247573+costellobot[bot]@users.noreply.github.com>\nCo-authored-by: Martin Costello <martin@martincostello.com>",
+          "timestamp": "2025-04-06T13:34:39Z",
+          "url": "https://github.com/martincostello/api/commit/9ae6ba7e9b852d1ac0215893e51255de8d32b21d"
+        },
+        "date": 1743946694627,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 295910.1886160714,
+            "unit": "ns",
+            "range": "± 3871.6789802837948",
+            "bytesAllocated": 30993
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 224204.13799579328,
+            "unit": "ns",
+            "range": "± 598.3702088364204",
+            "bytesAllocated": 15554
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 236749.13072916667,
+            "unit": "ns",
+            "range": "± 1884.9304711071616",
+            "bytesAllocated": 13771
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 204022.76949869792,
+            "unit": "ns",
+            "range": "± 845.4133535857969",
+            "bytesAllocated": 10977
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 226574.07149832588,
+            "unit": "ns",
+            "range": "± 2006.4153714188985",
+            "bytesAllocated": 25162
           }
         ]
       }
