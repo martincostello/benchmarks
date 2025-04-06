@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1743954100212,
+  "lastUpdated": 1743955181638,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -17333,6 +17333,58 @@
             "unit": "ns",
             "range": "± 1803.3463539502436",
             "bytesAllocated": 25162
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "97db383433b7460f5a6436b1d956a86c6228dcfd",
+          "message": "Set JsonNumberHandling.Strict\n\nSet `JsonNumberHandling.Strict` for JSON serialization to avoid behaviour change with OpenAPI in .NET 10.",
+          "timestamp": "2025-04-06T15:56:01Z",
+          "url": "https://github.com/martincostello/api/commit/97db383433b7460f5a6436b1d956a86c6228dcfd"
+        },
+        "date": 1743955181638,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 292083.25188802084,
+            "unit": "ns",
+            "range": "± 5198.0344138143555",
+            "bytesAllocated": 30995
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 225455.77315848213,
+            "unit": "ns",
+            "range": "± 777.570335358228",
+            "bytesAllocated": 15555
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 236151.5291748047,
+            "unit": "ns",
+            "range": "± 3747.193908447225",
+            "bytesAllocated": 13771
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 204148.83848353795,
+            "unit": "ns",
+            "range": "± 896.7086503646802",
+            "bytesAllocated": 10978
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 226430.83118489583,
+            "unit": "ns",
+            "range": "± 2939.1501763122897",
+            "bytesAllocated": 25154
           }
         ]
       }
