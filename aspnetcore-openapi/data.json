@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1743868743008,
+  "lastUpdated": 1743948281300,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -7480,6 +7480,44 @@
             "unit": "ns",
             "range": "± 64171.16676633198",
             "bytesAllocated": 1200593
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "e663c9fbbd2f0f3e4327f6b968150b32cd15e39e",
+          "message": "Migrate solution to SLNX (#269)\n\n* Migrate solution to SLNX\n\nMigrates the .NET solution to use the new [`.slnx`][slnx] file format.\n\n[slnx]: https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/\n\nContributes to https://github.com/martincostello/repo-migrations/issues/85.\n\nSigned-off-by: costellobot[bot] <102247573+costellobot[bot]@users.noreply.github.com>\n\n* Migrate to SLNX\r\n\r\nMigrate to the new `.slnx` file format.\n\n---------\n\nSigned-off-by: costellobot[bot] <102247573+costellobot[bot]@users.noreply.github.com>\nCo-authored-by: costellobot[bot] <102247573+costellobot[bot]@users.noreply.github.com>\nCo-authored-by: Martin Costello <martin@martincostello.com>",
+          "timestamp": "2025-04-06T14:01:12Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/e663c9fbbd2f0f3e4327f6b968150b32cd15e39e"
+        },
+        "date": 1743948281300,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1023391.2018612132,
+            "unit": "ns",
+            "range": "± 32965.31081757346",
+            "bytesAllocated": 336061
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4462824.215959822,
+            "unit": "ns",
+            "range": "± 101734.70340136302",
+            "bytesAllocated": 1536638
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2395616.2005208335,
+            "unit": "ns",
+            "range": "± 22115.600260737687",
+            "bytesAllocated": 1200646
           }
         ]
       }
