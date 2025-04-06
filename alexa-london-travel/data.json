@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1743945999086,
+  "lastUpdated": 1743954309200,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -10915,6 +10915,65 @@
             "unit": "ns",
             "range": "± 1820.2814419647098",
             "bytesAllocated": 52779
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "fa108cb759515ca04abb4b86b6489e20c2374b81",
+          "message": "Move .NET to D drive on Windows runner\n\nSpeed up Windows builds by moving .NET from the C drive to the D drive.\r\n\r\nSee https://chadgolden.com/blog/github-actions-hosted-windows-runners-slower-than-expected-ci-and-you.",
+          "timestamp": "2025-04-06T15:41:20Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/fa108cb759515ca04abb4b86b6489e20c2374b81"
+        },
+        "date": 1743954309200,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 119161.01231166294,
+            "unit": "ns",
+            "range": "± 1102.0596263914413",
+            "bytesAllocated": 36754
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 141375.00624302455,
+            "unit": "ns",
+            "range": "± 789.6754696076943",
+            "bytesAllocated": 65301
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 132540.26206752233,
+            "unit": "ns",
+            "range": "± 1504.9936030667157",
+            "bytesAllocated": 57941
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 132803.71142578125,
+            "unit": "ns",
+            "range": "± 1444.7762867464442",
+            "bytesAllocated": 52066
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 116732.30068359376,
+            "unit": "ns",
+            "range": "± 1054.2518482943385",
+            "bytesAllocated": 36771
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 134673.15833333333,
+            "unit": "ns",
+            "range": "± 1540.1482371203183",
+            "bytesAllocated": 52811
           }
         ]
       }
