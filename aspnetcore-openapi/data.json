@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1743948375401,
+  "lastUpdated": 1744147561067,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -6830,6 +6830,44 @@
             "unit": "ns",
             "range": "± 47931.040327232935",
             "bytesAllocated": 1214403
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "da43670f9f165b4bfbb52e4b434141a8e0845cd6",
+          "message": "Revert test refactor\n\nRevert change to use `[InlineData]` now that none of the tests are skipped.",
+          "timestamp": "2025-04-08T21:22:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/da43670f9f165b4bfbb52e4b434141a8e0845cd6"
+        },
+        "date": 1744147561067,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1537504.8872596154,
+            "unit": "ns",
+            "range": "± 61191.02281847765",
+            "bytesAllocated": 499296
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4508403.10078125,
+            "unit": "ns",
+            "range": "± 103811.21209405796",
+            "bytesAllocated": 1535503
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2362645.2542410716,
+            "unit": "ns",
+            "range": "± 66212.47387542608",
+            "bytesAllocated": 1214356
           }
         ]
       }
