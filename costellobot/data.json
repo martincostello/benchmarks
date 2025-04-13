@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1744466689030,
+  "lastUpdated": 1744538015541,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -20120,6 +20120,44 @@
             "unit": "ns",
             "range": "± 1597.2513791546207",
             "bytesAllocated": 50203
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "490aa5264f5bb6533f0948879fd1bf65af31b61e",
+          "message": "Avoid MessageSizeExceeded errors\n\nAvoid `MessageSizeExceeded` errors publishing to Azure Service Bus by skipping publish if the compressed payload is too large and swallowing the exception if it still happens.",
+          "timestamp": "2025-04-13T09:50:24Z",
+          "url": "https://github.com/martincostello/costellobot/commit/490aa5264f5bb6533f0948879fd1bf65af31b61e"
+        },
+        "date": 1744538015541,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 553678.0248697917,
+            "unit": "ns",
+            "range": "± 3423.5805484355587",
+            "bytesAllocated": 46640
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 243382.9359654018,
+            "unit": "ns",
+            "range": "± 2364.302046182439",
+            "bytesAllocated": 21508
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 319727.4814453125,
+            "unit": "ns",
+            "range": "± 684.6201473022544",
+            "bytesAllocated": 50193
           }
         ]
       }
