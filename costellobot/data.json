@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1744318311110,
+  "lastUpdated": 1744725188889,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -19968,6 +19968,44 @@
             "unit": "ns",
             "range": "± 1027.6738745535367",
             "bytesAllocated": 50098
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "3900074328cd6bc2da43e5f94ffa69eedcb43869",
+          "message": "Update .NET SDK to 10.0.100-preview.4.25214.32 (#2218)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.100-preview.4.25214.32.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.100-preview.4.25214.32\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 10.0.100-preview.4.25214.32 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 10.0.0-preview.4.25208.1 to 10.0.0-preview.4.25214.103.\nBumps Microsoft.AspNetCore.Mvc.Testing from 10.0.0-preview.4.25208.1 to 10.0.0-preview.4.25214.103.\nBumps Microsoft.Extensions.Configuration.UserSecrets from 10.0.0-preview.4.25208.11 to 10.0.0-preview.4.25215.1.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-version: 10.0.0-preview.4.25214.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-version: 10.0.0-preview.4.25214.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Configuration.UserSecrets\n  dependency-version: 10.0.0-preview.4.25215.1\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Disable HTTP resilience\n\nWorkaround dotnet/extensions#6297.\n\n* Fix IDE0055\n\nmacOS and Linux didn't like the previous formatting.\n\n* Fix IDE0055\n\nMore Linux and macOS formatting fixes.\n\n* Bump MartinCostello.BuildKit\n\nBump MartinCostello.BuildKit to 0.6.2 to fix container publishing.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>",
+          "timestamp": "2025-04-15T13:49:56Z",
+          "url": "https://github.com/martincostello/costellobot/commit/3900074328cd6bc2da43e5f94ffa69eedcb43869"
+        },
+        "date": 1744725188889,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 549319.9963942308,
+            "unit": "ns",
+            "range": "± 4032.5846255794777",
+            "bytesAllocated": 43059
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 243977.61642020088,
+            "unit": "ns",
+            "range": "± 1594.8749597402061",
+            "bytesAllocated": 21788
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 316317.7486328125,
+            "unit": "ns",
+            "range": "± 1035.768625493369",
+            "bytesAllocated": 50088
           }
         ]
       }
