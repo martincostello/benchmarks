@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1746451679525,
+  "lastUpdated": 1746453404967,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -21982,6 +21982,44 @@
             "unit": "ns",
             "range": "± 1262.5629792209625",
             "bytesAllocated": 50411
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "f336ebd6a727658b09e8e4bb16028552bb4f37c7",
+          "message": "Handle missing installation ID\n\nFall back to the payload headers for the installation ID if it is not present in the body (e.g. for `ping`).",
+          "timestamp": "2025-05-05T13:53:27Z",
+          "url": "https://github.com/martincostello/costellobot/commit/f336ebd6a727658b09e8e4bb16028552bb4f37c7"
+        },
+        "date": 1746453404967,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 552690.4917689732,
+            "unit": "ns",
+            "range": "± 3116.2966326176784",
+            "bytesAllocated": 46641
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 243502.53470052083,
+            "unit": "ns",
+            "range": "± 1526.0645964376945",
+            "bytesAllocated": 21508
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 321874.80572916666,
+            "unit": "ns",
+            "range": "± 1133.636502806712",
+            "bytesAllocated": 50413
           }
         ]
       }
