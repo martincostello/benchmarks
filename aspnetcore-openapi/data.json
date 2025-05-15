@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1747165641390,
+  "lastUpdated": 1747330927581,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -7172,6 +7172,44 @@
             "unit": "ns",
             "range": "± 28071.80382958407",
             "bytesAllocated": 1222790
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d325e2ab0dbab665acdfe830adc2037e6affbdaf",
+          "message": "Update .NET SDK to 10.0.100-preview.4.25258.110 (#304)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.100-preview.4.25258.110.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.100-preview.4.25258.110\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 10.0.100-preview.4.25258.110 SDK.\n\nBumps Microsoft.AspNetCore.Mvc.Testing from 10.0.0-preview.3.25172.1 to 10.0.0-preview.4.25258.110.\nBumps Microsoft.AspNetCore.OpenApi from 10.0.0-preview.3.25172.1 to 10.0.0-preview.4.25258.110.\nBumps Microsoft.EntityFrameworkCore.Sqlite from 10.0.0-preview.3.25171.6 to 10.0.0-preview.4.25258.110.\nBumps Microsoft.Extensions.ApiDescription.Server from 10.0.0-preview.3.25172.1 to 10.0.0-preview.4.25258.110.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-version: 10.0.0-preview.4.25258.110\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-version: 10.0.0-preview.4.25258.110\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.EntityFrameworkCore.Sqlite\n  dependency-version: 10.0.0-preview.4.25258.110\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-version: 10.0.0-preview.4.25258.110\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Fix build\n\nUpdate Swashbuckle.AspNetCore and Microsoft.OpenApi for .NET 10 preview 4.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>",
+          "timestamp": "2025-05-15T17:38:17Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/d325e2ab0dbab665acdfe830adc2037e6affbdaf"
+        },
+        "date": 1747330927581,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1462615.6822544644,
+            "unit": "ns",
+            "range": "± 70531.4527853461",
+            "bytesAllocated": 506078
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4346167.845535714,
+            "unit": "ns",
+            "range": "± 141486.14862613424",
+            "bytesAllocated": 1555326
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2270473.9275568184,
+            "unit": "ns",
+            "range": "± 44985.80439975958",
+            "bytesAllocated": 1218241
           }
         ]
       }
