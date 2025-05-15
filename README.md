@@ -3,7 +3,7 @@
 Repository for storing benchmark results from my repositories using [BenchmarkDotNet][benchmarkdotnet]
 and [martincostello/benchmarkdotnet-results-publisher][benchmarkdotnet-results-publisher].
 
-A site for visualising the continuous benchmark results can be found [here][site].
+A site for visualising the continuous benchmark results can be found at [benchmarks.martincostello.com][site].
 
 ## How It Works
 
