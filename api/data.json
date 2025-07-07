@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1751898409225,
+  "lastUpdated": 1751900722596,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -26641,6 +26641,58 @@
             "unit": "ns",
             "range": "± 1649.1975869840333",
             "bytesAllocated": 25334
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "3b34023098997a2472f27d814b713461f6ac5934",
+          "message": "Set User-Agent\n\nSet custom User-Agent for gRPC calls.\n\nUnfortunately setting them on `HttpClient` doesn't seem to work - they need to be specified per-call.",
+          "timestamp": "2025-07-07T15:01:01Z",
+          "url": "https://github.com/martincostello/api/commit/3b34023098997a2472f27d814b713461f6ac5934"
+        },
+        "date": 1751900722596,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 303939.0380078125,
+            "unit": "ns",
+            "range": "± 4512.190505404844",
+            "bytesAllocated": 30461
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 233811.19248046874,
+            "unit": "ns",
+            "range": "± 3922.5686956664094",
+            "bytesAllocated": 15552
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 247439.0255859375,
+            "unit": "ns",
+            "range": "± 6900.336642026109",
+            "bytesAllocated": 13926
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 207457.11785567435,
+            "unit": "ns",
+            "range": "± 1871.1864979645152",
+            "bytesAllocated": 10967
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 233221.67881944444,
+            "unit": "ns",
+            "range": "± 3458.957290428739",
+            "bytesAllocated": 25333
           }
         ]
       }
