@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1752418357041,
+  "lastUpdated": 1752420946418,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -27834,6 +27834,44 @@
             "unit": "ns",
             "range": "± 6592.914965445208",
             "bytesAllocated": 50318
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a1ac372c1856bb94ec9b702e27a7d27da40ed338",
+          "message": "Remove Dockerfile (#2483)\n\n- Instead of using a Dockerfile for OATS, build the application container separately using the .NET SDK, then consume it from the local Docker registry.\n- Do not persist Git credentials",
+          "timestamp": "2025-07-13T15:31:30Z",
+          "url": "https://github.com/martincostello/costellobot/commit/a1ac372c1856bb94ec9b702e27a7d27da40ed338"
+        },
+        "date": 1752420946418,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 560098.2253803454,
+            "unit": "ns",
+            "range": "± 14384.100636194184",
+            "bytesAllocated": 46632
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 246932.50385346284,
+            "unit": "ns",
+            "range": "± 6604.596256456367",
+            "bytesAllocated": 21504
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 323210.0068063447,
+            "unit": "ns",
+            "range": "± 6565.377430661342",
+            "bytesAllocated": 50291
           }
         ]
       }
