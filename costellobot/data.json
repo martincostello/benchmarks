@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1752513030339,
+  "lastUpdated": 1752514032707,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -28328,6 +28328,44 @@
             "unit": "ns",
             "range": "± 8167.399353465414",
             "bytesAllocated": 50526
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "c8515fa08cc5f5e9017b94fccf8befb509c9fb76",
+          "message": "Fix HTTP 500 if no delivery ID\n\nIf `X-GitHub-Delivery` is not specified, do not set the message ID to avoid an `ArgumentException` being thrown causing an HTTP 500 error.",
+          "timestamp": "2025-07-14T17:23:03Z",
+          "url": "https://github.com/martincostello/costellobot/commit/c8515fa08cc5f5e9017b94fccf8befb509c9fb76"
+        },
+        "date": 1752514032707,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 566428.887957317,
+            "unit": "ns",
+            "range": "± 13738.811853706486",
+            "bytesAllocated": 46637
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 244885.26607369087,
+            "unit": "ns",
+            "range": "± 2687.503049272514",
+            "bytesAllocated": 21504
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 326053.11551339284,
+            "unit": "ns",
+            "range": "± 6926.7102913959425",
+            "bytesAllocated": 50525
           }
         ]
       }
