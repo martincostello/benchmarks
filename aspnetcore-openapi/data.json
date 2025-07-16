@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1752595841509,
+  "lastUpdated": 1752656992237,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -7970,6 +7970,44 @@
             "unit": "ns",
             "range": "± 85785.16926772821",
             "bytesAllocated": 1194762
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "d46a6ae530dfe28dfb7f16038d76705acb62a34e",
+          "message": "Use UseKestrel() with WebApplicationFactory<T>\n\nUse the new `UseKestrel()` method for `WebApplicationFactory<T>` to remove the customisation needed to host the application on an HTTP port.",
+          "timestamp": "2025-07-16T09:05:06Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/d46a6ae530dfe28dfb7f16038d76705acb62a34e"
+        },
+        "date": 1752656992237,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1525589.5346111918,
+            "unit": "ns",
+            "range": "± 136939.99741776654",
+            "bytesAllocated": 494728
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4393061.130434782,
+            "unit": "ns",
+            "range": "± 211451.6906399688",
+            "bytesAllocated": 1528989
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2298443.167471591,
+            "unit": "ns",
+            "range": "± 93936.76538340721",
+            "bytesAllocated": 1194716
           }
         ]
       }
