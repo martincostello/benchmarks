@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1752726019212,
+  "lastUpdated": 1752750885881,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -28783,6 +28783,44 @@
             "value": 333532.09693818935,
             "unit": "ns",
             "range": "± 7962.600594106892",
+            "bytesAllocated": 50837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bcbfa2681a5bf1424029fa104c059d097148c025",
+          "message": "Add health checks (#2512)\n\n- Enable ServiceBus queue health check by default.\n- Disable ServiceBus and table check checks locally with Aspire as they always report unhealthy.\n- Disable Aspire health checks in tests as they always try to connect to real endpoints.\n- Add health check authentication.\n- Introduce authorization policies for admin and health checks.\n- Require users to have a name claim regardless of whether any explicit administrator names or roles are configured.",
+          "timestamp": "2025-07-17T11:10:52Z",
+          "url": "https://github.com/martincostello/costellobot/commit/bcbfa2681a5bf1424029fa104c059d097148c025"
+        },
+        "date": 1752750885881,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 568862.0413574219,
+            "unit": "ns",
+            "range": "± 20063.030444875614",
+            "bytesAllocated": 47349
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 245465.76967486212,
+            "unit": "ns",
+            "range": "± 1628.2830375686024",
+            "bytesAllocated": 21502
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 325995.34737273183,
+            "unit": "ns",
+            "range": "± 3002.8632568108496",
             "bytesAllocated": 50837
           }
         ]
