@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1752863488725,
+  "lastUpdated": 1752869536966,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -29164,6 +29164,44 @@
             "unit": "ns",
             "range": "± 9342.50205017885",
             "bytesAllocated": 50837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c0b5ef7c2e2404269b551d6f7420a12ccbf908a3",
+          "message": "Reuse ServiceBusSender (#2525)\n\n- Create a single `ServiceBusSender` in `` and re-use for all message publishing, rather than create a new one per publish.\n- Remove leak detection code.",
+          "timestamp": "2025-07-18T20:08:06Z",
+          "url": "https://github.com/martincostello/costellobot/commit/c0b5ef7c2e2404269b551d6f7420a12ccbf908a3"
+        },
+        "date": 1752869536966,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 576621.5356841217,
+            "unit": "ns",
+            "range": "± 18807.857234911928",
+            "bytesAllocated": 47349
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 253750.97651367186,
+            "unit": "ns",
+            "range": "± 6359.913664286182",
+            "bytesAllocated": 21640
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 334292.0646484375,
+            "unit": "ns",
+            "range": "± 6187.072367947847",
+            "bytesAllocated": 50749
           }
         ]
       }
