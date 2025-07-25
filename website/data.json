@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1752778031713,
+  "lastUpdated": 1753452772081,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -13598,6 +13598,58 @@
             "unit": "ns",
             "range": "± 8280.351935409002",
             "bytesAllocated": 19625
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "8741f8cb2566621448e6181f0443c752bee3d756",
+          "message": "Use UseKestrel() with WebApplicationFactory<T>\n\nUse the new `UseKestrel()` method for `WebApplicationFactory<T>` to remove the customisation needed to host the application on an HTTP port.",
+          "timestamp": "2025-07-25T14:08:02Z",
+          "url": "https://github.com/martincostello/website/commit/8741f8cb2566621448e6181f0443c752bee3d756"
+        },
+        "date": 1753452772081,
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 313335.0993652344,
+            "unit": "ns",
+            "range": "± 8435.072578766942",
+            "bytesAllocated": 42588
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 313410.82232862903,
+            "unit": "ns",
+            "range": "± 3814.430338095113",
+            "bytesAllocated": 43526
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 398902.47802734375,
+            "unit": "ns",
+            "range": "± 8511.304201853383",
+            "bytesAllocated": 62456
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 355504.2352570564,
+            "unit": "ns",
+            "range": "± 8876.675117679815",
+            "bytesAllocated": 52255
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 226440.61805555556,
+            "unit": "ns",
+            "range": "± 8041.7106957124215",
+            "bytesAllocated": 19624
           }
         ]
       }
