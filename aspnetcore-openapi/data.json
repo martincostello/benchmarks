@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1753419489106,
+  "lastUpdated": 1753530468499,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -11432,6 +11432,44 @@
             "unit": "ns",
             "range": "± 70743.55048301656",
             "bytesAllocated": 1200215
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "035a555db9d1f998b4d7a4a7ba09928aaea07cd7",
+          "message": "Fail benchmarks if any errors (#384)\n\nFail the benchmarks if any errors are encountered during execution.",
+          "timestamp": "2025-07-26T11:43:47Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/035a555db9d1f998b4d7a4a7ba09928aaea07cd7"
+        },
+        "date": 1753530468499,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1048944.4510690789,
+            "unit": "ns",
+            "range": "± 35217.50379406298",
+            "bytesAllocated": 336828
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4533104.523295455,
+            "unit": "ns",
+            "range": "± 91444.94959085765",
+            "bytesAllocated": 1536196
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2379025.3971656975,
+            "unit": "ns",
+            "range": "± 57032.41477458635",
+            "bytesAllocated": 1200357
           }
         ]
       }
