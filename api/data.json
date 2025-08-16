@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1755344333393,
+  "lastUpdated": 1755347469847,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -16189,6 +16189,58 @@
             "unit": "ns",
             "range": "± 9644.877775208233",
             "bytesAllocated": 25870
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "117146cf5142ccb03bb0c4ef07afea45f5088c37",
+          "message": "Remove request validation\r\n\r\nDoesn't add any functional changes but increases memory allocations in the benchmarks by 1KB.",
+          "timestamp": "2025-08-16T12:25:43Z",
+          "url": "https://github.com/martincostello/api/commit/117146cf5142ccb03bb0c4ef07afea45f5088c37"
+        },
+        "date": 1755347469847,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 287280.1553955078,
+            "unit": "ns",
+            "range": "± 7754.850751486472",
+            "bytesAllocated": 30686
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221329.44321469907,
+            "unit": "ns",
+            "range": "± 9276.586676077945",
+            "bytesAllocated": 15840
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 235597.638671875,
+            "unit": "ns",
+            "range": "± 9116.090720515813",
+            "bytesAllocated": 14145
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 196534.90906943043,
+            "unit": "ns",
+            "range": "± 2113.9346977639443",
+            "bytesAllocated": 11127
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 221026.68025996766,
+            "unit": "ns",
+            "range": "± 7525.1403978707785",
+            "bytesAllocated": 25875
           }
         ]
       }
