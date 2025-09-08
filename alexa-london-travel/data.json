@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1757307466529,
+  "lastUpdated": 1757344932904,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -23266,6 +23266,86 @@
             "unit": "ns",
             "range": "± 1149.2487565264955",
             "bytesAllocated": 52753
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "474ca0aeaeedd86a3ab8025939cfe086c32eb499",
+          "message": "Skip failing tests\n\nSkip failing end-to-end tests. The model appears to no longer be recognising the utterances, which causes the skill to not be invoked. Appears to have started some time on Friday 5th September.\n\nAlso add comment to avoid logging the responses.",
+          "timestamp": "2025-09-08T15:15:05Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/474ca0aeaeedd86a3ab8025939cfe086c32eb499"
+        },
+        "date": 1757344932904,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 120868.54474748884,
+            "unit": "ns",
+            "range": "± 3315.3614895582373",
+            "bytesAllocated": 36902
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 477665.01025390625,
+            "unit": "ns",
+            "range": "± 4841.986118190531",
+            "bytesAllocated": 82306
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 332459.1034679878,
+            "unit": "ns",
+            "range": "± 8768.347190647477",
+            "bytesAllocated": 72253
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 148972.88703264509,
+            "unit": "ns",
+            "range": "± 2739.9470950762693",
+            "bytesAllocated": 63871
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 131893.85865885418,
+            "unit": "ns",
+            "range": "± 2842.2395027850957",
+            "bytesAllocated": 57699
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 132988.57123674665,
+            "unit": "ns",
+            "range": "± 2539.6097708495704",
+            "bytesAllocated": 52037
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 334046.4401469983,
+            "unit": "ns",
+            "range": "± 11026.00796105988",
+            "bytesAllocated": 71679
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 119231.60770300662,
+            "unit": "ns",
+            "range": "± 2561.090397022326",
+            "bytesAllocated": 36942
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 137201.6586126512,
+            "unit": "ns",
+            "range": "± 1167.4769926890413",
+            "bytesAllocated": 52725
           }
         ]
       }
