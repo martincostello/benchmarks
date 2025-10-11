@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1760118129158,
+  "lastUpdated": 1760206640255,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -27586,6 +27586,86 @@
             "unit": "ns",
             "range": "± 609.5898306493278",
             "bytesAllocated": 52392
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "13067f4e3181fb94f939ca612f09f67a1c972856",
+          "message": "Remove metrics (#2026)\n\nRemove metrics as it is the cause of the performance regression originally identified from #1870 that there was an attempted fix for in #1873 that didn't actually work.",
+          "timestamp": "2025-10-11T18:10:18Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/13067f4e3181fb94f939ca612f09f67a1c972856"
+        },
+        "date": 1760206640255,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 112864.88228665866,
+            "unit": "ns",
+            "range": "± 574.78006189802",
+            "bytesAllocated": 36480
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 463282.26611328125,
+            "unit": "ns",
+            "range": "± 6398.185008396822",
+            "bytesAllocated": 81683
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 317609.5391927083,
+            "unit": "ns",
+            "range": "± 1744.0495520828624",
+            "bytesAllocated": 71614
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 134196.95522836538,
+            "unit": "ns",
+            "range": "± 626.5775313199775",
+            "bytesAllocated": 63555
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 122147.57139369419,
+            "unit": "ns",
+            "range": "± 433.8950553063096",
+            "bytesAllocated": 57320
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 124209.33541165866,
+            "unit": "ns",
+            "range": "± 550.1280773053536",
+            "bytesAllocated": 51778
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 326972.8684895833,
+            "unit": "ns",
+            "range": "± 2030.0502231413484",
+            "bytesAllocated": 71066
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 111654.46732584636,
+            "unit": "ns",
+            "range": "± 432.7548159801404",
+            "bytesAllocated": 36493
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 125365.10042317708,
+            "unit": "ns",
+            "range": "± 988.4746628156186",
+            "bytesAllocated": 52400
           }
         ]
       }
