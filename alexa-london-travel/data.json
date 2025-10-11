@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1760206640255,
+  "lastUpdated": 1760207308926,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -27666,6 +27666,86 @@
             "unit": "ns",
             "range": "± 988.4746628156186",
             "bytesAllocated": 52400
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "c367cfc827ba1777250edbfaa4770fce1e6479bf",
+          "message": "Avoid GetRequiredService call\n\nLeverage the fact that `TracerProvider` is a singleton, and only look it up in the `ServiceProvider` once.",
+          "timestamp": "2025-10-11T18:22:08Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/c367cfc827ba1777250edbfaa4770fce1e6479bf"
+        },
+        "date": 1760207308926,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 108568.03681640625,
+            "unit": "ns",
+            "range": "± 531.6561983381038",
+            "bytesAllocated": 36429
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 452005.8914866728,
+            "unit": "ns",
+            "range": "± 3725.5508122769916",
+            "bytesAllocated": 81712
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 306647.2385253906,
+            "unit": "ns",
+            "range": "± 655.2826981390584",
+            "bytesAllocated": 71591
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 127732.5916015625,
+            "unit": "ns",
+            "range": "± 796.7378537562275",
+            "bytesAllocated": 63517
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 121372.35452706473,
+            "unit": "ns",
+            "range": "± 724.3979824082974",
+            "bytesAllocated": 57297
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 118077.32893880208,
+            "unit": "ns",
+            "range": "± 921.2203981924039",
+            "bytesAllocated": 51743
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 315615.5314002404,
+            "unit": "ns",
+            "range": "± 1348.5745245033204",
+            "bytesAllocated": 70997
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 108042.55608723959,
+            "unit": "ns",
+            "range": "± 600.9096811634317",
+            "bytesAllocated": 36464
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 120131.09709821429,
+            "unit": "ns",
+            "range": "± 527.2026254149479",
+            "bytesAllocated": 52382
           }
         ]
       }
