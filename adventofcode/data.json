@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1764630075909,
+  "lastUpdated": 1764684012684,
   "repoUrl": "https://github.com/martincostello/adventofcode",
   "entries": {
     "Advent of Code": [
@@ -86846,6 +86846,135 @@
             "value": 37341850.928571425,
             "unit": "ns",
             "range": "± 584933.2102193645",
+            "bytesAllocated": 30104656
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0acf2009c7cf7fdde7f74ef7de5925e5a84e885f",
+          "message": "Solve day 2 for 2025 (#2701)\n\n* Solve day 2 part 1\n\nSolve part 1 of the puzzle for day 2 of 2025.\n\n* Solve day 2 part 2\n\nSolve part 2 of the puzzle for day 2 of 2025.\n\n* Fix typo\n\nFix typo in comment.\n\n* Make Digits() use bytes\n\nUse the smallest data type for a single digit number.\n\n* Optimize Math.Digits()\n\nReturn `byte[]` (or `ROS<byte>`) and avoid use of intermediate list.\n\n* Remove casts\n\nUse signed values instead of unsigned.\n\n* Add generic Digits<T>()\n\nAdd a variant of `Digits<T>()` for any `IBinaryInteger<T>`. Previous overloads retained for performance to avoid virtual dispatch.\n\n* Simplify code\n\nUse `Bifurcate()` to avoid manual iteration.\n\n* Refactor FromDigits()\n\n- Re-use input parameter instead of temporary variable.\n- Use `T.DivRem()`.",
+          "timestamp": "2025-12-02T13:56:43Z",
+          "url": "https://github.com/martincostello/adventofcode/commit/0acf2009c7cf7fdde7f74ef7de5925e5a84e885f"
+        },
+        "date": 1764684012684,
+        "benches": [
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-01)",
+            "value": 126470.69295247395,
+            "unit": "ns",
+            "range": "± 638.9466060654642",
+            "bytesAllocated": 37521
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-02)",
+            "value": 68731.27909342448,
+            "unit": "ns",
+            "range": "± 841.4781863651316",
+            "bytesAllocated": 22249
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-03)",
+            "value": 523228.5361328125,
+            "unit": "ns",
+            "range": "± 5992.886788497405",
+            "bytesAllocated": 1075361
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-04)",
+            "value": 2491542.2591145835,
+            "unit": "ns",
+            "range": "± 4510.737815644418",
+            "bytesAllocated": 2894107
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-06)",
+            "value": 145538.8927408854,
+            "unit": "ns",
+            "range": "± 382.39966810401495",
+            "bytesAllocated": 33209
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-07)",
+            "value": 2842877.4375,
+            "unit": "ns",
+            "range": "± 4572.046761135957",
+            "bytesAllocated": 4678291
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-08)",
+            "value": 96195.64632161458,
+            "unit": "ns",
+            "range": "± 654.9580616575231",
+            "bytesAllocated": 118241
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-09)",
+            "value": 167808.52465820312,
+            "unit": "ns",
+            "range": "± 407.6879384658955",
+            "bytesAllocated": 206689
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-10)",
+            "value": 129532.47314453125,
+            "unit": "ns",
+            "range": "± 773.0112841127659",
+            "bytesAllocated": 211351
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-13)",
+            "value": 12551344.057291666,
+            "unit": "ns",
+            "range": "± 68330.75769435248",
+            "bytesAllocated": 12094111
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-16)",
+            "value": 4903.186632792155,
+            "unit": "ns",
+            "range": "± 7.148960886232831",
+            "bytesAllocated": 7432
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-17)",
+            "value": 80932920.23809524,
+            "unit": "ns",
+            "range": "± 597463.6034946035",
+            "bytesAllocated": 104153088
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-20)",
+            "value": 4871461.450520833,
+            "unit": "ns",
+            "range": "± 1451.8203098794797",
+            "bytesAllocated": 5144170
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-21)",
+            "value": 16231.622141520182,
+            "unit": "ns",
+            "range": "± 74.21804615355418",
+            "bytesAllocated": 29720
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-22)",
+            "value": 1834443.02734375,
+            "unit": "ns",
+            "range": "± 2648.438319387664",
+            "bytesAllocated": 516742
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-24)",
+            "value": 37388424.35714286,
+            "unit": "ns",
+            "range": "± 83116.55973209458",
             "bytesAllocated": 30104656
           }
         ]
