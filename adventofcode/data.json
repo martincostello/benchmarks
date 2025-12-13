@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1765577025088,
+  "lastUpdated": 1765652637560,
   "repoUrl": "https://github.com/martincostello/adventofcode",
   "entries": {
     "Advent of Code": [
@@ -91104,6 +91104,135 @@
             "unit": "ns",
             "range": "± 88414.69892468587",
             "bytesAllocated": 30946124
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "cf755e3a7641ee83e6c1587f688d215c63557e58",
+          "message": "Solve day 12 for 2025 (#2737)\n\n* Solve day 12 for 2025\n\nSolve the puzzle for day 12 of 2025.\n\n* Fix algorithm\n\n- Fix early termination.\n- Exit early if the shape is too big to fit.\n\n* Honour cancellation\n\nCheck cancellation token in loops.\n\n* More fixes\n\n- Observe cancellation in more places.\n- Sort shapes largest to smallest to exhaust selection faster.\n\n* Remove redundant check\n\nWill always be false.\n\n* Fix use timeout\n\nUse test timeout, rather than xunit cancellation timeout.\n\n* Fix comparison\n\nDon't assume Capacity won't change.\n\n* Fix sorting\n\nSort in the queue, not globally, otherwise the index references are broken.\n\n* Normalize shapes\n\nNormalize shapes back to the origin after flip/rotate.\n\n* Apply optimizations\n\n- Exit early if not enough space for next shape.\n- Check that the shape fixes in the bounds.\n- Make hashing more efficient.",
+          "timestamp": "2025-12-13T19:00:30Z",
+          "url": "https://github.com/martincostello/adventofcode/commit/cf755e3a7641ee83e6c1587f688d215c63557e58"
+        },
+        "date": 1765652637560,
+        "benches": [
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-01)",
+            "value": 119599.12813313802,
+            "unit": "ns",
+            "range": "± 729.1546713764737",
+            "bytesAllocated": 37527
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-02)",
+            "value": 67991.67492675781,
+            "unit": "ns",
+            "range": "± 280.36717186244607",
+            "bytesAllocated": 22249
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-03)",
+            "value": 506341.7415364583,
+            "unit": "ns",
+            "range": "± 5159.95276470746",
+            "bytesAllocated": 1075361
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-04)",
+            "value": 2389371.078125,
+            "unit": "ns",
+            "range": "± 5348.816820279729",
+            "bytesAllocated": 2894107
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-06)",
+            "value": 146354.88411458334,
+            "unit": "ns",
+            "range": "± 283.5048202781359",
+            "bytesAllocated": 33209
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-07)",
+            "value": 2733297.1731770835,
+            "unit": "ns",
+            "range": "± 8737.04427617591",
+            "bytesAllocated": 4678291
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-08)",
+            "value": 104744.79797363281,
+            "unit": "ns",
+            "range": "± 567.9115377098615",
+            "bytesAllocated": 118241
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-09)",
+            "value": 162578.53255208334,
+            "unit": "ns",
+            "range": "± 184.45585622697513",
+            "bytesAllocated": 206689
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-10)",
+            "value": 81186.62223307292,
+            "unit": "ns",
+            "range": "± 817.2449842788518",
+            "bytesAllocated": 211351
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-13)",
+            "value": 14615651.229166666,
+            "unit": "ns",
+            "range": "± 80911.76880039624",
+            "bytesAllocated": 12734025
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-16)",
+            "value": 4742.289306640625,
+            "unit": "ns",
+            "range": "± 44.20376870529236",
+            "bytesAllocated": 7432
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-17)",
+            "value": 77639412.9047619,
+            "unit": "ns",
+            "range": "± 169983.07673162894",
+            "bytesAllocated": 104153088
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-20)",
+            "value": 4471159.348958333,
+            "unit": "ns",
+            "range": "± 6637.548522584884",
+            "bytesAllocated": 5144170
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-21)",
+            "value": 15421.028523763021,
+            "unit": "ns",
+            "range": "± 97.45031408922566",
+            "bytesAllocated": 29721
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-22)",
+            "value": 1851860.6953125,
+            "unit": "ns",
+            "range": "± 11542.603108733383",
+            "bytesAllocated": 516742
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-24)",
+            "value": 36624262.28571429,
+            "unit": "ns",
+            "range": "± 263597.58108119684",
+            "bytesAllocated": 30946128
           }
         ]
       }
