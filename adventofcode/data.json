@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1765714516058,
+  "lastUpdated": 1765727256841,
   "repoUrl": "https://github.com/martincostello/adventofcode",
   "entries": {
     "Advent of Code": [
@@ -91362,6 +91362,135 @@
             "unit": "ns",
             "range": "± 306806.4166428024",
             "bytesAllocated": 30946128
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "Copilot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "5f8c625fa63d6886b1330bf6333ee619b9a6a4ac",
+          "message": "Migrate puzzles to use Puzzle<T1, T2> (#2717)\n\n* Initial plan\n\n* Initial test: Migrate Y2015/Day01 to Puzzle<int, int>\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Migrate all puzzles to use Puzzle<T1, T2>\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix Y2018/Day03 migration to use Solution properties\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Refactor to reduce repetition\n\nApply `Puzzle<T>`/`Puzzle<T1, T2>` to more puzzles and add helper methods to remove duplication.\n\n* Remove redundant usings\n\nRemove redundant using statements from tests.\n\n* Migrate more puzzles to new format\n\nMigrate days 1-7 of 2015 to use the new infrastructure.\n\n* Complete conversion for 2015\n\nFinish converting the 2015 puzzles to the new design.\n\n* Refactor 2016\n\nRefactor all of the 2016 puzzles to use the new design.\n\n* Refactor 2017\n\nRefactor 2017 puzzles to the new design.\n\n* Refactor 2018\n\nRefactor 2018 puzzles to the new design.\n\n* Refactor 2019\n\nRefactor 2019 puzzles to the new design.\n\n* Refactor 2020\n\nRefactor 2020 puzzles to the new design.\n\n* Fix result\n\nFix swapped values.\n\n* Refactor 2025\n\nRefactor solved 2025 puzzles to the new design.\n\n* Rename locals\n\nMake locals match the original property names.\n\n* Fix IDE0055 warning\n\nRemove redundant whitespace.\n\n* Fix visualizations\n\nFix local variables not being captured for output.\n\n* Refactor 2021\n\nRefactor solved 2021 puzzles to the new design.\n\n* Complete refactoring\n\nComplete refactoring the puzzles to the new design.\n\n* Fix puzzle\n\nFix usage of uninitialized properties.\n\n* Fix review comments\n\nFix Copilot comments.\n\n---------\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>",
+          "timestamp": "2025-12-14T15:43:58Z",
+          "url": "https://github.com/martincostello/adventofcode/commit/5f8c625fa63d6886b1330bf6333ee619b9a6a4ac"
+        },
+        "date": 1765727256841,
+        "benches": [
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-01)",
+            "value": 124128.50073242188,
+            "unit": "ns",
+            "range": "± 408.49208434061285",
+            "bytesAllocated": 37593
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-02)",
+            "value": 69498.63521321614,
+            "unit": "ns",
+            "range": "± 487.1356773803271",
+            "bytesAllocated": 22321
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-03)",
+            "value": 518783.1412760417,
+            "unit": "ns",
+            "range": "± 9962.543655052521",
+            "bytesAllocated": 1075433
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-04)",
+            "value": 2469568.0247395835,
+            "unit": "ns",
+            "range": "± 4768.366620751177",
+            "bytesAllocated": 2894179
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-06)",
+            "value": 148345.88822428384,
+            "unit": "ns",
+            "range": "± 198.71945351320497",
+            "bytesAllocated": 33281
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-07)",
+            "value": 2828599.1979166665,
+            "unit": "ns",
+            "range": "± 6542.448445684062",
+            "bytesAllocated": 4678363
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-08)",
+            "value": 106739.8163248698,
+            "unit": "ns",
+            "range": "± 495.146413666073",
+            "bytesAllocated": 118449
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-09)",
+            "value": 169804.10994466147,
+            "unit": "ns",
+            "range": "± 876.3623476302056",
+            "bytesAllocated": 206761
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-10)",
+            "value": 91631.37841796875,
+            "unit": "ns",
+            "range": "± 3319.6209150087307",
+            "bytesAllocated": 211423
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-13)",
+            "value": 14715600.96875,
+            "unit": "ns",
+            "range": "± 73338.16934514868",
+            "bytesAllocated": 12734025
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-16)",
+            "value": 4876.9648030598955,
+            "unit": "ns",
+            "range": "± 40.2411805827281",
+            "bytesAllocated": 7432
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-17)",
+            "value": 80988932.8095238,
+            "unit": "ns",
+            "range": "± 582777.0389153186",
+            "bytesAllocated": 104153088
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-20)",
+            "value": 4551368.4609375,
+            "unit": "ns",
+            "range": "± 2704.7168544067986",
+            "bytesAllocated": 5144242
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-21)",
+            "value": 16383.633392333984,
+            "unit": "ns",
+            "range": "± 133.27767807382386",
+            "bytesAllocated": 29816
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-22)",
+            "value": 1878190.078125,
+            "unit": "ns",
+            "range": "± 15429.997909742055",
+            "bytesAllocated": 512641
+          },
+          {
+            "name": "MartinCostello.AdventOfCode.Benchmarks.PuzzleBenchmarks.Solve2016(input: Y2016-24)",
+            "value": 37524103.21428571,
+            "unit": "ns",
+            "range": "± 171291.76341839787",
+            "bytesAllocated": 30946272
           }
         ]
       }
