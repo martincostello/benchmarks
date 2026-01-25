@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1769195905155,
+  "lastUpdated": 1769341212889,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -21616,6 +21616,44 @@
             "unit": "ns",
             "range": "± 54222.87937868019",
             "bytesAllocated": 1202695
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ec0fe266724a6818675c913f1c208067ab78dfa2",
+          "message": "Use CreateTempSubdirectory (#673)\n\nReplace usage of `Path.GetTempPath` with `Directory.CreateTempSubdirectory()`.",
+          "timestamp": "2026-01-25T11:36:05Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/ec0fe266724a6818675c913f1c208067ab78dfa2"
+        },
+        "date": 1769341212889,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1546502.8389136905,
+            "unit": "ns",
+            "range": "± 67473.04435946366",
+            "bytesAllocated": 555469
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4216952.242629717,
+            "unit": "ns",
+            "range": "± 156097.7030502869",
+            "bytesAllocated": 1518015
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2316459.5684375,
+            "unit": "ns",
+            "range": "± 59004.47597278738",
+            "bytesAllocated": 1201958
           }
         ]
       }
