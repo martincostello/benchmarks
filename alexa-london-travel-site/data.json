@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1772552154700,
+  "lastUpdated": 1772563031177,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -33045,6 +33045,37 @@
             "value": 302629.52239583334,
             "unit": "ns",
             "range": "± 2186.2221482263176",
+            "bytesAllocated": 58913
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "Copilot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a62bdb04ef83ecac33472af4451c91f14c5ba6fd",
+          "message": "Fix Chromium browser test crashes on Linux CI (#4059)\n\n* Initial plan\n\n* Fix flaky UI tests: wait for sign-out navigation in SignOutAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix flaky UI tests: replace WaitForSelectorAsync with Locator.WaitForAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix strict mode violation: use .First on multi-element locator in WaitForLinesAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix TargetClosedException: use RunAndWaitForNavigationAsync in UpdatePreferencesAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Replace obsolete RunAndWaitForNavigationAsync with WaitForURLAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix TargetClosedException: revert WaitForLines/SignedOut to WaitForSelectorAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix TargetClosedException in Can_Delete_Account: revert WaitForSignedInAsync to WaitForSelectorAsync\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n* Fix Chromium browser test failures: block service workers + revert incorrect wait changes\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n---------\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>",
+          "timestamp": "2026-03-03T18:33:57Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/a62bdb04ef83ecac33472af4451c91f14c5ba6fd"
+        },
+        "date": 1772563031177,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 758341.3360243056,
+            "unit": "ns",
+            "range": "± 78320.24601086948",
+            "bytesAllocated": 211842
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 292497.9674479167,
+            "unit": "ns",
+            "range": "± 4163.833983058879",
             "bytesAllocated": 58913
           }
         ]
