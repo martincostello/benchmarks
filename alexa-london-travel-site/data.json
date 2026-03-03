@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1772546549952,
+  "lastUpdated": 1772549533909,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -32984,6 +32984,37 @@
             "unit": "ns",
             "range": "± 3925.213232978953",
             "bytesAllocated": 58912
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "Copilot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "301a710f045ada57e7a2bfe27a5797b45fd4dd44",
+          "message": "Fix flaky Playwright UI tests on Ubuntu Linux (#4057)\n\n- Add --disable-dev-shm-usage flag for Chromium on Linux to prevent browser\n  crashes caused by limited /dev/shm on GitHub Actions Ubuntu runners\n- Replace Task.Delay(1s) with WaitForLinesAsync() in PreferencesTests for\n  proper Playwright-based waiting instead of a fixed time delay\n- Add --no-sandbox to Chromium CI flags to fix remaining renderer crash\n- Skip chrome channel on Linux in BrowsersTestData to fix flaky tests\n\n---------\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>",
+          "timestamp": "2026-03-03T14:49:01Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/301a710f045ada57e7a2bfe27a5797b45fd4dd44"
+        },
+        "date": 1772549533909,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 741931.3606520433,
+            "unit": "ns",
+            "range": "± 23518.352377567895",
+            "bytesAllocated": 211873
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 293450.7972005208,
+            "unit": "ns",
+            "range": "± 2767.93691184739",
+            "bytesAllocated": 58913
           }
         ]
       }
