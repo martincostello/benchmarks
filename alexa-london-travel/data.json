@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1773094359473,
+  "lastUpdated": 1773176879192,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -40706,6 +40706,86 @@
             "unit": "ns",
             "range": "± 2011.8976577761068",
             "bytesAllocated": 51733
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "859c78c08321845cf2ec748aff77964f6b51ecd5",
+          "message": "Update .NET SDK to 10.0.200 (#2208)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.200.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.200\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 10.0.200 SDK.\n\nBumps Microsoft.AspNetCore.WebUtilities from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.Configuration.Binder from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.Configuration.EnvironmentVariables from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.Configuration.Json from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.Configuration.UserSecrets from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.DependencyInjection from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.Http from 10.0.3 to 10.0.4.\nBumps Microsoft.Extensions.Logging.Console from 10.0.3 to 10.0.4.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.WebUtilities\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.Configuration.Binder\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.Configuration.EnvironmentVariables\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.Configuration.Json\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.Configuration.UserSecrets\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.DependencyInjection\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.Http\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n- dependency-name: Microsoft.Extensions.Logging.Console\n  dependency-version: 10.0.4\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Fix build\n\nRemove redundant suppression.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: Martin Costello <martin@martincostello.com>",
+          "timestamp": "2026-03-10T21:00:30Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/859c78c08321845cf2ec748aff77964f6b51ecd5"
+        },
+        "date": 1773176879192,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 111596.103515625,
+            "unit": "ns",
+            "range": "± 1604.3913431995625",
+            "bytesAllocated": 35847
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 555333.0088682432,
+            "unit": "ns",
+            "range": "± 18846.205069518277",
+            "bytesAllocated": 81337
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 385037.6380208333,
+            "unit": "ns",
+            "range": "± 6865.3945444972915",
+            "bytesAllocated": 71448
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 135176.17316545759,
+            "unit": "ns",
+            "range": "± 963.1272885151492",
+            "bytesAllocated": 62887
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 124921.56916155134,
+            "unit": "ns",
+            "range": "± 1019.6467535847426",
+            "bytesAllocated": 56657
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 123246.69084821429,
+            "unit": "ns",
+            "range": "± 1025.2122372760082",
+            "bytesAllocated": 51054
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 422184.6966950492,
+            "unit": "ns",
+            "range": "± 65781.09042263158",
+            "bytesAllocated": 70954
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 110935.61005859375,
+            "unit": "ns",
+            "range": "± 1654.3517741881499",
+            "bytesAllocated": 35832
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 125668.91904994419,
+            "unit": "ns",
+            "range": "± 1397.5589384207688",
+            "bytesAllocated": 51768
           }
         ]
       }
