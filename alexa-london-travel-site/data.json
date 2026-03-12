@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1773305618148,
+  "lastUpdated": 1773314290254,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -33883,6 +33883,37 @@
             "unit": "ns",
             "range": "± 2137.382430750115",
             "bytesAllocated": 58914
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "Copilot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "2ed1c4f042196e369fcfb6af334779dbf2c07366",
+          "message": "Fix flaky `Can_Manage_Preferences` UI test (#4091)\n\nUse RunAndWaitForResponseAsync to set up the POST response listener\nbefore clicking, avoiding a race condition where WaitForURLAsync\nmatched the current URL \"/\" immediately and called the racy\nWaitForLoadStateAsync path instead of WaitForNavigationAsync.\n\nThe fix uses WaitForURLAsync with a predicate that checks for\n\"UpdateSuccess\" in the URL (present only after the redirect), ensuring\nproper navigation waiting via the WaitForNavigationAsync code path.\n\n---------\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>",
+          "timestamp": "2026-03-12T11:14:54Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/2ed1c4f042196e369fcfb6af334779dbf2c07366"
+        },
+        "date": 1773314290254,
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 745982.9691097862,
+            "unit": "ns",
+            "range": "± 30528.64064558953",
+            "bytesAllocated": 211810
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 297169.84225260414,
+            "unit": "ns",
+            "range": "± 2960.402551440103",
+            "bytesAllocated": 58913
           }
         ]
       }
