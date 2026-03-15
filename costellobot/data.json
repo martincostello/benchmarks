@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1773521028946,
+  "lastUpdated": 1773575870993,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -50748,6 +50748,44 @@
             "unit": "ns",
             "range": "± 11368.178929430247",
             "bytesAllocated": 55497
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ed554c16ef5241267c52f27f2c795e424b7a2d50",
+          "message": "Add IP addresses to allowed hosts (#3215)\n\nDynamically add the application host's IP addresses plus loopback to the `AllowedHosts` so that Azure App Service's warmup requests aren't blocked as they use a dynamic `169.254.x.x` IP address and `AllowedHosts` doesn't support CIDR ranges.",
+          "timestamp": "2026-03-15T11:53:09Z",
+          "url": "https://github.com/martincostello/costellobot/commit/ed554c16ef5241267c52f27f2c795e424b7a2d50"
+        },
+        "date": 1773575870993,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 562448.2888997396,
+            "unit": "ns",
+            "range": "± 17132.467234902222",
+            "bytesAllocated": 43018
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 245086.98953034158,
+            "unit": "ns",
+            "range": "± 8965.327222954025",
+            "bytesAllocated": 21520
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 344472.0147298177,
+            "unit": "ns",
+            "range": "± 11162.866371481308",
+            "bytesAllocated": 55467
           }
         ]
       }
