@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1773956026769,
+  "lastUpdated": 1773957681901,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -24618,6 +24618,44 @@
             "unit": "ns",
             "range": "± 77265.89038425375",
             "bytesAllocated": 1202742
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "451a313f9521d0d7c91bc6885445aa9affb9e85e",
+          "message": "Disable secrets-outside-env audit (#758)\n\nThis isn't appropriate in most cases as there's no logical environment, and environments are already used in cases where they are.",
+          "timestamp": "2026-03-19T21:57:12Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/451a313f9521d0d7c91bc6885445aa9affb9e85e"
+        },
+        "date": 1773957681901,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1578121.6254111843,
+            "unit": "ns",
+            "range": "± 54878.56871414486",
+            "bytesAllocated": 555854
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4330303.358762255,
+            "unit": "ns",
+            "range": "± 174921.27684681068",
+            "bytesAllocated": 1528045
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2314481.447048611,
+            "unit": "ns",
+            "range": "± 63389.17453228024",
+            "bytesAllocated": 1202739
           }
         ]
       }
