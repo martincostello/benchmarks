@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1774105840812,
+  "lastUpdated": 1774108733206,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -51774,6 +51774,44 @@
             "unit": "ns",
             "range": "± 1946.1870555552491",
             "bytesAllocated": 55550
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c40e234f22975738c19877f1bf3e042874645488",
+          "message": "Use liveness endpoint to check health (#3247)\n\n- Use the health check liveness probe during deployment.\n- Add the application's version to health probe response bodies.",
+          "timestamp": "2026-03-21T15:54:57Z",
+          "url": "https://github.com/martincostello/costellobot/commit/c40e234f22975738c19877f1bf3e042874645488"
+        },
+        "date": 1774108733206,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 543634.7279730903,
+            "unit": "ns",
+            "range": "± 5939.138682618504",
+            "bytesAllocated": 43118
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 249653.18287760418,
+            "unit": "ns",
+            "range": "± 2297.5049842302897",
+            "bytesAllocated": 21593
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 359831.96299342107,
+            "unit": "ns",
+            "range": "± 7813.59191064456",
+            "bytesAllocated": 55545
           }
         ]
       }
