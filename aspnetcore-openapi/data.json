@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1774954480300,
+  "lastUpdated": 1774967655699,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -25454,6 +25454,44 @@
             "unit": "ns",
             "range": "± 95876.05595980496",
             "bytesAllocated": 1292242
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "07a73c5a54285c9bc25ff2544b9fa8e08e9d2597",
+          "message": "Bump dependency typescript to v6 (#773)\n\n* Bump dependency typescript to v6\n\n| datasource | package    | from  | to    |\n| ---------- | ---------- | ----- | ----- |\n| npm        | typescript | 5.9.3 | 6.0.2 |\n\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\n\n* Fix TypeScript 6.0 compilation errors\n\n- Update moduleResolution from deprecated 'Node' to 'bundler' in tsconfig.json\n- Add non-null assertions to getElementById and querySelector calls in Elements.ts\n- Add non-null assertions to querySelector calls in TodoElement.ts\n- Make handler properties optional in TodoElement.ts to fix strictPropertyInitialization\n\nAgent-Logs-Url: https://github.com/martincostello/aspnetcore-openapi/sessions/771094e4-519b-479a-ad56-9489ed195372\n\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>\n\n---------\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: martincostello <1439341+martincostello@users.noreply.github.com>",
+          "timestamp": "2026-03-31T14:29:19Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/07a73c5a54285c9bc25ff2544b9fa8e08e9d2597"
+        },
+        "date": 1774967655699,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1611083.9075520833,
+            "unit": "ns",
+            "range": "± 81179.26173492955",
+            "bytesAllocated": 555945
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4604920.232443821,
+            "unit": "ns",
+            "range": "± 254409.3621354489",
+            "bytesAllocated": 1528272
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2451061.0859375,
+            "unit": "ns",
+            "range": "± 37052.04500395611",
+            "bytesAllocated": 1292288
           }
         ]
       }
