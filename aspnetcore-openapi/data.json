@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1775121327708,
+  "lastUpdated": 1775556666134,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -9528,6 +9528,44 @@
             "unit": "ns",
             "range": "± 9265.157338209889",
             "bytesAllocated": 1205024
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "f85549a1c91d438c6c5d66fe629c49ba320ca1d3",
+          "message": "Fix benchmarks\n\nFix benchmarks by using latest CI build of BenchmarkDotNet.",
+          "timestamp": "2026-04-07T10:07:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/f85549a1c91d438c6c5d66fe629c49ba320ca1d3"
+        },
+        "date": 1775556666134,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 1505428.2247596155,
+            "unit": "ns",
+            "range": "± 8621.277089697769",
+            "bytesAllocated": 552930
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 4133504.0161458333,
+            "unit": "ns",
+            "range": "± 64782.74766177856",
+            "bytesAllocated": 1530645
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 2256855.554427083,
+            "unit": "ns",
+            "range": "± 9262.507838720087",
+            "bytesAllocated": 1205073
           }
         ]
       }
