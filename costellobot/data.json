@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1775803723722,
+  "lastUpdated": 1775811318369,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -54092,6 +54092,44 @@
             "unit": "ns",
             "range": "± 4992.904328039418",
             "bytesAllocated": 55536
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "27dda0a1bffdb8c260e42b1fffda2a3accbf10fa",
+          "message": "Optimize CustomHttpHeadersMiddleware (#3321)\n\n* Optimize CustomHttpHeadersMiddleware\n\nOptimize `CustomHttpHeadersMiddleware` to avoid redundant creation of the `content-security-policy` HTTP response header.\n\n* Disable Sentry HTTP message handler\n\nSentry recommends disabling it when OpenTelemetry.Instrumentation.Http is used.",
+          "timestamp": "2026-04-10T08:51:42Z",
+          "url": "https://github.com/martincostello/costellobot/commit/27dda0a1bffdb8c260e42b1fffda2a3accbf10fa"
+        },
+        "date": 1775811318369,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 555276.2893415178,
+            "unit": "ns",
+            "range": "± 4310.652569359027",
+            "bytesAllocated": 40240
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 264556.1907552083,
+            "unit": "ns",
+            "range": "± 1669.4791042440465",
+            "bytesAllocated": 20213
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 359963.35389122594,
+            "unit": "ns",
+            "range": "± 5773.614414615775",
+            "bytesAllocated": 54162
           }
         ]
       }
