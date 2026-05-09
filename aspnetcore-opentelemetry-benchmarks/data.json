@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778274856167,
+  "lastUpdated": 1778321618329,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -13764,6 +13764,474 @@
             "unit": "ns",
             "range": "± 9737.586276086604",
             "bytesAllocated": 3876
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 87482.97163301356,
+            "unit": "ns",
+            "range": "± 4158.0414490611965",
+            "bytesAllocated": 2301
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 91537.12469108737,
+            "unit": "ns",
+            "range": "± 5337.666032206685",
+            "bytesAllocated": 3128
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 89878.5306640625,
+            "unit": "ns",
+            "range": "± 5119.84900256875",
+            "bytesAllocated": 3135
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 91353.5028524278,
+            "unit": "ns",
+            "range": "± 4740.983406199292",
+            "bytesAllocated": 3132
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 90363.68016782014,
+            "unit": "ns",
+            "range": "± 5088.488645477264",
+            "bytesAllocated": 3132
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 358728.6095703125,
+            "unit": "ns",
+            "range": "± 2132.43461207466",
+            "bytesAllocated": 3160
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 365561.7684244792,
+            "unit": "ns",
+            "range": "± 2138.2393740791185",
+            "bytesAllocated": 3984
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 358924.7591145833,
+            "unit": "ns",
+            "range": "± 6690.401764193976",
+            "bytesAllocated": 3984
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 369354.1150390625,
+            "unit": "ns",
+            "range": "± 8192.490305647612",
+            "bytesAllocated": 4201
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 367357.7992393092,
+            "unit": "ns",
+            "range": "± 8084.820767404334",
+            "bytesAllocated": 4200
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 2026870.251201923,
+            "unit": "ns",
+            "range": "± 6321.775482334434",
+            "bytesAllocated": 17868
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 2027664.7469308036,
+            "unit": "ns",
+            "range": "± 13236.333085760032",
+            "bytesAllocated": 19115
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 2125608.66484375,
+            "unit": "ns",
+            "range": "± 55839.51445663914",
+            "bytesAllocated": 21067
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 2080785.77734375,
+            "unit": "ns",
+            "range": "± 27245.490998715046",
+            "bytesAllocated": 21045
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 2058483.195033482,
+            "unit": "ns",
+            "range": "± 18714.850189884957",
+            "bytesAllocated": 21067
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 87709.05391099717,
+            "unit": "ns",
+            "range": "± 4313.758549653269",
+            "bytesAllocated": 2308
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 90466.30032714843,
+            "unit": "ns",
+            "range": "± 5574.724356162043",
+            "bytesAllocated": 3134
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 91679.46817787248,
+            "unit": "ns",
+            "range": "± 5894.966353321182",
+            "bytesAllocated": 3161
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 89204.4560546875,
+            "unit": "ns",
+            "range": "± 3303.8732572090958",
+            "bytesAllocated": 3142
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 91919.46384440105,
+            "unit": "ns",
+            "range": "± 4604.1458511834235",
+            "bytesAllocated": 3160
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 206756.56671516263,
+            "unit": "ns",
+            "range": "± 8173.238095989924",
+            "bytesAllocated": 6549
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 214263.62405493952,
+            "unit": "ns",
+            "range": "± 18736.313831241878",
+            "bytesAllocated": 10678
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 232805.26612304687,
+            "unit": "ns",
+            "range": "± 16130.791320866545",
+            "bytesAllocated": 11063
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 221052.2370193996,
+            "unit": "ns",
+            "range": "± 13916.558037218472",
+            "bytesAllocated": 12449
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 245217.69216132408,
+            "unit": "ns",
+            "range": "± 16356.851493647953",
+            "bytesAllocated": 12896
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 94320.26377650669,
+            "unit": "ns",
+            "range": "± 3075.824022947297",
+            "bytesAllocated": 2483
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 98001.28446538397,
+            "unit": "ns",
+            "range": "± 6944.671006892131",
+            "bytesAllocated": 3396
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 97895.65897833441,
+            "unit": "ns",
+            "range": "± 7489.408313472381",
+            "bytesAllocated": 3416
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 98527.79124663978,
+            "unit": "ns",
+            "range": "± 7396.553882393022",
+            "bytesAllocated": 3410
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 101185.02712729543,
+            "unit": "ns",
+            "range": "± 7232.992132863324",
+            "bytesAllocated": 3391
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 86756.57627197266,
+            "unit": "ns",
+            "range": "± 5090.4724017513845",
+            "bytesAllocated": 2314
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 90334.41488958865,
+            "unit": "ns",
+            "range": "± 5232.982481982432",
+            "bytesAllocated": 3135
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 90052.23476669815,
+            "unit": "ns",
+            "range": "± 5038.869742389987",
+            "bytesAllocated": 3140
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 90020.32949145872,
+            "unit": "ns",
+            "range": "± 4240.451121233162",
+            "bytesAllocated": 3142
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 92185.57380400508,
+            "unit": "ns",
+            "range": "± 4871.391526453747",
+            "bytesAllocated": 3132
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 1710475.1022135417,
+            "unit": "ns",
+            "range": "± 39525.808772591474",
+            "bytesAllocated": 78933
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 1756160.8003700657,
+            "unit": "ns",
+            "range": "± 59924.34427420914",
+            "bytesAllocated": 80920
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 1754350.620985243,
+            "unit": "ns",
+            "range": "± 52799.011858195256",
+            "bytesAllocated": 80922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 1750225.1212439905,
+            "unit": "ns",
+            "range": "± 59980.02574374782",
+            "bytesAllocated": 81656
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 1758755.7688419118,
+            "unit": "ns",
+            "range": "± 51141.71836966871",
+            "bytesAllocated": 81652
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a0bcbb5c30a425fdf2df23a645667aae51851909",
+          "message": "Per signal benchmarks (#18)\n\n- Specify a one hour timeout for the benchmarks instead of the default of 6 hours.\n- Suppress two IL2026 warnings in Visual Studio.\n- Refactor the benchmarks to support:\n  - Only logs\n  - Only metrics\n  - Only traces\n  - Logs, metrics and traces",
+          "timestamp": "2026-05-09T09:47:02Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a0bcbb5c30a425fdf2df23a645667aae51851909"
+        },
+        "date": 1778321618329,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 88752.69894446856,
+            "unit": "ns",
+            "range": "± 4659.409170399483",
+            "bytesAllocated": 2421
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 77468.57556884765,
+            "unit": "ns",
+            "range": "± 13914.530353743925",
+            "bytesAllocated": 3238
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 105678.44224330357,
+            "unit": "ns",
+            "range": "± 13068.61102214579",
+            "bytesAllocated": 3294
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 92619.08025473736,
+            "unit": "ns",
+            "range": "± 11028.45471075454",
+            "bytesAllocated": 3830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 101665.73288085937,
+            "unit": "ns",
+            "range": "± 10056.767261297233",
+            "bytesAllocated": 3877
           }
         ]
       }
