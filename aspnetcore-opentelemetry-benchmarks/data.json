@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778330033128,
+  "lastUpdated": 1778331649634,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -17352,6 +17352,526 @@
             "unit": "ns",
             "range": "± 8503.103248863814",
             "bytesAllocated": 3411
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 66884.20308105469,
+            "unit": "ns",
+            "range": "± 5913.92238730765",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 70204.82908447266,
+            "unit": "ns",
+            "range": "± 4885.144631217372",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 71075.54567382812,
+            "unit": "ns",
+            "range": "± 4202.3949545421465",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 70197.86602539063,
+            "unit": "ns",
+            "range": "± 5278.049777084932",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 71184.96355712891,
+            "unit": "ns",
+            "range": "± 4768.32849629732",
+            "bytesAllocated": 2653
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 68457.03654052735,
+            "unit": "ns",
+            "range": "± 5946.552516528724",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 70027.56319335937,
+            "unit": "ns",
+            "range": "± 4788.023475703857",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 70450.42286376953,
+            "unit": "ns",
+            "range": "± 5134.267921730572",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 71541.04276367188,
+            "unit": "ns",
+            "range": "± 5206.510272654494",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 70259.10201171874,
+            "unit": "ns",
+            "range": "± 5253.439569804254",
+            "bytesAllocated": 2661
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 319046.0564127604,
+            "unit": "ns",
+            "range": "± 1159.5334277343284",
+            "bytesAllocated": 2526
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 324476.2727950247,
+            "unit": "ns",
+            "range": "± 11186.412509911906",
+            "bytesAllocated": 3566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 324773.1232831401,
+            "unit": "ns",
+            "range": "± 9895.652122301817",
+            "bytesAllocated": 3350
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 320789.8468686996,
+            "unit": "ns",
+            "range": "± 9485.057512598592",
+            "bytesAllocated": 3350
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 326821.93784877233,
+            "unit": "ns",
+            "range": "± 11661.446390242878",
+            "bytesAllocated": 3566
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 70102.96559326172,
+            "unit": "ns",
+            "range": "± 5765.86508833968",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 69385.10845656622,
+            "unit": "ns",
+            "range": "± 3174.4906848312758",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 67897.59853043094,
+            "unit": "ns",
+            "range": "± 2991.387557402155",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 69546.87951660156,
+            "unit": "ns",
+            "range": "± 2810.317376020111",
+            "bytesAllocated": 2760
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 67320.68212402344,
+            "unit": "ns",
+            "range": "± 2705.4142080006122",
+            "bytesAllocated": 2760
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2347086.43125,
+            "unit": "ns",
+            "range": "± 54993.80624316917",
+            "bytesAllocated": 98870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2505155.6132675447,
+            "unit": "ns",
+            "range": "± 106848.77754044422",
+            "bytesAllocated": 104796
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2796471.3452620967,
+            "unit": "ns",
+            "range": "± 219989.85728161255",
+            "bytesAllocated": 118292
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2574970.8289835164,
+            "unit": "ns",
+            "range": "± 141146.99428367772",
+            "bytesAllocated": 107612
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2779325.057425902,
+            "unit": "ns",
+            "range": "± 235688.54720617068",
+            "bytesAllocated": 117561
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 583931.6081891741,
+            "unit": "ns",
+            "range": "± 2130.51453949659",
+            "bytesAllocated": 17232
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 597777.6688058035,
+            "unit": "ns",
+            "range": "± 1968.771722008073",
+            "bytesAllocated": 20591
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 588399.0080915178,
+            "unit": "ns",
+            "range": "± 4687.548234814201",
+            "bytesAllocated": 18615
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 600614.9822443182,
+            "unit": "ns",
+            "range": "± 10031.545887336728",
+            "bytesAllocated": 20594
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 595784.0830775669,
+            "unit": "ns",
+            "range": "± 2444.572211315244",
+            "bytesAllocated": 20569
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 67868.110390625,
+            "unit": "ns",
+            "range": "± 6086.729075259438",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 71081.98941894532,
+            "unit": "ns",
+            "range": "± 4634.498534214134",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 70493.45032470702,
+            "unit": "ns",
+            "range": "± 4281.329357822281",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 69858.7000390625,
+            "unit": "ns",
+            "range": "± 5287.724541668373",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 70435.6257836914,
+            "unit": "ns",
+            "range": "± 5818.2652976558675",
+            "bytesAllocated": 2661
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 1467384.6983506945,
+            "unit": "ns",
+            "range": "± 14385.476943366637",
+            "bytesAllocated": 80893
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 1508483.1956845238,
+            "unit": "ns",
+            "range": "± 42771.42615467673",
+            "bytesAllocated": 82847
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 1536723.4728467988,
+            "unit": "ns",
+            "range": "± 55133.797495736304",
+            "bytesAllocated": 83923
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 1510690.6206666667,
+            "unit": "ns",
+            "range": "± 61740.03968963479",
+            "bytesAllocated": 82845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 1513021.6342719782,
+            "unit": "ns",
+            "range": "± 42810.31870363078",
+            "bytesAllocated": 83849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 151559.1748046875,
+            "unit": "ns",
+            "range": "± 8326.230772792673",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 164370.5621686663,
+            "unit": "ns",
+            "range": "± 8760.90573461667",
+            "bytesAllocated": 8646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 195328.65123197116,
+            "unit": "ns",
+            "range": "± 9121.822967562655",
+            "bytesAllocated": 10880
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 187711.21648334703,
+            "unit": "ns",
+            "range": "± 10745.037228031772",
+            "bytesAllocated": 9072
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 177793.2831182065,
+            "unit": "ns",
+            "range": "± 10079.048210534478",
+            "bytesAllocated": 10495
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0d08a83ccc9e56138b80ece5e5e03319845262f9",
+          "message": "Reduce variance (#66)\n\nRefactor benchmarks to reduce variance in runs.",
+          "timestamp": "2026-05-09T12:30:34Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0d08a83ccc9e56138b80ece5e5e03319845262f9"
+        },
+        "date": 1778331649634,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 69553.2531274414,
+            "unit": "ns",
+            "range": "± 6455.521747862433",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 61533.444260817305,
+            "unit": "ns",
+            "range": "± 1624.613684869921",
+            "bytesAllocated": 3109
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 80779.60202126975,
+            "unit": "ns",
+            "range": "± 5519.46109463218",
+            "bytesAllocated": 3562
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 78498.24614990235,
+            "unit": "ns",
+            "range": "± 4651.958707603404",
+            "bytesAllocated": 3158
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 75497.08631275318,
+            "unit": "ns",
+            "range": "± 3174.256212229581",
+            "bytesAllocated": 3681
           }
         ]
       }
