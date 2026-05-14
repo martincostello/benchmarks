@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778737108978,
+  "lastUpdated": 1778758691150,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -58120,6 +58120,44 @@
             "unit": "ns",
             "range": "± 1030.8871903099198",
             "bytesAllocated": 48060
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "2837a0df6217a23ae6db370d55f69c0c4ad3ab3d",
+          "message": "Extend trust for third party NuGet feeds (#3450)\n\n- Add an attribute for GitHub webhook payloads' action.\n- Add support for multiple registries of the same type, for example using MyGet or feedz.io.\n- Deduct token skew when setting the expiry for JWTs to avoid requests being rejected as too far into the future.\n- Support NuGet package registries other than NuGet.org, such as MyGet and feedz.io, as private if the registry URL matches a well-known format. This then marks any packages found as implicitly trusted as having the same ownership as the feed.",
+          "timestamp": "2026-05-14T11:35:01Z",
+          "url": "https://github.com/martincostello/costellobot/commit/2837a0df6217a23ae6db370d55f69c0c4ad3ab3d"
+        },
+        "date": 1778758691150,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 503465.85205078125,
+            "unit": "ns",
+            "range": "± 2418.9328816660623",
+            "bytesAllocated": 40235
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 222847.56647600446,
+            "unit": "ns",
+            "range": "± 1802.8492779189678",
+            "bytesAllocated": 20217
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 288096.16256510414,
+            "unit": "ns",
+            "range": "± 1735.888645116836",
+            "bytesAllocated": 48029
           }
         ]
       }
