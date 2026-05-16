@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778852093798,
+  "lastUpdated": 1778939237593,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -33992,6 +33992,578 @@
             "unit": "ns",
             "range": "± 6139.385499225537",
             "bytesAllocated": 3289
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 52142.56154201342,
+            "unit": "ns",
+            "range": "± 1993.9227273700103",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 54512.730484759224,
+            "unit": "ns",
+            "range": "± 2442.5875758002194",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 55276.12622477214,
+            "unit": "ns",
+            "range": "± 2435.3409420561225",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 54861.63667179988,
+            "unit": "ns",
+            "range": "± 2830.375902019292",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 54937.92718702747,
+            "unit": "ns",
+            "range": "± 2417.0186718522546",
+            "bytesAllocated": 2654
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 256453.78868815105,
+            "unit": "ns",
+            "range": "± 888.1398040803675",
+            "bytesAllocated": 2526
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 264769.1400390625,
+            "unit": "ns",
+            "range": "± 2893.593371263791",
+            "bytesAllocated": 3566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 263232.7728515625,
+            "unit": "ns",
+            "range": "± 823.0941026516452",
+            "bytesAllocated": 3350
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 265332.17376302084,
+            "unit": "ns",
+            "range": "± 1713.8878159373567",
+            "bytesAllocated": 3350
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 266571.0243389423,
+            "unit": "ns",
+            "range": "± 6987.933575484914",
+            "bytesAllocated": 3566
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 53312.154125976565,
+            "unit": "ns",
+            "range": "± 2018.8948866677276",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 54584.74703216553,
+            "unit": "ns",
+            "range": "± 2526.38917240735",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 55498.96906195747,
+            "unit": "ns",
+            "range": "± 2320.0398498715444",
+            "bytesAllocated": 2693
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 53842.16219787598,
+            "unit": "ns",
+            "range": "± 2817.9050884955413",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 52992.224835020126,
+            "unit": "ns",
+            "range": "± 2377.4944709987576",
+            "bytesAllocated": 1847
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 52010.03064778646,
+            "unit": "ns",
+            "range": "± 2294.869003358571",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 54435.63262384588,
+            "unit": "ns",
+            "range": "± 2547.71002225118",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 55445.72891865079,
+            "unit": "ns",
+            "range": "± 2526.14836168681",
+            "bytesAllocated": 2685
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 55380.641891818574,
+            "unit": "ns",
+            "range": "± 2076.0565670770293",
+            "bytesAllocated": 2685
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 54299.860030423675,
+            "unit": "ns",
+            "range": "± 2536.622916801674",
+            "bytesAllocated": 2661
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 530355.3530970982,
+            "unit": "ns",
+            "range": "± 1239.5915290348496",
+            "bytesAllocated": 17235
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 567125.6282552083,
+            "unit": "ns",
+            "range": "± 21660.595429888563",
+            "bytesAllocated": 20592
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 539993.1275111607,
+            "unit": "ns",
+            "range": "± 1707.715506349863",
+            "bytesAllocated": 18616
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 552387.68359375,
+            "unit": "ns",
+            "range": "± 1265.8684038834344",
+            "bytesAllocated": 20594
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 551410.3331473215,
+            "unit": "ns",
+            "range": "± 2149.478363604709",
+            "bytesAllocated": 20567
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 53823.05716087705,
+            "unit": "ns",
+            "range": "± 1251.175070237171",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 54415.99665050972,
+            "unit": "ns",
+            "range": "± 1945.1256000459382",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 53893.23635253906,
+            "unit": "ns",
+            "range": "± 1757.3408689176665",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 53933.594363064236,
+            "unit": "ns",
+            "range": "± 2027.343596811901",
+            "bytesAllocated": 2781
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 53603.326686693275,
+            "unit": "ns",
+            "range": "± 2023.3246975225215",
+            "bytesAllocated": 2781
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 1483153.307002315,
+            "unit": "ns",
+            "range": "± 3161.076157564056",
+            "bytesAllocated": 97784
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 1549783.4713541663,
+            "unit": "ns",
+            "range": "± 60001.776861706676",
+            "bytesAllocated": 102974
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 1788253.0463068178,
+            "unit": "ns",
+            "range": "± 122474.92170689507",
+            "bytesAllocated": 116561
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 1667915.1323138298,
+            "unit": "ns",
+            "range": "± 191469.30729995426",
+            "bytesAllocated": 105700
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 1812798.688604798,
+            "unit": "ns",
+            "range": "± 241655.63466903652",
+            "bytesAllocated": 115966
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 51508.49372342267,
+            "unit": "ns",
+            "range": "± 2653.94231060005",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 54401.76565779501,
+            "unit": "ns",
+            "range": "± 2558.327748291001",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 54040.517352203824,
+            "unit": "ns",
+            "range": "± 2565.642067858208",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 54185.179840572295,
+            "unit": "ns",
+            "range": "± 2484.1502450518165",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 54420.83765048668,
+            "unit": "ns",
+            "range": "± 2425.859396387344",
+            "bytesAllocated": 2662
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 108864.31663101439,
+            "unit": "ns",
+            "range": "± 4948.418460818658",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 122995.56764787946,
+            "unit": "ns",
+            "range": "± 3939.8997227746045",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 140921.17021908966,
+            "unit": "ns",
+            "range": "± 6780.220989103352",
+            "bytesAllocated": 10077
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 135788.02282714844,
+            "unit": "ns",
+            "range": "± 3425.444322034072",
+            "bytesAllocated": 8261
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 126133.24372209821,
+            "unit": "ns",
+            "range": "± 4549.838595194676",
+            "bytesAllocated": 9661
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 668141.802594866,
+            "unit": "ns",
+            "range": "± 3250.624879969317",
+            "bytesAllocated": 79716
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 679407.8409598215,
+            "unit": "ns",
+            "range": "± 4627.441024445409",
+            "bytesAllocated": 81740
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 695816.6564685313,
+            "unit": "ns",
+            "range": "± 21095.179280015534",
+            "bytesAllocated": 82812
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 686500.6023026316,
+            "unit": "ns",
+            "range": "± 14827.438563976648",
+            "bytesAllocated": 81741
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 686560.9663690476,
+            "unit": "ns",
+            "range": "± 8824.73884256328",
+            "bytesAllocated": 82749
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0b80b0b241de71e3664df4583bdfd79559637d6d",
+          "message": "Add Prometheus benchmark (#76)\n\nAdd a benchmark that uses Prometheus for metrics instead of OTLP.\n\nFixes #74.",
+          "timestamp": "2026-05-16T13:23:21Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/0b80b0b241de71e3664df4583bdfd79559637d6d"
+        },
+        "date": 1778939237593,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 51071.76315542368,
+            "unit": "ns",
+            "range": "± 2632.5994886818994",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 54555.084559187104,
+            "unit": "ns",
+            "range": "± 2798.782473819479",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 60604.72570800781,
+            "unit": "ns",
+            "range": "± 1904.1276301391802",
+            "bytesAllocated": 3337
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 57922.16272786458,
+            "unit": "ns",
+            "range": "± 2546.987115181497",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 56122.937493739984,
+            "unit": "ns",
+            "range": "± 1929.2536971546874",
+            "bytesAllocated": 3290
           }
         ]
       }
