@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778958534169,
+  "lastUpdated": 1778960303536,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -572,6 +572,578 @@
             "unit": "ns",
             "range": "± 4137.396605901424",
             "bytesAllocated": 4396
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 95731.54669189453,
+            "unit": "ns",
+            "range": "± 1041.347278850943",
+            "bytesAllocated": 2735
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 103179.22252604166,
+            "unit": "ns",
+            "range": "± 538.6839344817581",
+            "bytesAllocated": 3559
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 102250.93674879808,
+            "unit": "ns",
+            "range": "± 321.54586588966936",
+            "bytesAllocated": 3559
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 102097.00076059195,
+            "unit": "ns",
+            "range": "± 267.79232005402815",
+            "bytesAllocated": 3560
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 102987.72555977957,
+            "unit": "ns",
+            "range": "± 765.0471888439114",
+            "bytesAllocated": 3559
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 298409.0477539062,
+            "unit": "ns",
+            "range": "± 1567.211213408303",
+            "bytesAllocated": 3495
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 306979.44698660716,
+            "unit": "ns",
+            "range": "± 3366.7742318044407",
+            "bytesAllocated": 4543
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 303471.5354003906,
+            "unit": "ns",
+            "range": "± 1592.3796803813332",
+            "bytesAllocated": 4327
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 303464.70651041664,
+            "unit": "ns",
+            "range": "± 1719.8863364522954",
+            "bytesAllocated": 4319
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 306756.64599609375,
+            "unit": "ns",
+            "range": "± 2159.270843724191",
+            "bytesAllocated": 4535
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 97363.26559244792,
+            "unit": "ns",
+            "range": "± 564.4074996367743",
+            "bytesAllocated": 2743
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 102581.33111572266,
+            "unit": "ns",
+            "range": "± 415.64415312461017",
+            "bytesAllocated": 3568
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 102791.1286882673,
+            "unit": "ns",
+            "range": "± 305.0529716352277",
+            "bytesAllocated": 3591
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 103556.91621907552,
+            "unit": "ns",
+            "range": "± 491.11456355577576",
+            "bytesAllocated": 3591
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 102776.75578962054,
+            "unit": "ns",
+            "range": "± 454.07768427155656",
+            "bytesAllocated": 3567
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 99976.91099196214,
+            "unit": "ns",
+            "range": "± 570.7768283891459",
+            "bytesAllocated": 2775
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 103002.28783365885,
+            "unit": "ns",
+            "range": "± 508.3475592695593",
+            "bytesAllocated": 3583
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 103732.17823893229,
+            "unit": "ns",
+            "range": "± 399.481497738543",
+            "bytesAllocated": 3607
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 100642.799054827,
+            "unit": "ns",
+            "range": "± 668.872062998349",
+            "bytesAllocated": 2791
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 97708.7078125,
+            "unit": "ns",
+            "range": "± 718.4702016690067",
+            "bytesAllocated": 2759
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 573866.458844866,
+            "unit": "ns",
+            "range": "± 1881.8143665987584",
+            "bytesAllocated": 18632
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 596394.6998046875,
+            "unit": "ns",
+            "range": "± 2336.687385937819",
+            "bytesAllocated": 21992
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 580754.5416434152,
+            "unit": "ns",
+            "range": "± 2806.418048112796",
+            "bytesAllocated": 20016
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 595940.674203726,
+            "unit": "ns",
+            "range": "± 1828.140890824096",
+            "bytesAllocated": 21992
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 590422.7419621394,
+            "unit": "ns",
+            "range": "± 2193.6546165241502",
+            "bytesAllocated": 21969
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 96734.95451136997,
+            "unit": "ns",
+            "range": "± 823.909829437637",
+            "bytesAllocated": 2727
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 103774.98157677284,
+            "unit": "ns",
+            "range": "± 442.81735395485475",
+            "bytesAllocated": 3660
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 104940.67111440805,
+            "unit": "ns",
+            "range": "± 523.8503359929051",
+            "bytesAllocated": 3668
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 103207.19611002604,
+            "unit": "ns",
+            "range": "± 494.2249909313675",
+            "bytesAllocated": 3688
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 103421.72009277344,
+            "unit": "ns",
+            "range": "± 393.60891366919304",
+            "bytesAllocated": 3688
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 179006.75999232702,
+            "unit": "ns",
+            "range": "± 1402.060991696317",
+            "bytesAllocated": 6544
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 190656.0179966518,
+            "unit": "ns",
+            "range": "± 766.1142975097381",
+            "bytesAllocated": 9935
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 217640.94080528847,
+            "unit": "ns",
+            "range": "± 627.0292030264036",
+            "bytesAllocated": 12538
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 204732.3888346354,
+            "unit": "ns",
+            "range": "± 820.5915801287337",
+            "bytesAllocated": 10607
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 203926.54532877603,
+            "unit": "ns",
+            "range": "± 1159.9326521240007",
+            "bytesAllocated": 11866
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 1559783.9833603895,
+            "unit": "ns",
+            "range": "± 12156.927586741513",
+            "bytesAllocated": 100828
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 1590951.6295673077,
+            "unit": "ns",
+            "range": "± 7973.71303189849",
+            "bytesAllocated": 106102
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 1741411.4232142859,
+            "unit": "ns",
+            "range": "± 15682.059039744008",
+            "bytesAllocated": 120140
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 1653938.7120833332,
+            "unit": "ns",
+            "range": "± 10836.748107099293",
+            "bytesAllocated": 109437
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 1688863.5118749999,
+            "unit": "ns",
+            "range": "± 12940.64881656899",
+            "bytesAllocated": 118837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 96179.91165597098,
+            "unit": "ns",
+            "range": "± 638.1651646759192",
+            "bytesAllocated": 2743
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 101125.32237025669,
+            "unit": "ns",
+            "range": "± 543.7270174356349",
+            "bytesAllocated": 3567
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 101938.67292131696,
+            "unit": "ns",
+            "range": "± 694.5425668361686",
+            "bytesAllocated": 3567
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 102526.11092703683,
+            "unit": "ns",
+            "range": "± 308.62516092716714",
+            "bytesAllocated": 3567
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 101835.56665852865,
+            "unit": "ns",
+            "range": "± 437.4357876721128",
+            "bytesAllocated": 3567
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 719673.5101841518,
+            "unit": "ns",
+            "range": "± 5284.809261501192",
+            "bytesAllocated": 81352
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 730630.8329427083,
+            "unit": "ns",
+            "range": "± 5119.948605827958",
+            "bytesAllocated": 83483
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 738645.712890625,
+            "unit": "ns",
+            "range": "± 4788.411502659805",
+            "bytesAllocated": 84420
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 734293.4940708706,
+            "unit": "ns",
+            "range": "± 4564.489251696215",
+            "bytesAllocated": 83480
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 738181.8068359375,
+            "unit": "ns",
+            "range": "± 4900.555741466304",
+            "bytesAllocated": 84479
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d98b37c738ac0abf43c74243e83285873a6fd19a",
+          "message": "Restore feature switch\n\nRestore to see if it is the cause of the performance degradation.",
+          "timestamp": "2026-05-16T19:14:00Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/d98b37c738ac0abf43c74243e83285873a6fd19a"
+        },
+        "date": 1778960303536,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 95302.75723702567,
+            "unit": "ns",
+            "range": "± 630.025194926654",
+            "bytesAllocated": 2727
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 101830.52438151042,
+            "unit": "ns",
+            "range": "± 721.5839059462337",
+            "bytesAllocated": 3551
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 114226.21609933036,
+            "unit": "ns",
+            "range": "± 327.90650632084595",
+            "bytesAllocated": 4244
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 106276.42981896034,
+            "unit": "ns",
+            "range": "± 450.40913383310135",
+            "bytesAllocated": 3607
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 107940.09124348959,
+            "unit": "ns",
+            "range": "± 467.69035807567656",
+            "bytesAllocated": 4196
           }
         ]
       }
