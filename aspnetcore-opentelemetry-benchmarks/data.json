@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778949612289,
+  "lastUpdated": 1778952372285,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -35707,6 +35707,578 @@
             "value": 57171.06522253788,
             "unit": "ns",
             "range": "± 1801.0380554988287",
+            "bytesAllocated": 3290
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 70225.29395996094,
+            "unit": "ns",
+            "range": "± 6798.73766807413",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 71263.97146972656,
+            "unit": "ns",
+            "range": "± 6990.520023498565",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 70351.76723876953,
+            "unit": "ns",
+            "range": "± 7016.279877539087",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 70261.34433349609,
+            "unit": "ns",
+            "range": "± 7117.358966203529",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 71679.97043945313,
+            "unit": "ns",
+            "range": "± 7074.193099527728",
+            "bytesAllocated": 2654
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 333063.0824707031,
+            "unit": "ns",
+            "range": "± 797.4522026350933",
+            "bytesAllocated": 2526
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 336556.6142578125,
+            "unit": "ns",
+            "range": "± 6399.857958869338",
+            "bytesAllocated": 3566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 336119.46479492186,
+            "unit": "ns",
+            "range": "± 989.9625637876087",
+            "bytesAllocated": 3350
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 340490.0201497396,
+            "unit": "ns",
+            "range": "± 920.5474558679465",
+            "bytesAllocated": 3350
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 338328.9203613281,
+            "unit": "ns",
+            "range": "± 2428.1163811331803",
+            "bytesAllocated": 3566
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 68326.72655029297,
+            "unit": "ns",
+            "range": "± 7272.721995421787",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 70339.69252197265,
+            "unit": "ns",
+            "range": "± 7063.069200188909",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 68956.06772216797,
+            "unit": "ns",
+            "range": "± 7157.434954929535",
+            "bytesAllocated": 2685
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 69418.31239990234,
+            "unit": "ns",
+            "range": "± 6617.646425965601",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 70774.08338134765,
+            "unit": "ns",
+            "range": "± 7162.166611781721",
+            "bytesAllocated": 2661
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 72832.50193359375,
+            "unit": "ns",
+            "range": "± 7861.566364957019",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 68855.469765625,
+            "unit": "ns",
+            "range": "± 7035.71172764888",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 71778.39569580078,
+            "unit": "ns",
+            "range": "± 6522.227479000967",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 72229.67874511718,
+            "unit": "ns",
+            "range": "± 5084.7622180618855",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 67367.55989501953,
+            "unit": "ns",
+            "range": "± 6614.865449739838",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 590435.2564174107,
+            "unit": "ns",
+            "range": "± 2197.400022613802",
+            "bytesAllocated": 17230
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 606487.8952073317,
+            "unit": "ns",
+            "range": "± 3291.6120424240826",
+            "bytesAllocated": 20592
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 595214.0149739584,
+            "unit": "ns",
+            "range": "± 2998.527389580305",
+            "bytesAllocated": 18615
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 604976.6954627404,
+            "unit": "ns",
+            "range": "± 2117.8034934183056",
+            "bytesAllocated": 20591
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 609972.3199637277,
+            "unit": "ns",
+            "range": "± 3223.7821950973675",
+            "bytesAllocated": 20567
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 70063.64052734376,
+            "unit": "ns",
+            "range": "± 6775.096065200238",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 77123.20807041266,
+            "unit": "ns",
+            "range": "± 3945.0390712381877",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 75070.8157303973,
+            "unit": "ns",
+            "range": "± 3974.8978448393877",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 73535.07166980562,
+            "unit": "ns",
+            "range": "± 3934.375653333947",
+            "bytesAllocated": 2781
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 72876.5098413086,
+            "unit": "ns",
+            "range": "± 4497.523745721395",
+            "bytesAllocated": 2781
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 1624392.603448276,
+            "unit": "ns",
+            "range": "± 28944.370532583624",
+            "bytesAllocated": 97809
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 1683060.9830842393,
+            "unit": "ns",
+            "range": "± 135768.89492130998",
+            "bytesAllocated": 102907
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 1764196.5754781424,
+            "unit": "ns",
+            "range": "± 64956.7513080049",
+            "bytesAllocated": 116570
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 1736530.0997159095,
+            "unit": "ns",
+            "range": "± 112470.62243933517",
+            "bytesAllocated": 105634
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 1729787.6747989769,
+            "unit": "ns",
+            "range": "± 71030.36692418296",
+            "bytesAllocated": 115806
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 156064.52470214842,
+            "unit": "ns",
+            "range": "± 10130.56997249143",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 166083.60294596353,
+            "unit": "ns",
+            "range": "± 4241.540510194336",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 215384.10572916668,
+            "unit": "ns",
+            "range": "± 8085.4933287517415",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 196530.7606977983,
+            "unit": "ns",
+            "range": "± 4671.807851756765",
+            "bytesAllocated": 8262
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 188644.10718433277,
+            "unit": "ns",
+            "range": "± 6284.076812634251",
+            "bytesAllocated": 9664
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 70008.10529541016,
+            "unit": "ns",
+            "range": "± 7264.952805477485",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 71011.8928491211,
+            "unit": "ns",
+            "range": "± 6744.234950502725",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 68289.65204833985,
+            "unit": "ns",
+            "range": "± 6745.524311342339",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 69348.6633984375,
+            "unit": "ns",
+            "range": "± 6799.407523239592",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 71281.93183105468,
+            "unit": "ns",
+            "range": "± 7016.79371520661",
+            "bytesAllocated": 2662
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 718569.3132512019,
+            "unit": "ns",
+            "range": "± 4941.715995441772",
+            "bytesAllocated": 79719
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 728689.1757383241,
+            "unit": "ns",
+            "range": "± 18450.519452131448",
+            "bytesAllocated": 81815
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 726201.4313909775,
+            "unit": "ns",
+            "range": "± 7247.667693436859",
+            "bytesAllocated": 82816
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 725787.698051948,
+            "unit": "ns",
+            "range": "± 6958.3805707004085",
+            "bytesAllocated": 81813
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 735126.7954695766,
+            "unit": "ns",
+            "range": "± 16000.111023375866",
+            "bytesAllocated": 82741
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6653f93ab52b24bb9f0e3b4c8c8771f868018e71",
+          "message": "Fix stub collector hang (#110)\n\nSet logging to warning to prevent hang if buffer is full when redirecting stderr/stdout.",
+          "timestamp": "2026-05-16T16:55:30Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/6653f93ab52b24bb9f0e3b4c8c8771f868018e71"
+        },
+        "date": 1778952372285,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 70356.95601806641,
+            "unit": "ns",
+            "range": "± 7114.891357513946",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 72326.43130126953,
+            "unit": "ns",
+            "range": "± 6949.621341855502",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 86940.52012861536,
+            "unit": "ns",
+            "range": "± 4946.40363377705",
+            "bytesAllocated": 3338
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 75617.84338134766,
+            "unit": "ns",
+            "range": "± 6641.380391961558",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 80711.05746144262,
+            "unit": "ns",
+            "range": "± 2286.4843730569855",
             "bytesAllocated": 3290
           }
         ]
