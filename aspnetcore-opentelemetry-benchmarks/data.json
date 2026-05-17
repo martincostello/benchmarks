@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1779024155248,
+  "lastUpdated": 1779054237977,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -1716,6 +1716,578 @@
             "unit": "ns",
             "range": "± 608.8397535616712",
             "bytesAllocated": 4196
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 92628.45696614584,
+            "unit": "ns",
+            "range": "± 1569.2929811847634",
+            "bytesAllocated": 2692
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 102456.93151855469,
+            "unit": "ns",
+            "range": "± 1503.822795090891",
+            "bytesAllocated": 3516
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 102481.72285970052,
+            "unit": "ns",
+            "range": "± 888.2717820535091",
+            "bytesAllocated": 3508
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 99935.9146484375,
+            "unit": "ns",
+            "range": "± 1323.9552075987265",
+            "bytesAllocated": 3508
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 100308.94024658203,
+            "unit": "ns",
+            "range": "± 411.83567240520665",
+            "bytesAllocated": 3508
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 344653.4466145833,
+            "unit": "ns",
+            "range": "± 1712.0391723055668",
+            "bytesAllocated": 3445
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 344050.5494791667,
+            "unit": "ns",
+            "range": "± 4218.970676608717",
+            "bytesAllocated": 4485
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 345537.89411272324,
+            "unit": "ns",
+            "range": "± 1714.6986446489095",
+            "bytesAllocated": 4269
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 349087.2757161458,
+            "unit": "ns",
+            "range": "± 2251.0584453690735",
+            "bytesAllocated": 4269
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 343491.852734375,
+            "unit": "ns",
+            "range": "± 4433.715188906025",
+            "bytesAllocated": 4485
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 100167.50231933594,
+            "unit": "ns",
+            "range": "± 1297.4997941305692",
+            "bytesAllocated": 2724
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 104625.65376790364,
+            "unit": "ns",
+            "range": "± 1458.9216978506788",
+            "bytesAllocated": 3532
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 101353.25951334635,
+            "unit": "ns",
+            "range": "± 679.1234881362954",
+            "bytesAllocated": 3556
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 94600.12438092913,
+            "unit": "ns",
+            "range": "± 504.31124637240936",
+            "bytesAllocated": 2740
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 93681.39199393136,
+            "unit": "ns",
+            "range": "± 823.5941258806165",
+            "bytesAllocated": 2716
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 575456.9674479166,
+            "unit": "ns",
+            "range": "± 4700.044945946939",
+            "bytesAllocated": 18574
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 595787.6862630208,
+            "unit": "ns",
+            "range": "± 4920.052272959731",
+            "bytesAllocated": 21942
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 586616.750139509,
+            "unit": "ns",
+            "range": "± 2968.510705485421",
+            "bytesAllocated": 19950
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 594143.842172476,
+            "unit": "ns",
+            "range": "± 3193.8049456550084",
+            "bytesAllocated": 21926
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 594807.6649693081,
+            "unit": "ns",
+            "range": "± 2963.858426221781",
+            "bytesAllocated": 21918
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 97088.49807871944,
+            "unit": "ns",
+            "range": "± 2372.474868275152",
+            "bytesAllocated": 2676
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 98813.27337239584,
+            "unit": "ns",
+            "range": "± 1638.1185607374546",
+            "bytesAllocated": 3608
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 102245.22919573102,
+            "unit": "ns",
+            "range": "± 730.395322377384",
+            "bytesAllocated": 3616
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 99816.83089192708,
+            "unit": "ns",
+            "range": "± 851.2830969282475",
+            "bytesAllocated": 3637
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 98501.541015625,
+            "unit": "ns",
+            "range": "± 1317.7032283645901",
+            "bytesAllocated": 3636
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 92089.1645320012,
+            "unit": "ns",
+            "range": "± 826.6049314038265",
+            "bytesAllocated": 2692
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 101655.07496473525,
+            "unit": "ns",
+            "range": "± 2135.7231971219403",
+            "bytesAllocated": 3516
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 101026.14868164062,
+            "unit": "ns",
+            "range": "± 2036.3727123744297",
+            "bytesAllocated": 3540
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 97726.36156354632,
+            "unit": "ns",
+            "range": "± 269.38091902737096",
+            "bytesAllocated": 3540
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 97270.64351981027,
+            "unit": "ns",
+            "range": "± 382.76893716442413",
+            "bytesAllocated": 3516
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 1583970.1401785717,
+            "unit": "ns",
+            "range": "± 7061.447842528096",
+            "bytesAllocated": 100657
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 1612563.9460937502,
+            "unit": "ns",
+            "range": "± 4969.457682955931",
+            "bytesAllocated": 106137
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 1746174.5933333333,
+            "unit": "ns",
+            "range": "± 9563.568553666888",
+            "bytesAllocated": 120083
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 1676271.4078125004,
+            "unit": "ns",
+            "range": "± 8907.564153166559",
+            "bytesAllocated": 109391
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 1702618.9093749996,
+            "unit": "ns",
+            "range": "± 7991.610613104307",
+            "bytesAllocated": 118780
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 178269.3012858073,
+            "unit": "ns",
+            "range": "± 1972.0780456556124",
+            "bytesAllocated": 6492
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 204945.95890299478,
+            "unit": "ns",
+            "range": "± 1541.7528718592337",
+            "bytesAllocated": 9884
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 244479.39765625,
+            "unit": "ns",
+            "range": "± 1312.0022523585876",
+            "bytesAllocated": 12503
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 232396.58963448662,
+            "unit": "ns",
+            "range": "± 721.0549576616456",
+            "bytesAllocated": 10556
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 219316.8133138021,
+            "unit": "ns",
+            "range": "± 927.6966869310572",
+            "bytesAllocated": 11815
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 95529.83805338542,
+            "unit": "ns",
+            "range": "± 2014.4570179550785",
+            "bytesAllocated": 2692
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 97258.68518066406,
+            "unit": "ns",
+            "range": "± 1236.5944395531887",
+            "bytesAllocated": 3516
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 100290.12541707356,
+            "unit": "ns",
+            "range": "± 433.5586057939021",
+            "bytesAllocated": 3516
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 100634.21463216146,
+            "unit": "ns",
+            "range": "± 1331.280788963051",
+            "bytesAllocated": 3516
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 98628.33704427084,
+            "unit": "ns",
+            "range": "± 1102.2291349943034",
+            "bytesAllocated": 3516
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 715746.7736328125,
+            "unit": "ns",
+            "range": "± 3545.104226785564",
+            "bytesAllocated": 81295
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 726313.0890764509,
+            "unit": "ns",
+            "range": "± 3898.959034035678",
+            "bytesAllocated": 83436
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 735676.624860491,
+            "unit": "ns",
+            "range": "± 3255.903792240849",
+            "bytesAllocated": 84431
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 725131.3348214285,
+            "unit": "ns",
+            "range": "± 3359.814806624649",
+            "bytesAllocated": 83430
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 733352.9504557292,
+            "unit": "ns",
+            "range": "± 2399.0521702437563",
+            "bytesAllocated": 84431
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "ce343efcc34111dca52f0684019140deb4c49d37",
+          "message": "Workaround BenchmarkDotNet 0.16.0 change\n\nAdd workaround for changes to how BenchmarkDotNet 0.16.0 handles async methods to remove delta in results compared to with 0.15.8.",
+          "timestamp": "2026-05-17T21:19:29Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ce343efcc34111dca52f0684019140deb4c49d37"
+        },
+        "date": 1779054237977,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 90659.97657063803,
+            "unit": "ns",
+            "range": "± 776.9520859011978",
+            "bytesAllocated": 2676
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 96055.65053885324,
+            "unit": "ns",
+            "range": "± 240.06463451644456",
+            "bytesAllocated": 3500
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 110560.99557931082,
+            "unit": "ns",
+            "range": "± 651.1118563330031",
+            "bytesAllocated": 4200
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 102500.55521937778,
+            "unit": "ns",
+            "range": "± 358.7707655716951",
+            "bytesAllocated": 3548
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 104739.05412074497,
+            "unit": "ns",
+            "range": "± 628.7862120698079",
+            "bytesAllocated": 4152
           }
         ]
       }
