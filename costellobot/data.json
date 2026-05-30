@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1780149925447,
+  "lastUpdated": 1780160411479,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -59716,6 +59716,44 @@
             "unit": "ns",
             "range": "± 1859.7706690510474",
             "bytesAllocated": 48439
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "2d7deba7fc3ccc06bf69e7195161fa82ab72fc18",
+          "message": "Support GitHub app tokens (#3499)\n\n- Add an explicit name to the GitHub Token endpoint.\n- Add support for configuring GitHub apps that do not have a webhook.\n- Add constants for GitHub vendored media types.\n- Add support for acquiring GitHub app installation tokens from the token broker.\n- Configure the benchmarks for costellobot to use a GitHub app instead of a PAT.",
+          "timestamp": "2026-05-30T16:56:32Z",
+          "url": "https://github.com/martincostello/costellobot/commit/2d7deba7fc3ccc06bf69e7195161fa82ab72fc18"
+        },
+        "date": 1780160411479,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 552336.859375,
+            "unit": "ns",
+            "range": "± 5313.594878023714",
+            "bytesAllocated": 40236
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 260200.28676060267,
+            "unit": "ns",
+            "range": "± 1322.6850373336556",
+            "bytesAllocated": 20215
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 325558.98688616074,
+            "unit": "ns",
+            "range": "± 1586.7082015766553",
+            "bytesAllocated": 48456
           }
         ]
       }
