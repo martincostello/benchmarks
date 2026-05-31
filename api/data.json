@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1780169286917,
+  "lastUpdated": 1780249118597,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -59245,6 +59245,58 @@
             "unit": "ns",
             "range": "± 555.6822372466681",
             "bytesAllocated": 25773
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d4508291932402d3d40a415b48164eee7d57a2bb",
+          "message": "Refactor use of secrets (#3310)\n\n- Use OIDC to authenticate with Azure.\n- Use GitHub token broker.\n- Scope all secrets to environments.\n- Use GITHUB_TOKEN to dispatch workflow.\n- Remove codecov token.",
+          "timestamp": "2026-05-31T17:35:05Z",
+          "url": "https://github.com/martincostello/api/commit/d4508291932402d3d40a415b48164eee7d57a2bb"
+        },
+        "date": 1780249118597,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 272992.63927283656,
+            "unit": "ns",
+            "range": "± 2044.4190230399022",
+            "bytesAllocated": 30804
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 206334.73465401787,
+            "unit": "ns",
+            "range": "± 2723.3817228584735",
+            "bytesAllocated": 15568
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 222411.19056919642,
+            "unit": "ns",
+            "range": "± 1330.2424857838714",
+            "bytesAllocated": 13928
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 183776.07259114584,
+            "unit": "ns",
+            "range": "± 2809.8857736911514",
+            "bytesAllocated": 10893
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 229795.3959263393,
+            "unit": "ns",
+            "range": "± 846.641070631319",
+            "bytesAllocated": 25775
           }
         ]
       }
