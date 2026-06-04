@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1780555814343,
+  "lastUpdated": 1780568198779,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -61046,6 +61046,44 @@
             "unit": "ns",
             "range": "± 2172.215897145205",
             "bytesAllocated": 48444
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "5d12d6ef5ffa2ce2a89d33cd7d8d87f23b7ff916",
+          "message": "Fix benchmarks permissions (#3535)\n\nBenchmarks need access to comment on issues in the originating repository. Add `comments: write` permissions to the profiles and extend functionality to allow multi-repository targets.",
+          "timestamp": "2026-06-04T10:13:10Z",
+          "url": "https://github.com/martincostello/costellobot/commit/5d12d6ef5ffa2ce2a89d33cd7d8d87f23b7ff916"
+        },
+        "date": 1780568198779,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 499454.13731971156,
+            "unit": "ns",
+            "range": "± 3169.362590109118",
+            "bytesAllocated": 40238
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 221843.42533052884,
+            "unit": "ns",
+            "range": "± 1399.5526987330697",
+            "bytesAllocated": 20216
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 287973.6819661458,
+            "unit": "ns",
+            "range": "± 966.8233671826332",
+            "bytesAllocated": 48445
           }
         ]
       }
