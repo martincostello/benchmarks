@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1778622063169,
+  "lastUpdated": 1780851174193,
   "repoUrl": "https://github.com/martincostello/benchmarks-demo",
   "entries": {
     "DotNetBenchmarks.IndexOfAnyBenchmarks": [
@@ -8514,6 +8514,44 @@
             "bytesAllocated": 0
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a92000cf3779f265783d5f55f3beed0400bef929",
+          "message": "Fix build\r\n\r\nRemove `rollForward` to workaround actions/setup-dotnet issue and use a version of BenchmarkDotNet that exists.",
+          "timestamp": "2026-06-07T16:48:34Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/a92000cf3779f265783d5f55f3beed0400bef929"
+        },
+        "date": 1780851174193,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.993727667629718,
+            "unit": "ns",
+            "range": "± 0.013957978929993394",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 5.98004657889788,
+            "unit": "ns",
+            "range": "± 0.0022874266750431364",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 5.287693101167679,
+            "unit": "ns",
+            "range": "± 0.013051072226552253",
+            "bytesAllocated": 0
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.HashBenchmarks": [
@@ -15457,6 +15495,37 @@
             "value": 7753.625337873186,
             "unit": "ns",
             "range": "± 15.705393720744077",
+            "bytesAllocated": 56
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a92000cf3779f265783d5f55f3beed0400bef929",
+          "message": "Fix build\r\n\r\nRemove `rollForward` to workaround actions/setup-dotnet issue and use a version of BenchmarkDotNet that exists.",
+          "timestamp": "2026-06-07T16:48:34Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/a92000cf3779f265783d5f55f3beed0400bef929"
+        },
+        "date": 1780851174193,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 8020.630494181315,
+            "unit": "ns",
+            "range": "± 38.099210886985766",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 7728.501867675781,
+            "unit": "ns",
+            "range": "± 3.4067388188050383",
             "bytesAllocated": 56
           }
         ]
@@ -22406,6 +22475,37 @@
             "bytesAllocated": 120
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a92000cf3779f265783d5f55f3beed0400bef929",
+          "message": "Fix build\r\n\r\nRemove `rollForward` to workaround actions/setup-dotnet issue and use a version of BenchmarkDotNet that exists.",
+          "timestamp": "2026-06-07T16:48:34Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/a92000cf3779f265783d5f55f3beed0400bef929"
+        },
+        "date": 1780851174193,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 46.30991366704305,
+            "unit": "ns",
+            "range": "± 0.1856022651751739",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 34.15728501081467,
+            "unit": "ns",
+            "range": "± 0.13070151757018728",
+            "bytesAllocated": 120
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.TodoAppBenchmarks": [
@@ -29287,6 +29387,37 @@
             "value": 112887.61938476562,
             "unit": "ns",
             "range": "± 594.4933576988681",
+            "bytesAllocated": 4000
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a92000cf3779f265783d5f55f3beed0400bef929",
+          "message": "Fix build\r\n\r\nRemove `rollForward` to workaround actions/setup-dotnet issue and use a version of BenchmarkDotNet that exists.",
+          "timestamp": "2026-06-07T16:48:34Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/a92000cf3779f265783d5f55f3beed0400bef929"
+        },
+        "date": 1780851174193,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+            "value": 111114.38007061298,
+            "unit": "ns",
+            "range": "± 311.91963758799267",
+            "bytesAllocated": 4256
+          },
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            "value": 112039.05287272135,
+            "unit": "ns",
+            "range": "± 411.41025364169855",
             "bytesAllocated": 4000
           }
         ]
