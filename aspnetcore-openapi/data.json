@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1780850863119,
+  "lastUpdated": 1781029589748,
   "repoUrl": "https://github.com/martincostello/aspnetcore-openapi",
   "entries": {
     "ASP.NET Core OpenAPI": [
@@ -10060,6 +10060,44 @@
             "unit": "ns",
             "range": "± 17148.96562512369",
             "bytesAllocated": 1296349
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "a423da06fa4e764295a2b3752ff64e8b4fb0e31e",
+          "message": "Fix build\r\n\r\nRemove `rollForward` to workaround actions/setup-dotnet issue and use a version of BenchmarkDotNet that exists.",
+          "timestamp": "2026-06-09T18:21:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-openapi/commit/a423da06fa4e764295a2b3752ff64e8b4fb0e31e"
+        },
+        "date": 1781029589748,
+        "benches": [
+          {
+            "name": "TodoApp.OpenApiBenchmarks.AspNetCore",
+            "value": 739140.7208658854,
+            "unit": "ns",
+            "range": "± 4040.2293946644813",
+            "bytesAllocated": 555623
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.NSwag",
+            "value": 2206770.05703125,
+            "unit": "ns",
+            "range": "± 28139.85398178308",
+            "bytesAllocated": 1567073
+          },
+          {
+            "name": "TodoApp.OpenApiBenchmarks.Swashbuckle",
+            "value": 1136405.2255208334,
+            "unit": "ns",
+            "range": "± 9809.09752368557",
+            "bytesAllocated": 1296934
           }
         ]
       }
