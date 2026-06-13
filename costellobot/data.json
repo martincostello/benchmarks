@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1781286551445,
+  "lastUpdated": 1781345348803,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -62794,6 +62794,44 @@
             "unit": "ns",
             "range": "± 5087.476130260481",
             "bytesAllocated": 48449
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "286793adc172887a2fc4d56aadba285c54609f91",
+          "message": "Extend GitHub token broker (#3590)\n\n- Support configuring arbitrary required claims for GitHub token broker profiles.\n- Only allow access to the one in-use repo.\n- Remove `workflows: write`.\n- Add a JSON schema for the token broker configuration and a test that uses it to validate.\n- Return the permissions and repositories in the token response when the token is for a GitHub app installation.\n- Move dependency configuration to a file.\n- Allow the `AGPL-3.0-only AND JSON` license for Newtonsoft.Json.Schema.",
+          "timestamp": "2026-06-13T10:05:43Z",
+          "url": "https://github.com/martincostello/costellobot/commit/286793adc172887a2fc4d56aadba285c54609f91"
+        },
+        "date": 1781345348803,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 503854.81080729165,
+            "unit": "ns",
+            "range": "± 4471.409849660037",
+            "bytesAllocated": 40239
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 223762.88658854167,
+            "unit": "ns",
+            "range": "± 2523.41447889595",
+            "bytesAllocated": 20216
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 288715.92506510415,
+            "unit": "ns",
+            "range": "± 1974.8783594848987",
+            "bytesAllocated": 48451
           }
         ]
       }
