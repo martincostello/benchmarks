@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1781041258320,
+  "lastUpdated": 1781521082360,
   "repoUrl": "https://github.com/martincostello/benchmarks-demo",
   "entries": {
     "DotNetBenchmarks.IndexOfAnyBenchmarks": [
@@ -8628,6 +8628,44 @@
             "bytesAllocated": 0
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "7504d5b69c52438aadf5da02cc6663e225de7f8e",
+          "message": "Enable runtime async\n\nEnable runtime async.",
+          "timestamp": "2026-06-15T10:53:28Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/7504d5b69c52438aadf5da02cc6663e225de7f8e"
+        },
+        "date": 1781521082360,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_String",
+            "value": 5.344243660569191,
+            "unit": "ns",
+            "range": "± 0.0046564603151067144",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Array",
+            "value": 5.350025844893286,
+            "unit": "ns",
+            "range": "± 0.014645947599914336",
+            "bytesAllocated": 0
+          },
+          {
+            "name": "DotNetBenchmarks.IndexOfAnyBenchmarks.IndexOfAny_Span_Two_Chars",
+            "value": 4.731347974141439,
+            "unit": "ns",
+            "range": "± 0.011004351587283063",
+            "bytesAllocated": 0
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.HashBenchmarks": [
@@ -15664,6 +15702,37 @@
             "value": 6908.276553344726,
             "unit": "ns",
             "range": "± 12.039995881013548",
+            "bytesAllocated": 56
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "7504d5b69c52438aadf5da02cc6663e225de7f8e",
+          "message": "Enable runtime async\n\nEnable runtime async.",
+          "timestamp": "2026-06-15T10:53:28Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/7504d5b69c52438aadf5da02cc6663e225de7f8e"
+        },
+        "date": 1781521082360,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256ComputeHash",
+            "value": 7247.797584533691,
+            "unit": "ns",
+            "range": "± 13.188740635354721",
+            "bytesAllocated": 248
+          },
+          {
+            "name": "DotNetBenchmarks.HashBenchmarks.Sha256HashData",
+            "value": 6829.408907572429,
+            "unit": "ns",
+            "range": "± 12.03007874824783",
             "bytesAllocated": 56
           }
         ]
@@ -22706,6 +22775,37 @@
             "bytesAllocated": 120
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "7504d5b69c52438aadf5da02cc6663e225de7f8e",
+          "message": "Enable runtime async\n\nEnable runtime async.",
+          "timestamp": "2026-06-15T10:53:28Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/7504d5b69c52438aadf5da02cc6663e225de7f8e"
+        },
+        "date": 1781521082360,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Generic",
+            "value": 37.92529966433843,
+            "unit": "ns",
+            "range": "± 0.3766031794651259",
+            "bytesAllocated": 144
+          },
+          {
+            "name": "DotNetBenchmarks.ILoggerFactoryBenchmarks.CreateLogger_Type",
+            "value": 34.409953348338604,
+            "unit": "ns",
+            "range": "± 0.6675330199426249",
+            "bytesAllocated": 120
+          }
+        ]
       }
     ],
     "DotNetBenchmarks.TodoAppBenchmarks": [
@@ -29681,6 +29781,37 @@
             "unit": "ns",
             "range": "± 544.5403751299303",
             "bytesAllocated": 3944
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "7504d5b69c52438aadf5da02cc6663e225de7f8e",
+          "message": "Enable runtime async\n\nEnable runtime async.",
+          "timestamp": "2026-06-15T10:53:28Z",
+          "url": "https://github.com/martincostello/benchmarks-demo/commit/7504d5b69c52438aadf5da02cc6663e225de7f8e"
+        },
+        "date": 1781521082360,
+        "benches": [
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetAllTodos",
+            "value": 150178.15325520834,
+            "unit": "ns",
+            "range": "± 538.9845451804916",
+            "bytesAllocated": 4096
+          },
+          {
+            "name": "DotNetBenchmarks.TodoAppBenchmarks.GetOneTodo",
+            "value": 154042.64098307292,
+            "unit": "ns",
+            "range": "± 981.8400446029199",
+            "bytesAllocated": 3840
           }
         ]
       }
