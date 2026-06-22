@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782120773253,
+  "lastUpdated": 1782124664336,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -78036,6 +78036,578 @@
             "unit": "ns",
             "range": "± 5146.8997619119955",
             "bytesAllocated": 2781
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 52276.27003251745,
+            "unit": "ns",
+            "range": "± 2973.5342872505435",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 54181.35383789062,
+            "unit": "ns",
+            "range": "± 3378.692779469969",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 54991.72230786956,
+            "unit": "ns",
+            "range": "± 3030.492384215303",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 55372.87162898137,
+            "unit": "ns",
+            "range": "± 2826.5029793335916",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 55765.86226276436,
+            "unit": "ns",
+            "range": "± 3269.534697430084",
+            "bytesAllocated": 2654
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 200896.84898158483,
+            "unit": "ns",
+            "range": "± 3107.3911249589137",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 221246.2723388672,
+            "unit": "ns",
+            "range": "± 4298.620418404336",
+            "bytesAllocated": 3550
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 217321.5291922433,
+            "unit": "ns",
+            "range": "± 1024.2871607063976",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 215637.67919921875,
+            "unit": "ns",
+            "range": "± 2063.716100225381",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 222108.94673978366,
+            "unit": "ns",
+            "range": "± 2235.1535537461814",
+            "bytesAllocated": 3550
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 52842.901881331105,
+            "unit": "ns",
+            "range": "± 2341.0617254461945",
+            "bytesAllocated": 1845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 56394.89501953125,
+            "unit": "ns",
+            "range": "± 2462.003207769622",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 56634.385954589845,
+            "unit": "ns",
+            "range": "± 3502.4218137488097",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 53558.76583784055,
+            "unit": "ns",
+            "range": "± 2753.9995940168697",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 53121.09929011418,
+            "unit": "ns",
+            "range": "± 2178.385395942229",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 530790.7073317308,
+            "unit": "ns",
+            "range": "± 1508.8245224637003",
+            "bytesAllocated": 17237
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 553448.5366210938,
+            "unit": "ns",
+            "range": "± 2306.0232700627166",
+            "bytesAllocated": 20592
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 536981.0460286458,
+            "unit": "ns",
+            "range": "± 2970.9228547758257",
+            "bytesAllocated": 18628
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 550221.7470005581,
+            "unit": "ns",
+            "range": "± 2139.4513412491838",
+            "bytesAllocated": 20409
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 552066.3560267857,
+            "unit": "ns",
+            "range": "± 1850.6018456599102",
+            "bytesAllocated": 20570
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 4410689.712015086,
+            "unit": "ns",
+            "range": "± 127505.69444308437",
+            "bytesAllocated": 149544
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 4683628.549867021,
+            "unit": "ns",
+            "range": "± 288602.24570032634",
+            "bytesAllocated": 157335
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 4856827.510526316,
+            "unit": "ns",
+            "range": "± 298327.4124064506",
+            "bytesAllocated": 171610
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 4684042.499013158,
+            "unit": "ns",
+            "range": "± 287007.69805158576",
+            "bytesAllocated": 160970
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 4578403.638310186,
+            "unit": "ns",
+            "range": "± 94082.37722605746",
+            "bytesAllocated": 170584
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 52614.03610595703,
+            "unit": "ns",
+            "range": "± 3097.28727675822",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 56741.019113251656,
+            "unit": "ns",
+            "range": "± 1791.196674595142",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 56602.45112784964,
+            "unit": "ns",
+            "range": "± 2526.224122020889",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 52508.27175355569,
+            "unit": "ns",
+            "range": "± 1797.4808111570135",
+            "bytesAllocated": 2781
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 51871.39119119847,
+            "unit": "ns",
+            "range": "± 1877.2772781968738",
+            "bytesAllocated": 2781
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 111733.8015562996,
+            "unit": "ns",
+            "range": "± 5096.964948977798",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 123721.28102213542,
+            "unit": "ns",
+            "range": "± 2071.7538401999354",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 144313.3610107422,
+            "unit": "ns",
+            "range": "± 3159.6744653760643",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 136094.39700137867,
+            "unit": "ns",
+            "range": "± 2680.077962132963",
+            "bytesAllocated": 8262
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 133255.71514892578,
+            "unit": "ns",
+            "range": "± 2525.412357813243",
+            "bytesAllocated": 9664
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 52711.79085213797,
+            "unit": "ns",
+            "range": "± 2251.926672452651",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 54738.504259940906,
+            "unit": "ns",
+            "range": "± 2797.7925780067035",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 55286.922084263395,
+            "unit": "ns",
+            "range": "± 2347.231270330108",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 54314.01420593262,
+            "unit": "ns",
+            "range": "± 3121.511003424536",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 54427.85055226293,
+            "unit": "ns",
+            "range": "± 2958.253974289316",
+            "bytesAllocated": 2662
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 3568721.9424342103,
+            "unit": "ns",
+            "range": "± 173833.87236006567",
+            "bytesAllocated": 131566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 3617220.379340278,
+            "unit": "ns",
+            "range": "± 85946.37923672011",
+            "bytesAllocated": 136269
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 3571186.7003125,
+            "unit": "ns",
+            "range": "± 95229.0674921422",
+            "bytesAllocated": 137176
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 3542702.9090000005,
+            "unit": "ns",
+            "range": "± 93521.5370880896",
+            "bytesAllocated": 136265
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 3594665.1490384615,
+            "unit": "ns",
+            "range": "± 59496.89095613375",
+            "bytesAllocated": 137156
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 52705.65509521485,
+            "unit": "ns",
+            "range": "± 3312.5596388548793",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 55333.88821265811,
+            "unit": "ns",
+            "range": "± 2967.9671283900225",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 55850.186005563446,
+            "unit": "ns",
+            "range": "± 3267.469040079092",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 55692.17180101799,
+            "unit": "ns",
+            "range": "± 3784.4146048449925",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 55319.239562128634,
+            "unit": "ns",
+            "range": "± 2713.5571591522516",
+            "bytesAllocated": 2662
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "008a89df0d00b1aff9f3c612bde7cde82dea549e",
+          "message": "Downgrade AWSSDK.S3 to 4.0.25.1 (#204)\n\nDowngrade to see if 4.0.25.2 is the cause of a performance regression.",
+          "timestamp": "2026-06-22T10:05:16Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/008a89df0d00b1aff9f3c612bde7cde82dea549e"
+        },
+        "date": 1782124664336,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 54078.40008433949,
+            "unit": "ns",
+            "range": "± 2296.3780396831594",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 54215.069648332494,
+            "unit": "ns",
+            "range": "± 3074.3892397522695",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 62415.2447261487,
+            "unit": "ns",
+            "range": "± 2718.8693531571093",
+            "bytesAllocated": 3298
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 57386.19574991862,
+            "unit": "ns",
+            "range": "± 3310.9383284596215",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 58732.89901928192,
+            "unit": "ns",
+            "range": "± 2269.7250838318428",
+            "bytesAllocated": 3250
           }
         ]
       }
