@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782327993768,
+  "lastUpdated": 1782329549977,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -62261,6 +62261,58 @@
             "unit": "ns",
             "range": "± 1745.773366594861",
             "bytesAllocated": 25684
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d9dd2831de464706fe86514f0e822b09627006ec",
+          "message": "Disable SuppressActivityOpenTelemetryData (#3386)\n\nDisable the `Microsoft.AspnetCore.Hosting.SuppressActivityOpenTelemetryData` feature switch for (hopefully) more performant telemetry.",
+          "timestamp": "2026-06-24T19:28:34Z",
+          "url": "https://github.com/martincostello/api/commit/d9dd2831de464706fe86514f0e822b09627006ec"
+        },
+        "date": 1782329549977,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 309614.74372209824,
+            "unit": "ns",
+            "range": "± 2050.372792526255",
+            "bytesAllocated": 30773
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 250179.85104166667,
+            "unit": "ns",
+            "range": "± 1929.6903625345922",
+            "bytesAllocated": 15519
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 264771.323046875,
+            "unit": "ns",
+            "range": "± 1926.373179619756",
+            "bytesAllocated": 13873
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 224013.52740885416,
+            "unit": "ns",
+            "range": "± 1157.3794520634146",
+            "bytesAllocated": 10863
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 264180.48053385416,
+            "unit": "ns",
+            "range": "± 1628.6019968291728",
+            "bytesAllocated": 25687
           }
         ]
       }
