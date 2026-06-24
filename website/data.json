@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782324903006,
+  "lastUpdated": 1782326745641,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -57954,6 +57954,58 @@
             "unit": "ns",
             "range": "± 1817.04445135039",
             "bytesAllocated": 19953
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8539a1db85a6739546ac0202a522bcb6693a375",
+          "message": "Disable SuppressActivityOpenTelemetryData (#3508)\n\nDisable the `Microsoft.AspnetCore.Hosting.SuppressActivityOpenTelemetryData` feature switch for (hopefully) more performant telemetry.",
+          "timestamp": "2026-06-24T18:41:51Z",
+          "url": "https://github.com/martincostello/website/commit/f8539a1db85a6739546ac0202a522bcb6693a375"
+        },
+        "date": 1782326745641,
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 316245.7403846154,
+            "unit": "ns",
+            "range": "± 2515.9015852558528",
+            "bytesAllocated": 42468
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 325441.8744741586,
+            "unit": "ns",
+            "range": "± 773.440819117722",
+            "bytesAllocated": 43840
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 409459.8888221154,
+            "unit": "ns",
+            "range": "± 6300.912540282841",
+            "bytesAllocated": 62838
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 346040.70857747394,
+            "unit": "ns",
+            "range": "± 1122.4068304457091",
+            "bytesAllocated": 52578
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 221271.28055245537,
+            "unit": "ns",
+            "range": "± 2796.0185110897214",
+            "bytesAllocated": 19952
           }
         ]
       }
