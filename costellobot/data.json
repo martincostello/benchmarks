@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782324642214,
+  "lastUpdated": 1782328150519,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -64048,6 +64048,44 @@
             "unit": "ns",
             "range": "± 5145.338910270682",
             "bytesAllocated": 48401
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c0b819f8da0481f8c9b341f7a04aced70c9657be",
+          "message": "Disable SuppressActivityOpenTelemetryData (#3632)\n\nDisable the `Microsoft.AspnetCore.Hosting.SuppressActivityOpenTelemetryData` feature switch for (hopefully) more performant telemetry.",
+          "timestamp": "2026-06-24T19:05:26Z",
+          "url": "https://github.com/martincostello/costellobot/commit/c0b819f8da0481f8c9b341f7a04aced70c9657be"
+        },
+        "date": 1782328150519,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 555316.3158052885,
+            "unit": "ns",
+            "range": "± 2264.0934239571693",
+            "bytesAllocated": 40141
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 269702.89229910716,
+            "unit": "ns",
+            "range": "± 936.7337502563134",
+            "bytesAllocated": 20167
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 333275.3375651042,
+            "unit": "ns",
+            "range": "± 1807.275049917187",
+            "bytesAllocated": 48398
           }
         ]
       }
