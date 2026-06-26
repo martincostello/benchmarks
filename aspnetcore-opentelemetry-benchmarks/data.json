@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782461759750,
+  "lastUpdated": 1782468236633,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -91192,6 +91192,630 @@
             "unit": "ns",
             "range": "± 4572.3757128941925",
             "bytesAllocated": 3250
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 62568.93886962891,
+            "unit": "ns",
+            "range": "± 5264.200127172106",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 67307.94079833984,
+            "unit": "ns",
+            "range": "± 4660.5874838562495",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 67271.95293393343,
+            "unit": "ns",
+            "range": "± 3794.7613206361166",
+            "bytesAllocated": 2655
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 64177.451247558594,
+            "unit": "ns",
+            "range": "± 5064.271382676476",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 62720.46441243489,
+            "unit": "ns",
+            "range": "± 3485.349598286134",
+            "bytesAllocated": 2357
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 252424.93746744792,
+            "unit": "ns",
+            "range": "± 1835.8445791870024",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 256430.398828125,
+            "unit": "ns",
+            "range": "± 1879.311517926701",
+            "bytesAllocated": 3550
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 254705.08113606772,
+            "unit": "ns",
+            "range": "± 1332.3181481739266",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 251141.03076171875,
+            "unit": "ns",
+            "range": "± 2118.9462368806194",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 250701.62464192708,
+            "unit": "ns",
+            "range": "± 4210.127321574895",
+            "bytesAllocated": 2630
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 66100.21683349609,
+            "unit": "ns",
+            "range": "± 5370.091345932758",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 67929.78721679687,
+            "unit": "ns",
+            "range": "± 4545.937613306983",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 67397.32056884766,
+            "unit": "ns",
+            "range": "± 4438.910996977516",
+            "bytesAllocated": 2693
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 63631.223979492184,
+            "unit": "ns",
+            "range": "± 5052.535187474493",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 62752.82715576172,
+            "unit": "ns",
+            "range": "± 5344.370247026861",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 63164.3618359375,
+            "unit": "ns",
+            "range": "± 5671.125476989352",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 67017.59468261719,
+            "unit": "ns",
+            "range": "± 4450.61565188694",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 66850.27331298828,
+            "unit": "ns",
+            "range": "± 4470.242601742015",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 62010.483891601565,
+            "unit": "ns",
+            "range": "± 5531.824048914996",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 62416.941506347655,
+            "unit": "ns",
+            "range": "± 5248.283254476003",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 61719.68765136719,
+            "unit": "ns",
+            "range": "± 5070.5116386830805",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 65150.203877995526,
+            "unit": "ns",
+            "range": "± 3609.29903399453",
+            "bytesAllocated": 2781
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 69612.63810929008,
+            "unit": "ns",
+            "range": "± 2637.1678834062204",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 61920.45649658203,
+            "unit": "ns",
+            "range": "± 5883.994940560576",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 63953.67217285156,
+            "unit": "ns",
+            "range": "± 5534.022111311368",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 556423.8962751116,
+            "unit": "ns",
+            "range": "± 3728.3112027462657",
+            "bytesAllocated": 17232
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 574262.3466099331,
+            "unit": "ns",
+            "range": "± 4148.002720711555",
+            "bytesAllocated": 20593
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 568993.8932942708,
+            "unit": "ns",
+            "range": "± 2578.9889494007643",
+            "bytesAllocated": 18616
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 566746.179274339,
+            "unit": "ns",
+            "range": "± 2097.5110545414377",
+            "bytesAllocated": 19551
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 570285.148297991,
+            "unit": "ns",
+            "range": "± 4737.6467807294275",
+            "bytesAllocated": 20514
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2210342.1618351066,
+            "unit": "ns",
+            "range": "± 52493.48274782242",
+            "bytesAllocated": 210696
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2767322.71734375,
+            "unit": "ns",
+            "range": "± 609474.9712605273",
+            "bytesAllocated": 215922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2385031.5192901236,
+            "unit": "ns",
+            "range": "± 106753.29526860378",
+            "bytesAllocated": 236296
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2287513.820113636,
+            "unit": "ns",
+            "range": "± 86729.81629285331",
+            "bytesAllocated": 215665
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2460998.9557291665,
+            "unit": "ns",
+            "range": "± 113660.51980402831",
+            "bytesAllocated": 234003
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 141304.50880940756,
+            "unit": "ns",
+            "range": "± 6929.946499470443",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 154451.5339029948,
+            "unit": "ns",
+            "range": "± 2755.065229039228",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 196877.68968098957,
+            "unit": "ns",
+            "range": "± 2602.2299334180866",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 168835.17337740384,
+            "unit": "ns",
+            "range": "± 6930.851179354582",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 160167.3564717061,
+            "unit": "ns",
+            "range": "± 5339.034930773067",
+            "bytesAllocated": 7851
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 750678.0888798701,
+            "unit": "ns",
+            "range": "± 5120.852873203643",
+            "bytesAllocated": 118958
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 760318.0405241938,
+            "unit": "ns",
+            "range": "± 18948.49447276782",
+            "bytesAllocated": 119916
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 756274.3589691558,
+            "unit": "ns",
+            "range": "± 5834.3858833286695",
+            "bytesAllocated": 121642
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 754179.410116793,
+            "unit": "ns",
+            "range": "± 22511.719339699688",
+            "bytesAllocated": 118993
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 764771.099025974,
+            "unit": "ns",
+            "range": "± 6278.408973189547",
+            "bytesAllocated": 123367
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 64823.6898071289,
+            "unit": "ns",
+            "range": "± 4923.737962294171",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 66474.60079101562,
+            "unit": "ns",
+            "range": "± 4551.943448483771",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 66211.949921875,
+            "unit": "ns",
+            "range": "± 4868.406313799551",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 61924.42696777344,
+            "unit": "ns",
+            "range": "± 5469.337039135468",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 63567.80752929687,
+            "unit": "ns",
+            "range": "± 4965.136474780199",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 678013.6503208706,
+            "unit": "ns",
+            "range": "± 5364.216464786067",
+            "bytesAllocated": 76274
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 677994.4490740742,
+            "unit": "ns",
+            "range": "± 11834.952812381136",
+            "bytesAllocated": 78302
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 681137.7111882716,
+            "unit": "ns",
+            "range": "± 14971.356875671205",
+            "bytesAllocated": 79143
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 665367.3286458333,
+            "unit": "ns",
+            "range": "± 6121.63038441117",
+            "bytesAllocated": 76275
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 694751.6076388888,
+            "unit": "ns",
+            "range": "± 13886.021425736635",
+            "bytesAllocated": 82153
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "f8eb1145af9ed807a102e2af12891abe7e23273e",
+          "message": "Fix OTLP overhead (#227)\n\nOnly call `UseOtlpExporter()` when all signals are enabled, otherwise use individual `AddOtlpExporter()` methods for each signal.",
+          "timestamp": "2026-06-26T09:32:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/f8eb1145af9ed807a102e2af12891abe7e23273e"
+        },
+        "date": 1782468236633,
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 65075.1175415039,
+            "unit": "ns",
+            "range": "± 5469.438469944481",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 67514.38297526042,
+            "unit": "ns",
+            "range": "± 3941.2346536125756",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 78280.50901884191,
+            "unit": "ns",
+            "range": "± 3732.473552919688",
+            "bytesAllocated": 3298
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 68269.51522572835,
+            "unit": "ns",
+            "range": "± 3904.501221214401",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 68515.01169433593,
+            "unit": "ns",
+            "range": "± 3300.644731827241",
+            "bytesAllocated": 2877
           }
         ]
       }
