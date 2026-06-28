@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782636760213,
+  "lastUpdated": 1782645032631,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -64466,6 +64466,44 @@
             "unit": "ns",
             "range": "± 1971.4478537823143",
             "bytesAllocated": 48369
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "4ae9db2fa499b641db4b446460f3c2bfa363778d",
+          "message": "Use BodyWriter (#3643)\n\nWrite the JSON directly to `HttpResponse.BodyWriter` instead of to a stream and then re-encoding it as a UTF-8 string.",
+          "timestamp": "2026-06-28T11:07:08Z",
+          "url": "https://github.com/martincostello/costellobot/commit/4ae9db2fa499b641db4b446460f3c2bfa363778d"
+        },
+        "date": 1782645032631,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 502299.43694196426,
+            "unit": "ns",
+            "range": "± 6546.723629067601",
+            "bytesAllocated": 40141
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 222953.57727864583,
+            "unit": "ns",
+            "range": "± 1957.2927791134803",
+            "bytesAllocated": 20168
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 292329.8594501202,
+            "unit": "ns",
+            "range": "± 2202.925484678858",
+            "bytesAllocated": 48382
           }
         ]
       }
