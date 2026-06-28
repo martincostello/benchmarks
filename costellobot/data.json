@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782645032631,
+  "lastUpdated": 1782647218861,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -64504,6 +64504,44 @@
             "unit": "ns",
             "range": "± 2202.925484678858",
             "bytesAllocated": 48382
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "3752fe25963c23e557015d2264f1a516639c0ab2",
+          "message": "Performance optimisations (#3644)\n\n- Avoid allocating arrays to split strings.\n- Avoid recomputing things in loops.\n- Avoid `O(n*m)` lookup and replace with `O(1)`.\n- Avoid counting group twice.",
+          "timestamp": "2026-06-28T11:43:25Z",
+          "url": "https://github.com/martincostello/costellobot/commit/3752fe25963c23e557015d2264f1a516639c0ab2"
+        },
+        "date": 1782647218861,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 502564.5082632211,
+            "unit": "ns",
+            "range": "± 3480.9060596930685",
+            "bytesAllocated": 40136
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 222549.8681640625,
+            "unit": "ns",
+            "range": "± 1921.6369927718345",
+            "bytesAllocated": 20168
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 294864.5198567708,
+            "unit": "ns",
+            "range": "± 2369.9712705156994",
+            "bytesAllocated": 48390
           }
         ]
       }
