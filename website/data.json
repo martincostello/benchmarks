@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782496259757,
+  "lastUpdated": 1782643398654,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -58266,6 +58266,58 @@
             "unit": "ns",
             "range": "± 1331.9635965726072",
             "bytesAllocated": 19951
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "4d98d2057ffaafe03fe8f1d3eed2405ae1ea06ad",
+          "message": "Performance improvements (#3515)\n\n- Avoid redundant allocations.\n- Avoid closure.",
+          "timestamp": "2026-06-28T10:39:05Z",
+          "url": "https://github.com/martincostello/website/commit/4d98d2057ffaafe03fe8f1d3eed2405ae1ea06ad"
+        },
+        "date": 1782643398654,
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 363997.2117838542,
+            "unit": "ns",
+            "range": "± 1797.7867603691564",
+            "bytesAllocated": 42319
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 375015.9996744792,
+            "unit": "ns",
+            "range": "± 1738.448548553572",
+            "bytesAllocated": 43674
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 455607.7795632102,
+            "unit": "ns",
+            "range": "± 10106.5213093007",
+            "bytesAllocated": 62717
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 386580.30227864586,
+            "unit": "ns",
+            "range": "± 2398.098567635491",
+            "bytesAllocated": 52408
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 268360.6534505208,
+            "unit": "ns",
+            "range": "± 1660.1143889971202",
+            "bytesAllocated": 19855
           }
         ]
       }
