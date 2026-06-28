@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1782643398654,
+  "lastUpdated": 1782645374060,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -58318,6 +58318,58 @@
             "unit": "ns",
             "range": "± 1660.1143889971202",
             "bytesAllocated": 19855
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6d73d2dd99ff160259adfa037f8fccc35afaf379",
+          "message": "Performance improvements (#3516)\n\n- Avoid reflection for each `/version` call.\n- Avoid creating the same string twice.\n- Avoid allocating a `StringBuilder`.\n- Add uptime to `/version` response.",
+          "timestamp": "2026-06-28T11:12:18Z",
+          "url": "https://github.com/martincostello/website/commit/6d73d2dd99ff160259adfa037f8fccc35afaf379"
+        },
+        "date": 1782645374060,
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 320497.033984375,
+            "unit": "ns",
+            "range": "± 2964.2688609583674",
+            "bytesAllocated": 41945
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 325199.2199358259,
+            "unit": "ns",
+            "range": "± 1625.06721731195",
+            "bytesAllocated": 43317
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 411900.52102864586,
+            "unit": "ns",
+            "range": "± 10528.26460259834",
+            "bytesAllocated": 62317
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 346161.3116536458,
+            "unit": "ns",
+            "range": "± 3505.375979236716",
+            "bytesAllocated": 52052
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 194109.69095552884,
+            "unit": "ns",
+            "range": "± 1516.294929709029",
+            "bytesAllocated": 17960
           }
         ]
       }
