@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1784294384577,
+  "lastUpdated": 1784301962389,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -65120,6 +65120,58 @@
             "value": 270867.40481770836,
             "unit": "ns",
             "range": "± 937.3930600266848",
+            "bytesAllocated": 25467
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "de0b4b852861dba305fc9e69beb932b537d80c7d",
+          "message": "Remove spectral validation (#3453)\n\nspectral uses unpinned dependencies and pulls in the compromised asyncio packages.\n\nAs the workflow doesn't have any relevant GitHub permissions there's no impact, but as it doesn't appear to have responsive maintainers to fix it and the workflow doesn't add much value, just delete it.",
+          "timestamp": "2026-07-17T15:21:16Z",
+          "url": "https://github.com/martincostello/api/commit/de0b4b852861dba305fc9e69beb932b537d80c7d"
+        },
+        "date": 1784301962389,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 323179.5931966146,
+            "unit": "ns",
+            "range": "± 2904.2460991144962",
+            "bytesAllocated": 30571
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 257300.05758463542,
+            "unit": "ns",
+            "range": "± 521.4953550578571",
+            "bytesAllocated": 15303
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 268215.76642717636,
+            "unit": "ns",
+            "range": "± 856.6027065298025",
+            "bytesAllocated": 13655
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 226814.9822265625,
+            "unit": "ns",
+            "range": "± 2963.926789221929",
+            "bytesAllocated": 10637
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 269344.852734375,
+            "unit": "ns",
+            "range": "± 606.9082701786433",
             "bytesAllocated": 25467
           }
         ]
