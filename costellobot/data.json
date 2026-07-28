@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1785216097151,
+  "lastUpdated": 1785230289081,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -67772,6 +67772,44 @@
             "unit": "ns",
             "range": "± 3821.725374061607",
             "bytesAllocated": 48758
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bdcabe3186d45e81ebd70564c5d80d2032cc527c",
+          "message": "Native AoT preparation (#3743)\n\n- Remove the Microsoft.TypeScript.MSBuild NuGet package as it's redundant and causes build errors in Visual Studio.\n- Run `npm audit fix` to update brace-expansion.\n- Pass empty route dictionary to `Results.RedirectToRoute()`.\n- Wire-up JSON serializer context to SignalR.",
+          "timestamp": "2026-07-28T09:14:36Z",
+          "url": "https://github.com/martincostello/costellobot/commit/bdcabe3186d45e81ebd70564c5d80d2032cc527c"
+        },
+        "date": 1785230289081,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 390555.6544270833,
+            "unit": "ns",
+            "range": "± 1506.0579521135758",
+            "bytesAllocated": 39544
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 168907.56708984374,
+            "unit": "ns",
+            "range": "± 1248.6892232463226",
+            "bytesAllocated": 19968
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 224331.78860677083,
+            "unit": "ns",
+            "range": "± 1228.7626999508138",
+            "bytesAllocated": 48763
           }
         ]
       }
