@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1785322304682,
+  "lastUpdated": 1785326776672,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -68000,6 +68000,44 @@
             "unit": "ns",
             "range": "± 2876.011499024026",
             "bytesAllocated": 48767
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b490a9d2a33a48a8c310f1e4718eed75942c3f10",
+          "message": "Fix native AoT warning (#3751)\n\n- Remove the `data` property of health check items instead of serializing an `object`. Today no checks have any data anyway, so nothing is lost.\n- Enable AoT analyzer to prevent future regressions.\n- Explicitly disable AoT publishing as various dependencies are not AoT compatible.",
+          "timestamp": "2026-07-29T12:01:57Z",
+          "url": "https://github.com/martincostello/costellobot/commit/b490a9d2a33a48a8c310f1e4718eed75942c3f10"
+        },
+        "date": 1785326776672,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 577259.9441105769,
+            "unit": "ns",
+            "range": "± 3469.53945014888",
+            "bytesAllocated": 39619
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 274000.8917317708,
+            "unit": "ns",
+            "range": "± 1085.9711931930326",
+            "bytesAllocated": 19967
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 338465.64718191966,
+            "unit": "ns",
+            "range": "± 1515.403800850826",
+            "bytesAllocated": 48777
           }
         ]
       }
