@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1785391888404,
+  "lastUpdated": 1785403078966,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -68114,6 +68114,44 @@
             "unit": "ns",
             "range": "± 2296.992640334331",
             "bytesAllocated": 48778
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a9a260b7283936f72ae6ce192d1ee13757306bee",
+          "message": "Handle dependabot ignore regexes better (#3755)\n\n- Do not throw an exception if a dependabot ignore pattern is `*`.\n- Handle `RegexMatchTimeoutException` and `RegexParseException` when evaluating dependabot ignore patterns.\n- Evaluate the update type before evaluating the pattern.",
+          "timestamp": "2026-07-30T09:14:36Z",
+          "url": "https://github.com/martincostello/costellobot/commit/a9a260b7283936f72ae6ce192d1ee13757306bee"
+        },
+        "date": 1785403078966,
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 336217.67962239584,
+            "unit": "ns",
+            "range": "± 6240.555295127073",
+            "bytesAllocated": 39540
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 135887.7447979267,
+            "unit": "ns",
+            "range": "± 1429.1475281647372",
+            "bytesAllocated": 19967
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 187440.5901066707,
+            "unit": "ns",
+            "range": "± 1414.6353619643191",
+            "bytesAllocated": 48782
           }
         ]
       }
