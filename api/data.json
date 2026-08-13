@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1786565537834,
+  "lastUpdated": 1786611819117,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -19985,6 +19985,58 @@
             "unit": "ns",
             "range": "± 1886.1135868103931",
             "bytesAllocated": 26685
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "364bfe87addb239067765e2fcb91c85e302c347e",
+          "message": "Update .NET SDK to 11.0.100-preview.7.26381.103 (#3499)\n\n* Update to .NET 11 preview 5\n\nUpdate to preview 5 of .NET 11.\n\n* Fix benchmarks\n\nRemove prerelease feed.\n\n* Bump MartinCostello.OpenApi.Extensions\n\nUpdate to the latest prerelease for .NET 11.\n\n* Remove MessagePack override\n\nNo longer needed.\n\n* Update OpenAPI dependencies\n\nUpdate to the latest builds for openapi-extensions and Microsoft.OpenApi.\n\n* Update .NET SDK to 11.0.100-preview.6.26359.118 (#3437)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 11.0.100-preview.6.26359.118.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-preview.6.26359.118\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 11.0.100-preview.6.26359.118 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 11.0.0-preview.5.26302.115 to 11.0.0-preview.6.26359.118.\nBumps Microsoft.AspNetCore.Mvc.Testing from 11.0.0-preview.5.26302.115 to 11.0.0-preview.6.26359.118.\nBumps Microsoft.AspNetCore.OpenApi from 11.0.0-preview.5.26302.115 to 11.0.0-preview.6.26359.118.\nBumps Microsoft.Extensions.ApiDescription.Server from 11.0.0-preview.5.26302.115 to 11.0.0-preview.6.26359.118.\nBumps Microsoft.Extensions.Configuration.UserSecrets from 11.0.0-preview.5.26302.115 to 11.0.0-preview.6.26359.118.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-version: 11.0.0-preview.6.26359.118\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-version: 11.0.0-preview.6.26359.118\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-version: 11.0.0-preview.6.26359.118\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-version: 11.0.0-preview.6.26359.118\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Configuration.UserSecrets\n  dependency-version: 11.0.0-preview.6.26359.118\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Use OpenAPI 3.1\n\nDowngrade to OpenAPI 3.1 as spectral doesn't support OpenAPI 3.2.\n\n* Fix spectral\n\nGenerate OpenAPI 3.1 documents.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>\n\n* Bump openapi-extensions\n\nUpdate to version compiled against ASP.NET Core 11 preview 6.\n\n* Bump Microsoft.OpenApi\n\nBump Microsoft.OpenApi to 3.9.0.\n\n* Update to OpenAPI 3.2\n\nUpgrade from OpenAPI 3.1 to 3.2.\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 11.0.100-preview.7.26381.103.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-preview.7.26381.103\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 11.0.100-preview.7.26381.103 SDK.\n\nBumps Microsoft.AspNetCore.AzureAppServices.HostingStartup from 11.0.0-preview.6.26359.118 to 11.0.0-preview.7.26381.103.\nBumps Microsoft.AspNetCore.Mvc.Testing from 11.0.0-preview.6.26359.118 to 11.0.0-preview.7.26381.103.\nBumps Microsoft.AspNetCore.OpenApi from 11.0.0-preview.6.26359.118 to 11.0.0-preview.7.26381.103.\nBumps Microsoft.Extensions.ApiDescription.Server from 11.0.0-preview.6.26359.118 to 11.0.0-preview.7.26381.103.\nBumps Microsoft.Extensions.Configuration.UserSecrets from 11.0.0-preview.6.26359.118 to 11.0.0-preview.7.26381.103.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.AspNetCore.AzureAppServices.HostingStartup\n  dependency-version: 11.0.0-preview.7.26381.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.Mvc.Testing\n  dependency-version: 11.0.0-preview.7.26381.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.AspNetCore.OpenApi\n  dependency-version: 11.0.0-preview.7.26381.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.ApiDescription.Server\n  dependency-version: 11.0.0-preview.7.26381.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Configuration.UserSecrets\n  dependency-version: 11.0.0-preview.7.26381.103\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>",
+          "timestamp": "2026-08-13T08:59:27Z",
+          "url": "https://github.com/martincostello/api/commit/364bfe87addb239067765e2fcb91c85e302c347e"
+        },
+        "date": 1786611819117,
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 311926.16240985575,
+            "unit": "ns",
+            "range": "± 3301.2178142176613",
+            "bytesAllocated": 31902
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 267125.0848214286,
+            "unit": "ns",
+            "range": "± 1246.3648504661985",
+            "bytesAllocated": 16684
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 274092.19846754806,
+            "unit": "ns",
+            "range": "± 1488.090133956873",
+            "bytesAllocated": 15745
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 244059.91151646205,
+            "unit": "ns",
+            "range": "± 1492.9569531045602",
+            "bytesAllocated": 11981
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 267539.6668526786,
+            "unit": "ns",
+            "range": "± 2081.4633851534027",
+            "bytesAllocated": 26658
           }
         ]
       }
