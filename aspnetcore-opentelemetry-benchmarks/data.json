@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1787306597556,
+  "lastUpdated": 1787336814828,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -46903,6 +46903,786 @@
             "value": 98875.36820475261,
             "unit": "ns",
             "range": "± 1496.1956991142417",
+            "bytesAllocated": 2745
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 47946.36382649739,
+            "unit": "ns",
+            "range": "± 777.7059784991231",
+            "bytesAllocated": 1914
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 51589.6230061849,
+            "unit": "ns",
+            "range": "± 675.8636721163862",
+            "bytesAllocated": 2738
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 53544.23125406901,
+            "unit": "ns",
+            "range": "± 378.42211305508994",
+            "bytesAllocated": 2738
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 47735.97084554037,
+            "unit": "ns",
+            "range": "± 886.756481433944",
+            "bytesAllocated": 1914
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 51062.80148111979,
+            "unit": "ns",
+            "range": "± 416.5323901178557",
+            "bytesAllocated": 2433
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 49699.289778645834,
+            "unit": "ns",
+            "range": "± 595.1862234076556",
+            "bytesAllocated": 1930
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 51307.34600423177,
+            "unit": "ns",
+            "range": "± 776.0830536170743",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 52138.52916259765,
+            "unit": "ns",
+            "range": "± 1166.3814697439182",
+            "bytesAllocated": 2778
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 48429.73037997159,
+            "unit": "ns",
+            "range": "± 1188.4246008846153",
+            "bytesAllocated": 1954
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 48200.00679082456,
+            "unit": "ns",
+            "range": "± 1191.8379893559318",
+            "bytesAllocated": 1930
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 165217.7037150065,
+            "unit": "ns",
+            "range": "± 451.02857141055597",
+            "bytesAllocated": 2664
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 173030.73809344953,
+            "unit": "ns",
+            "range": "± 832.699876234065",
+            "bytesAllocated": 3713
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 171913.09184919085,
+            "unit": "ns",
+            "range": "± 823.5338113011397",
+            "bytesAllocated": 3487
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 165663.1870814732,
+            "unit": "ns",
+            "range": "± 563.5027645631059",
+            "bytesAllocated": 2664
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 166572.72990534856,
+            "unit": "ns",
+            "range": "± 1111.7179531554189",
+            "bytesAllocated": 2816
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 47976.279659016924,
+            "unit": "ns",
+            "range": "± 573.3721942970122",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 52115.63857327975,
+            "unit": "ns",
+            "range": "± 485.7390499773203",
+            "bytesAllocated": 2746
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 55483.38907063802,
+            "unit": "ns",
+            "range": "± 393.55897979300545",
+            "bytesAllocated": 2770
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 49228.89334716797,
+            "unit": "ns",
+            "range": "± 1132.2669644173588",
+            "bytesAllocated": 1946
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 48457.69715983073,
+            "unit": "ns",
+            "range": "± 411.6340846615896",
+            "bytesAllocated": 1922
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 46922.72720772879,
+            "unit": "ns",
+            "range": "± 711.930015962649",
+            "bytesAllocated": 1906
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 52990.123364257815,
+            "unit": "ns",
+            "range": "± 289.98879422534907",
+            "bytesAllocated": 2809
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 54150.71121419271,
+            "unit": "ns",
+            "range": "± 831.7930697228526",
+            "bytesAllocated": 2790
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 47944.324763706754,
+            "unit": "ns",
+            "range": "± 352.1926020575914",
+            "bytesAllocated": 1906
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 47504.05573323568,
+            "unit": "ns",
+            "range": "± 458.56922689266963",
+            "bytesAllocated": 1906
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 1619244.2375,
+            "unit": "ns",
+            "range": "± 9341.673887534178",
+            "bytesAllocated": 186077
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 1658617.295982143,
+            "unit": "ns",
+            "range": "± 8044.988606807756",
+            "bytesAllocated": 191375
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 1794639.9648148152,
+            "unit": "ns",
+            "range": "± 12206.462188021289",
+            "bytesAllocated": 210286
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 1673571.6796875,
+            "unit": "ns",
+            "range": "± 6167.012943673373",
+            "bytesAllocated": 190984
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 1744744.6706249998,
+            "unit": "ns",
+            "range": "± 10703.018078073743",
+            "bytesAllocated": 208253
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 404635.40774739586,
+            "unit": "ns",
+            "range": "± 3240.9004735416856",
+            "bytesAllocated": 17875
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 417729.75453404017,
+            "unit": "ns",
+            "range": "± 1943.220286953774",
+            "bytesAllocated": 21182
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 412244.18809291295,
+            "unit": "ns",
+            "range": "± 1400.1905065984834",
+            "bytesAllocated": 19258
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 413592.870703125,
+            "unit": "ns",
+            "range": "± 2199.456095675434",
+            "bytesAllocated": 20167
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 414066.8827427455,
+            "unit": "ns",
+            "range": "± 2261.9252158268964",
+            "bytesAllocated": 21118
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 95335.9644869291,
+            "unit": "ns",
+            "range": "± 538.7772744556577",
+            "bytesAllocated": 4839
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 103120.66416713169,
+            "unit": "ns",
+            "range": "± 1032.8949071121565",
+            "bytesAllocated": 8063
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 125353.46629231771,
+            "unit": "ns",
+            "range": "± 1527.7743389034792",
+            "bytesAllocated": 10113
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 100362.85710797991,
+            "unit": "ns",
+            "range": "± 1215.2322202274515",
+            "bytesAllocated": 5126
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 100681.16713053385,
+            "unit": "ns",
+            "range": "± 999.2896463235835",
+            "bytesAllocated": 7981
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 520803.90659877233,
+            "unit": "ns",
+            "range": "± 2579.0785723084655",
+            "bytesAllocated": 91300
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 524929.3173828125,
+            "unit": "ns",
+            "range": "± 2728.479839762748",
+            "bytesAllocated": 92211
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 532795.13515625,
+            "unit": "ns",
+            "range": "± 3226.0652332462205",
+            "bytesAllocated": 93989
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 521257.60028545675,
+            "unit": "ns",
+            "range": "± 1127.6222490497908",
+            "bytesAllocated": 91262
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 533580.5666155134,
+            "unit": "ns",
+            "range": "± 3612.0945774530355",
+            "bytesAllocated": 95602
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 48752.78144327799,
+            "unit": "ns",
+            "range": "± 1264.2465019598533",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 52151.828744506834,
+            "unit": "ns",
+            "range": "± 1164.2437709640767",
+            "bytesAllocated": 2746
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 52600.39833170573,
+            "unit": "ns",
+            "range": "± 526.6360256945146",
+            "bytesAllocated": 2746
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 48460.91886683873,
+            "unit": "ns",
+            "range": "± 519.11112131934",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 49002.330307006836,
+            "unit": "ns",
+            "range": "± 918.7866509070408",
+            "bytesAllocated": 1922
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 551907.3198567708,
+            "unit": "ns",
+            "range": "± 4487.115552199536",
+            "bytesAllocated": 78644
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 560473.4624023438,
+            "unit": "ns",
+            "range": "± 4370.032104098983",
+            "bytesAllocated": 80610
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 571978.068498884,
+            "unit": "ns",
+            "range": "± 5388.204328326836",
+            "bytesAllocated": 81593
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 552134.825,
+            "unit": "ns",
+            "range": "± 5630.426660649951",
+            "bytesAllocated": 78788
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 573660.1428786058,
+            "unit": "ns",
+            "range": "± 2039.1415123144923",
+            "bytesAllocated": 84335
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7db2ea0d89f47b621f15618b2dca5a12568f9cca",
+          "message": "Remove SSH.NET override\n\nTestcontainers 4.14.0 makes it redundant.",
+          "timestamp": "2026-08-21T18:00:11Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7db2ea0d89f47b621f15618b2dca5a12568f9cca"
+        },
+        "date": 1787336814828,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-preview.7.26381.103",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-preview.7.26381.103, 11.0.26.38203)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 48273.420797909006,
+            "unit": "ns",
+            "range": "± 927.7759303733415",
+            "bytesAllocated": 1906
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 50600.77901204427,
+            "unit": "ns",
+            "range": "± 775.2656293856464",
+            "bytesAllocated": 2730
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 60705.821315220426,
+            "unit": "ns",
+            "range": "± 329.8488829712059",
+            "bytesAllocated": 3181
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 53979.77755502554,
+            "unit": "ns",
+            "range": "± 1469.0933432234974",
+            "bytesAllocated": 1954
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 55009.230961100264,
+            "unit": "ns",
+            "range": "± 400.36077837510373",
             "bytesAllocated": 2745
           }
         ]
