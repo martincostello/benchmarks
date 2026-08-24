@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1787555212089,
+  "lastUpdated": 1787555256409,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -175743,6 +175743,786 @@
             "value": 72003.543798376,
             "unit": "ns",
             "range": "± 2991.2359304412735",
+            "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 64337.03842041016,
+            "unit": "ns",
+            "range": "± 5914.5670801749",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 70601.38595336914,
+            "unit": "ns",
+            "range": "± 4860.152749356488",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 68889.15100097656,
+            "unit": "ns",
+            "range": "± 6165.063107755455",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 68114.05081420898,
+            "unit": "ns",
+            "range": "± 5613.4481649456075",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 64662.22815659467,
+            "unit": "ns",
+            "range": "± 3071.4118334737905",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 263672.3680889423,
+            "unit": "ns",
+            "range": "± 2196.0917248532046",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 265418.7248186384,
+            "unit": "ns",
+            "range": "± 2193.5522476271344",
+            "bytesAllocated": 3558
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 263655.6509440104,
+            "unit": "ns",
+            "range": "± 1471.1482272458306",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 265223.25625,
+            "unit": "ns",
+            "range": "± 1168.7528036548917",
+            "bytesAllocated": 2511
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 263910.6996154785,
+            "unit": "ns",
+            "range": "± 4877.837662693222",
+            "bytesAllocated": 2630
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 67078.4561376953,
+            "unit": "ns",
+            "range": "± 5653.4826020237215",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 68654.10389282227,
+            "unit": "ns",
+            "range": "± 5998.766989715392",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 72336.53304077148,
+            "unit": "ns",
+            "range": "± 5481.863561500293",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 64842.52891967774,
+            "unit": "ns",
+            "range": "± 5996.313156913079",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 69699.27116210938,
+            "unit": "ns",
+            "range": "± 5291.096148902676",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 569793.9366861979,
+            "unit": "ns",
+            "range": "± 1894.68681703223",
+            "bytesAllocated": 17230
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 587832.5464242789,
+            "unit": "ns",
+            "range": "± 1535.1850323400718",
+            "bytesAllocated": 20471
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 573945.4079241072,
+            "unit": "ns",
+            "range": "± 1937.5472315385214",
+            "bytesAllocated": 18615
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 583314.3626953125,
+            "unit": "ns",
+            "range": "± 3779.8980030387374",
+            "bytesAllocated": 18928
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 585971.5496744792,
+            "unit": "ns",
+            "range": "± 3102.1400225523944",
+            "bytesAllocated": 20486
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 65580.57224975586,
+            "unit": "ns",
+            "range": "± 5693.1233445050875",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 70570.9697253418,
+            "unit": "ns",
+            "range": "± 4870.113804197627",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 70014.55838012695,
+            "unit": "ns",
+            "range": "± 5304.086085806474",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 65933.70625488281,
+            "unit": "ns",
+            "range": "± 4546.787386229724",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 66937.25322021484,
+            "unit": "ns",
+            "range": "± 5214.86596386471",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 68192.97967651367,
+            "unit": "ns",
+            "range": "± 6183.133349461779",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 68104.0645690918,
+            "unit": "ns",
+            "range": "± 2405.32673621269",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 71795.4326682867,
+            "unit": "ns",
+            "range": "± 3882.251965797355",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 68190.42116455077,
+            "unit": "ns",
+            "range": "± 5201.877513838286",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 65586.7821081543,
+            "unit": "ns",
+            "range": "± 6173.083234973473",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2298498.537202381,
+            "unit": "ns",
+            "range": "± 3754.0929925252963",
+            "bytesAllocated": 213101
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2332852.913461538,
+            "unit": "ns",
+            "range": "± 4901.306149474919",
+            "bytesAllocated": 218423
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2498479.5875686817,
+            "unit": "ns",
+            "range": "± 8598.442059878116",
+            "bytesAllocated": 237799
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2358227.104739011,
+            "unit": "ns",
+            "range": "± 7050.494568309587",
+            "bytesAllocated": 217489
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2433788.5855034725,
+            "unit": "ns",
+            "range": "± 8183.553582458621",
+            "bytesAllocated": 235558
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 145049.16865678268,
+            "unit": "ns",
+            "range": "± 6174.035091801959",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 159205.00395507814,
+            "unit": "ns",
+            "range": "± 2745.184313853435",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 203997.5724609375,
+            "unit": "ns",
+            "range": "± 2261.9746536723073",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 172312.43301716258,
+            "unit": "ns",
+            "range": "± 6668.513152541967",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 173400.48423665363,
+            "unit": "ns",
+            "range": "± 5017.828490230428",
+            "bytesAllocated": 7855
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 764435.8513020833,
+            "unit": "ns",
+            "range": "± 3346.9850292606425",
+            "bytesAllocated": 118998
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 768613.0543387277,
+            "unit": "ns",
+            "range": "± 2552.103823505614",
+            "bytesAllocated": 119950
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 777152.2891322544,
+            "unit": "ns",
+            "range": "± 1955.741468278433",
+            "bytesAllocated": 121684
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 758557.3097098215,
+            "unit": "ns",
+            "range": "± 2468.8086449980146",
+            "bytesAllocated": 118996
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 783282.7081580529,
+            "unit": "ns",
+            "range": "± 2416.634794083045",
+            "bytesAllocated": 123347
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 776478.4669270833,
+            "unit": "ns",
+            "range": "± 5962.516296513012",
+            "bytesAllocated": 78802
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 781239.5727914664,
+            "unit": "ns",
+            "range": "± 3082.4610339682426",
+            "bytesAllocated": 80860
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 798629.9839192708,
+            "unit": "ns",
+            "range": "± 6568.419050710973",
+            "bytesAllocated": 81713
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 787185.9951171875,
+            "unit": "ns",
+            "range": "± 6866.119377481798",
+            "bytesAllocated": 78925
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 806630.4911411831,
+            "unit": "ns",
+            "range": "± 6635.138047614496",
+            "bytesAllocated": 84651
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 69083.18044921875,
+            "unit": "ns",
+            "range": "± 5674.336283470847",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 70487.70417236329,
+            "unit": "ns",
+            "range": "± 4183.199775402055",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 68893.7814855957,
+            "unit": "ns",
+            "range": "± 6107.6122110456",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 64649.21145751953,
+            "unit": "ns",
+            "range": "± 7237.515248873278",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 65987.89240600586,
+            "unit": "ns",
+            "range": "± 4854.694029951163",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "25a06e2de3ff5187096a28c22d7fe27b44bd5377",
+          "message": "Bump dependency AWSSDK.S3 to 4.0.102.3 (#381)\n\n| datasource | package   | from      | to        |\n| ---------- | --------- | --------- | --------- |\n| nuget      | AWSSDK.S3 | 4.0.102.1 | 4.0.102.3 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-24T06:17:54Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/25a06e2de3ff5187096a28c22d7fe27b44bd5377"
+        },
+        "date": 1787555256409,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 64999.135776367184,
+            "unit": "ns",
+            "range": "± 6250.860682578535",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 68925.65741210937,
+            "unit": "ns",
+            "range": "± 5832.939670881522",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 81097.09544941023,
+            "unit": "ns",
+            "range": "± 3276.2191852304627",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 71746.05463989258,
+            "unit": "ns",
+            "range": "± 4225.503475794857",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 69931.29501577523,
+            "unit": "ns",
+            "range": "± 2844.762343231426",
             "bytesAllocated": 2668
           }
         ]
