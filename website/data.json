@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1788006186400,
+  "lastUpdated": 1788011954774,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -64714,6 +64714,71 @@
             "unit": "ns",
             "range": "± 558.9392609131991",
             "bytesAllocated": 17752
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6e234e45664005d1d173e39540cdc4366c0d2bd9",
+          "message": "Avoid UriBuilder allocation (#3653)\n\nAvoid allocating a `UriBuilder` in `Canonical()`.",
+          "timestamp": "2026-08-29T13:54:57Z",
+          "url": "https://github.com/martincostello/website/commit/6e234e45664005d1d173e39540cdc4366c0d2bd9"
+        },
+        "date": 1788011954774,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 353884.5106375558,
+            "unit": "ns",
+            "range": "± 1089.2631418266446",
+            "bytesAllocated": 41531
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 359820.9166015625,
+            "unit": "ns",
+            "range": "± 2043.694545229549",
+            "bytesAllocated": 42878
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 429079.02584635414,
+            "unit": "ns",
+            "range": "± 1699.5145774433793",
+            "bytesAllocated": 61895
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 368959.16575520835,
+            "unit": "ns",
+            "range": "± 1878.429843526882",
+            "bytesAllocated": 51633
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 232721.25059291295,
+            "unit": "ns",
+            "range": "± 743.511862190342",
+            "bytesAllocated": 17766
           }
         ]
       }
