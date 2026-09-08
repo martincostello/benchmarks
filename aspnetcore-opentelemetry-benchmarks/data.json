@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1788848308314,
+  "lastUpdated": 1788877643069,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -191343,6 +191343,786 @@
             "value": 48335.694272411114,
             "unit": "ns",
             "range": "± 1914.0957056951202",
+            "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 53020.05533071665,
+            "unit": "ns",
+            "range": "± 1444.1154009284417",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 54733.220295674095,
+            "unit": "ns",
+            "range": "± 1834.8596666028295",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 55270.55143636068,
+            "unit": "ns",
+            "range": "± 1004.7433012516422",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 52978.054819742836,
+            "unit": "ns",
+            "range": "± 1118.5690371538217",
+            "bytesAllocated": 1829
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 49397.998706054685,
+            "unit": "ns",
+            "range": "± 731.4046831506134",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 525698.7416992188,
+            "unit": "ns",
+            "range": "± 2327.2697616786213",
+            "bytesAllocated": 17240
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 549330.1012834822,
+            "unit": "ns",
+            "range": "± 2171.248247385884",
+            "bytesAllocated": 20472
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 539387.7039620535,
+            "unit": "ns",
+            "range": "± 8326.623291244312",
+            "bytesAllocated": 18620
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 537236.0613932292,
+            "unit": "ns",
+            "range": "± 3055.7576813241167",
+            "bytesAllocated": 18930
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 546700.7530691965,
+            "unit": "ns",
+            "range": "± 2575.3722324819664",
+            "bytesAllocated": 20489
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 52417.83889301006,
+            "unit": "ns",
+            "range": "± 1376.8824122230894",
+            "bytesAllocated": 1845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 56729.00571217256,
+            "unit": "ns",
+            "range": "± 1118.8956650018865",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 55562.80515307049,
+            "unit": "ns",
+            "range": "± 2059.720456137993",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 53427.137658691405,
+            "unit": "ns",
+            "range": "± 1725.5958567588275",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 53103.078977796766,
+            "unit": "ns",
+            "range": "± 1753.375803968511",
+            "bytesAllocated": 1845
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 52982.66982454867,
+            "unit": "ns",
+            "range": "± 1776.673704678326",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 55339.681511773,
+            "unit": "ns",
+            "range": "± 2097.39234779058",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 55683.491778205425,
+            "unit": "ns",
+            "range": "± 1121.5841992178512",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 52858.45418939358,
+            "unit": "ns",
+            "range": "± 1866.9284316339879",
+            "bytesAllocated": 1861
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 52619.75976223416,
+            "unit": "ns",
+            "range": "± 1109.457229541185",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 52986.8682055664,
+            "unit": "ns",
+            "range": "± 1365.8440609692107",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 51456.73937552316,
+            "unit": "ns",
+            "range": "± 720.1572302542634",
+            "bytesAllocated": 2733
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 55287.51589688388,
+            "unit": "ns",
+            "range": "± 1331.4044216568043",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 52523.66966029576,
+            "unit": "ns",
+            "range": "± 1915.7122395676415",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 53457.223054431735,
+            "unit": "ns",
+            "range": "± 1271.493594513119",
+            "bytesAllocated": 1821
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 198285.11755371094,
+            "unit": "ns",
+            "range": "± 3727.3682399776612",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 213345.16964285713,
+            "unit": "ns",
+            "range": "± 1951.6778517745736",
+            "bytesAllocated": 3558
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 208820.56202915736,
+            "unit": "ns",
+            "range": "± 1496.70173403344",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 199614.17078575722,
+            "unit": "ns",
+            "range": "± 2361.4994764614735",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 200596.97534179688,
+            "unit": "ns",
+            "range": "± 1704.7988418816083",
+            "bytesAllocated": 2630
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2286587.574776786,
+            "unit": "ns",
+            "range": "± 26455.69562768004",
+            "bytesAllocated": 200305
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2264297.7628676477,
+            "unit": "ns",
+            "range": "± 45120.74216747602",
+            "bytesAllocated": 205600
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2772065.3739224137,
+            "unit": "ns",
+            "range": "± 80583.55613503489",
+            "bytesAllocated": 224852
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2694264.7051339285,
+            "unit": "ns",
+            "range": "± 204273.93019643976",
+            "bytesAllocated": 204665
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2982005.920833334,
+            "unit": "ns",
+            "range": "± 78711.84074436812",
+            "bytesAllocated": 222734
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 111590.87081748561,
+            "unit": "ns",
+            "range": "± 2384.7223806006537",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 121798.22403971355,
+            "unit": "ns",
+            "range": "± 1423.8655739595217",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 143410.76654924665,
+            "unit": "ns",
+            "range": "± 2118.5626287781197",
+            "bytesAllocated": 10079
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 120991.66870880127,
+            "unit": "ns",
+            "range": "± 2365.6288450792395",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 118415.2032546997,
+            "unit": "ns",
+            "range": "± 2239.204899127379",
+            "bytesAllocated": 7849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 735205.3330078125,
+            "unit": "ns",
+            "range": "± 3176.942760794612",
+            "bytesAllocated": 118994
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 748159.2709635417,
+            "unit": "ns",
+            "range": "± 2539.797005416428",
+            "bytesAllocated": 119948
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 751549.6252253606,
+            "unit": "ns",
+            "range": "± 2082.395340589014",
+            "bytesAllocated": 121639
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 737512.6592548077,
+            "unit": "ns",
+            "range": "± 2131.0279301992337",
+            "bytesAllocated": 118996
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 767448.6577148438,
+            "unit": "ns",
+            "range": "± 4347.429079926414",
+            "bytesAllocated": 123348
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 52031.32537841797,
+            "unit": "ns",
+            "range": "± 1562.2443294718835",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 55486.89638264974,
+            "unit": "ns",
+            "range": "± 973.0256983223672",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 54134.77424812317,
+            "unit": "ns",
+            "range": "± 1632.4332932333857",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 53504.74907139369,
+            "unit": "ns",
+            "range": "± 1511.7359761997802",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 52022.9432220459,
+            "unit": "ns",
+            "range": "± 1468.6784070445428",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 659827.1783621652,
+            "unit": "ns",
+            "range": "± 3075.322588013145",
+            "bytesAllocated": 66010
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 675959.3213541667,
+            "unit": "ns",
+            "range": "± 3939.847520251118",
+            "bytesAllocated": 68111
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 683965.3663504465,
+            "unit": "ns",
+            "range": "± 6430.68914871702",
+            "bytesAllocated": 68814
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 663434.5378255208,
+            "unit": "ns",
+            "range": "± 4452.856207608436",
+            "bytesAllocated": 65955
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 688245.4226262019,
+            "unit": "ns",
+            "range": "± 2892.6114089359967",
+            "bytesAllocated": 71824
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "a975affa75012738acece95dd8c6793cbe102c2e",
+          "message": "Set AmazonS3Config.AuthenticationRegion (#409)\n\nSet the `AuthenticationRegion` property to the value of `AWS_REGION` to avoid a regression in memory allocations for multiple attempts internally for the SDK to determine the fallback region to use.",
+          "timestamp": "2026-09-08T13:52:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/a975affa75012738acece95dd8c6793cbe102c2e"
+        },
+        "date": 1788877643069,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "10.0.400",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.11 (10.0.11, 10.0.1126.37416)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 51259.84341359693,
+            "unit": "ns",
+            "range": "± 1870.3617666285584",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 53790.24803710938,
+            "unit": "ns",
+            "range": "± 1377.7049460582843",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 60567.74610053169,
+            "unit": "ns",
+            "range": "± 1977.8973475603204",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 55410.72309802828,
+            "unit": "ns",
+            "range": "± 1301.9039722229816",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 51687.36094563802,
+            "unit": "ns",
+            "range": "± 891.8970167992546",
             "bytesAllocated": 2668
           }
         ]
