@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1788678222646,
+  "lastUpdated": 1788902734694,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -56264,6 +56264,786 @@
             "unit": "ns",
             "range": "± 1134.1095202860445",
             "bytesAllocated": 2745
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 100273.24410629272,
+            "unit": "ns",
+            "range": "± 3055.7850865616806",
+            "bytesAllocated": 1930
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 110925.60061848958,
+            "unit": "ns",
+            "range": "± 1819.4721847638998",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 113691.89010521673,
+            "unit": "ns",
+            "range": "± 3361.40699554568",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 101384.03447469075,
+            "unit": "ns",
+            "range": "± 2602.0858782144865",
+            "bytesAllocated": 1930
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 94926.73358154297,
+            "unit": "ns",
+            "range": "± 2791.6848374665874",
+            "bytesAllocated": 2449
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 275061.08342633926,
+            "unit": "ns",
+            "range": "± 1408.8528593358797",
+            "bytesAllocated": 2618
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 273351.7490234375,
+            "unit": "ns",
+            "range": "± 2950.1834712731243",
+            "bytesAllocated": 3670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 281134.7897251674,
+            "unit": "ns",
+            "range": "± 2217.4878430710933",
+            "bytesAllocated": 3442
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 276184.25732421875,
+            "unit": "ns",
+            "range": "± 949.9810108635457",
+            "bytesAllocated": 2621
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 275081.6229717548,
+            "unit": "ns",
+            "range": "± 3950.4484583024273",
+            "bytesAllocated": 2739
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 98604.77095540364,
+            "unit": "ns",
+            "range": "± 2689.1514624043834",
+            "bytesAllocated": 1946
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 96569.10635579427,
+            "unit": "ns",
+            "range": "± 1012.7137854996371",
+            "bytesAllocated": 2770
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 92207.39291763306,
+            "unit": "ns",
+            "range": "± 2823.7703034979913",
+            "bytesAllocated": 2794
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 104726.5859375,
+            "unit": "ns",
+            "range": "± 2819.038239033023",
+            "bytesAllocated": 1970
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 104878.0266398112,
+            "unit": "ns",
+            "range": "± 3098.1712205929043",
+            "bytesAllocated": 1946
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 99140.68685041156,
+            "unit": "ns",
+            "range": "± 4232.6376233651345",
+            "bytesAllocated": 1938
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 101113.18618977864,
+            "unit": "ns",
+            "range": "± 1426.7296621938938",
+            "bytesAllocated": 2762
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 105243.35369282385,
+            "unit": "ns",
+            "range": "± 3181.5273505523714",
+            "bytesAllocated": 2786
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 94507.77098200872,
+            "unit": "ns",
+            "range": "± 2278.4013613704406",
+            "bytesAllocated": 1962
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 89556.69264322917,
+            "unit": "ns",
+            "range": "± 761.631553354198",
+            "bytesAllocated": 1938
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 99779.72274344308,
+            "unit": "ns",
+            "range": "± 1586.3653374115497",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 98946.89505807977,
+            "unit": "ns",
+            "range": "± 2153.833524194338",
+            "bytesAllocated": 2825
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 103952.19884575738,
+            "unit": "ns",
+            "range": "± 3470.0197163677562",
+            "bytesAllocated": 2806
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 94248.08762032645,
+            "unit": "ns",
+            "range": "± 1150.8774513687626",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 95790.25837402344,
+            "unit": "ns",
+            "range": "± 3129.4317536283106",
+            "bytesAllocated": 1922
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2117048.7313701925,
+            "unit": "ns",
+            "range": "± 12177.19867650171",
+            "bytesAllocated": 172548
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2194832.58828125,
+            "unit": "ns",
+            "range": "± 26525.52638258807",
+            "bytesAllocated": 177763
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2347264.600127551,
+            "unit": "ns",
+            "range": "± 52848.51425481151",
+            "bytesAllocated": 197588
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2192429.8148809527,
+            "unit": "ns",
+            "range": "± 25707.114695883494",
+            "bytesAllocated": 177652
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2224603.7194940476,
+            "unit": "ns",
+            "range": "± 10278.951476487631",
+            "bytesAllocated": 194775
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 164555.3330485026,
+            "unit": "ns",
+            "range": "± 3910.835788873726",
+            "bytesAllocated": 4848
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 222728.41274966835,
+            "unit": "ns",
+            "range": "± 9288.419699420778",
+            "bytesAllocated": 8046
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 212002.4120703125,
+            "unit": "ns",
+            "range": "± 5637.126469472645",
+            "bytesAllocated": 11307
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 186670.7914608226,
+            "unit": "ns",
+            "range": "± 3608.8021995012386",
+            "bytesAllocated": 6382
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 198754.2890472412,
+            "unit": "ns",
+            "range": "± 3881.692843147359",
+            "bytesAllocated": 7942
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 580398.6438802084,
+            "unit": "ns",
+            "range": "± 7300.798175330841",
+            "bytesAllocated": 17311
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 590753.7287946428,
+            "unit": "ns",
+            "range": "± 5438.774183666617",
+            "bytesAllocated": 20553
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 582400.060686384,
+            "unit": "ns",
+            "range": "± 3167.464997798586",
+            "bytesAllocated": 18694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 582397.0359235491,
+            "unit": "ns",
+            "range": "± 3796.1731137555767",
+            "bytesAllocated": 19006
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 584027.9132254465,
+            "unit": "ns",
+            "range": "± 4464.863296657358",
+            "bytesAllocated": 20559
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 712552.4325520833,
+            "unit": "ns",
+            "range": "± 3675.9291571619424",
+            "bytesAllocated": 90811
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 722009.7883463542,
+            "unit": "ns",
+            "range": "± 1823.0135657598316",
+            "bytesAllocated": 91720
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 731518.5615234375,
+            "unit": "ns",
+            "range": "± 4472.611316839013",
+            "bytesAllocated": 93426
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 707414.0927734375,
+            "unit": "ns",
+            "range": "± 2954.832223659345",
+            "bytesAllocated": 90810
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 731947.5193219866,
+            "unit": "ns",
+            "range": "± 5445.688431482904",
+            "bytesAllocated": 95155
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 98577.57786621094,
+            "unit": "ns",
+            "range": "± 2612.8931594129617",
+            "bytesAllocated": 1938
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 97338.35822405134,
+            "unit": "ns",
+            "range": "± 2251.0497535510135",
+            "bytesAllocated": 2762
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 110667.22066722196,
+            "unit": "ns",
+            "range": "± 2241.8303600555",
+            "bytesAllocated": 2762
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 86644.18438720703,
+            "unit": "ns",
+            "range": "± 1934.5189030645456",
+            "bytesAllocated": 1938
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 89160.64657389323,
+            "unit": "ns",
+            "range": "± 1013.0449773921317",
+            "bytesAllocated": 1938
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 100299.828696511,
+            "unit": "ns",
+            "range": "± 2429.0187851327205",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 103564.5884399414,
+            "unit": "ns",
+            "range": "± 1950.1713229445566",
+            "bytesAllocated": 2746
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 108891.78872884114,
+            "unit": "ns",
+            "range": "± 1684.0822277670325",
+            "bytesAllocated": 3198
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 101778.79881998697,
+            "unit": "ns",
+            "range": "± 1442.3466535803325",
+            "bytesAllocated": 1970
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 100261.07818924754,
+            "unit": "ns",
+            "range": "± 1864.52891662421",
+            "bytesAllocated": 2762
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eebac22afe13d4095cef1dddc4228ddd4987e12",
+          "message": "Update .NET SDK (#412)\n\nUpdate .NET SDK to version 11.0.100-rc.1.26425.128.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.1.26425.128\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-09-08T20:51:18Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9eebac22afe13d4095cef1dddc4228ddd4987e12"
+        },
+        "date": 1788902734694,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 694228.3501953125,
+            "unit": "ns",
+            "range": "± 11326.887030625856",
+            "bytesAllocated": 66422
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 703750.9063197544,
+            "unit": "ns",
+            "range": "± 3763.711825535775",
+            "bytesAllocated": 68303
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 711292.7063802084,
+            "unit": "ns",
+            "range": "± 3899.4856711343846",
+            "bytesAllocated": 69203
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 690240.39765625,
+            "unit": "ns",
+            "range": "± 7254.169875217516",
+            "bytesAllocated": 66358
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 709080.8689453125,
+            "unit": "ns",
+            "range": "± 3503.5248424944075",
+            "bytesAllocated": 72169
           }
         ]
       }
