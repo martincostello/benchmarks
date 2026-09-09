@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1788938954893,
+  "lastUpdated": 1788946366404,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -24742,6 +24742,50 @@
             "unit": "ns",
             "range": "± 14141.4568713605",
             "bytesAllocated": 694496
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "4923b52590d36ec2dc105a409a2232505668858f",
+          "message": "Update to .NET 11 rc.1 (#729)\n\n- Update to .NET 11 with .NET SDK version 11.0.100-rc.1.26425.128.\n- Drop support for .NET 9.\n- Update version to 3.0.0.\n- Update Microsoft.OpenApi v3 to the latest release.\n- React to change in default OpenAPI version to 3.2.\n- Use `Examples` property instead of `Example` to fix obsolete warning.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: martincostello <martin@martincostello.com>",
+          "timestamp": "2026-09-09T09:30:17Z",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/4923b52590d36ec2dc105a409a2232505668858f"
+        },
+        "date": 1788946366404,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon Platinum 8370C CPU 2.80GHz",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 1854618.4265625,
+            "unit": "ns",
+            "range": "± 12334.69546769322",
+            "bytesAllocated": 847766
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 1971461.634486607,
+            "unit": "ns",
+            "range": "± 11072.738963191387",
+            "bytesAllocated": 827292
           }
         ]
       }
