@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1788951859207,
+  "lastUpdated": 1788952201091,
   "repoUrl": "https://github.com/martincostello/openapi-extensions",
   "entries": {
     "OpenAPI Extensions": [
@@ -24874,6 +24874,50 @@
             "unit": "ns",
             "range": "± 26642.603765105006",
             "bytesAllocated": 827659
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "7753ffd854cd655d32691596c45ce9f814e1a139",
+          "message": "Skip job for prereleases (#978)\n\nSkip the version bump workflow if the released tag is a prerelease.",
+          "timestamp": "2026-09-09T11:07:22Z",
+          "url": "https://github.com/martincostello/openapi-extensions/commit/7753ffd854cd655d32691596c45ce9f814e1a139"
+        },
+        "date": 1788952201091,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.4 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentJson",
+            "value": 2070004.661830357,
+            "unit": "ns",
+            "range": "± 13043.716997364274",
+            "bytesAllocated": 848581
+          },
+          {
+            "name": "MartinCostello.OpenApi.OpenApiBenchmarks.GetOpenApiDocumentYaml",
+            "value": 2195337.5458333334,
+            "unit": "ns",
+            "range": "± 23318.93762490798",
+            "bytesAllocated": 827701
           }
         ]
       }
