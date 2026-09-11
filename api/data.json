@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1789110369787,
+  "lastUpdated": 1789125252906,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -70516,6 +70516,71 @@
             "unit": "ns",
             "range": "± 2895.712384693958",
             "bytesAllocated": 26681
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "827ad7bac35a5a28fa960f323f38568c7afd902e",
+          "message": "Enable runtime async (#3566)\n\n- Enable runtime async to see if it's more performant.\r\n- Remove obsolete workaround.",
+          "timestamp": "2026-09-11T11:10:26Z",
+          "url": "https://github.com/martincostello/api/commit/827ad7bac35a5a28fa960f323f38568c7afd902e"
+        },
+        "date": 1789125252906,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 24.04.5 LTS (Noble Numbat)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 271610.7197265625,
+            "unit": "ns",
+            "range": "± 3985.818403772285",
+            "bytesAllocated": 31610
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221796.39130859374,
+            "unit": "ns",
+            "range": "± 4138.488219655535",
+            "bytesAllocated": 16433
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 246503.8818359375,
+            "unit": "ns",
+            "range": "± 1532.4880727886614",
+            "bytesAllocated": 15428
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 199610.40412248884,
+            "unit": "ns",
+            "range": "± 2131.4535159925545",
+            "bytesAllocated": 11715
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 225617.09459635417,
+            "unit": "ns",
+            "range": "± 4193.152716686498",
+            "bytesAllocated": 26710
           }
         ]
       }
