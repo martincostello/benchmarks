@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1789817434248,
+  "lastUpdated": 1789821133234,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -63453,6 +63453,99 @@
             "unit": "ns",
             "range": "± 1411.2950967055078",
             "bytesAllocated": 55721
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "0ea7b1fe723ccfed3f10a18dcc1dfe1a7372848b",
+          "message": "Remove read-all permission (#2526)\n\nRemove the `read-all` permission and replace with explicit permissions instead.\r\n\r\nResolves https://github.com/martincostello/alexa-london-travel/security/code-scanning/310.",
+          "timestamp": "2026-09-19T12:27:02Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/0ea7b1fe723ccfed3f10a18dcc1dfe1a7372848b"
+        },
+        "date": 1789821133234,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.1",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon Platinum 8370C CPU 2.80GHz",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 111984.43366350446,
+            "unit": "ns",
+            "range": "± 1623.9377284269171",
+            "bytesAllocated": 39460
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 434033.6315104167,
+            "unit": "ns",
+            "range": "± 4569.291589748381",
+            "bytesAllocated": 84289
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 310241.5775390625,
+            "unit": "ns",
+            "range": "± 2578.875510529487",
+            "bytesAllocated": 74852
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 133904.7202799479,
+            "unit": "ns",
+            "range": "± 1663.3678570373474",
+            "bytesAllocated": 66419
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 124377.10728236607,
+            "unit": "ns",
+            "range": "± 1362.9383927061679",
+            "bytesAllocated": 60508
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 126339.82828776042,
+            "unit": "ns",
+            "range": "± 1230.8010264047653",
+            "bytesAllocated": 54915
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 315877.8372395833,
+            "unit": "ns",
+            "range": "± 3822.8476735169234",
+            "bytesAllocated": 74063
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 113517.01886393229,
+            "unit": "ns",
+            "range": "± 1584.0613273818742",
+            "bytesAllocated": 39561
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 125170.14033203125,
+            "unit": "ns",
+            "range": "± 1587.6491965219143",
+            "bytesAllocated": 55278
           }
         ]
       }
