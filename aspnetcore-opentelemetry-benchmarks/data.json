@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790311655107,
+  "lastUpdated": 1790357534706,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -220203,6 +220203,786 @@
             "value": 64281.56663004557,
             "unit": "ns",
             "range": "± 1333.4159887903147",
+            "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 59432.802587509155,
+            "unit": "ns",
+            "range": "± 1807.9682175975001",
+            "bytesAllocated": 1829
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 63547.99300711496,
+            "unit": "ns",
+            "range": "± 777.6215436158891",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 61554.90043279475,
+            "unit": "ns",
+            "range": "± 2599.8042259818885",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 58663.133793131514,
+            "unit": "ns",
+            "range": "± 817.1835744030121",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 60344.067220052086,
+            "unit": "ns",
+            "range": "± 1089.874454858221",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 539368.607561384,
+            "unit": "ns",
+            "range": "± 1542.1311442436534",
+            "bytesAllocated": 6845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 560984.6911057692,
+            "unit": "ns",
+            "range": "± 1481.6884988037768",
+            "bytesAllocated": 10079
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 547218.7073317308,
+            "unit": "ns",
+            "range": "± 1564.3287840406115",
+            "bytesAllocated": 8226
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 555175.216657366,
+            "unit": "ns",
+            "range": "± 2696.248031906968",
+            "bytesAllocated": 8535
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 558590.55546875,
+            "unit": "ns",
+            "range": "± 3118.78084303293",
+            "bytesAllocated": 10096
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 242278.54572405134,
+            "unit": "ns",
+            "range": "± 903.4891826206109",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 250668.2252061632,
+            "unit": "ns",
+            "range": "± 6789.36934862507",
+            "bytesAllocated": 3558
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 248149.56508091517,
+            "unit": "ns",
+            "range": "± 1309.778828897266",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 240220.30797851563,
+            "unit": "ns",
+            "range": "± 6317.224455924953",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 245749.2521057129,
+            "unit": "ns",
+            "range": "± 4788.209220412476",
+            "bytesAllocated": 2630
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 59871.59411468506,
+            "unit": "ns",
+            "range": "± 2093.186228851018",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 63514.335131835935,
+            "unit": "ns",
+            "range": "± 1187.4012236861636",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 64062.045534529774,
+            "unit": "ns",
+            "range": "± 2665.7226178937667",
+            "bytesAllocated": 2693
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 60418.344078063965,
+            "unit": "ns",
+            "range": "± 1114.1804817288282",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 61038.00028483073,
+            "unit": "ns",
+            "range": "± 908.3646945665106",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 59258.65002034505,
+            "unit": "ns",
+            "range": "± 887.2758232906367",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 62736.91854654948,
+            "unit": "ns",
+            "range": "± 898.7073421489337",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 62937.38203938802,
+            "unit": "ns",
+            "range": "± 1107.3050889711071",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 59126.60496520996,
+            "unit": "ns",
+            "range": "± 1519.067009210389",
+            "bytesAllocated": 1861
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 58691.09229329427,
+            "unit": "ns",
+            "range": "± 1011.6783727776722",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 57789.35159505208,
+            "unit": "ns",
+            "range": "± 469.5011490422495",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 62155.409822591144,
+            "unit": "ns",
+            "range": "± 1150.2469609142029",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 63707.2545328776,
+            "unit": "ns",
+            "range": "± 910.0186741086601",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 57942.60606282552,
+            "unit": "ns",
+            "range": "± 859.6831199317747",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 58516.97090956744,
+            "unit": "ns",
+            "range": "± 1862.7665751838222",
+            "bytesAllocated": 1821
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2150404.25625,
+            "unit": "ns",
+            "range": "± 19414.09530470036",
+            "bytesAllocated": 181083
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2182564.4891183036,
+            "unit": "ns",
+            "range": "± 14721.3579983825",
+            "bytesAllocated": 186379
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2359747.0930631873,
+            "unit": "ns",
+            "range": "± 19959.157763282772",
+            "bytesAllocated": 205661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2222574.672135417,
+            "unit": "ns",
+            "range": "± 24111.811658164464",
+            "bytesAllocated": 185364
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2282161.830013736,
+            "unit": "ns",
+            "range": "± 15006.846560075512",
+            "bytesAllocated": 203368
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 122318.61870117187,
+            "unit": "ns",
+            "range": "± 2090.8090081002115",
+            "bytesAllocated": 4565
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 140579.36040039064,
+            "unit": "ns",
+            "range": "± 1481.0845005873532",
+            "bytesAllocated": 7845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 171530.79565429688,
+            "unit": "ns",
+            "range": "± 2280.3063395960694",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 139895.65406901043,
+            "unit": "ns",
+            "range": "± 1438.1152085450392",
+            "bytesAllocated": 4981
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 140882.1772623698,
+            "unit": "ns",
+            "range": "± 2244.724627934407",
+            "bytesAllocated": 7849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 744767.6283804086,
+            "unit": "ns",
+            "range": "± 2518.9704061899643",
+            "bytesAllocated": 110299
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 748985.6192220052,
+            "unit": "ns",
+            "range": "± 4502.197130890838",
+            "bytesAllocated": 111251
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 758175.4379882812,
+            "unit": "ns",
+            "range": "± 2767.4702340740264",
+            "bytesAllocated": 112990
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 744140.8626802885,
+            "unit": "ns",
+            "range": "± 5288.891493233609",
+            "bytesAllocated": 110304
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 771443.4769112723,
+            "unit": "ns",
+            "range": "± 2911.9437095136714",
+            "bytesAllocated": 114379
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 58326.26467285156,
+            "unit": "ns",
+            "range": "± 687.1409632279963",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 62608.835136413574,
+            "unit": "ns",
+            "range": "± 1182.9480513657186",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 61671.848186383926,
+            "unit": "ns",
+            "range": "± 1997.7059542095021",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 58520.98481405935,
+            "unit": "ns",
+            "range": "± 1777.7668095623271",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 58226.88658854167,
+            "unit": "ns",
+            "range": "± 1727.7646518207814",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 670926.4460637019,
+            "unit": "ns",
+            "range": "± 3762.066265736227",
+            "bytesAllocated": 65793
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 680131.2693359375,
+            "unit": "ns",
+            "range": "± 2983.0916160699917",
+            "bytesAllocated": 67891
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 688032.3545673077,
+            "unit": "ns",
+            "range": "± 2941.0546504300582",
+            "bytesAllocated": 68653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 672788.206640625,
+            "unit": "ns",
+            "range": "± 5658.597806622202",
+            "bytesAllocated": 65796
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 700352.7534555289,
+            "unit": "ns",
+            "range": "± 6253.709533159956",
+            "bytesAllocated": 71616
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9fe8e61948aa2b2246ee5d0997a7913e776dbf70",
+          "message": "Bump grafana/otel-lgtm Docker tag to v0.34.0 (#452)\n\n| datasource | package           | from   | to     |\n| ---------- | ----------------- | ------ | ------ |\n| docker     | grafana/otel-lgtm | 0.33.1 | 0.34.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-25T17:02:48Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9fe8e61948aa2b2246ee5d0997a7913e776dbf70"
+        },
+        "date": 1790357534706,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 57805.08044433594,
+            "unit": "ns",
+            "range": "± 895.7623938439333",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 61626.49256591797,
+            "unit": "ns",
+            "range": "± 925.4319286824414",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 72775.54983681126,
+            "unit": "ns",
+            "range": "± 1522.3664225922041",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 62088.72473144531,
+            "unit": "ns",
+            "range": "± 1434.8546531476384",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 64901.46171569824,
+            "unit": "ns",
+            "range": "± 1193.0340106743163",
             "bytesAllocated": 2668
           }
         ]
