@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790422257605,
+  "lastUpdated": 1790427420034,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -223324,6 +223324,786 @@
             "unit": "ns",
             "range": "± 3573.0604780088483",
             "bytesAllocated": 71608
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 58528.63276367188,
+            "unit": "ns",
+            "range": "± 663.8802406273062",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 62868.99091485206,
+            "unit": "ns",
+            "range": "± 2430.144621885601",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 62502.51845189145,
+            "unit": "ns",
+            "range": "± 1306.7289698391126",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 58629.02023228237,
+            "unit": "ns",
+            "range": "± 1898.0680317067436",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 60212.807255045576,
+            "unit": "ns",
+            "range": "± 625.0761271498329",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 245965.24700055804,
+            "unit": "ns",
+            "range": "± 1438.5611535081491",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 253018.72339928668,
+            "unit": "ns",
+            "range": "± 6327.423549335488",
+            "bytesAllocated": 4567
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 252789.08527483259,
+            "unit": "ns",
+            "range": "± 1299.0777200249327",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 245839.22765174278,
+            "unit": "ns",
+            "range": "± 909.0491734367505",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 245566.9319773707,
+            "unit": "ns",
+            "range": "± 7088.371420653011",
+            "bytesAllocated": 2630
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 59606.19922688802,
+            "unit": "ns",
+            "range": "± 948.2811437355299",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 63229.72030874399,
+            "unit": "ns",
+            "range": "± 1674.6732000117659",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 64004.964001671746,
+            "unit": "ns",
+            "range": "± 2834.1664656789085",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 61523.07402487362,
+            "unit": "ns",
+            "range": "± 1190.5442536038142",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 61170.17266438802,
+            "unit": "ns",
+            "range": "± 793.4177221116826",
+            "bytesAllocated": 1845
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 58960.619666466344,
+            "unit": "ns",
+            "range": "± 577.2554219484755",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 62538.32268880208,
+            "unit": "ns",
+            "range": "± 966.4313261737009",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 63608.11227562314,
+            "unit": "ns",
+            "range": "± 1476.6531093059082",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 59645.079907226565,
+            "unit": "ns",
+            "range": "± 830.5363584118955",
+            "bytesAllocated": 1861
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 59462.15826822917,
+            "unit": "ns",
+            "range": "± 738.2552766939012",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 539900.8233119419,
+            "unit": "ns",
+            "range": "± 2216.776292225026",
+            "bytesAllocated": 6846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 568221.2895883414,
+            "unit": "ns",
+            "range": "± 4591.439198332261",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 552089.8336356027,
+            "unit": "ns",
+            "range": "± 1947.8350067442634",
+            "bytesAllocated": 8225
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 554966.0729817708,
+            "unit": "ns",
+            "range": "± 4029.3629550496157",
+            "bytesAllocated": 8541
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 561166.5243326823,
+            "unit": "ns",
+            "range": "± 2158.3389403708106",
+            "bytesAllocated": 10096
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 59175.29002278646,
+            "unit": "ns",
+            "range": "± 1080.7956549394232",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 62710.60109863281,
+            "unit": "ns",
+            "range": "± 1145.5552727849677",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 63646.99772644043,
+            "unit": "ns",
+            "range": "± 1200.9623929730803",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 58580.645495605466,
+            "unit": "ns",
+            "range": "± 943.5363669975851",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 58983.47107747396,
+            "unit": "ns",
+            "range": "± 1000.5474944258472",
+            "bytesAllocated": 1821
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2155397.0065104165,
+            "unit": "ns",
+            "range": "± 12840.247523151698",
+            "bytesAllocated": 181084
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2215615.422175481,
+            "unit": "ns",
+            "range": "± 30578.03186891291",
+            "bytesAllocated": 186565
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2329557.2842261908,
+            "unit": "ns",
+            "range": "± 12155.761548099521",
+            "bytesAllocated": 205337
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2218706.466927083,
+            "unit": "ns",
+            "range": "± 20902.685254928187",
+            "bytesAllocated": 185366
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2289054.9821428573,
+            "unit": "ns",
+            "range": "± 22647.13023785119",
+            "bytesAllocated": 203441
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 123686.82592773438,
+            "unit": "ns",
+            "range": "± 1763.1436173996642",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 141631.32132161458,
+            "unit": "ns",
+            "range": "± 1368.4805084157808",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 170863.36302083332,
+            "unit": "ns",
+            "range": "± 2541.2417621675186",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 138957.37841796875,
+            "unit": "ns",
+            "range": "± 2539.2025059276557",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 141586.57233072916,
+            "unit": "ns",
+            "range": "± 1916.9544428795537",
+            "bytesAllocated": 7849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 744880.8638822115,
+            "unit": "ns",
+            "range": "± 5631.826766462345",
+            "bytesAllocated": 110331
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 756814.6842447916,
+            "unit": "ns",
+            "range": "± 3559.786900152258",
+            "bytesAllocated": 111257
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 759799.9915597098,
+            "unit": "ns",
+            "range": "± 2888.5112600468497",
+            "bytesAllocated": 112987
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 752958.197265625,
+            "unit": "ns",
+            "range": "± 2719.527453316063",
+            "bytesAllocated": 110260
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 768314.0148577009,
+            "unit": "ns",
+            "range": "± 3878.948373754261",
+            "bytesAllocated": 114374
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 58684.39608328683,
+            "unit": "ns",
+            "range": "± 809.2455217110938",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 62050.263279506136,
+            "unit": "ns",
+            "range": "± 2249.392086310434",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 62844.05396792763,
+            "unit": "ns",
+            "range": "± 1386.268128346041",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 58941.93470458985,
+            "unit": "ns",
+            "range": "± 838.2888767789764",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 58087.15836715698,
+            "unit": "ns",
+            "range": "± 1130.8476380094803",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 674784.4357561384,
+            "unit": "ns",
+            "range": "± 4489.468536074066",
+            "bytesAllocated": 65795
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 686508.1726262019,
+            "unit": "ns",
+            "range": "± 3884.207149868257",
+            "bytesAllocated": 67820
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 689750.2470703125,
+            "unit": "ns",
+            "range": "± 3312.4738320839565",
+            "bytesAllocated": 68652
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 677105.0673177083,
+            "unit": "ns",
+            "range": "± 3219.6644917282233",
+            "bytesAllocated": 65795
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 704326.1970563616,
+            "unit": "ns",
+            "range": "± 6161.577725782179",
+            "bytesAllocated": 71608
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "ecea6b89114415893eb7efa7117dd232a4e4a410",
+          "message": "Improve reliability (#456)\n\n- Attempt to start a container 3 times.\n- Run mssql as root to avoid permissions issues.\n- Ignore `.bdn` artifacts from BenchmarkDotNet.\n- Add suffix wildcard for BenchmarkDotNet results.",
+          "timestamp": "2026-09-26T12:29:01Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/ecea6b89114415893eb7efa7117dd232a4e4a410"
+        },
+        "date": 1790427420034,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 57096.19700404576,
+            "unit": "ns",
+            "range": "± 1834.7472732561182",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 61712.57860281808,
+            "unit": "ns",
+            "range": "± 1979.8452506753317",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 73533.2509765625,
+            "unit": "ns",
+            "range": "± 1245.2882111214183",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 62295.08978678386,
+            "unit": "ns",
+            "range": "± 992.6896979627339",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 64740.071622721356,
+            "unit": "ns",
+            "range": "± 655.5780661297191",
+            "bytesAllocated": 2669
           }
         ]
       }
