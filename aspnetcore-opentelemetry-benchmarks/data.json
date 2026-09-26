@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790405738013,
+  "lastUpdated": 1790422257605,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -222544,6 +222544,786 @@
             "unit": "ns",
             "range": "± 1071.7887336123952",
             "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 58660.954354422436,
+            "unit": "ns",
+            "range": "± 803.0290838993402",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 62415.14708658854,
+            "unit": "ns",
+            "range": "± 1129.5940972501242",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 61244.56207682292,
+            "unit": "ns",
+            "range": "± 1086.3192897495007",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 59605.145446777344,
+            "unit": "ns",
+            "range": "± 972.1657194275112",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 59240.22941894531,
+            "unit": "ns",
+            "range": "± 887.4471765655624",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 538419.3722098215,
+            "unit": "ns",
+            "range": "± 1549.368915523157",
+            "bytesAllocated": 6805
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 568640.8834134615,
+            "unit": "ns",
+            "range": "± 6262.615003205201",
+            "bytesAllocated": 10081
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 545312.5696847098,
+            "unit": "ns",
+            "range": "± 1973.2241894549015",
+            "bytesAllocated": 8225
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 552933.616780599,
+            "unit": "ns",
+            "range": "± 3484.233738685207",
+            "bytesAllocated": 8536
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 559730.8056640625,
+            "unit": "ns",
+            "range": "± 3348.293929104206",
+            "bytesAllocated": 10101
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 244381.15335518974,
+            "unit": "ns",
+            "range": "± 2083.815165516414",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 254051.01303335337,
+            "unit": "ns",
+            "range": "± 2166.602946351838",
+            "bytesAllocated": 3558
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 250294.20213216144,
+            "unit": "ns",
+            "range": "± 766.6073368358423",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 244263.1948730469,
+            "unit": "ns",
+            "range": "± 912.9468331974991",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 244504.562046596,
+            "unit": "ns",
+            "range": "± 4081.4729075596256",
+            "bytesAllocated": 2631
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 59074.99645182292,
+            "unit": "ns",
+            "range": "± 931.7123728641491",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 62985.91123860677,
+            "unit": "ns",
+            "range": "± 2351.6122097168377",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 63123.0801579402,
+            "unit": "ns",
+            "range": "± 1683.1160346902568",
+            "bytesAllocated": 2685
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 59986.4785949707,
+            "unit": "ns",
+            "range": "± 1782.2134035555864",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 58995.09746907552,
+            "unit": "ns",
+            "range": "± 547.5770416729364",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 58105.67632649739,
+            "unit": "ns",
+            "range": "± 959.0780263493293",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 62400.701832490806,
+            "unit": "ns",
+            "range": "± 1279.2558859064422",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 63827.64855957031,
+            "unit": "ns",
+            "range": "± 1079.2083194809918",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 58620.96670328776,
+            "unit": "ns",
+            "range": "± 745.4577974856948",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 58396.94832763672,
+            "unit": "ns",
+            "range": "± 939.391974780743",
+            "bytesAllocated": 1821
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2522537.549512987,
+            "unit": "ns",
+            "range": "± 93787.46223880001",
+            "bytesAllocated": 181159
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2392090.895238095,
+            "unit": "ns",
+            "range": "± 42192.153804937356",
+            "bytesAllocated": 186379
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2601570.590677083,
+            "unit": "ns",
+            "range": "± 158805.06812939615",
+            "bytesAllocated": 205358
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2271533.0151098897,
+            "unit": "ns",
+            "range": "± 24415.29575410733",
+            "bytesAllocated": 185375
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2520535.4604700855,
+            "unit": "ns",
+            "range": "± 87921.29923515655",
+            "bytesAllocated": 203438
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 123603.80397135417,
+            "unit": "ns",
+            "range": "± 1261.2919972201635",
+            "bytesAllocated": 4565
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 140670.82405813117,
+            "unit": "ns",
+            "range": "± 4801.666213475379",
+            "bytesAllocated": 7847
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 174514.35109165736,
+            "unit": "ns",
+            "range": "± 1393.879756371318",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 137429.10122070313,
+            "unit": "ns",
+            "range": "± 1991.6086523122692",
+            "bytesAllocated": 4981
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 142574.1778483073,
+            "unit": "ns",
+            "range": "± 1752.8744453893191",
+            "bytesAllocated": 7849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 747283.2170222356,
+            "unit": "ns",
+            "range": "± 3193.0033897922203",
+            "bytesAllocated": 110264
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 751462.1981670673,
+            "unit": "ns",
+            "range": "± 1986.6054330146526",
+            "bytesAllocated": 111215
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 761454.1754324777,
+            "unit": "ns",
+            "range": "± 2172.853671214324",
+            "bytesAllocated": 112988
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 750647.903125,
+            "unit": "ns",
+            "range": "± 4939.718814128088",
+            "bytesAllocated": 110264
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 769682.026171875,
+            "unit": "ns",
+            "range": "± 3368.1597267421184",
+            "bytesAllocated": 114414
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 59856.15651593889,
+            "unit": "ns",
+            "range": "± 833.4616626594027",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 63744.54871768043,
+            "unit": "ns",
+            "range": "± 1472.0000065725499",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 64204.45797664561,
+            "unit": "ns",
+            "range": "± 2497.3328574285542",
+            "bytesAllocated": 2693
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 61060.56354980469,
+            "unit": "ns",
+            "range": "± 947.3892887252673",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 61149.56282145182,
+            "unit": "ns",
+            "range": "± 829.8155658826315",
+            "bytesAllocated": 1847
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 57896.47926199777,
+            "unit": "ns",
+            "range": "± 1853.5345322720805",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 61775.70154363459,
+            "unit": "ns",
+            "range": "± 1404.1124383131985",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 61268.545218008534,
+            "unit": "ns",
+            "range": "± 1675.604522238558",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 58554.02259521485,
+            "unit": "ns",
+            "range": "± 1091.8772322134039",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 59414.45273844401,
+            "unit": "ns",
+            "range": "± 1094.7005054603515",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 58142.353878348214,
+            "unit": "ns",
+            "range": "± 1874.3995564467941",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 61026.152587890625,
+            "unit": "ns",
+            "range": "± 885.3831708406714",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 73812.09806315105,
+            "unit": "ns",
+            "range": "± 1208.3787601113743",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 62176.68358732525,
+            "unit": "ns",
+            "range": "± 1372.185217095582",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 65969.89296061198,
+            "unit": "ns",
+            "range": "± 1033.6586955584894",
+            "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c26f99be6539ceea936f5d695c4564f8779198a8",
+          "message": "Add affinity flag (#455)\n\nAdd a flag to the PowerShell script to specify processor affinity.",
+          "timestamp": "2026-09-26T11:00:57Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/c26f99be6539ceea936f5d695c4564f8779198a8"
+        },
+        "date": 1790422257605,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 680467.5243389423,
+            "unit": "ns",
+            "range": "± 4602.814583552564",
+            "bytesAllocated": 65793
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 686285.3628255208,
+            "unit": "ns",
+            "range": "± 4329.573957219192",
+            "bytesAllocated": 67818
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 693945.478655134,
+            "unit": "ns",
+            "range": "± 3987.4565751416562",
+            "bytesAllocated": 68653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 681115.6921223958,
+            "unit": "ns",
+            "range": "± 4855.231396413078",
+            "bytesAllocated": 65796
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 699327.2686197917,
+            "unit": "ns",
+            "range": "± 3573.0604780088483",
+            "bytesAllocated": 71608
           }
         ]
       }
