@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791009114153,
+  "lastUpdated": 1791047317687,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -231904,6 +231904,786 @@
             "unit": "ns",
             "range": "± 1001.6388457329111",
             "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 48160.39874267578,
+            "unit": "ns",
+            "range": "± 891.798650055459",
+            "bytesAllocated": 1829
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 50462.82609049479,
+            "unit": "ns",
+            "range": "± 593.7773844734447",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 49880.4387898763,
+            "unit": "ns",
+            "range": "± 740.102996903321",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 47987.9503133138,
+            "unit": "ns",
+            "range": "± 628.7438628961228",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 46215.39735194615,
+            "unit": "ns",
+            "range": "± 714.995550256219",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 48461.33324788411,
+            "unit": "ns",
+            "range": "± 720.7082452572149",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 50690.42555303159,
+            "unit": "ns",
+            "range": "± 1238.2508601547586",
+            "bytesAllocated": 2669
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 50465.87786051432,
+            "unit": "ns",
+            "range": "± 703.2887984452009",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 49167.526420084636,
+            "unit": "ns",
+            "range": "± 873.067792819041",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 48812.4843776537,
+            "unit": "ns",
+            "range": "± 1214.7149727007331",
+            "bytesAllocated": 1845
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 47160.11801147461,
+            "unit": "ns",
+            "range": "± 1151.1309098769436",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 47832.211068289624,
+            "unit": "ns",
+            "range": "± 654.6137521424828",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 49961.94438476562,
+            "unit": "ns",
+            "range": "± 800.0612218049633",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 47616.34803390503,
+            "unit": "ns",
+            "range": "± 902.478913037686",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 47698.046140034996,
+            "unit": "ns",
+            "range": "± 1235.1784559348562",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 47216.76811218262,
+            "unit": "ns",
+            "range": "± 1047.936544663464",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 50296.25093296596,
+            "unit": "ns",
+            "range": "± 761.8932597276134",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 50864.93455403646,
+            "unit": "ns",
+            "range": "± 537.0361216342978",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 47782.04607772827,
+            "unit": "ns",
+            "range": "± 825.6266379852852",
+            "bytesAllocated": 1861
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 48108.95381303267,
+            "unit": "ns",
+            "range": "± 1127.305708420511",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2081134.2950721155,
+            "unit": "ns",
+            "range": "± 6487.60560500997",
+            "bytesAllocated": 181152
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2115223.8351004464,
+            "unit": "ns",
+            "range": "± 9727.594312245625",
+            "bytesAllocated": 186371
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2306613.8529974488,
+            "unit": "ns",
+            "range": "± 22930.986250548918",
+            "bytesAllocated": 205482
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2137522.150065104,
+            "unit": "ns",
+            "range": "± 10295.258353043513",
+            "bytesAllocated": 185500
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2236987.888802083,
+            "unit": "ns",
+            "range": "± 16074.632067525756",
+            "bytesAllocated": 203395
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 99124.46300455728,
+            "unit": "ns",
+            "range": "± 1238.4727286765776",
+            "bytesAllocated": 4565
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 111580.99875313895,
+            "unit": "ns",
+            "range": "± 491.51911497136314",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 128022.1721516927,
+            "unit": "ns",
+            "range": "± 1708.5737583619662",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 108500.33224283854,
+            "unit": "ns",
+            "range": "± 777.810048492452",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 109440.93925258091,
+            "unit": "ns",
+            "range": "± 1046.9834915534666",
+            "bytesAllocated": 7849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 711513.4036690848,
+            "unit": "ns",
+            "range": "± 4108.81107276028",
+            "bytesAllocated": 110261
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 721273.3856026785,
+            "unit": "ns",
+            "range": "± 3341.9947245230246",
+            "bytesAllocated": 111211
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 726883.603655134,
+            "unit": "ns",
+            "range": "± 2349.927343646857",
+            "bytesAllocated": 112949
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 712968.4886300223,
+            "unit": "ns",
+            "range": "± 2712.1008962383876",
+            "bytesAllocated": 110297
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 737864.6843098958,
+            "unit": "ns",
+            "range": "± 5187.442335347638",
+            "bytesAllocated": 114412
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 47783.856929524736,
+            "unit": "ns",
+            "range": "± 825.6738060624709",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 50261.17963053386,
+            "unit": "ns",
+            "range": "± 632.9602958980623",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 50085.09248860677,
+            "unit": "ns",
+            "range": "± 562.3007795898743",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 47660.51576861213,
+            "unit": "ns",
+            "range": "± 952.472610049079",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 48522.06015218099,
+            "unit": "ns",
+            "range": "± 719.2021843765224",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 496875.19754464284,
+            "unit": "ns",
+            "range": "± 1883.331720402301",
+            "bytesAllocated": 6852
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 525166.6149739583,
+            "unit": "ns",
+            "range": "± 4595.408391260094",
+            "bytesAllocated": 10084
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 505646.08558872767,
+            "unit": "ns",
+            "range": "± 2510.8391436354545",
+            "bytesAllocated": 8237
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 516109.416015625,
+            "unit": "ns",
+            "range": "± 2319.188731544933",
+            "bytesAllocated": 8541
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 525262.6426432292,
+            "unit": "ns",
+            "range": "± 5794.644064218275",
+            "bytesAllocated": 10110
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 149249.3498860677,
+            "unit": "ns",
+            "range": "± 2411.831887019398",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 168429.23191923252,
+            "unit": "ns",
+            "range": "± 6861.800040240944",
+            "bytesAllocated": 3558
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 159043.67598783053,
+            "unit": "ns",
+            "range": "± 5468.690201748669",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 153165.72886256166,
+            "unit": "ns",
+            "range": "± 3376.5306478611333",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 153785.29180230034,
+            "unit": "ns",
+            "range": "± 3184.849208021398",
+            "bytesAllocated": 18636
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 47124.72437286377,
+            "unit": "ns",
+            "range": "± 867.5834990901955",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 49738.034541829424,
+            "unit": "ns",
+            "range": "± 777.027157827134",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 55200.2134765625,
+            "unit": "ns",
+            "range": "± 918.1072817320897",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 49587.676538085936,
+            "unit": "ns",
+            "range": "± 679.6678486582732",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 49307.350622558595,
+            "unit": "ns",
+            "range": "± 730.3471136109175",
+            "bytesAllocated": 2668
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "911661c13b3f3ecae0d2ff6dab3244253ce69fec",
+          "message": "Add Artifacts flag (#467)\n\nAdd `Artifacts` flag to control where results are written to.",
+          "timestamp": "2026-10-03T16:40:35Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/911661c13b3f3ecae0d2ff6dab3244253ce69fec"
+        },
+        "date": 1791047317687,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 644890.7323521206,
+            "unit": "ns",
+            "range": "± 3930.514384327363",
+            "bytesAllocated": 65794
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 656077.2753208706,
+            "unit": "ns",
+            "range": "± 6286.293494224292",
+            "bytesAllocated": 67893
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 659097.2444661459,
+            "unit": "ns",
+            "range": "± 5429.40709556016",
+            "bytesAllocated": 68657
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 641616.1994791667,
+            "unit": "ns",
+            "range": "± 6692.563892487454",
+            "bytesAllocated": 65796
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 669461.9539620535,
+            "unit": "ns",
+            "range": "± 4415.790159861994",
+            "bytesAllocated": 71605
           }
         ]
       }
