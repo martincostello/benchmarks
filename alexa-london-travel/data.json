@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791447229880,
+  "lastUpdated": 1791452997007,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -65313,6 +65313,99 @@
             "unit": "ns",
             "range": "± 625.6316718308722",
             "bytesAllocated": 55725
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "69011cf4f92ee3501382a48ced1564eb42a900f9",
+          "message": "Fix flaky tests (#2546)\n\n- Increase end-to-end test timeout.\n- Reconfigure `AmazonSecretsManagerConfig` to fail faster when used in tests.",
+          "timestamp": "2026-10-08T09:41:08Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/69011cf4f92ee3501382a48ced1564eb42a900f9"
+        },
+        "date": 1791452997007,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 94714.29421561105,
+            "unit": "ns",
+            "range": "± 453.59987650413797",
+            "bytesAllocated": 39488
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 332782.7674278846,
+            "unit": "ns",
+            "range": "± 1251.0606953526533",
+            "bytesAllocated": 84059
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 239389.93969726562,
+            "unit": "ns",
+            "range": "± 1817.3297106647574",
+            "bytesAllocated": 74686
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 109992.2250453404,
+            "unit": "ns",
+            "range": "± 680.7685392478537",
+            "bytesAllocated": 66520
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 102109.77114868164,
+            "unit": "ns",
+            "range": "± 285.5478846933798",
+            "bytesAllocated": 60472
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 105038.25918782552,
+            "unit": "ns",
+            "range": "± 369.41255206704426",
+            "bytesAllocated": 54882
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 243362.630405971,
+            "unit": "ns",
+            "range": "± 621.3021861184541",
+            "bytesAllocated": 73929
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 93175.42621319111,
+            "unit": "ns",
+            "range": "± 470.4137123970938",
+            "bytesAllocated": 39588
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 103035.51180326022,
+            "unit": "ns",
+            "range": "± 529.3939400631047",
+            "bytesAllocated": 55454
           }
         ]
       }
