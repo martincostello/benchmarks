@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791572553629,
+  "lastUpdated": 1791732842957,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -76872,6 +76872,57 @@
             "unit": "ns",
             "range": "± 1220.6822080335774",
             "bytesAllocated": 48952
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9eeb4f9af86ea6590632b55ba7d9a0d8dda7555e",
+          "message": "Performance improvements (#3970)\n\n- Avoid parsing webhook payloads into a `JsonElement` on the consumer when nothing reads it, and publish the original body instead of re-serialising the parsed document.\n- Serialise Service Bus messages with `SerializeToUtf8Bytes()` instead of a growing `MemoryStream` and `ToArray()`.\n- Parse Git diffs using spans, compute the file name once per file instead of once per line, and only parse XML for `PackageReference`, `PackageVersion` and `GlobalPackageReference` elements.\n- Cache the Markdig pipeline instead of rebuilding it for every renovate commit message.\n- Avoid evaluating any regular expressions when extracting a version number if the dependency name does not appear in the commit message.\n- Find dependabot YAML metadata without `ReplaceLineEndings()`, `Split()` and `Join()`.\n- Improve test coverage for Git commit and diff handling.",
+          "timestamp": "2026-10-11T15:29:44Z",
+          "url": "https://github.com/martincostello/costellobot/commit/9eeb4f9af86ea6590632b55ba7d9a0d8dda7555e"
+        },
+        "date": 1791732842957,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 495051.80983072915,
+            "unit": "ns",
+            "range": "± 2593.6781422041113",
+            "bytesAllocated": 38044
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 240188.9907038762,
+            "unit": "ns",
+            "range": "± 774.5478198457354",
+            "bytesAllocated": 19717
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 302980.3142653245,
+            "unit": "ns",
+            "range": "± 2299.444258224834",
+            "bytesAllocated": 45001
           }
         ]
       }
