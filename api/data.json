@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791574817830,
+  "lastUpdated": 1791726302578,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -73896,6 +73896,71 @@
             "unit": "ns",
             "range": "± 1913.9463315669598",
             "bytesAllocated": 26702
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "62d9e339c7956ec73ff50f8bba25cec5d1a02d14",
+          "message": "Improve performance (#3629)\n\nUse more performant overload to set HTTP response headers.",
+          "timestamp": "2026-10-11T13:39:37Z",
+          "url": "https://github.com/martincostello/api/commit/62d9e339c7956ec73ff50f8bba25cec5d1a02d14"
+        },
+        "date": 1791726302578,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 203154.4065592448,
+            "unit": "ns",
+            "range": "± 1966.1694479220062",
+            "bytesAllocated": 31206
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 168897.5887044271,
+            "unit": "ns",
+            "range": "± 2335.761171079847",
+            "bytesAllocated": 16430
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 180184.2474934896,
+            "unit": "ns",
+            "range": "± 2526.803648746066",
+            "bytesAllocated": 15480
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 157993.27176339287,
+            "unit": "ns",
+            "range": "± 2632.5459982613743",
+            "bytesAllocated": 11729
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 171141.99307686943,
+            "unit": "ns",
+            "range": "± 1699.8665199232867",
+            "bytesAllocated": 26713
           }
         ]
       }
