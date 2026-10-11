@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791577013723,
+  "lastUpdated": 1791725688925,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -69524,6 +69524,71 @@
             "unit": "ns",
             "range": "± 424.66405153705244",
             "bytesAllocated": 18317
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "94b570892c240532c33762c457ef969b4cbdc6e7",
+          "message": "Performance improvements (#3738)\n\n- Build canonical and content URLs with a single allocation.\n- Cache `Environment.MachineName`, the build timestamp and short Git SHA.\n- Share `IResult` instances for redirects instead of allocating per request.\n- Use `Random.Shared` for crawler redirects.\n- Return a typed model from `/version` instead of building a `JsonObject`.\n- Set custom HTTP headers directly rather than appending.\n- Remove unused `IHttpContextAccessor` and response caching registrations.\n- Add tests for `HttpRequestExtensions` and the `/version` response.\n- Enable `AspireUseCliBundle` to fix build warning.",
+          "timestamp": "2026-10-11T13:29:31Z",
+          "url": "https://github.com/martincostello/website/commit/94b570892c240532c33762c457ef969b4cbdc6e7"
+        },
+        "date": 1791725688925,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 276492.6422200521,
+            "unit": "ns",
+            "range": "± 1334.740537602906",
+            "bytesAllocated": 34683
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 284849.90673828125,
+            "unit": "ns",
+            "range": "± 671.1947258623009",
+            "bytesAllocated": 35770
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 354967.7573893229,
+            "unit": "ns",
+            "range": "± 1979.91185225699",
+            "bytesAllocated": 54764
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 306547.916804387,
+            "unit": "ns",
+            "range": "± 2254.659468778305",
+            "bytesAllocated": 44528
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 209575.1724196214,
+            "unit": "ns",
+            "range": "± 1139.3113971333437",
+            "bytesAllocated": 15595
           }
         ]
       }
