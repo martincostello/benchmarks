@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791567903916,
+  "lastUpdated": 1791726338511,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -49887,6 +49887,50 @@
             "unit": "ns",
             "range": "± 4527.465915834848",
             "bytesAllocated": 30889
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "aa6287d10a4c207926bf006416ae2cdd80af5251",
+          "message": "Improve performance (#4680)\n\nUse more performant overload to set HTTP response headers.",
+          "timestamp": "2026-10-11T13:42:26Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/aa6287d10a4c207926bf006416ae2cdd80af5251"
+        },
+        "date": 1791726338511,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 462405.16751534597,
+            "unit": "ns",
+            "range": "± 2551.607444690132",
+            "bytesAllocated": 180282
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 185180.50677959734,
+            "unit": "ns",
+            "range": "± 2025.026323299847",
+            "bytesAllocated": 30909
           }
         ]
       }
