@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791576401169,
+  "lastUpdated": 1791721720138,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -65685,6 +65685,99 @@
             "unit": "ns",
             "range": "± 1481.9432399286757",
             "bytesAllocated": 55593
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "d96cc456b54aa44433654d24fb53461846320bd4",
+          "message": "Reduce allocations when handling requests (#2550)\n\n- Generate SSML directly instead of via `System.Xml.Linq`, which reduces the allocations to build a response by 90-97%.\n- Build TfL API request URLs with string interpolation and remove the dependency on `Microsoft.AspNetCore.WebUtilities`.\n- Cache the `FunctionHandler`, logger and handler delegate in `AlexaFunction` instead of resolving them per request.\n- Replace LINQ with loops and in-place sorting in `CommuteIntent`, `DisruptionIntent` and `StatusIntent`.\n- Use `CompositeFormat` for the status intent format strings.\n- Add more test coverage.",
+          "timestamp": "2026-10-11T12:21:03Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/d96cc456b54aa44433654d24fb53461846320bd4"
+        },
+        "date": 1791721720138,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.1.26425.128",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 147346.1326904297,
+            "unit": "ns",
+            "range": "± 560.3632310127404",
+            "bytesAllocated": 39463
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 453410.4656808036,
+            "unit": "ns",
+            "range": "± 1421.8623589299527",
+            "bytesAllocated": 67597
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 309420.7122395833,
+            "unit": "ns",
+            "range": "± 1460.5245706792346",
+            "bytesAllocated": 57979
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 147520.07284109932,
+            "unit": "ns",
+            "range": "± 490.14466684243877",
+            "bytesAllocated": 46955
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 143717.57123272234,
+            "unit": "ns",
+            "range": "± 389.73537817476404",
+            "bytesAllocated": 44374
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 144999.53103841146,
+            "unit": "ns",
+            "range": "± 673.0628071176723",
+            "bytesAllocated": 39444
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 319783.4316057478,
+            "unit": "ns",
+            "range": "± 926.2473912964241",
+            "bytesAllocated": 58060
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 144594.9844970703,
+            "unit": "ns",
+            "range": "± 536.806486786125",
+            "bytesAllocated": 39425
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 146879.08815104168,
+            "unit": "ns",
+            "range": "± 582.5540103177368",
+            "bytesAllocated": 39709
           }
         ]
       }
