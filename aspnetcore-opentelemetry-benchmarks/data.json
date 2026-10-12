@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791818028751,
+  "lastUpdated": 1791822396397,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -247504,6 +247504,786 @@
             "unit": "ns",
             "range": "± 885.8923608368751",
             "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 57843.90754609949,
+            "unit": "ns",
+            "range": "± 1815.7849285261946",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 62845.90960286458,
+            "unit": "ns",
+            "range": "± 831.8310531719212",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 60290.07539113363,
+            "unit": "ns",
+            "range": "± 2335.827380959904",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 57886.635372161865,
+            "unit": "ns",
+            "range": "± 1057.474520903789",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 59141.55264808392,
+            "unit": "ns",
+            "range": "± 1730.8490558656224",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 237969.58501325335,
+            "unit": "ns",
+            "range": "± 773.3144422848412",
+            "bytesAllocated": 2511
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 245947.56870814733,
+            "unit": "ns",
+            "range": "± 1236.0238494479595",
+            "bytesAllocated": 3645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 248015.75965294472,
+            "unit": "ns",
+            "range": "± 1186.7690392319978",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 236025.27659388952,
+            "unit": "ns",
+            "range": "± 3050.1712137651266",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 238636.0719563802,
+            "unit": "ns",
+            "range": "± 1820.3912523670672",
+            "bytesAllocated": 3599
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 59664.474446614586,
+            "unit": "ns",
+            "range": "± 567.8825091683972",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 64079.79335239955,
+            "unit": "ns",
+            "range": "± 662.744986055804",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 64035.07016601563,
+            "unit": "ns",
+            "range": "± 850.8686510123523",
+            "bytesAllocated": 2693
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 60748.815368652344,
+            "unit": "ns",
+            "range": "± 983.146346285561",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 60059.918277994795,
+            "unit": "ns",
+            "range": "± 934.7429386764668",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 58469.2098496381,
+            "unit": "ns",
+            "range": "± 1193.8284886950607",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 61827.656242370605,
+            "unit": "ns",
+            "range": "± 1157.8430513493183",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 63642.86280924479,
+            "unit": "ns",
+            "range": "± 734.4036467049943",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 59570.350830078125,
+            "unit": "ns",
+            "range": "± 871.7163773266517",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 58607.1789835612,
+            "unit": "ns",
+            "range": "± 1045.7985820788358",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 58804.08170427595,
+            "unit": "ns",
+            "range": "± 417.9086144970513",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 61510.764676920575,
+            "unit": "ns",
+            "range": "± 916.5420541565409",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 63349.14756673177,
+            "unit": "ns",
+            "range": "± 927.4955043779041",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 58182.56772460938,
+            "unit": "ns",
+            "range": "± 819.2255987918282",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 57876.40638928536,
+            "unit": "ns",
+            "range": "± 2020.145236151915",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2129064.93984375,
+            "unit": "ns",
+            "range": "± 22129.555880062002",
+            "bytesAllocated": 177658
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2149976.4104352677,
+            "unit": "ns",
+            "range": "± 20836.589966339947",
+            "bytesAllocated": 182888
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2310906.426167582,
+            "unit": "ns",
+            "range": "± 12831.548345984247",
+            "bytesAllocated": 201057
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2168820.090401786,
+            "unit": "ns",
+            "range": "± 8734.278808635185",
+            "bytesAllocated": 182006
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2246204.638764881,
+            "unit": "ns",
+            "range": "± 15533.7809071229",
+            "bytesAllocated": 199035
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 533843.5365084135,
+            "unit": "ns",
+            "range": "± 1054.46181745924",
+            "bytesAllocated": 6846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 554464.2507512019,
+            "unit": "ns",
+            "range": "± 1081.937905418671",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 546724.9867466518,
+            "unit": "ns",
+            "range": "± 4042.4297131228263",
+            "bytesAllocated": 8226
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 550652.1879882812,
+            "unit": "ns",
+            "range": "± 4229.797583666029",
+            "bytesAllocated": 8540
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 552351.96796875,
+            "unit": "ns",
+            "range": "± 3037.3248844752425",
+            "bytesAllocated": 10099
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 124590.73236955915,
+            "unit": "ns",
+            "range": "± 1361.645181603986",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 137349.70250355115,
+            "unit": "ns",
+            "range": "± 3257.5120532760143",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 165972.38974609374,
+            "unit": "ns",
+            "range": "± 2837.1952075575737",
+            "bytesAllocated": 10080
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 134828.58068033855,
+            "unit": "ns",
+            "range": "± 2422.1638876987445",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 138831.73461914062,
+            "unit": "ns",
+            "range": "± 3567.29185961576",
+            "bytesAllocated": 7849
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 740909.63046875,
+            "unit": "ns",
+            "range": "± 4368.437995235177",
+            "bytesAllocated": 110301
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 747301.663922991,
+            "unit": "ns",
+            "range": "± 4657.178077764011",
+            "bytesAllocated": 111257
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 747468.4924479167,
+            "unit": "ns",
+            "range": "± 2773.2831089855586",
+            "bytesAllocated": 111645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 737693.7828776041,
+            "unit": "ns",
+            "range": "± 1634.2793631942918",
+            "bytesAllocated": 110304
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 751288.6400991586,
+            "unit": "ns",
+            "range": "± 2734.854458829749",
+            "bytesAllocated": 113110
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 57500.261350631714,
+            "unit": "ns",
+            "range": "± 1743.8905592922188",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 61116.22556152344,
+            "unit": "ns",
+            "range": "± 1017.0516847576203",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 62045.09324886924,
+            "unit": "ns",
+            "range": "± 1350.9171630682104",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 58835.32130314754,
+            "unit": "ns",
+            "range": "± 432.93649321444417",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 58366.09431966146,
+            "unit": "ns",
+            "range": "± 1328.6073057453307",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 658679.9738581731,
+            "unit": "ns",
+            "range": "± 5146.20078531204",
+            "bytesAllocated": 62299
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 663523.3541165865,
+            "unit": "ns",
+            "range": "± 2883.1034660776295",
+            "bytesAllocated": 64329
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 672451.348828125,
+            "unit": "ns",
+            "range": "± 4290.751592636419",
+            "bytesAllocated": 65158
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 659284.0516880581,
+            "unit": "ns",
+            "range": "± 5345.038493627761",
+            "bytesAllocated": 62305
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 683715.6520182291,
+            "unit": "ns",
+            "range": "± 5230.507181865574",
+            "bytesAllocated": 67450
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "864f9b7e0ffb7d4ed300ec6399504433da0835c8",
+          "message": "Increase EC2 timeout (#488)\n\nIncrease job timeout to stop some benchmarks failing as they got too close to the limit.",
+          "timestamp": "2026-10-12T15:58:33Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/864f9b7e0ffb7d4ed300ec6399504433da0835c8"
+        },
+        "date": 1791822396397,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.401",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.12 (10.0.12, 10.0.1226.42308)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 57758.69442138672,
+            "unit": "ns",
+            "range": "± 982.2365191815579",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 60931.778147730336,
+            "unit": "ns",
+            "range": "± 1755.8684358192088",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 72310.89253743489,
+            "unit": "ns",
+            "range": "± 1263.0565278989388",
+            "bytesAllocated": 3098
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 61272.57245279948,
+            "unit": "ns",
+            "range": "± 2286.2422499605464",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 66058.84488932292,
+            "unit": "ns",
+            "range": "± 1081.7365023346108",
+            "bytesAllocated": 2668
           }
         ]
       }
