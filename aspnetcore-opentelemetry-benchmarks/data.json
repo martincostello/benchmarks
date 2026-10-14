@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791956966592,
+  "lastUpdated": 1791971137228,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -251404,6 +251404,786 @@
             "unit": "ns",
             "range": "± 7473.50539169557",
             "bytesAllocated": 10133
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 37319.109924316406,
+            "unit": "ns",
+            "range": "± 457.19988581285213",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 38188.98154296875,
+            "unit": "ns",
+            "range": "± 876.8110402577469",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 38105.673465983076,
+            "unit": "ns",
+            "range": "± 622.924448230478",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 36954.14321695964,
+            "unit": "ns",
+            "range": "± 609.3919132324069",
+            "bytesAllocated": 1829
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 35176.36999511719,
+            "unit": "ns",
+            "range": "± 842.5013104248197",
+            "bytesAllocated": 2356
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 118037.72861480713,
+            "unit": "ns",
+            "range": "± 2264.707861039409",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 120897.87569912997,
+            "unit": "ns",
+            "range": "± 2870.8178043248495",
+            "bytesAllocated": 3644
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 120590.80231584821,
+            "unit": "ns",
+            "range": "± 2730.906805904346",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 114860.82328796387,
+            "unit": "ns",
+            "range": "± 2231.2124896443797",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 119186.64081488716,
+            "unit": "ns",
+            "range": "± 2382.7377851142674",
+            "bytesAllocated": 3485
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 37067.73453140259,
+            "unit": "ns",
+            "range": "± 687.9812931009222",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 38382.47605242048,
+            "unit": "ns",
+            "range": "± 600.1341089139652",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 38531.46447753906,
+            "unit": "ns",
+            "range": "± 576.5026837509154",
+            "bytesAllocated": 2685
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 37486.94106852214,
+            "unit": "ns",
+            "range": "± 372.8481519912959",
+            "bytesAllocated": 1861
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 36900.40539550781,
+            "unit": "ns",
+            "range": "± 711.3878925852081",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 37861.201790945874,
+            "unit": "ns",
+            "range": "± 285.9209126761145",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 38931.09881998698,
+            "unit": "ns",
+            "range": "± 712.663718230792",
+            "bytesAllocated": 2669
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 39457.39896065848,
+            "unit": "ns",
+            "range": "± 526.9936900481441",
+            "bytesAllocated": 2693
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 37681.00961303711,
+            "unit": "ns",
+            "range": "± 445.774303475629",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 36853.19149959789,
+            "unit": "ns",
+            "range": "± 707.508526715184",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 37400.21231313852,
+            "unit": "ns",
+            "range": "± 499.05019654738373",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 36902.54971516927,
+            "unit": "ns",
+            "range": "± 537.2819682455555",
+            "bytesAllocated": 2732
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 37898.27460793888,
+            "unit": "ns",
+            "range": "± 750.9747271318225",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 37095.99760885799,
+            "unit": "ns",
+            "range": "± 745.1672547073335",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 36986.55183919271,
+            "unit": "ns",
+            "range": "± 476.477595010745",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 1621948.5379807693,
+            "unit": "ns",
+            "range": "± 8455.54190001562",
+            "bytesAllocated": 177696
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 1655582.3841666665,
+            "unit": "ns",
+            "range": "± 29064.163160071712",
+            "bytesAllocated": 182961
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 1766798.6738425924,
+            "unit": "ns",
+            "range": "± 14577.047212757881",
+            "bytesAllocated": 200941
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 1662072.0986607142,
+            "unit": "ns",
+            "range": "± 6596.773988134663",
+            "bytesAllocated": 182033
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 1720684.7312500004,
+            "unit": "ns",
+            "range": "± 7488.458183240362",
+            "bytesAllocated": 198713
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 385637.61568777903,
+            "unit": "ns",
+            "range": "± 1715.91104955275",
+            "bytesAllocated": 6852
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 402893.8350911458,
+            "unit": "ns",
+            "range": "± 1812.2653713319849",
+            "bytesAllocated": 10088
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 394335.4598214286,
+            "unit": "ns",
+            "range": "± 1200.5179064779388",
+            "bytesAllocated": 8234
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 396756.0920247396,
+            "unit": "ns",
+            "range": "± 1892.253348802915",
+            "bytesAllocated": 8545
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 399881.5301513672,
+            "unit": "ns",
+            "range": "± 846.0719792284126",
+            "bytesAllocated": 10104
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 76866.96244884672,
+            "unit": "ns",
+            "range": "± 1777.9458206944691",
+            "bytesAllocated": 4565
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 85020.00152994791,
+            "unit": "ns",
+            "range": "± 987.1860292000742",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 97604.62539876302,
+            "unit": "ns",
+            "range": "± 1213.7832127325362",
+            "bytesAllocated": 10001
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 82674.48099772136,
+            "unit": "ns",
+            "range": "± 631.9285185409752",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 83818.70338657925,
+            "unit": "ns",
+            "range": "± 1150.4279342626796",
+            "bytesAllocated": 7770
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 36425.80655517578,
+            "unit": "ns",
+            "range": "± 603.4241633864264",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 37825.14840494792,
+            "unit": "ns",
+            "range": "± 687.8759983356609",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 38160.597395833334,
+            "unit": "ns",
+            "range": "± 320.4030760380981",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 36690.79684448242,
+            "unit": "ns",
+            "range": "± 310.13484011529687",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 37366.36783708845,
+            "unit": "ns",
+            "range": "± 327.76305549605485",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 562888.6065755208,
+            "unit": "ns",
+            "range": "± 3055.5528761723713",
+            "bytesAllocated": 110298
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 567500.519670759,
+            "unit": "ns",
+            "range": "± 2477.1611988285636",
+            "bytesAllocated": 111249
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 568698.4691685268,
+            "unit": "ns",
+            "range": "± 2200.24800200127",
+            "bytesAllocated": 111637
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 559564.8489815848,
+            "unit": "ns",
+            "range": "± 4147.204547425387",
+            "bytesAllocated": 110405
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 583154.9676432292,
+            "unit": "ns",
+            "range": "± 4468.991424019448",
+            "bytesAllocated": 113108
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 494310.2947916667,
+            "unit": "ns",
+            "range": "± 3129.4384070812994",
+            "bytesAllocated": 62333
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 502036.7863420759,
+            "unit": "ns",
+            "range": "± 2245.754720915573",
+            "bytesAllocated": 64334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 505993.25725446426,
+            "unit": "ns",
+            "range": "± 3198.8754206114495",
+            "bytesAllocated": 65169
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 495787.5879657452,
+            "unit": "ns",
+            "range": "± 6988.856217604289",
+            "bytesAllocated": 62309
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 512586.79150390625,
+            "unit": "ns",
+            "range": "± 3012.769087476925",
+            "bytesAllocated": 67452
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "52f0374bfe02b8cb470e9ecf50f95ba256b4164a",
+          "message": "Override System.Security.Cryptography.Pkcs version (#494)\n\nFixes https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/2 and https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/security/dependabot/3.",
+          "timestamp": "2026-10-14T09:21:44Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/52f0374bfe02b8cb470e9ecf50f95ba256b4164a"
+        },
+        "date": 1791971137228,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.402",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 10.0.13 (10.0.13, 10.0.1326.50504)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 36088.281918334964,
+            "unit": "ns",
+            "range": "± 810.0958623801619",
+            "bytesAllocated": 1821
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 38250.470458984375,
+            "unit": "ns",
+            "range": "± 410.2195606533103",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 41750.14858398437,
+            "unit": "ns",
+            "range": "± 764.5714789572206",
+            "bytesAllocated": 3058
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 37687.821643829346,
+            "unit": "ns",
+            "range": "± 719.8584136870526",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 36821.17285970052,
+            "unit": "ns",
+            "range": "± 461.8539571645506",
+            "bytesAllocated": 2628
           }
         ]
       }
