@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791905064733,
+  "lastUpdated": 1791969153167,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -66150,6 +66150,99 @@
             "unit": "ns",
             "range": "± 777.0367895152099",
             "bytesAllocated": 39794
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9ede65abdbdb33bdf02159e35e88a7f8abdf67fb",
+          "message": "Update .NET SDK to 11.0.100-rc.2.26504.105 (#2555)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 11.0.100-rc.2.26504.105.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 11.0.100-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump .NET NuGet packages\n\nBumps .NET dependencies to their latest versions for the .NET 11.0.100-rc.2.26504.105 SDK.\n\nBumps Microsoft.Extensions.Configuration.Binder from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\nBumps Microsoft.Extensions.Configuration.EnvironmentVariables from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\nBumps Microsoft.Extensions.Configuration.Json from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\nBumps Microsoft.Extensions.Configuration.UserSecrets from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\nBumps Microsoft.Extensions.DependencyInjection from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\nBumps Microsoft.Extensions.Http from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\nBumps Microsoft.Extensions.Logging.Console from 11.0.0-rc.1.26425.128 to 11.0.0-rc.2.26504.105.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.Extensions.Configuration.Binder\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Configuration.EnvironmentVariables\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Configuration.Json\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Configuration.UserSecrets\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.DependencyInjection\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Http\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n- dependency-name: Microsoft.Extensions.Logging.Console\n  dependency-version: 11.0.0-rc.2.26504.105\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Fix build\n\nWorkaround native AoT publishing issue.\n\n* Fix build\n\nAdd workaround for SDK issue.\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\nCo-authored-by: Martin Costello <martin@martincostello.com>",
+          "timestamp": "2026-10-14T09:04:15Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/9ede65abdbdb33bdf02159e35e88a7f8abdf67fb"
+        },
+        "date": 1791969153167,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 102673.91227213542,
+            "unit": "ns",
+            "range": "± 1005.5801061436059",
+            "bytesAllocated": 39613
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 437908.0391376202,
+            "unit": "ns",
+            "range": "± 3084.8546715616067",
+            "bytesAllocated": 66839
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 299915.75994001114,
+            "unit": "ns",
+            "range": "± 1836.627139014656",
+            "bytesAllocated": 57493
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 111638.04829915364,
+            "unit": "ns",
+            "range": "± 1549.9309972047745",
+            "bytesAllocated": 47254
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 104374.06210763114,
+            "unit": "ns",
+            "range": "± 1235.4646532795061",
+            "bytesAllocated": 44590
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 102833.45606282553,
+            "unit": "ns",
+            "range": "± 786.1377999708163",
+            "bytesAllocated": 39623
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 308323.8827427455,
+            "unit": "ns",
+            "range": "± 1886.8365205385498",
+            "bytesAllocated": 57352
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 104293.42216273716,
+            "unit": "ns",
+            "range": "± 704.4228571068135",
+            "bytesAllocated": 39735
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 106808.3007899693,
+            "unit": "ns",
+            "range": "± 1579.2362597617778",
+            "bytesAllocated": 39979
           }
         ]
       }
