@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792339291348,
+  "lastUpdated": 1792350316192,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -71084,6 +71084,71 @@
             "unit": "ns",
             "range": "± 1526.6303771824062",
             "bytesAllocated": 15672
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "1b170aa4fd6cdcc3c2a5f342c1bb4291949b2bc1",
+          "message": "Use AWS credentials for ECR (#3762)\n\nUse OIDC to get credentials for AWS ECR to avoid rate-limiting in Trivy scans when pulling trivy-db.",
+          "timestamp": "2026-10-18T18:59:49Z",
+          "url": "https://github.com/martincostello/website/commit/1b170aa4fd6cdcc3c2a5f342c1bb4291949b2bc1"
+        },
+        "date": 1792350316192,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 277803.82686360675,
+            "unit": "ns",
+            "range": "± 2196.2699668371943",
+            "bytesAllocated": 34749
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 294775.726171875,
+            "unit": "ns",
+            "range": "± 1784.404920989451",
+            "bytesAllocated": 35903
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 369797.039851262,
+            "unit": "ns",
+            "range": "± 1158.9402214186712",
+            "bytesAllocated": 59767
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 307710.6258544922,
+            "unit": "ns",
+            "range": "± 600.1420590289295",
+            "bytesAllocated": 44638
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 206057.9066894531,
+            "unit": "ns",
+            "range": "± 1460.6684462442552",
+            "bytesAllocated": 15701
           }
         ]
       }
