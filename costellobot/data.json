@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792150997466,
+  "lastUpdated": 1792337581582,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -78249,6 +78249,57 @@
             "unit": "ns",
             "range": "± 1358.492887377163",
             "bytesAllocated": 43479
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "7f846c3a7b61173905a5e6318ea478d268dc8696",
+          "message": "Add fuzz tests (#4001)\n\n- Add property-based fuzz tests for the parsers using FsCheck.\n- Fix two issues found in `GitCommitAnalyzer`.",
+          "timestamp": "2026-10-18T15:29:09Z",
+          "url": "https://github.com/martincostello/costellobot/commit/7f846c3a7b61173905a5e6318ea478d268dc8696"
+        },
+        "date": 1792337581582,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V45",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 209122.2269944411,
+            "unit": "ns",
+            "range": "± 1656.0515764815302",
+            "bytesAllocated": 38617
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 82449.3110921224,
+            "unit": "ns",
+            "range": "± 1221.3889968906076",
+            "bytesAllocated": 19853
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 141614.1260811942,
+            "unit": "ns",
+            "range": "± 1799.5433891637213",
+            "bytesAllocated": 43472
           }
         ]
       }
