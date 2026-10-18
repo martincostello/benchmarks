@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792133377572,
+  "lastUpdated": 1792350389774,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -75261,6 +75261,71 @@
             "unit": "ns",
             "range": "± 1790.0155420707638",
             "bytesAllocated": 26951
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "29ebf4cfbfd842afe6e6807f91422b8952c1c5bf",
+          "message": "Use AWS credentials for ECR (#3651)\n\nUse OIDC to get credentials for AWS ECR to avoid rate-limiting in Trivy scans when pulling trivy-db.",
+          "timestamp": "2026-10-18T19:01:12Z",
+          "url": "https://github.com/martincostello/api/commit/29ebf4cfbfd842afe6e6807f91422b8952c1c5bf"
+        },
+        "date": 1792350389774,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 269337.9443033854,
+            "unit": "ns",
+            "range": "± 1120.5704792727715",
+            "bytesAllocated": 31425
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 225586.78388323102,
+            "unit": "ns",
+            "range": "± 1682.7302429930703",
+            "bytesAllocated": 16678
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 249768.76295572918,
+            "unit": "ns",
+            "range": "± 2903.6158096624645",
+            "bytesAllocated": 15693
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 204224.69103064903,
+            "unit": "ns",
+            "range": "± 1703.5793264385238",
+            "bytesAllocated": 11930
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 225150.74322040266,
+            "unit": "ns",
+            "range": "± 851.77932294445",
+            "bytesAllocated": 26955
           }
         ]
       }
