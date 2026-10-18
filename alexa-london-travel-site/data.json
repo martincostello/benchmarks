@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792133291648,
+  "lastUpdated": 1792350321002,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -50987,6 +50987,50 @@
             "unit": "ns",
             "range": "± 3160.7482225381923",
             "bytesAllocated": 31116
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "c6a5044c8370fd5003d658d2ab6125ba08cb4d09",
+          "message": "Use AWS credentials for ECR (#4707)\n\nUse OIDC to get credentials for AWS ECR to avoid rate-limiting in Trivy scans when pulling trivy-db.",
+          "timestamp": "2026-10-18T19:01:59Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/c6a5044c8370fd5003d658d2ab6125ba08cb4d09"
+        },
+        "date": 1792350321002,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 454809.34912109375,
+            "unit": "ns",
+            "range": "± 2185.16344607518",
+            "bytesAllocated": 180468
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 178252.21907552084,
+            "unit": "ns",
+            "range": "± 941.1242059003547",
+            "bytesAllocated": 31111
           }
         ]
       }
