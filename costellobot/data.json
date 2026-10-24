@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792863125146,
+  "lastUpdated": 1792868224318,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -79881,6 +79881,57 @@
             "unit": "ns",
             "range": "± 3457.582508271426",
             "bytesAllocated": 39909
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "6a153d2b8acfd6b760c445e20db552c076a2c99a",
+          "message": "Reconfigure compression (#4037)\n\n- Prefer zstd when no preference.\r\n- Set zstd quality to 1.",
+          "timestamp": "2026-10-24T18:52:56Z",
+          "url": "https://github.com/martincostello/costellobot/commit/6a153d2b8acfd6b760c445e20db552c076a2c99a"
+        },
+        "date": 1792868224318,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 348318.37845284597,
+            "unit": "ns",
+            "range": "± 895.046898897213",
+            "bytesAllocated": 38704
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 131896.26998697917,
+            "unit": "ns",
+            "range": "± 1013.5499150272146",
+            "bytesAllocated": 17808
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 232701.35960286457,
+            "unit": "ns",
+            "range": "± 854.724299529751",
+            "bytesAllocated": 39943
           }
         ]
       }
