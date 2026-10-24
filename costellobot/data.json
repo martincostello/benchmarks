@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792767905818,
+  "lastUpdated": 1792851266304,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -79728,6 +79728,57 @@
             "unit": "ns",
             "range": "± 884.3520286832438",
             "bytesAllocated": 42827
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "26bbb66c05f69c4ea0b33b00126a79cfb6f775cb",
+          "message": "Support zstd compression (#4034)\n\n- Add support for compressing ServiceBus payloads with zstd.\n- Add support for zstd response compression.",
+          "timestamp": "2026-10-24T14:10:16Z",
+          "url": "https://github.com/martincostello/costellobot/commit/26bbb66c05f69c4ea0b33b00126a79cfb6f775cb"
+        },
+        "date": 1792851266304,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 353130.0724534255,
+            "unit": "ns",
+            "range": "± 1221.6874721871668",
+            "bytesAllocated": 38704
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 157745.79929896764,
+            "unit": "ns",
+            "range": "± 1093.3883648055776",
+            "bytesAllocated": 19862
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 232285.29064941406,
+            "unit": "ns",
+            "range": "± 1120.2953428271474",
+            "bytesAllocated": 42854
           }
         ]
       }
