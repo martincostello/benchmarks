@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792851536626,
+  "lastUpdated": 1792867492532,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -76236,6 +76236,71 @@
             "unit": "ns",
             "range": "± 1869.958011711536",
             "bytesAllocated": 26948
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b2a5dc5cd95c3739e002d02b1b222b0a3b243c31",
+          "message": "Reconfigure compression (#3668)\n\n- Prefer zstd when no preference.\n- Set zstd quality to 1.",
+          "timestamp": "2026-10-24T18:39:48Z",
+          "url": "https://github.com/martincostello/api/commit/b2a5dc5cd95c3739e002d02b1b222b0a3b243c31"
+        },
+        "date": 1792867492532,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 171843.71280343193,
+            "unit": "ns",
+            "range": "± 1529.238093078856",
+            "bytesAllocated": 31389
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 144056.29052734375,
+            "unit": "ns",
+            "range": "± 1817.8778340127403",
+            "bytesAllocated": 16616
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 162023.3893171038,
+            "unit": "ns",
+            "range": "± 998.8188009352381",
+            "bytesAllocated": 15619
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 126795.90391322544,
+            "unit": "ns",
+            "range": "± 1813.7365550159043",
+            "bytesAllocated": 11915
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 144779.85279947918,
+            "unit": "ns",
+            "range": "± 1763.7431897800213",
+            "bytesAllocated": 26890
           }
         ]
       }
