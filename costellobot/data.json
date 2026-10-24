@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792852657553,
+  "lastUpdated": 1792863125146,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -79830,6 +79830,57 @@
             "unit": "ns",
             "range": "± 1971.6132489270456",
             "bytesAllocated": 42862
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "087c16828c6c08f179e116ad6cf164f085a3ae70",
+          "message": "Improve performance (#4036)\n\n- Cache the runtime and ASP.NET Core informational versions instead of using reflection on every request to `/version`.\n- Only parse webhook payloads into a `JsonElement` and broadcast them when a client is connected to the SignalR hub, as the payload is already parsed lazily if the history is replayed to a new client.\n- Track the number of connected hub clients with `GitHubWebhookHubConnections`.\n- Deserialize message headers directly into `StringValues` with a custom converter instead of allocating an array per header and then copying into a second dictionary.",
+          "timestamp": "2026-10-24T17:27:29Z",
+          "url": "https://github.com/martincostello/costellobot/commit/087c16828c6c08f179e116ad6cf164f085a3ae70"
+        },
+        "date": 1792863125146,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.2.26504.105",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon Platinum 8370C CPU 2.80GHz",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.2.26504.105, 11.0.26.50505)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 397618.3884765625,
+            "unit": "ns",
+            "range": "± 5802.504289546557",
+            "bytesAllocated": 38707
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 158734.75426432292,
+            "unit": "ns",
+            "range": "± 2585.0122906090464",
+            "bytesAllocated": 17805
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 281939.7659388951,
+            "unit": "ns",
+            "range": "± 3457.582508271426",
+            "bytesAllocated": 39909
           }
         ]
       }
