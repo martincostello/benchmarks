@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1792920508962,
+  "lastUpdated": 1792956160378,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -276364,6 +276364,786 @@
             "unit": "ns",
             "range": "± 1209.6197806434461",
             "bytesAllocated": 10104
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 58428.26826171875,
+            "unit": "ns",
+            "range": "± 935.2525312578248",
+            "bytesAllocated": 1829
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 62015.85152762277,
+            "unit": "ns",
+            "range": "± 1403.1508472022138",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 61359.2255912449,
+            "unit": "ns",
+            "range": "± 1507.1180128741864",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 57056.656667401716,
+            "unit": "ns",
+            "range": "± 1736.4514685816757",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 58079.71096420288,
+            "unit": "ns",
+            "range": "± 1118.2273895365688",
+            "bytesAllocated": 2354
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 238700.16658528647,
+            "unit": "ns",
+            "range": "± 1509.9095180112608",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 248159.6474233774,
+            "unit": "ns",
+            "range": "± 1894.7186500158334",
+            "bytesAllocated": 3644
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 246321.6233097957,
+            "unit": "ns",
+            "range": "± 1454.4452908631936",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 238837.5249186198,
+            "unit": "ns",
+            "range": "± 986.3993028940785",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 240417.6177106585,
+            "unit": "ns",
+            "range": "± 1153.6027979239414",
+            "bytesAllocated": 3592
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 58654.32017008463,
+            "unit": "ns",
+            "range": "± 1026.0301053135752",
+            "bytesAllocated": 1845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 62288.23612154447,
+            "unit": "ns",
+            "range": "± 846.5598634371291",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 63705.249366760254,
+            "unit": "ns",
+            "range": "± 1202.9256811013408",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 60160.16287841797,
+            "unit": "ns",
+            "range": "± 693.9211264366195",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 59186.831498209634,
+            "unit": "ns",
+            "range": "± 983.235982797814",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 528855.814453125,
+            "unit": "ns",
+            "range": "± 1386.847123305782",
+            "bytesAllocated": 6844
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 555728.0369001116,
+            "unit": "ns",
+            "range": "± 1204.8231484878481",
+            "bytesAllocated": 10082
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 542975.2891376202,
+            "unit": "ns",
+            "range": "± 1221.0676201537938",
+            "bytesAllocated": 8226
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 552859.3504557292,
+            "unit": "ns",
+            "range": "± 9780.629256819477",
+            "bytesAllocated": 8536
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 555759.6850260417,
+            "unit": "ns",
+            "range": "± 3219.9246025681064",
+            "bytesAllocated": 10093
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 57943.364420572914,
+            "unit": "ns",
+            "range": "± 910.5520313711518",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 62468.3522976962,
+            "unit": "ns",
+            "range": "± 2337.1050489538184",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 61838.003182547436,
+            "unit": "ns",
+            "range": "± 562.9657191057966",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 59420.29001464844,
+            "unit": "ns",
+            "range": "± 644.7298234499988",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 58311.96992594401,
+            "unit": "ns",
+            "range": "± 847.7460053599416",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 58154.61717810998,
+            "unit": "ns",
+            "range": "± 613.9588451812375",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 62150.928731282555,
+            "unit": "ns",
+            "range": "± 521.0857844951472",
+            "bytesAllocated": 2730
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 62900.02167154948,
+            "unit": "ns",
+            "range": "± 824.3287281770405",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 58804.15876871745,
+            "unit": "ns",
+            "range": "± 705.3492260258432",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 57775.45619710287,
+            "unit": "ns",
+            "range": "± 1711.9352481095432",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2143995.6075721155,
+            "unit": "ns",
+            "range": "± 8657.669193859974",
+            "bytesAllocated": 177668
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2172603.3498883927,
+            "unit": "ns",
+            "range": "± 12279.96687997752",
+            "bytesAllocated": 182950
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2330159.2393543953,
+            "unit": "ns",
+            "range": "± 10274.231429953705",
+            "bytesAllocated": 200977
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2222764.510323661,
+            "unit": "ns",
+            "range": "± 9962.27293300159",
+            "bytesAllocated": 182242
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2303899.826236264,
+            "unit": "ns",
+            "range": "± 17614.727084876155",
+            "bytesAllocated": 198839
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 122672.76083170573,
+            "unit": "ns",
+            "range": "± 1012.826696717203",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 137585.2323376886,
+            "unit": "ns",
+            "range": "± 4016.983059625608",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 167340.11661783853,
+            "unit": "ns",
+            "range": "± 1730.6746197842685",
+            "bytesAllocated": 10001
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 133071.45615234374,
+            "unit": "ns",
+            "range": "± 1521.9929086234158",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 136525.35171621817,
+            "unit": "ns",
+            "range": "± 3740.485887059586",
+            "bytesAllocated": 7758
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 740893.2674153646,
+            "unit": "ns",
+            "range": "± 2169.077872826139",
+            "bytesAllocated": 110259
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 742986.9039963942,
+            "unit": "ns",
+            "range": "± 1990.0197977970365",
+            "bytesAllocated": 111213
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 743339.9169921875,
+            "unit": "ns",
+            "range": "± 3163.7184331505086",
+            "bytesAllocated": 111647
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 744663.1948567708,
+            "unit": "ns",
+            "range": "± 3002.039905802876",
+            "bytesAllocated": 110297
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 758472.5434895833,
+            "unit": "ns",
+            "range": "± 5012.035119427431",
+            "bytesAllocated": 113105
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 58247.80407714844,
+            "unit": "ns",
+            "range": "± 2084.2950172850456",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 60589.58929850261,
+            "unit": "ns",
+            "range": "± 1032.065841422353",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 60640.8501329924,
+            "unit": "ns",
+            "range": "± 2088.2480488178653",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 58289.44565429688,
+            "unit": "ns",
+            "range": "± 568.8873348472105",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 58003.640987820094,
+            "unit": "ns",
+            "range": "± 1893.3977269974996",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 687631.7,
+            "unit": "ns",
+            "range": "± 8233.326418753164",
+            "bytesAllocated": 62334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 694267.0727163461,
+            "unit": "ns",
+            "range": "± 3239.7920798369146",
+            "bytesAllocated": 64405
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 701790.0793619792,
+            "unit": "ns",
+            "range": "± 4206.378589718482",
+            "bytesAllocated": 65188
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 689011.3507952009,
+            "unit": "ns",
+            "range": "± 8551.566534048477",
+            "bytesAllocated": 62304
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 714869.0727213542,
+            "unit": "ns",
+            "range": "± 5610.696216800852",
+            "bytesAllocated": 67451
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "costellobot"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "9237c4e231d16bfee45423bca423b03f7be170bb",
+          "message": "Update .NET SDK to 10.0.403 (#531)\n\n* Update .NET SDK\n\nUpdate .NET SDK to version 10.0.403.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Sdk\n  dependency-version: 10.0.403\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n* Bump Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14\n\nBumps Microsoft.EntityFrameworkCore.SqlServer from 10.0.13 to 10.0.14.\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.EntityFrameworkCore.SqlServer\n  dependency-version: 10.0.14\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>\n\n---------\n\nSigned-off-by: costellobot <102549341+costellobot@users.noreply.github.com>",
+          "timestamp": "2026-10-25T18:54:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/9237c4e231d16bfee45423bca423b03f7be170bb"
+        },
+        "date": 1792956160378,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 57791.94805094401,
+            "unit": "ns",
+            "range": "± 804.1139905051234",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 61220.070721794575,
+            "unit": "ns",
+            "range": "± 1254.4505674655468",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 71599.27548828124,
+            "unit": "ns",
+            "range": "± 1131.3079312424277",
+            "bytesAllocated": 3058
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 61803.58340657552,
+            "unit": "ns",
+            "range": "± 949.3374631146148",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 64057.865877278644,
+            "unit": "ns",
+            "range": "± 956.794932540367",
+            "bytesAllocated": 2626
           }
         ]
       }
