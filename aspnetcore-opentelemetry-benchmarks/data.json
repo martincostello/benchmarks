@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793001909648,
+  "lastUpdated": 1793002048040,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -278704,6 +278704,786 @@
             "unit": "ns",
             "range": "± 767.5527932211384",
             "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 126511.89956325955,
+            "unit": "ns",
+            "range": "± 2659.1919891647826",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 133765.87989908856,
+            "unit": "ns",
+            "range": "± 1265.712992658783",
+            "bytesAllocated": 3634
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 130767.02439880371,
+            "unit": "ns",
+            "range": "± 2429.8280325203937",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 127632.6345703125,
+            "unit": "ns",
+            "range": "± 2001.3018657885689",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 128378.12351989746,
+            "unit": "ns",
+            "range": "± 3877.881723204745",
+            "bytesAllocated": 3640
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 38900.15056996287,
+            "unit": "ns",
+            "range": "± 2047.4999555649256",
+            "bytesAllocated": 1829
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 35527.878078613285,
+            "unit": "ns",
+            "range": "± 2617.577727338767",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 37476.69104552537,
+            "unit": "ns",
+            "range": "± 2063.766984423218",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 40271.2257317437,
+            "unit": "ns",
+            "range": "± 2223.3815410164566",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 37276.57343171772,
+            "unit": "ns",
+            "range": "± 2125.8608491936666",
+            "bytesAllocated": 2354
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 39862.39123083044,
+            "unit": "ns",
+            "range": "± 2098.320315583875",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 36220.48327513415,
+            "unit": "ns",
+            "range": "± 2570.151618991143",
+            "bytesAllocated": 2669
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 33570.47977050781,
+            "unit": "ns",
+            "range": "± 2420.662860562267",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 36434.794678516875,
+            "unit": "ns",
+            "range": "± 1861.1290019112203",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 37353.627115885414,
+            "unit": "ns",
+            "range": "± 2038.396926199239",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 39460.216176102804,
+            "unit": "ns",
+            "range": "± 2088.078115574496",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 36695.82262505425,
+            "unit": "ns",
+            "range": "± 1532.0577463645109",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 37007.798768310546,
+            "unit": "ns",
+            "range": "± 2423.372645974676",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 38458.063714278374,
+            "unit": "ns",
+            "range": "± 2205.1058487562664",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 38920.533743722095,
+            "unit": "ns",
+            "range": "± 1871.376663428561",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 40138.94108581543,
+            "unit": "ns",
+            "range": "± 1139.976671793996",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 35311.45731121561,
+            "unit": "ns",
+            "range": "± 1360.0726819570225",
+            "bytesAllocated": 2730
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 37946.584984519264,
+            "unit": "ns",
+            "range": "± 1415.3628566970558",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 41108.33654536033,
+            "unit": "ns",
+            "range": "± 1618.9134480311673",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 40677.781188964844,
+            "unit": "ns",
+            "range": "± 1465.6529885301857",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2074161.9911458334,
+            "unit": "ns",
+            "range": "± 26210.340044753164",
+            "bytesAllocated": 177634
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2144556.2583333333,
+            "unit": "ns",
+            "range": "± 37150.084858688635",
+            "bytesAllocated": 182877
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2253755.9982142854,
+            "unit": "ns",
+            "range": "± 26981.45230452393",
+            "bytesAllocated": 200820
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2165569.527604167,
+            "unit": "ns",
+            "range": "± 24628.854494060954",
+            "bytesAllocated": 181937
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2128082.534895833,
+            "unit": "ns",
+            "range": "± 38992.382449353245",
+            "bytesAllocated": 198601
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 85827.07787555197,
+            "unit": "ns",
+            "range": "± 2150.456964926289",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 85225.77153778076,
+            "unit": "ns",
+            "range": "± 2624.235140101617",
+            "bytesAllocated": 7845
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 101400.6162188986,
+            "unit": "ns",
+            "range": "± 3892.71230846386",
+            "bytesAllocated": 10001
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 88534.26540883382,
+            "unit": "ns",
+            "range": "± 3457.536994636008",
+            "bytesAllocated": 4981
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 93683.3683866613,
+            "unit": "ns",
+            "range": "± 3812.057251230944",
+            "bytesAllocated": 7757
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 406036.52794921875,
+            "unit": "ns",
+            "range": "± 10648.765469532342",
+            "bytesAllocated": 6844
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 423206.966796875,
+            "unit": "ns",
+            "range": "± 9643.35987667331",
+            "bytesAllocated": 10078
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 424413.09905133926,
+            "unit": "ns",
+            "range": "± 5734.079617914432",
+            "bytesAllocated": 8224
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 418457.2616325827,
+            "unit": "ns",
+            "range": "± 8126.461996255445",
+            "bytesAllocated": 8535
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 425785.9771412037,
+            "unit": "ns",
+            "range": "± 11415.35525171356",
+            "bytesAllocated": 10092
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 39348.7627286044,
+            "unit": "ns",
+            "range": "± 2322.233300514905",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 37656.8379864502,
+            "unit": "ns",
+            "range": "± 2875.639956379492",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 38410.20922328404,
+            "unit": "ns",
+            "range": "± 1860.5124429953144",
+            "bytesAllocated": 2661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 39139.45603059467,
+            "unit": "ns",
+            "range": "± 1981.260336103806",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 40012.307429798864,
+            "unit": "ns",
+            "range": "± 1723.1110860017664",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 663124.6710286458,
+            "unit": "ns",
+            "range": "± 9945.468582414236",
+            "bytesAllocated": 110241
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 679178.9467773438,
+            "unit": "ns",
+            "range": "± 9935.019839329454",
+            "bytesAllocated": 111190
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 687218.0570203993,
+            "unit": "ns",
+            "range": "± 14629.63046159056",
+            "bytesAllocated": 111661
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 671509.0107421875,
+            "unit": "ns",
+            "range": "± 11106.799563966877",
+            "bytesAllocated": 110281
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 696458.3617838542,
+            "unit": "ns",
+            "range": "± 10844.27662025926",
+            "bytesAllocated": 113083
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 609037.3559895833,
+            "unit": "ns",
+            "range": "± 10102.208279800714",
+            "bytesAllocated": 62305
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 634589.4896763393,
+            "unit": "ns",
+            "range": "± 11250.869448896501",
+            "bytesAllocated": 64337
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 631082.7115722656,
+            "unit": "ns",
+            "range": "± 12784.884540384466",
+            "bytesAllocated": 65166
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 615115.9544270834,
+            "unit": "ns",
+            "range": "± 9590.311333383148",
+            "bytesAllocated": 62336
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 640859.3268229166,
+            "unit": "ns",
+            "range": "± 11105.969593344615",
+            "bytesAllocated": 67429
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b0f168b01841b54ff4617a0f26ece02db9d342fd",
+          "message": "Bump DavidAnson/markdownlint-cli2-action action to v25 (#535)\n\n| datasource  | package                             | from    | to      |\n| ----------- | ----------------------------------- | ------- | ------- |\n| github-tags | DavidAnson/markdownlint-cli2-action | v24.2.0 | v25.0.0 |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-26T07:18:49Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/b0f168b01841b54ff4617a0f26ece02db9d342fd"
+        },
+        "date": 1793002048040,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 39279.67480191318,
+            "unit": "ns",
+            "range": "± 2157.9561141103973",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 37637.803636030716,
+            "unit": "ns",
+            "range": "± 1391.550093051049",
+            "bytesAllocated": 2646
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 38888.67883300781,
+            "unit": "ns",
+            "range": "± 1721.0042012319368",
+            "bytesAllocated": 3058
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 37723.92787963867,
+            "unit": "ns",
+            "range": "± 2554.4042576704355",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 36117.13187739534,
+            "unit": "ns",
+            "range": "± 1498.2958925346475",
+            "bytesAllocated": 2626
           }
         ]
       }
