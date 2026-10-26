@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793013653331,
+  "lastUpdated": 1793026296934,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel",
   "entries": {
     "LondonTravel.Skill": [
@@ -69405,6 +69405,99 @@
             "unit": "ns",
             "range": "± 1937.8111265791865",
             "bytesAllocated": 39515
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "e38178ed87900ffe7de08e845addb169c9c8ffdd",
+          "message": "Reduce serializer allocations (#2592)\n\n- Implement `ILambdaSerializer` directly in `AppLambdaSerializer` instead of deriving from `SourceGeneratorLambdaJsonSerializer<T>`.\n- Reuse a thread-static `Utf8JsonWriter` to serialize responses so its buffer is not regrown for every invocation, which reduces allocations by ~4.8 KB per request for intents with larger responses.\n- Deserialize requests from a pooled buffer instead of copying the request stream to a new array, which reduces deserialization allocations by ~30%.",
+          "timestamp": "2026-10-26T14:42:30Z",
+          "url": "https://github.com/martincostello/alexa-london-travel/commit/e38178ed87900ffe7de08e845addb169c9c8ffdd"
+        },
+        "date": 1793026296934,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V45",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Cancel",
+            "value": 35226.03289794922,
+            "unit": "ns",
+            "range": "± 744.5026342759201",
+            "bytesAllocated": 37751
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Commute",
+            "value": 206780.89375,
+            "unit": "ns",
+            "range": "± 3733.347219005394",
+            "bytesAllocated": 60708
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Disruption",
+            "value": 137792.53651646205,
+            "unit": "ns",
+            "range": "± 2079.8161038888616",
+            "bytesAllocated": 51434
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Help",
+            "value": 36537.16104736328,
+            "unit": "ns",
+            "range": "± 825.136559203948",
+            "bytesAllocated": 40828
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Launch",
+            "value": 31765.80848475865,
+            "unit": "ns",
+            "range": "± 549.5023982723255",
+            "bytesAllocated": 38263
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.SessionEnded",
+            "value": 35633.644328397866,
+            "unit": "ns",
+            "range": "± 1121.985004712061",
+            "bytesAllocated": 37502
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Status",
+            "value": 149682.79142622513,
+            "unit": "ns",
+            "range": "± 3662.3491260174624",
+            "bytesAllocated": 51196
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.Stop",
+            "value": 35450.19457538311,
+            "unit": "ns",
+            "range": "± 523.3518365704147",
+            "bytesAllocated": 37631
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Skill.Benchmarks.AppBenchmarks.UnknownIntent",
+            "value": 37286.15012613932,
+            "unit": "ns",
+            "range": "± 1457.8633449099193",
+            "bytesAllocated": 37855
           }
         ]
       }
