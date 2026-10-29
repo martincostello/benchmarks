@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793257362060,
+  "lastUpdated": 1793286367340,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -73619,6 +73619,71 @@
             "unit": "ns",
             "range": "± 1016.2506224209343",
             "bytesAllocated": 15694
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "19d4697c687865691422fde735665287f73b7b61",
+          "message": "Reduce telemetry overhead (#3803)\n\n- Disable Sentry's tracing middleware with `Sentry:AutoRegisterTracing` as OpenTelemetry already provides tracing.\n- Add `Logging:Sentry:LogLevel` rules for `Microsoft`, `System` and the DataProtection categories as Sentry's logger provider otherwise ignores the configured log levels, and generates breadcrumbs for every log entry.\n- Disable the console logger in `Production` via `appsettings.Production.json`. It can be re-enabled with `Logging__Console__LogLevel__Default`.",
+          "timestamp": "2026-10-29T15:00:53Z",
+          "url": "https://github.com/martincostello/website/commit/19d4697c687865691422fde735665287f73b7b61"
+        },
+        "date": 1793286367340,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 161871.6894683838,
+            "unit": "ns",
+            "range": "± 3074.247532715812",
+            "bytesAllocated": 30139
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 163396.57662259616,
+            "unit": "ns",
+            "range": "± 1273.191598932015",
+            "bytesAllocated": 31130
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 249690.78352864584,
+            "unit": "ns",
+            "range": "± 4341.088769943161",
+            "bytesAllocated": 55392
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 182489.91158854167,
+            "unit": "ns",
+            "range": "± 1498.2038330535158",
+            "bytesAllocated": 40191
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 109622.4228428432,
+            "unit": "ns",
+            "range": "± 1350.0069999217544",
+            "bytesAllocated": 15672
           }
         ]
       }
