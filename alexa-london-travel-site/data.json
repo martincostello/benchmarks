@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793217891979,
+  "lastUpdated": 1793286417098,
   "repoUrl": "https://github.com/martincostello/alexa-london-travel-site",
   "entries": {
     "LondonTravel.Site": [
@@ -53011,6 +53011,50 @@
             "unit": "ns",
             "range": "± 2531.7613471746567",
             "bytesAllocated": 31319
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "2b624b25c93543969e2a0b7c320a3731ebe2f3b8",
+          "message": "Reduce telemetry overhead (#4758)\n\n- Disable Sentry's tracing middleware with `Sentry:AutoRegisterTracing` as OpenTelemetry already provides tracing.\n- Add `Logging:Sentry:LogLevel` rules for the categories configured in `Logging:LogLevel`, as Sentry's logger provider otherwise ignores the configured log levels, and generates breadcrumbs for every log entry.\n- Disable the console logger in `Production` via `appsettings.Production.json`. It can be re-enabled with `Logging__Console__LogLevel__Default`.\n- Avoid an async state machine allocation for every request that does not have k6 baggage in `ApplicationTelemetry.ProfileAsync()`.",
+          "timestamp": "2026-10-29T15:03:36Z",
+          "url": "https://github.com/martincostello/alexa-london-travel-site/commit/2b624b25c93543969e2a0b7c320a3731ebe2f3b8"
+        },
+        "date": 1793286417098,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Root",
+            "value": 618732.5199869792,
+            "unit": "ns",
+            "range": "± 3615.3480698643493",
+            "bytesAllocated": 180687
+          },
+          {
+            "name": "MartinCostello.LondonTravel.Site.Benchmarks.AppBenchmarks.Version",
+            "value": 225380.60522460938,
+            "unit": "ns",
+            "range": "± 929.186960283365",
+            "bytesAllocated": 31327
           }
         ]
       }
