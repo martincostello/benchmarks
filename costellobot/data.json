@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793258291801,
+  "lastUpdated": 1793274253154,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -81105,6 +81105,57 @@
             "unit": "ns",
             "range": "± 1198.5100858329224",
             "bytesAllocated": 39503
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "34d77ad657efe1625ccf0a57ddb2a04bdac6cb49",
+          "message": "Reduce telemetry overhead (#4063)\n\n- Disable Sentry's tracing middleware with `Sentry:AutoRegisterTracing` as OpenTelemetry already provides tracing.\n- Add `Logging:Sentry:LogLevel` rules for `Azure`, `Microsoft`, `Polly` and `System` as Sentry's logger provider otherwise ignores the configured log levels, and generates breadcrumbs for every log entry.\n- Disable the console logger in `Production` via `appsettings.Production.json`. It can be re-enabled with `Logging__Console__LogLevel__Default`.\n- Create a single logging scope containing the webhook headers and event instead of two nested scopes.\n- Remove the duplicate logging scopes from `GitHubWebhookDispatcher`, as its only caller already creates them.\n- Skip creating webhook logging scopes when logging is disabled for the logger.\n- Move the constant Pyroscope labels to `PYROSCOPE_LABELS` in the container image instead of setting them on every request.\n- Only apply dynamic Pyroscope labels to requests that have `k6.*` baggage.",
+          "timestamp": "2026-10-29T11:39:25Z",
+          "url": "https://github.com/martincostello/costellobot/commit/34d77ad657efe1625ccf0a57ddb2a04bdac6cb49"
+        },
+        "date": 1793274253154,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 497107.991015625,
+            "unit": "ns",
+            "range": "± 2892.9771533024614",
+            "bytesAllocated": 38696
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 211350.18177208534,
+            "unit": "ns",
+            "range": "± 2780.2042013225196",
+            "bytesAllocated": 17814
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 314229.9901592548,
+            "unit": "ns",
+            "range": "± 1572.6465345785316",
+            "bytesAllocated": 37707
           }
         ]
       }
