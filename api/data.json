@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793264783133,
+  "lastUpdated": 1793286319172,
   "repoUrl": "https://github.com/martincostello/api",
   "entries": {
     "API": [
@@ -77471,6 +77471,71 @@
             "unit": "ns",
             "range": "± 1859.7590113049607",
             "bytesAllocated": 26895
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "5e3d19073c5215dc319f45009b2ea0532392c62c",
+          "message": "Reduce telemetry overhead (#3688)\n\n- Disable Sentry's tracing middleware with `Sentry:AutoRegisterTracing` as OpenTelemetry already provides tracing.\n- Add `Logging:Sentry:LogLevel` rules for `Microsoft`, `System` and the DataProtection categories as Sentry's logger provider otherwise ignores the configured log levels, and generates breadcrumbs for every log entry.\n- Disable the console logger in `Production` via `appsettings.Production.json`. It can be re-enabled with `Logging__Console__LogLevel__Default`.",
+          "timestamp": "2026-10-29T14:59:55Z",
+          "url": "https://github.com/martincostello/api/commit/5e3d19073c5215dc319f45009b2ea0532392c62c"
+        },
+        "date": 1793286319172,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Root",
+            "value": 270753.1593098958,
+            "unit": "ns",
+            "range": "± 3864.3331912183457",
+            "bytesAllocated": 31383
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Version",
+            "value": 221549.4096516927,
+            "unit": "ns",
+            "range": "± 1801.5583813783433",
+            "bytesAllocated": 16621
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Hash",
+            "value": 249480.41181640624,
+            "unit": "ns",
+            "range": "± 5608.366189536691",
+            "bytesAllocated": 15623
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.Time",
+            "value": 204754.2514811198,
+            "unit": "ns",
+            "range": "± 2150.574919350515",
+            "bytesAllocated": 11925
+          },
+          {
+            "name": "MartinCostello.Api.Benchmarks.ApiBenchmarks.OpenApi",
+            "value": 221874.28893229167,
+            "unit": "ns",
+            "range": "± 1544.5788443628198",
+            "bytesAllocated": 26899
           }
         ]
       }
