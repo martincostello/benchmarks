@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793354819986,
+  "lastUpdated": 1793368432555,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -81411,6 +81411,57 @@
             "unit": "ns",
             "range": "± 594.0689863136778",
             "bytesAllocated": 37158
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "b4bbd93228c408acd848e16b4a49519a754a5462",
+          "message": "Improve webhook processing performance (#4069)\n\n- Avoid redundant log enqueuing if there are no connected clients to log to.\n- Refactor the parallel search of open PRs to improve throughput.\n- Get the commit and the diff of a pull request at the same time instead of one after the other.\n- Allow the number of webhooks processed at the same time to be configured.",
+          "timestamp": "2026-10-30T13:48:42Z",
+          "url": "https://github.com/martincostello/costellobot/commit/b4bbd93228c408acd848e16b4a49519a754a5462"
+        },
+        "date": 1793368432555,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "Intel Xeon 6973P-C",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 287100.607385972,
+            "unit": "ns",
+            "range": "± 13633.40775323979",
+            "bytesAllocated": 38705
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 101955.79657389323,
+            "unit": "ns",
+            "range": "± 408.770677449532",
+            "bytesAllocated": 17779
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 185627.11346028646,
+            "unit": "ns",
+            "range": "± 1423.9173650420282",
+            "bytesAllocated": 36837
           }
         ]
       }
