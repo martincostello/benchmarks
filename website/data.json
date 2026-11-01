@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793304127418,
+  "lastUpdated": 1793547741344,
   "repoUrl": "https://github.com/martincostello/website",
   "entries": {
     "Website": [
@@ -73749,6 +73749,71 @@
             "unit": "ns",
             "range": "± 1348.7368059875407",
             "bytesAllocated": 15693
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "97d9046f8664682dfd53a2dad1d8a5cbdfcea724",
+          "message": "Fix accessibility violations (#3805)\n\n- Add axe-core accessibility tests for each page, including mobile with the navbar expanded.\n- Darken the Bluesky follow button's background for WCAG AA contrast while keeping `btn-info`.\n- Change the GitHub star/fork link text to \"Star\"/\"Fork\" so it is part of the accessible name.\n- Name the tool forms with `aria-labelledby` and remove the redundant `role=\"form\"`.\n- Use `<button type=\"button\">` instead of `<a role=\"button\">` for the tool actions so they respond to Space, and stop `copy-guid` submitting its form.\n- Announce generated GUIDs, hashes and machine keys via a live region (a short summary for machine keys).\n- Remove `role=\"button\"` from navigation links on the home page.\n- Hide decorative icons from assistive technology and label the copy hash button.\n- Respect `prefers-reduced-motion` for the image fade-in.",
+          "timestamp": "2026-11-01T15:36:24Z",
+          "url": "https://github.com/martincostello/website/commit/97d9046f8664682dfd53a2dad1d8a5cbdfcea724"
+        },
+        "date": 1793547741344,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Root",
+            "value": 288442.7791992187,
+            "unit": "ns",
+            "range": "± 2012.2997076038832",
+            "bytesAllocated": 30094
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.About",
+            "value": 297577.568359375,
+            "unit": "ns",
+            "range": "± 1263.4312982920592",
+            "bytesAllocated": 31151
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Projects",
+            "value": 370160.51825420675,
+            "unit": "ns",
+            "range": "± 920.2253286923547",
+            "bytesAllocated": 55316
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Tools",
+            "value": 307126.0647786458,
+            "unit": "ns",
+            "range": "± 1181.0572965334375",
+            "bytesAllocated": 40412
+          },
+          {
+            "name": "MartinCostello.Website.Benchmarks.WebsiteBenchmarks.Version",
+            "value": 204935.55975811297,
+            "unit": "ns",
+            "range": "± 1831.9245321851724",
+            "bytesAllocated": 15700
           }
         ]
       }
