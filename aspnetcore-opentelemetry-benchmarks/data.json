@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793354812298,
+  "lastUpdated": 1793695486086,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -96044,6 +96044,786 @@
             "unit": "ns",
             "range": "± 372.37251213034926",
             "bytesAllocated": 1922
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 72328.84500558036,
+            "unit": "ns",
+            "range": "± 508.89113175958977",
+            "bytesAllocated": 1930
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 76886.38126627605,
+            "unit": "ns",
+            "range": "± 514.4238008454031",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 75944.48719133649,
+            "unit": "ns",
+            "range": "± 316.1262691144859",
+            "bytesAllocated": 2754
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 74115.39739583334,
+            "unit": "ns",
+            "range": "± 441.3234831785474",
+            "bytesAllocated": 1930
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 75989.6158203125,
+            "unit": "ns",
+            "range": "± 455.3823979251709",
+            "bytesAllocated": 2449
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 528760.4241536459,
+            "unit": "ns",
+            "range": "± 4731.065068408627",
+            "bytesAllocated": 7017
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 549170.6306501116,
+            "unit": "ns",
+            "range": "± 2869.464269598583",
+            "bytesAllocated": 10233
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 536961.5596516927,
+            "unit": "ns",
+            "range": "± 1285.848449592887",
+            "bytesAllocated": 8374
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 539172.5981445312,
+            "unit": "ns",
+            "range": "± 2234.348495047373",
+            "bytesAllocated": 8689
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 548725.1535807292,
+            "unit": "ns",
+            "range": "± 4589.601963820587",
+            "bytesAllocated": 10239
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 75410.65284016928,
+            "unit": "ns",
+            "range": "± 285.0177041946495",
+            "bytesAllocated": 1946
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 77530.02713012695,
+            "unit": "ns",
+            "range": "± 331.73264422297575",
+            "bytesAllocated": 2770
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 76425.9865373884,
+            "unit": "ns",
+            "range": "± 417.9242267469282",
+            "bytesAllocated": 2794
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 75398.72412109375,
+            "unit": "ns",
+            "range": "± 247.4816212960837",
+            "bytesAllocated": 1970
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 74816.38026780348,
+            "unit": "ns",
+            "range": "± 499.96725300262455",
+            "bytesAllocated": 1946
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 73948.61065204327,
+            "unit": "ns",
+            "range": "± 354.69726503444053",
+            "bytesAllocated": 1938
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 76457.4287196568,
+            "unit": "ns",
+            "range": "± 435.86546998243085",
+            "bytesAllocated": 2762
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 76928.2133219401,
+            "unit": "ns",
+            "range": "± 563.7915081386477",
+            "bytesAllocated": 2786
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 74359.7112473708,
+            "unit": "ns",
+            "range": "± 478.70757176783604",
+            "bytesAllocated": 1962
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 74011.02170410156,
+            "unit": "ns",
+            "range": "± 514.6748026744526",
+            "bytesAllocated": 1938
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 72936.16137695312,
+            "unit": "ns",
+            "range": "± 415.7929297558829",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 76694.91636439732,
+            "unit": "ns",
+            "range": "± 525.8192941439004",
+            "bytesAllocated": 2825
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 78184.64780099051,
+            "unit": "ns",
+            "range": "± 602.3286989775137",
+            "bytesAllocated": 2806
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 73354.58228410993,
+            "unit": "ns",
+            "range": "± 384.198480252226",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 73655.29888044085,
+            "unit": "ns",
+            "range": "± 402.57108065315515",
+            "bytesAllocated": 1922
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2060003.330829327,
+            "unit": "ns",
+            "range": "± 8386.602378377307",
+            "bytesAllocated": 149760
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2103336.3481770833,
+            "unit": "ns",
+            "range": "± 19711.615389374216",
+            "bytesAllocated": 155140
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2206313.564127604,
+            "unit": "ns",
+            "range": "± 12612.638076502537",
+            "bytesAllocated": 173286
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2110125.8370535714,
+            "unit": "ns",
+            "range": "± 14333.647116888595",
+            "bytesAllocated": 154797
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2228701.1829927885,
+            "unit": "ns",
+            "range": "± 12501.386708636666",
+            "bytesAllocated": 170520
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 253324.20934244792,
+            "unit": "ns",
+            "range": "± 1652.685574492565",
+            "bytesAllocated": 2700
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 260261.408656529,
+            "unit": "ns",
+            "range": "± 1528.4472844668967",
+            "bytesAllocated": 3855
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 258585.7869873047,
+            "unit": "ns",
+            "range": "± 1802.5660316357817",
+            "bytesAllocated": 3512
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 263098.0547572545,
+            "unit": "ns",
+            "range": "± 2789.154704405729",
+            "bytesAllocated": 2672
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 255519.0739558293,
+            "unit": "ns",
+            "range": "± 1398.0080857336507",
+            "bytesAllocated": 3822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 154529.72021484375,
+            "unit": "ns",
+            "range": "± 1724.3561435301392",
+            "bytesAllocated": 4865
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 167233.6840122768,
+            "unit": "ns",
+            "range": "± 619.8414881801606",
+            "bytesAllocated": 8062
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 181224.02554757256,
+            "unit": "ns",
+            "range": "± 953.1099782456942",
+            "bytesAllocated": 11246
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 163193.17190755208,
+            "unit": "ns",
+            "range": "± 1201.8485482990723",
+            "bytesAllocated": 6383
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 167737.5542179988,
+            "unit": "ns",
+            "range": "± 422.9265929838189",
+            "bytesAllocated": 7879
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 679808.3253255208,
+            "unit": "ns",
+            "range": "± 3391.6694611592893",
+            "bytesAllocated": 82054
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 686026.0176432292,
+            "unit": "ns",
+            "range": "± 3928.7127759411474",
+            "bytesAllocated": 83072
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 698579.2255859375,
+            "unit": "ns",
+            "range": "± 7605.770836768741",
+            "bytesAllocated": 83577
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 679840.0021158854,
+            "unit": "ns",
+            "range": "± 2912.0773591123084",
+            "bytesAllocated": 82076
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 694572.3570033482,
+            "unit": "ns",
+            "range": "± 4274.823594376825",
+            "bytesAllocated": 85075
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 75406.89425223214,
+            "unit": "ns",
+            "range": "± 610.630070299925",
+            "bytesAllocated": 1937
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 76678.154523577,
+            "unit": "ns",
+            "range": "± 400.55484627991467",
+            "bytesAllocated": 2762
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 77103.94946289062,
+            "unit": "ns",
+            "range": "± 1176.2744152117607",
+            "bytesAllocated": 2762
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 73497.21583048503,
+            "unit": "ns",
+            "range": "± 404.36187700853395",
+            "bytesAllocated": 1938
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 74115.70253092448,
+            "unit": "ns",
+            "range": "± 476.67178733270674",
+            "bytesAllocated": 1938
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 698475.5803385417,
+            "unit": "ns",
+            "range": "± 5175.11421274022",
+            "bytesAllocated": 62772
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 706565.998828125,
+            "unit": "ns",
+            "range": "± 5487.763907858719",
+            "bytesAllocated": 64715
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 721506.7763671875,
+            "unit": "ns",
+            "range": "± 4918.605424352142",
+            "bytesAllocated": 65549
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 691920.8408203125,
+            "unit": "ns",
+            "range": "± 3770.45671316564",
+            "bytesAllocated": 62770
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 713524.3479567308,
+            "unit": "ns",
+            "range": "± 5985.625372362815",
+            "bytesAllocated": 67802
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "martincostello"
+          },
+          "sha": "7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a",
+          "message": "Bump NuGet package\n\nUpdate NuGet package for .NET 11 RC3.",
+          "timestamp": "2026-11-03T08:20:20Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/7e6ee4c4f9961b52290ff07a7eb7e12c8ba3353a"
+        },
+        "date": 1793695486086,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 7763",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 73139.36617606027,
+            "unit": "ns",
+            "range": "± 601.4191499576489",
+            "bytesAllocated": 1922
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 76800.67957414899,
+            "unit": "ns",
+            "range": "± 411.7503302998806",
+            "bytesAllocated": 2746
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 85754.20546061198,
+            "unit": "ns",
+            "range": "± 647.5546420090237",
+            "bytesAllocated": 3159
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 78259.66857096353,
+            "unit": "ns",
+            "range": "± 589.3746311497597",
+            "bytesAllocated": 1970
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 78267.81564941406,
+            "unit": "ns",
+            "range": "± 443.50257858542966",
+            "bytesAllocated": 2721
           }
         ]
       }
