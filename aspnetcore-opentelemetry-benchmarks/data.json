@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793900040557,
+  "lastUpdated": 1793951438721,
   "repoUrl": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks",
   "entries": {
     "ASP.NET Core OpenTelemetry Benchmarks": [
@@ -302883,6 +302883,786 @@
             "value": 65335.50509440104,
             "unit": "ns",
             "range": "± 1103.2349245130176",
+            "bytesAllocated": 2626
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Baseline",
+            "value": 37806.0389831543,
+            "unit": "ns",
+            "range": "± 1666.7617959120785",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.AllTelemetry",
+            "value": 37771.78734207153,
+            "unit": "ns",
+            "range": "± 1151.7849396857162",
+            "bytesAllocated": 2653
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Logs",
+            "value": 38251.88412550019,
+            "unit": "ns",
+            "range": "± 1356.5016674715428",
+            "bytesAllocated": 2654
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Metrics",
+            "value": 37085.40447279986,
+            "unit": "ns",
+            "range": "± 1502.1415825875936",
+            "bytesAllocated": 1830
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.TraceBenchmarks.Traces",
+            "value": 34415.675546357124,
+            "unit": "ns",
+            "range": "± 1079.678035789457",
+            "bytesAllocated": 2354
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Baseline",
+            "value": 125083.2511858259,
+            "unit": "ns",
+            "range": "± 1038.7319016596655",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.AllTelemetry",
+            "value": 131501.24931989398,
+            "unit": "ns",
+            "range": "± 2211.4089063088286",
+            "bytesAllocated": 3639
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Logs",
+            "value": 130997.19426081731,
+            "unit": "ns",
+            "range": "± 625.6236825529327",
+            "bytesAllocated": 3334
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Metrics",
+            "value": 124688.81651475694,
+            "unit": "ns",
+            "range": "± 2643.1440867360566",
+            "bytesAllocated": 2510
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.RedisBenchmarks.Traces",
+            "value": 125001.69724121093,
+            "unit": "ns",
+            "range": "± 800.5505968430581",
+            "bytesAllocated": 3664
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Baseline",
+            "value": 38251.58808233799,
+            "unit": "ns",
+            "range": "± 1957.16079504825",
+            "bytesAllocated": 1846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Logs",
+            "value": 38372.72445424398,
+            "unit": "ns",
+            "range": "± 2210.146645069992",
+            "bytesAllocated": 2670
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.AllTelemetry",
+            "value": 38106.27958602905,
+            "unit": "ns",
+            "range": "± 1972.998241597856",
+            "bytesAllocated": 2694
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Metrics",
+            "value": 36979.3904554579,
+            "unit": "ns",
+            "range": "± 1815.2906480993463",
+            "bytesAllocated": 1869
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.PrometheusBenchmarks.Traces",
+            "value": 36941.66124338344,
+            "unit": "ns",
+            "range": "± 1780.0564097632623",
+            "bytesAllocated": 1846
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Baseline",
+            "value": 38600.038770141604,
+            "unit": "ns",
+            "range": "± 2355.949264051665",
+            "bytesAllocated": 1838
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Logs",
+            "value": 38929.78718933105,
+            "unit": "ns",
+            "range": "± 2461.0382152985676",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.AllTelemetry",
+            "value": 38886.91962235062,
+            "unit": "ns",
+            "range": "± 1639.1386242283131",
+            "bytesAllocated": 2686
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Metrics",
+            "value": 37791.940071554745,
+            "unit": "ns",
+            "range": "± 1810.7160945970675",
+            "bytesAllocated": 1862
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.MetricBenchmarks.Traces",
+            "value": 38581.53216308594,
+            "unit": "ns",
+            "range": "± 2371.4055132576927",
+            "bytesAllocated": 1838
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Baseline",
+            "value": 37739.17288035267,
+            "unit": "ns",
+            "range": "± 1564.0562500646738",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Logs",
+            "value": 36344.39953730656,
+            "unit": "ns",
+            "range": "± 1497.411586397644",
+            "bytesAllocated": 2730
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.AllTelemetry",
+            "value": 40350.700329051295,
+            "unit": "ns",
+            "range": "± 1904.2630273937018",
+            "bytesAllocated": 2706
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Metrics",
+            "value": 39360.82968566895,
+            "unit": "ns",
+            "range": "± 2553.5631921159725",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.LogBenchmarks.Traces",
+            "value": 39853.519229736325,
+            "unit": "ns",
+            "range": "± 2587.301177135445",
+            "bytesAllocated": 1822
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Baseline",
+            "value": 395025.8959716797,
+            "unit": "ns",
+            "range": "± 8941.437783865598",
+            "bytesAllocated": 6841
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.AllTelemetry",
+            "value": 423710.7686593192,
+            "unit": "ns",
+            "range": "± 5014.646445198021",
+            "bytesAllocated": 10095
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Logs",
+            "value": 397461.4855608259,
+            "unit": "ns",
+            "range": "± 5331.703795627213",
+            "bytesAllocated": 8228
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Metrics",
+            "value": 402098.87109375,
+            "unit": "ns",
+            "range": "± 7057.493143194656",
+            "bytesAllocated": 8555
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.SqlServerBenchmarks.Traces",
+            "value": 415021.1960611979,
+            "unit": "ns",
+            "range": "± 6155.093211739721",
+            "bytesAllocated": 9813
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Baseline",
+            "value": 2157706.8442708333,
+            "unit": "ns",
+            "range": "± 19796.060927282946",
+            "bytesAllocated": 177637
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Logs",
+            "value": 2296459.877511161,
+            "unit": "ns",
+            "range": "± 10585.523236928957",
+            "bytesAllocated": 182921
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.AllTelemetry",
+            "value": 2469789.97172619,
+            "unit": "ns",
+            "range": "± 14483.454539263395",
+            "bytesAllocated": 201455
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Metrics",
+            "value": 2218123.8596875,
+            "unit": "ns",
+            "range": "± 56682.922363311714",
+            "bytesAllocated": 182105
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.KitchenSinkBenchmarks.Traces",
+            "value": 2244719.792729592,
+            "unit": "ns",
+            "range": "± 27683.76504020208",
+            "bytesAllocated": 199595
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Baseline",
+            "value": 89961.04650557668,
+            "unit": "ns",
+            "range": "± 3097.1733964080067",
+            "bytesAllocated": 4566
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Logs",
+            "value": 86430.78506181824,
+            "unit": "ns",
+            "range": "± 3480.7457440859102",
+            "bytesAllocated": 7846
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.AllTelemetry",
+            "value": 97883.1123046875,
+            "unit": "ns",
+            "range": "± 1827.8240200987814",
+            "bytesAllocated": 10001
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Metrics",
+            "value": 88750.00248535156,
+            "unit": "ns",
+            "range": "± 2126.5439708779318",
+            "bytesAllocated": 4982
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.HttpClientBenchmarks.Traces",
+            "value": 88654.97201102121,
+            "unit": "ns",
+            "range": "± 2306.496211465518",
+            "bytesAllocated": 7757
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Baseline",
+            "value": 687057.7690104167,
+            "unit": "ns",
+            "range": "± 10614.291682532135",
+            "bytesAllocated": 110237
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Logs",
+            "value": 715145.3999348958,
+            "unit": "ns",
+            "range": "± 6861.264042847439",
+            "bytesAllocated": 111230
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.AllTelemetry",
+            "value": 723125.1235351562,
+            "unit": "ns",
+            "range": "± 5113.6166507963335",
+            "bytesAllocated": 111695
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Metrics",
+            "value": 684770.7257161458,
+            "unit": "ns",
+            "range": "± 12045.088282727236",
+            "bytesAllocated": 110278
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.EFCoreBenchmarks.Traces",
+            "value": 704048.472795759,
+            "unit": "ns",
+            "range": "± 22727.84065203646",
+            "bytesAllocated": 113082
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Baseline",
+            "value": 38061.94305840854,
+            "unit": "ns",
+            "range": "± 1670.0016147012504",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Logs",
+            "value": 38494.716825263444,
+            "unit": "ns",
+            "range": "± 2089.7510079508784",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.AllTelemetry",
+            "value": 39153.97832275391,
+            "unit": "ns",
+            "range": "± 2897.8045402332973",
+            "bytesAllocated": 2662
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Metrics",
+            "value": 39724.41141174317,
+            "unit": "ns",
+            "range": "± 2527.804969557917",
+            "bytesAllocated": 1837
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.DefaultBenchmarks.Traces",
+            "value": 38154.13221068023,
+            "unit": "ns",
+            "range": "± 2162.555014554336",
+            "bytesAllocated": 1837
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Baseline",
+            "value": 599727.201171875,
+            "unit": "ns",
+            "range": "± 14761.298900439311",
+            "bytesAllocated": 62307
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Logs",
+            "value": 622580.2642261402,
+            "unit": "ns",
+            "range": "± 21097.598440357007",
+            "bytesAllocated": 64404
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.AllTelemetry",
+            "value": 608559.996000744,
+            "unit": "ns",
+            "range": "± 14363.627939791895",
+            "bytesAllocated": 65164
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Metrics",
+            "value": 615771.0494541266,
+            "unit": "ns",
+            "range": "± 21526.027564975662",
+            "bytesAllocated": 62307
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AwsBenchmarks.Traces",
+            "value": 647885.4655164931,
+            "unit": "ns",
+            "range": "± 23642.472123548512",
+            "bytesAllocated": 67429
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "bd299f48fadb3199047c6f1646a322f96255a98a",
+          "message": "Bump OpenTelemetry (#568)\n\n| datasource | package                                           | from               | to                 |\n| ---------- | ------------------------------------------------- | ------------------ | ------------------ |\n| nuget      | OpenTelemetry.Exporter.OpenTelemetryProtocol      | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Exporter.Prometheus.AspNetCore      | 1.20.1-beta.1.88   | 1.20.1-beta.1.91   |\n| nuget      | OpenTelemetry.Extensions.Hosting                  | 1.21.0-rc.1.26     | 1.21.0-rc.1.29     |\n| nuget      | OpenTelemetry.Instrumentation.AspNetCore          | 1.20.2-alpha.0.137 | 1.20.2-alpha.0.172 |\n| nuget      | OpenTelemetry.Instrumentation.EntityFrameworkCore | 1.20.1-beta.1.138  | 1.20.1-beta.1.173  |\n| nuget      | OpenTelemetry.Instrumentation.Http                | 1.20.2-alpha.0.145 | 1.20.3-alpha.0.2   |\n| nuget      | OpenTelemetry.Instrumentation.SqlClient           | 1.20.2-alpha.0.133 | 1.20.2-alpha.0.168 |\n| nuget      | OpenTelemetry.Instrumentation.StackExchangeRedis  | 1.20.1-beta.1.132  | 1.20.1-beta.1.167  |\n\nSigned-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-06T07:05:22Z",
+          "url": "https://github.com/martincostello/aspnetcore-opentelemetry-benchmarks/commit/bd299f48fadb3199047c6f1646a322f96255a98a"
+        },
+        "date": 1793951438721,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "10.0.403",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "INTEL XEON PLATINUM 8573C",
+            "RuntimeVersion": ".NET 10.0.14 (10.0.14, 10.0.1426.52326)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Baseline",
+            "value": 36911.92369515555,
+            "unit": "ns",
+            "range": "± 1908.7449004325547",
+            "bytesAllocated": 1822
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Logs",
+            "value": 37390.74749496135,
+            "unit": "ns",
+            "range": "± 1448.975779919118",
+            "bytesAllocated": 2645
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.AllTelemetry",
+            "value": 42595.12104056222,
+            "unit": "ns",
+            "range": "± 2070.766584741907",
+            "bytesAllocated": 3058
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Metrics",
+            "value": 37800.36888149328,
+            "unit": "ns",
+            "range": "± 1633.7155350865357",
+            "bytesAllocated": 1870
+          },
+          {
+            "name": "MartinCostello.AspNetCoreOpenTelemetry.Benchmarks.AspNetCoreBenchmarks.Traces",
+            "value": 35902.56691996256,
+            "unit": "ns",
+            "range": "± 916.0932617543041",
             "bytesAllocated": 2626
           }
         ]
