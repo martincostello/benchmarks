@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793999241652,
+  "lastUpdated": 1794051718019,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -82533,6 +82533,57 @@
             "unit": "ns",
             "range": "± 618.3784879533437",
             "bytesAllocated": 36870
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "adc7d9295b56e12a9fed51b0ac2fcfb43eb16ffd",
+          "message": "Improve decompression performance (#4094)\n\nDeserialize JSON directly from the Brotli and zstd decompression streams instead of first copying the decompressed payload into a `MemoryStream`.",
+          "timestamp": "2026-11-07T11:36:56Z",
+          "url": "https://github.com/martincostello/costellobot/commit/adc7d9295b56e12a9fed51b0ac2fcfb43eb16ffd"
+        },
+        "date": 1794051718019,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100-rc.3.26522.148",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V45",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 208118.80416165866,
+            "unit": "ns",
+            "range": "± 2251.5601587858605",
+            "bytesAllocated": 38734
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 78339.8027256557,
+            "unit": "ns",
+            "range": "± 2242.12409127469",
+            "bytesAllocated": 17806
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 126169.30529785156,
+            "unit": "ns",
+            "range": "± 2134.562038845628",
+            "bytesAllocated": 36874
           }
         ]
       }
