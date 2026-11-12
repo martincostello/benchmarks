@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1794470149508,
+  "lastUpdated": 1794482744920,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -83604,6 +83604,57 @@
             "unit": "ns",
             "range": "± 1179.6257601778882",
             "bytesAllocated": 36870
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "4498881edb90eaa370057652a36851c865152ed7",
+          "message": "Fix Sentry log levels (#4119)\n\nRespond to changes from https://github.com/getsentry/sentry-dotnet/issues/5860 that broke the previous approach.",
+          "timestamp": "2026-11-12T11:20:31Z",
+          "url": "https://github.com/martincostello/costellobot/commit/4498881edb90eaa370057652a36851c865152ed7"
+        },
+        "date": 1794482744920,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0, 11.0.26.53018)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 456656.3919921875,
+            "unit": "ns",
+            "range": "± 1907.4908735724762",
+            "bytesAllocated": 37959
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 174515.07175990514,
+            "unit": "ns",
+            "range": "± 924.3580212652612",
+            "bytesAllocated": 17781
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 290966.8776157924,
+            "unit": "ns",
+            "range": "± 2176.3663119544963",
+            "bytesAllocated": 36873
           }
         ]
       }
