@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1794829818785,
+  "lastUpdated": 1794830150241,
   "repoUrl": "https://github.com/martincostello/costellobot",
   "entries": {
     "Costellobot": [
@@ -84165,6 +84165,57 @@
             "unit": "ns",
             "range": "± 929.6020681576543",
             "bytesAllocated": 36868
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "martincostello"
+          },
+          "committer": {
+            "username": "web-flow"
+          },
+          "sha": "79f7e32e8b15d20e4c12c8753c12bc5802f36545",
+          "message": "Enable MSBuild multi-threading (#4128)\n\nAdd the `-mt` flag when invoking dotnet.",
+          "timestamp": "2026-11-16T11:50:48Z",
+          "url": "https://github.com/martincostello/costellobot/commit/79f7e32e8b15d20e4c12c8753c12bc5802f36545"
+        },
+        "date": 1794830150241,
+        "metadata": {
+          "environment": {
+            "Architecture": "X64",
+            "BenchmarkDotNetVersion": "0.16.0-preview.2",
+            "DotNetCliVersion": "11.0.100",
+            "LogicalCoreCount": 4,
+            "OsVersion": "Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)",
+            "PhysicalCoreCount": 2,
+            "PhysicalProcessorCount": 1,
+            "ProcessorName": "AMD EPYC 9V74",
+            "RuntimeVersion": ".NET 11.0.0 (11.0.0, 11.0.26.53018)"
+          }
+        },
+        "benches": [
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Root",
+            "value": 347092.8218149039,
+            "unit": "ns",
+            "range": "± 1828.7339644280003",
+            "bytesAllocated": 37980
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Version",
+            "value": 133062.9531625601,
+            "unit": "ns",
+            "range": "± 1010.3478649136679",
+            "bytesAllocated": 17784
+          },
+          {
+            "name": "MartinCostello.Costellobot.Benchmarks.AppBenchmarks.Webhook",
+            "value": 219256.12384440104,
+            "unit": "ns",
+            "range": "± 986.9896504059851",
+            "bytesAllocated": 36870
           }
         ]
       }
